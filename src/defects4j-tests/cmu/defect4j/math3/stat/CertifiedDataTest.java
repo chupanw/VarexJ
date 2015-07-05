@@ -5,23 +5,23 @@ import org.junit.Test;
 
 public class CertifiedDataTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testSummaryStatistics() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.CertifiedDataTest object = new org.apache.commons.math3.stat.CertifiedDataTest();
-               object.testSummaryStatistics();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testDescriptiveStatistics() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.CertifiedDataTest object = new org.apache.commons.math3.stat.CertifiedDataTest();
                object.testDescriptiveStatistics();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testSummaryStatistics() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.CertifiedDataTest object = new org.apache.commons.math3.stat.CertifiedDataTest();
+               object.testSummaryStatistics();
         }
     }
 

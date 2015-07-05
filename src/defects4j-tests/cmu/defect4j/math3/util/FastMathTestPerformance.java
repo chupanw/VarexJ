@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class FastMathTestPerformance extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -14,14 +14,6 @@ public class FastMathTestPerformance extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.FastMathTestPerformance object = new org.apache.commons.math3.util.FastMathTestPerformance();
                object.testLog10();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testSimpleBenchmark() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.FastMathTestPerformance object = new org.apache.commons.math3.util.FastMathTestPerformance();
-               object.testSimpleBenchmark();
         }
     }
 
@@ -134,6 +126,14 @@ public class FastMathTestPerformance extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.FastMathTestPerformance object = new org.apache.commons.math3.util.FastMathTestPerformance();
                object.testLog1p();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testSimpleBenchmark() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.FastMathTestPerformance object = new org.apache.commons.math3.util.FastMathTestPerformance();
+               object.testSimpleBenchmark();
         }
     }
 

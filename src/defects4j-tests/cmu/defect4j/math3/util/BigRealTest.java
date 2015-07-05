@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class BigRealTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1000000)
-    public void testDivide() throws Exception {
+    public void testSerial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
-               object.testDivide();
+               object.testSerial();
         }
     }
 
@@ -50,10 +50,10 @@ public class BigRealTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testSerial() throws Exception {
+    public void testDivide() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
-               object.testSerial();
+               object.testDivide();
         }
     }
 

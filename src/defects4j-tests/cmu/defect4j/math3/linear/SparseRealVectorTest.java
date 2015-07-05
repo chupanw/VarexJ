@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class SparseRealVectorTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testConcurrentModification() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
-               object.testConcurrentModification();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testMap() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -30,6 +22,14 @@ public class SparseRealVectorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
                object.testMapToSelf();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testConcurrentModification() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
+               object.testConcurrentModification();
         }
     }
 
@@ -50,18 +50,18 @@ public class SparseRealVectorTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testGetEntry() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
-               object.testGetEntry();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testSerial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
                object.testSerial();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testEquals() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
+               object.testEquals();
         }
     }
 
@@ -82,18 +82,18 @@ public class SparseRealVectorTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testGetEntryInvalidIndex2() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
-               org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
-               object.testGetEntryInvalidIndex2();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testSetEntry() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
                object.testSetEntry();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testGetEntryInvalidIndex2() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
+               org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
+               object.testGetEntryInvalidIndex2();
         }
     }
 
@@ -850,10 +850,10 @@ public class SparseRealVectorTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testEquals() throws Exception {
+    public void testGetEntry() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
-               object.testEquals();
+               object.testGetEntry();
         }
     }
 

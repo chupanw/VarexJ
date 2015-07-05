@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class QuaternionTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testConjugate() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.QuaternionTest object = new org.apache.commons.math3.complex.QuaternionTest();
-               object.testConjugate();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testAccessors1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -182,6 +174,14 @@ public class QuaternionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.complex.QuaternionTest object = new org.apache.commons.math3.complex.QuaternionTest();
                object.testToString();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testConjugate() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.QuaternionTest object = new org.apache.commons.math3.complex.QuaternionTest();
+               object.testConjugate();
         }
     }
 

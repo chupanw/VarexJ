@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class SigmoidTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -14,6 +14,14 @@ public class SigmoidTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.SigmoidTest object = new org.apache.commons.math3.analysis.function.SigmoidTest();
                object.testSomeValues();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testDerivativeLargeArguments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.function.SigmoidTest object = new org.apache.commons.math3.analysis.function.SigmoidTest();
+               object.testDerivativeLargeArguments();
         }
     }
 
@@ -54,14 +62,6 @@ public class SigmoidTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.SigmoidTest object = new org.apache.commons.math3.analysis.function.SigmoidTest();
                object.testParametricValue();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testDerivativeLargeArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.function.SigmoidTest object = new org.apache.commons.math3.analysis.function.SigmoidTest();
-               object.testDerivativeLargeArguments();
         }
     }
 

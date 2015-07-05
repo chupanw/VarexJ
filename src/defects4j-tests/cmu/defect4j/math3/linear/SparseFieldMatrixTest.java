@@ -5,10 +5,18 @@ import org.junit.Test;
 
 public class SparseFieldMatrixTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1000000)
+    public void testEqualsAndHashCode() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SparseFieldMatrixTest object = new org.apache.commons.math3.linear.SparseFieldMatrixTest();
+               object.testEqualsAndHashCode();
+        }
+    }
+
     @Test(timeout=1000000)
     public void testScalarAdd() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -18,10 +26,10 @@ public class SparseFieldMatrixTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testEqualsAndHashCode() throws Exception {
+    public void testSubMatrix() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseFieldMatrixTest object = new org.apache.commons.math3.linear.SparseFieldMatrixTest();
-               object.testEqualsAndHashCode();
+               object.testSubMatrix();
         }
     }
 
@@ -174,14 +182,6 @@ public class SparseFieldMatrixTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseFieldMatrixTest object = new org.apache.commons.math3.linear.SparseFieldMatrixTest();
                object.testSetSubMatrix();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testSubMatrix() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SparseFieldMatrixTest object = new org.apache.commons.math3.linear.SparseFieldMatrixTest();
-               object.testSubMatrix();
         }
     }
 

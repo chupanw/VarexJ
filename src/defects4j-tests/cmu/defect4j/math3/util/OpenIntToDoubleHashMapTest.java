@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class OpenIntToDoubleHashMapTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -19,20 +19,20 @@ public class OpenIntToDoubleHashMapTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testConcurrentModification() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.OpenIntToDoubleHashMapTest object = new org.apache.commons.math3.util.OpenIntToDoubleHashMapTest();
-               object.setUp();
-               object.testConcurrentModification();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testCopy() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.OpenIntToDoubleHashMapTest object = new org.apache.commons.math3.util.OpenIntToDoubleHashMapTest();
                object.setUp();
                object.testCopy();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testConcurrentModification() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.OpenIntToDoubleHashMapTest object = new org.apache.commons.math3.util.OpenIntToDoubleHashMapTest();
+               object.setUp();
+               object.testConcurrentModification();
         }
     }
 

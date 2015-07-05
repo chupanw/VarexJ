@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class FieldVector3DTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -42,18 +42,18 @@ public class FieldVector3DTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testHash() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
-               object.testHash();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testEquals() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
                object.testEquals();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testHash() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
+               object.testHash();
         }
     }
 

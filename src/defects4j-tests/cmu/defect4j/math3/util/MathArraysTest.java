@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class MathArraysTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testScale() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.MathArraysTest object = new org.apache.commons.math3.util.MathArraysTest();
-               object.testScale();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testScaleInPlace() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -202,14 +194,6 @@ public class MathArraysTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testSortInPlaceDecresasingOrder() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.MathArraysTest object = new org.apache.commons.math3.util.MathArraysTest();
-               object.testSortInPlaceDecresasingOrder();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testSortInPlaceExample() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.MathArraysTest object = new org.apache.commons.math3.util.MathArraysTest();
@@ -274,14 +258,6 @@ public class MathArraysTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testLinearCombinationWithSingleElementArray() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.MathArraysTest object = new org.apache.commons.math3.util.MathArraysTest();
-               object.testLinearCombinationWithSingleElementArray();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testLinearCombination1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.MathArraysTest object = new org.apache.commons.math3.util.MathArraysTest();
@@ -330,26 +306,10 @@ public class MathArraysTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testConvolve() throws Exception {
+    public void testScale() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.MathArraysTest object = new org.apache.commons.math3.util.MathArraysTest();
-               object.testConvolve();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testShuffleTail() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.MathArraysTest object = new org.apache.commons.math3.util.MathArraysTest();
-               object.testShuffleTail();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testShuffleHead() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.MathArraysTest object = new org.apache.commons.math3.util.MathArraysTest();
-               object.testShuffleHead();
+               object.testScale();
         }
     }
 

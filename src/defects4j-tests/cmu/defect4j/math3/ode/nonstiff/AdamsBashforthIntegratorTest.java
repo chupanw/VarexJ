@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class AdamsBashforthIntegratorTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -14,14 +14,6 @@ public class AdamsBashforthIntegratorTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
                org.apache.commons.math3.ode.nonstiff.AdamsBashforthIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.AdamsBashforthIntegratorTest();
                object.dimensionCheck();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testMinStep() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
-               org.apache.commons.math3.ode.nonstiff.AdamsBashforthIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.AdamsBashforthIntegratorTest();
-               object.testMinStep();
         }
     }
 
@@ -38,6 +30,14 @@ public class AdamsBashforthIntegratorTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MaxCountExceededException", config)) {
                org.apache.commons.math3.ode.nonstiff.AdamsBashforthIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.AdamsBashforthIntegratorTest();
                object.exceedMaxEvaluations();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testMinStep() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+               org.apache.commons.math3.ode.nonstiff.AdamsBashforthIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.AdamsBashforthIntegratorTest();
+               object.testMinStep();
         }
     }
 

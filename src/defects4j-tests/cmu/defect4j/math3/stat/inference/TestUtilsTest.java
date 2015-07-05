@@ -5,10 +5,26 @@ import org.junit.Test;
 
 public class TestUtilsTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1000000)
+    public void testRootLogLikelihood() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.inference.TestUtilsTest object = new org.apache.commons.math3.stat.inference.TestUtilsTest();
+               object.testRootLogLikelihood();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testSmallSamples() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.inference.TestUtilsTest object = new org.apache.commons.math3.stat.inference.TestUtilsTest();
+               object.testSmallSamples();
+        }
+    }
+
     @Test(timeout=1000000)
     public void testChiSquare() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -42,26 +58,10 @@ public class TestUtilsTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testSmallSamples() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.inference.TestUtilsTest object = new org.apache.commons.math3.stat.inference.TestUtilsTest();
-               object.testSmallSamples();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testOneSampleT() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.inference.TestUtilsTest object = new org.apache.commons.math3.stat.inference.TestUtilsTest();
                object.testOneSampleT();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testRootLogLikelihood() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.inference.TestUtilsTest object = new org.apache.commons.math3.stat.inference.TestUtilsTest();
-               object.testRootLogLikelihood();
         }
     }
 

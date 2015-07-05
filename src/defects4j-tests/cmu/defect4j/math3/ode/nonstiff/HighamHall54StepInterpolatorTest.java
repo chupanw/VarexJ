@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class HighamHall54StepInterpolatorTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1000000)
-    public void checkClone() throws Exception {
+    public void serialization() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.HighamHall54StepInterpolatorTest object = new org.apache.commons.math3.ode.nonstiff.HighamHall54StepInterpolatorTest();
-               object.checkClone();
+               object.serialization();
         }
     }
 
@@ -26,10 +26,10 @@ public class HighamHall54StepInterpolatorTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void serialization() throws Exception {
+    public void checkClone() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.HighamHall54StepInterpolatorTest object = new org.apache.commons.math3.ode.nonstiff.HighamHall54StepInterpolatorTest();
-               object.serialization();
+               object.checkClone();
         }
     }
 

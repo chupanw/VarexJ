@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class DummyStepInterpolatorTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1000000)
-    public void testImpossibleSerialization() throws Exception {
+    public void testNoReset() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.sampling.DummyStepInterpolatorTest object = new org.apache.commons.math3.ode.sampling.DummyStepInterpolatorTest();
-               object.testImpossibleSerialization();
+               object.testNoReset();
         }
     }
 
@@ -26,10 +26,10 @@ public class DummyStepInterpolatorTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testNoReset() throws Exception {
+    public void testImpossibleSerialization() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.sampling.DummyStepInterpolatorTest object = new org.apache.commons.math3.ode.sampling.DummyStepInterpolatorTest();
-               object.testNoReset();
+               object.testImpossibleSerialization();
         }
     }
 

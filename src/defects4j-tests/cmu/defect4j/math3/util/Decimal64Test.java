@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class Decimal64Test extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -74,30 +74,6 @@ public class Decimal64Test extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testHash() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
-               object.testHash();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testAddField() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
-               object.testAddField();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testLinearCombinationFaFa() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
-               object.testLinearCombinationFaFa();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testAddDouble() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
@@ -110,6 +86,14 @@ public class Decimal64Test extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
                object.testSubtractField();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testAddField() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
+               object.testAddField();
         }
     }
 
@@ -402,6 +386,14 @@ public class Decimal64Test extends TestJPF {
     }
 
     @Test(timeout=1000000)
+    public void testLinearCombinationFaFa() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
+               object.testLinearCombinationFaFa();
+        }
+    }
+
+    @Test(timeout=1000000)
     public void testLinearCombinationDaFa() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
@@ -470,6 +462,14 @@ public class Decimal64Test extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
                object.testEquals();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testHash() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
+               object.testHash();
         }
     }
 

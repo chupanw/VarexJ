@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class PolynomialFitterTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testFit() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fitting.PolynomialFitterTest object = new org.apache.commons.math3.fitting.PolynomialFitterTest();
-               object.testFit();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testMath798() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -26,10 +18,10 @@ public class PolynomialFitterTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testNoError() throws Exception {
+    public void testFit() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fitting.PolynomialFitterTest object = new org.apache.commons.math3.fitting.PolynomialFitterTest();
-               object.testNoError();
+               object.testFit();
         }
     }
 
@@ -78,6 +70,14 @@ public class PolynomialFitterTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fitting.PolynomialFitterTest object = new org.apache.commons.math3.fitting.PolynomialFitterTest();
                object.testLargeSample();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testNoError() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fitting.PolynomialFitterTest object = new org.apache.commons.math3.fitting.PolynomialFitterTest();
+               object.testNoError();
         }
     }
 

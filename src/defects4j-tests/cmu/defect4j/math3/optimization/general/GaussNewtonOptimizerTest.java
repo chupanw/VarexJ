@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class GaussNewtonOptimizerTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -58,14 +58,6 @@ public class GaussNewtonOptimizerTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testQRColumnsPermutation() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
-               object.testQRColumnsPermutation();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testNoDependency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
@@ -86,14 +78,6 @@ public class GaussNewtonOptimizerTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
                object.testTwoSets();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testNonInvertible() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.ConvergenceException", config)) {
-               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
-               object.testNonInvertible();
         }
     }
 
@@ -122,6 +106,22 @@ public class GaussNewtonOptimizerTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
+    public void testCircleFitting() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
+               object.testCircleFitting();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testQRColumnsPermutation() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
+               object.testQRColumnsPermutation();
+        }
+    }
+
+    @Test(timeout=1000000)
     public void testInconsistentSizes1() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
                org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
@@ -138,14 +138,6 @@ public class GaussNewtonOptimizerTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testCircleFitting() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
-               object.testCircleFitting();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testCircleFittingGoodInit() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
@@ -158,6 +150,14 @@ public class GaussNewtonOptimizerTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
                object.testKirby2();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testNonInvertible() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.ConvergenceException", config)) {
+               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
+               object.testNonInvertible();
         }
     }
 

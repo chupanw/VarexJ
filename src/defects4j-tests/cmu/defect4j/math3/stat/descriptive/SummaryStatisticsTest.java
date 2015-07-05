@@ -5,26 +5,10 @@ import org.junit.Test;
 
 public class SummaryStatisticsTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testEqualsAndHashCode() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest();
-               object.testEqualsAndHashCode();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testSetterInjection() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest();
-               object.testSetterInjection();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testStats() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -50,10 +34,42 @@ public class SummaryStatisticsTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
+    public void testSetterIllegalState() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest();
+               object.testSetterIllegalState();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testNaNContracts() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest();
+               object.testNaNContracts();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testEqualsAndHashCode() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest();
+               object.testEqualsAndHashCode();
+        }
+    }
+
+    @Test(timeout=1000000)
     public void testCopy() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest();
                object.testCopy();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testSetterInjection() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest();
+               object.testSetterInjection();
         }
     }
 
@@ -86,22 +102,6 @@ public class SummaryStatisticsTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest();
                object.testOverrideGeoMeanWithMathClass();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testSetterIllegalState() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest();
-               object.testSetterIllegalState();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testNaNContracts() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest();
-               object.testNaNContracts();
         }
     }
 

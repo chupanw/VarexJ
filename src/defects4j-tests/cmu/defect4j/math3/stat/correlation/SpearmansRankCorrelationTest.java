@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class SpearmansRankCorrelationTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testConsistency() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.correlation.SpearmansRankCorrelationTest object = new org.apache.commons.math3.stat.correlation.SpearmansRankCorrelationTest();
-               object.testConsistency();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testLongly() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -34,10 +26,18 @@ public class SpearmansRankCorrelationTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testStdErrorConsistency() throws Exception {
+    public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.correlation.SpearmansRankCorrelationTest object = new org.apache.commons.math3.stat.correlation.SpearmansRankCorrelationTest();
-               object.testStdErrorConsistency();
+               object.testConsistency();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testConstant() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.correlation.SpearmansRankCorrelationTest object = new org.apache.commons.math3.stat.correlation.SpearmansRankCorrelationTest();
+               object.testConstant();
         }
     }
 
@@ -58,26 +58,10 @@ public class SpearmansRankCorrelationTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testMath891Array() throws Exception {
+    public void testStdErrorConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.correlation.SpearmansRankCorrelationTest object = new org.apache.commons.math3.stat.correlation.SpearmansRankCorrelationTest();
-               object.testMath891Array();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testMath891Matrix() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.correlation.SpearmansRankCorrelationTest object = new org.apache.commons.math3.stat.correlation.SpearmansRankCorrelationTest();
-               object.testMath891Matrix();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testConstant() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.correlation.SpearmansRankCorrelationTest object = new org.apache.commons.math3.stat.correlation.SpearmansRankCorrelationTest();
-               object.testConstant();
+               object.testStdErrorConsistency();
         }
     }
 

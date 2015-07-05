@@ -5,23 +5,23 @@ import org.junit.Test;
 
 public class RealVectorTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testSparseIterator() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.RealVectorTest object = new org.apache.commons.math3.linear.RealVectorTest();
-               object.testSparseIterator();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testSerial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.RealVectorTest object = new org.apache.commons.math3.linear.RealVectorTest();
                object.testSerial();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testEquals() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.RealVectorTest object = new org.apache.commons.math3.linear.RealVectorTest();
+               object.testEquals();
         }
     }
 
@@ -202,10 +202,10 @@ public class RealVectorTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testEquals() throws Exception {
+    public void testSparseIterator() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.RealVectorTest object = new org.apache.commons.math3.linear.RealVectorTest();
-               object.testEquals();
+               object.testSparseIterator();
         }
     }
 
@@ -214,14 +214,6 @@ public class RealVectorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.RealVectorTest object = new org.apache.commons.math3.linear.RealVectorTest();
                object.testIterator();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testGetEntry() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.RealVectorTest object = new org.apache.commons.math3.linear.RealVectorTest();
-               object.testGetEntry();
         }
     }
 
@@ -242,18 +234,18 @@ public class RealVectorTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testGetEntryInvalidIndex2() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
-               org.apache.commons.math3.linear.RealVectorTest object = new org.apache.commons.math3.linear.RealVectorTest();
-               object.testGetEntryInvalidIndex2();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testSetEntry() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.RealVectorTest object = new org.apache.commons.math3.linear.RealVectorTest();
                object.testSetEntry();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testGetEntryInvalidIndex2() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
+               org.apache.commons.math3.linear.RealVectorTest object = new org.apache.commons.math3.linear.RealVectorTest();
+               object.testGetEntryInvalidIndex2();
         }
     }
 
@@ -846,6 +838,14 @@ public class RealVectorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.RealVectorTest object = new org.apache.commons.math3.linear.RealVectorTest();
                object.testWalkInOptimizedOrderChangingVisitor3();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testGetEntry() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.RealVectorTest object = new org.apache.commons.math3.linear.RealVectorTest();
+               object.testGetEntry();
         }
     }
 

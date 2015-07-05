@@ -5,66 +5,10 @@ import org.junit.Test;
 
 public class SimplexSolverTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testMath828() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.linear.SimplexSolverTest object = new org.apache.commons.math3.optim.linear.SimplexSolverTest();
-               object.testMath828();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testMath828Cycle() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.linear.SimplexSolverTest object = new org.apache.commons.math3.optim.linear.SimplexSolverTest();
-               object.testMath828Cycle();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testMath781() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.linear.SimplexSolverTest object = new org.apache.commons.math3.optim.linear.SimplexSolverTest();
-               object.testMath781();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testMath713NegativeVariable() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.linear.SimplexSolverTest object = new org.apache.commons.math3.optim.linear.SimplexSolverTest();
-               object.testMath713NegativeVariable();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testMath434NegativeVariable() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.linear.SimplexSolverTest object = new org.apache.commons.math3.optim.linear.SimplexSolverTest();
-               object.testMath434NegativeVariable();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testMath434UnfeasibleSolution() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.optim.linear.NoFeasibleSolutionException", config)) {
-               org.apache.commons.math3.optim.linear.SimplexSolverTest object = new org.apache.commons.math3.optim.linear.SimplexSolverTest();
-               object.testMath434UnfeasibleSolution();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testMath434PivotRowSelection() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.linear.SimplexSolverTest object = new org.apache.commons.math3.optim.linear.SimplexSolverTest();
-               object.testMath434PivotRowSelection();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testMath434PivotRowSelection2() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -222,6 +166,62 @@ public class SimplexSolverTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.linear.SimplexSolverTest object = new org.apache.commons.math3.optim.linear.SimplexSolverTest();
                object.testLargeModel();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testMath828() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.linear.SimplexSolverTest object = new org.apache.commons.math3.optim.linear.SimplexSolverTest();
+               object.testMath828();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testMath828Cycle() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.linear.SimplexSolverTest object = new org.apache.commons.math3.optim.linear.SimplexSolverTest();
+               object.testMath828Cycle();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testMath781() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.linear.SimplexSolverTest object = new org.apache.commons.math3.optim.linear.SimplexSolverTest();
+               object.testMath781();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testMath713NegativeVariable() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.linear.SimplexSolverTest object = new org.apache.commons.math3.optim.linear.SimplexSolverTest();
+               object.testMath713NegativeVariable();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testMath434NegativeVariable() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.linear.SimplexSolverTest object = new org.apache.commons.math3.optim.linear.SimplexSolverTest();
+               object.testMath434NegativeVariable();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testMath434UnfeasibleSolution() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.optim.linear.NoFeasibleSolutionException", config)) {
+               org.apache.commons.math3.optim.linear.SimplexSolverTest object = new org.apache.commons.math3.optim.linear.SimplexSolverTest();
+               object.testMath434UnfeasibleSolution();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testMath434PivotRowSelection() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.linear.SimplexSolverTest object = new org.apache.commons.math3.optim.linear.SimplexSolverTest();
+               object.testMath434PivotRowSelection();
         }
     }
 

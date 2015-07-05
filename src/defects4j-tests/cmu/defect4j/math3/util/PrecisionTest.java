@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class PrecisionTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -14,6 +14,14 @@ public class PrecisionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
                object.testEqualsWithRelativeTolerance();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testMath475() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
+               object.testMath475();
         }
     }
 
@@ -30,14 +38,6 @@ public class PrecisionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
                object.testEqualsWithAllowedDelta();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testMath475() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
-               object.testMath475();
         }
     }
 

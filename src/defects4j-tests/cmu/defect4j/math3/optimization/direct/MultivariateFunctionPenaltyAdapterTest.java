@@ -5,10 +5,18 @@ import org.junit.Test;
 
 public class MultivariateFunctionPenaltyAdapterTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1000000)
+    public void testStartSimplexOutsideRange() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.direct.MultivariateFunctionPenaltyAdapterTest object = new org.apache.commons.math3.optimization.direct.MultivariateFunctionPenaltyAdapterTest();
+               object.testStartSimplexOutsideRange();
+        }
+    }
+
     @Test(timeout=1000000)
     public void testStartSimplexInsideRange() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -38,14 +46,6 @@ public class MultivariateFunctionPenaltyAdapterTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.direct.MultivariateFunctionPenaltyAdapterTest object = new org.apache.commons.math3.optimization.direct.MultivariateFunctionPenaltyAdapterTest();
                object.testHalfBounded();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testStartSimplexOutsideRange() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.direct.MultivariateFunctionPenaltyAdapterTest object = new org.apache.commons.math3.optimization.direct.MultivariateFunctionPenaltyAdapterTest();
-               object.testStartSimplexOutsideRange();
         }
     }
 

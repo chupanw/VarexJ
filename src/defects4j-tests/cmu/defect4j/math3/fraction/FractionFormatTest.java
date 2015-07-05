@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class FractionFormatTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -172,11 +172,11 @@ public class FractionFormatTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testParseOne2() throws Exception {
+    public void testParseOne1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fraction.FractionFormatTest object = new org.apache.commons.math3.fraction.FractionFormatTest();
                object.setUp();
-               object.testParseOne2();
+               object.testParseOne1();
         }
     }
 
@@ -190,20 +190,20 @@ public class FractionFormatTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testParseOne1() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.FractionFormatTest object = new org.apache.commons.math3.fraction.FractionFormatTest();
-               object.setUp();
-               object.testParseOne1();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testParseZero2() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fraction.FractionFormatTest object = new org.apache.commons.math3.fraction.FractionFormatTest();
                object.setUp();
                object.testParseZero2();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testParseOne2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.FractionFormatTest object = new org.apache.commons.math3.fraction.FractionFormatTest();
+               object.setUp();
+               object.testParseOne2();
         }
     }
 

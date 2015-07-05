@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class TransformerMapTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testClear() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.TransformerMapTest object = new org.apache.commons.math3.util.TransformerMapTest();
-               object.testClear();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testSerial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -26,10 +18,18 @@ public class TransformerMapTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testContainsClass() throws Exception {
+    public void testClear() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.TransformerMapTest object = new org.apache.commons.math3.util.TransformerMapTest();
-               object.testContainsClass();
+               object.testClear();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testContainsTransformer() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.TransformerMapTest object = new org.apache.commons.math3.util.TransformerMapTest();
+               object.testContainsTransformer();
         }
     }
 
@@ -42,10 +42,10 @@ public class TransformerMapTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testContainsTransformer() throws Exception {
+    public void testContainsClass() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.TransformerMapTest object = new org.apache.commons.math3.util.TransformerMapTest();
-               object.testContainsTransformer();
+               object.testContainsClass();
         }
     }
 

@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class BOBYQAOptimizerTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testMaxEvaluations() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.TooManyEvaluationsException", config)) {
-               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.BOBYQAOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.BOBYQAOptimizerTest();
-               object.testMaxEvaluations();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testInitOutOfBounds() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
@@ -38,6 +30,14 @@ public class BOBYQAOptimizerTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
                org.apache.commons.math3.optim.nonlinear.scalar.noderiv.BOBYQAOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.BOBYQAOptimizerTest();
                object.testProblemDimensionTooSmall();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testMaxEvaluations() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.TooManyEvaluationsException", config)) {
+               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.BOBYQAOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.BOBYQAOptimizerTest();
+               object.testMaxEvaluations();
         }
     }
 

@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class GaussianTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1000000)
-    public void testLargeArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
+    public void testPreconditions() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
                org.apache.commons.math3.analysis.function.GaussianTest object = new org.apache.commons.math3.analysis.function.GaussianTest();
-               object.testLargeArguments();
+               object.testPreconditions();
         }
     }
 
@@ -26,10 +26,26 @@ public class GaussianTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testPreconditions() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
+    public void testLargeArguments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.GaussianTest object = new org.apache.commons.math3.analysis.function.GaussianTest();
-               object.testPreconditions();
+               object.testLargeArguments();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testDerivatives() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.function.GaussianTest object = new org.apache.commons.math3.analysis.function.GaussianTest();
+               object.testDerivatives();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testDerivativeLargeArguments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.function.GaussianTest object = new org.apache.commons.math3.analysis.function.GaussianTest();
+               object.testDerivativeLargeArguments();
         }
     }
 
@@ -102,22 +118,6 @@ public class GaussianTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.GaussianTest object = new org.apache.commons.math3.analysis.function.GaussianTest();
                object.testParametricGradient();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testDerivatives() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.function.GaussianTest object = new org.apache.commons.math3.analysis.function.GaussianTest();
-               object.testDerivatives();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testDerivativeLargeArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.function.GaussianTest object = new org.apache.commons.math3.analysis.function.GaussianTest();
-               object.testDerivativeLargeArguments();
         }
     }
 

@@ -5,15 +5,23 @@ import org.junit.Test;
 
 public class BigFractionTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1000000)
-    public void testDivide() throws Exception {
+    public void testSerial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
-               object.testDivide();
+               object.testSerial();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testIntValue() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
+               object.testIntValue();
         }
     }
 
@@ -34,14 +42,6 @@ public class BigFractionTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testCompareTo() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
-               object.testCompareTo();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testDigitLimitConstructor() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
@@ -54,6 +54,14 @@ public class BigFractionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
                object.testEpsilonLimitConstructor();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testCompareTo() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
+               object.testCompareTo();
         }
     }
 
@@ -146,18 +154,10 @@ public class BigFractionTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testSerial() throws Exception {
+    public void testDivide() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
-               object.testSerial();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testIntValue() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
-               object.testIntValue();
+               object.testDivide();
         }
     }
 

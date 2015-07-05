@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class EigenSolverTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testSolveDimensionErrors() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.EigenSolverTest object = new org.apache.commons.math3.linear.EigenSolverTest();
-               object.testSolveDimensionErrors();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testSolve() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -26,10 +18,10 @@ public class EigenSolverTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testInvertible() throws Exception {
+    public void testSolveDimensionErrors() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.EigenSolverTest object = new org.apache.commons.math3.linear.EigenSolverTest();
-               object.testInvertible();
+               object.testSolveDimensionErrors();
         }
     }
 
@@ -38,6 +30,14 @@ public class EigenSolverTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.EigenSolverTest object = new org.apache.commons.math3.linear.EigenSolverTest();
                object.testNonInvertible();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testInvertible() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.EigenSolverTest object = new org.apache.commons.math3.linear.EigenSolverTest();
+               object.testInvertible();
         }
     }
 

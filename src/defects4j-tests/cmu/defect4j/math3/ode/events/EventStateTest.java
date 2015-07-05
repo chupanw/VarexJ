@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class EventStateTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -22,14 +22,6 @@ public class EventStateTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.events.EventStateTest object = new org.apache.commons.math3.ode.events.EventStateTest();
                object.testIssue695();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testIssue965() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.events.EventStateTest object = new org.apache.commons.math3.ode.events.EventStateTest();
-               object.testIssue965();
         }
     }
 

@@ -5,10 +5,19 @@ import org.junit.Test;
 
 public class FrequencyTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1000000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.FrequencyTest object = new org.apache.commons.math3.stat.FrequencyTest();
+               object.setUp();
+               object.testSerial();
+        }
+    }
+
     @Test(timeout=1000000)
     public void testToString() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -42,24 +51,6 @@ public class FrequencyTest extends TestJPF {
                org.apache.commons.math3.stat.FrequencyTest object = new org.apache.commons.math3.stat.FrequencyTest();
                object.setUp();
                object.testEmptyTable();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testNonComparableCumPct() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.FrequencyTest object = new org.apache.commons.math3.stat.FrequencyTest();
-               object.setUp();
-               object.testNonComparableCumPct();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testNonComparablePct() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.FrequencyTest object = new org.apache.commons.math3.stat.FrequencyTest();
-               object.setUp();
-               object.testNonComparablePct();
         }
     }
 
@@ -105,42 +96,6 @@ public class FrequencyTest extends TestJPF {
                org.apache.commons.math3.stat.FrequencyTest object = new org.apache.commons.math3.stat.FrequencyTest();
                object.setUp();
                object.testMergeCollection();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testMode() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.FrequencyTest object = new org.apache.commons.math3.stat.FrequencyTest();
-               object.setUp();
-               object.testMode();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testModeDoubleNan() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.FrequencyTest object = new org.apache.commons.math3.stat.FrequencyTest();
-               object.setUp();
-               object.testModeDoubleNan();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testModeFloatNan() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.FrequencyTest object = new org.apache.commons.math3.stat.FrequencyTest();
-               object.setUp();
-               object.testModeFloatNan();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.FrequencyTest object = new org.apache.commons.math3.stat.FrequencyTest();
-               object.setUp();
-               object.testSerial();
         }
     }
 

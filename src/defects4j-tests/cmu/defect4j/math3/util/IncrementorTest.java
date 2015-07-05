@@ -5,34 +5,10 @@ import org.junit.Test;
 
 public class IncrementorTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testConstructor1() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.IncrementorTest object = new org.apache.commons.math3.util.IncrementorTest();
-               object.testConstructor1();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testConstructor2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.IncrementorTest object = new org.apache.commons.math3.util.IncrementorTest();
-               object.testConstructor2();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testCanIncrement2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.IncrementorTest object = new org.apache.commons.math3.util.IncrementorTest();
-               object.testCanIncrement2();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testAccessor() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -42,18 +18,18 @@ public class IncrementorTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testBelowMaxCount() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.IncrementorTest object = new org.apache.commons.math3.util.IncrementorTest();
-               object.testBelowMaxCount();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testCanIncrement1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.IncrementorTest object = new org.apache.commons.math3.util.IncrementorTest();
                object.testCanIncrement1();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testBelowMaxCount() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.IncrementorTest object = new org.apache.commons.math3.util.IncrementorTest();
+               object.testBelowMaxCount();
         }
     }
 
@@ -86,6 +62,30 @@ public class IncrementorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.IncrementorTest object = new org.apache.commons.math3.util.IncrementorTest();
                object.testBulkIncrement();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testCanIncrement2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.IncrementorTest object = new org.apache.commons.math3.util.IncrementorTest();
+               object.testCanIncrement2();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testConstructor1() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.IncrementorTest object = new org.apache.commons.math3.util.IncrementorTest();
+               object.testConstructor1();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testConstructor2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.IncrementorTest object = new org.apache.commons.math3.util.IncrementorTest();
+               object.testConstructor2();
         }
     }
 

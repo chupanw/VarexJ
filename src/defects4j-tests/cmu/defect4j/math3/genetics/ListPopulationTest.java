@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class ListPopulationTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1000000)
-    public void testChromosomes() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
+    public void testIterator() throws Exception {
+        if (verifyUnhandledException("java.lang.UnsupportedOperationException", config)) {
                org.apache.commons.math3.genetics.ListPopulationTest object = new org.apache.commons.math3.genetics.ListPopulationTest();
-               object.testChromosomes();
+               object.testIterator();
         }
     }
 
@@ -22,6 +22,14 @@ public class ListPopulationTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.genetics.ListPopulationTest object = new org.apache.commons.math3.genetics.ListPopulationTest();
                object.testGetFittestChromosome();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testChromosomes() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.genetics.ListPopulationTest object = new org.apache.commons.math3.genetics.ListPopulationTest();
+               object.testChromosomes();
         }
     }
 
@@ -70,14 +78,6 @@ public class ListPopulationTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
                org.apache.commons.math3.genetics.ListPopulationTest object = new org.apache.commons.math3.genetics.ListPopulationTest();
                object.testAddTooManyChromosomesSingleCall();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testIterator() throws Exception {
-        if (verifyUnhandledException("java.lang.UnsupportedOperationException", config)) {
-               org.apache.commons.math3.genetics.ListPopulationTest object = new org.apache.commons.math3.genetics.ListPopulationTest();
-               object.testIterator();
         }
     }
 

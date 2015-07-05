@@ -5,10 +5,26 @@ import org.junit.Test;
 
 public class SemiVarianceTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1000000)
+    public void testInsufficientData() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest object = new org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest();
+               object.testInsufficientData();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testSample() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest object = new org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest();
+               object.testSample();
+        }
+    }
+
     @Test(timeout=1000000)
     public void testSingleDown() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -62,22 +78,6 @@ public class SemiVarianceTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest object = new org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest();
                object.testNoVariance();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testInsufficientData() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest object = new org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest();
-               object.testInsufficientData();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testSample() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest object = new org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest();
-               object.testSample();
         }
     }
 

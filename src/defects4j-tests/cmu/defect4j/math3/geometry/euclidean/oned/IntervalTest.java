@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class IntervalTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1000000)
-    public void testTolerance() throws Exception {
+    public void testInterval() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.oned.IntervalTest object = new org.apache.commons.math3.geometry.euclidean.oned.IntervalTest();
-               object.testTolerance();
+               object.testInterval();
         }
     }
 
@@ -34,10 +34,10 @@ public class IntervalTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testInterval() throws Exception {
+    public void testTolerance() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.oned.IntervalTest object = new org.apache.commons.math3.geometry.euclidean.oned.IntervalTest();
-               object.testInterval();
+               object.testTolerance();
         }
     }
 

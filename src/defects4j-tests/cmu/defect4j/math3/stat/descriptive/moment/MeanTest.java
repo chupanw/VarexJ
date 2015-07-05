@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class MeanTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -26,14 +26,6 @@ public class MeanTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testEqualsAndHashCode() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.moment.MeanTest object = new org.apache.commons.math3.stat.descriptive.moment.MeanTest();
-               object.testEqualsAndHashCode();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testSerial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.moment.MeanTest object = new org.apache.commons.math3.stat.descriptive.moment.MeanTest();
@@ -42,10 +34,10 @@ public class MeanTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testConsistency() throws Exception {
+    public void testEqualsAndHashCode() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.moment.MeanTest object = new org.apache.commons.math3.stat.descriptive.moment.MeanTest();
-               object.testConsistency();
+               object.testEqualsAndHashCode();
         }
     }
 
@@ -70,6 +62,14 @@ public class MeanTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.moment.MeanTest object = new org.apache.commons.math3.stat.descriptive.moment.MeanTest();
                object.testCopyConsistency();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testConsistency() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.moment.MeanTest object = new org.apache.commons.math3.stat.descriptive.moment.MeanTest();
+               object.testConsistency();
         }
     }
 

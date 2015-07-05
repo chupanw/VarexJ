@@ -5,31 +5,31 @@ import org.junit.Test;
 
 public class BicubicSplineInterpolatorTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1000000)
+    public void testPlane() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest();
+               object.testPlane();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testParaboloid() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest();
+               object.testParaboloid();
+        }
+    }
+
     @Test(timeout=1000000)
     public void testPreconditions() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest();
                object.testPreconditions();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testInterpolation1() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest();
-               object.testInterpolation1();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testInterpolation2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest();
-               object.testInterpolation2();
         }
     }
 

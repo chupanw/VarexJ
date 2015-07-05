@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class MatrixUtilsTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -110,14 +110,6 @@ public class MatrixUtilsTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.MatrixUtilsTest object = new org.apache.commons.math3.linear.MatrixUtilsTest();
                object.testBlockInverse();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testBlockInverseNonInvertible() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.linear.SingularMatrixException", config)) {
-               org.apache.commons.math3.linear.MatrixUtilsTest object = new org.apache.commons.math3.linear.MatrixUtilsTest();
-               object.testBlockInverseNonInvertible();
         }
     }
 

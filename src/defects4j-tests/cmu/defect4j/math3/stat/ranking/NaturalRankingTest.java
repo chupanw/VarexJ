@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class NaturalRankingTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -34,14 +34,6 @@ public class NaturalRankingTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testNaNsAndInfs() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.ranking.NaturalRankingTest object = new org.apache.commons.math3.stat.ranking.NaturalRankingTest();
-               object.testNaNsAndInfs();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testNaNsMinimalTiesMaximum() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.ranking.NaturalRankingTest object = new org.apache.commons.math3.stat.ranking.NaturalRankingTest();
@@ -62,6 +54,14 @@ public class NaturalRankingTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.ranking.NaturalRankingTest object = new org.apache.commons.math3.stat.ranking.NaturalRankingTest();
                object.testNaNsFixedTiesRandom();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testNaNsAndInfs() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.ranking.NaturalRankingTest object = new org.apache.commons.math3.stat.ranking.NaturalRankingTest();
+               object.testNaNsAndInfs();
         }
     }
 

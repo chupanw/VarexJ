@@ -5,26 +5,10 @@ import org.junit.Test;
 
 public class StatUtilsTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testMean() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.StatUtilsTest object = new org.apache.commons.math3.stat.StatUtilsTest();
-               object.testMean();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testMode() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.StatUtilsTest object = new org.apache.commons.math3.stat.StatUtilsTest();
-               object.testMode();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testStats() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -38,14 +22,6 @@ public class StatUtilsTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.StatUtilsTest object = new org.apache.commons.math3.stat.StatUtilsTest();
                object.testN0andN1Conditions();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testPercentile() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.StatUtilsTest object = new org.apache.commons.math3.stat.StatUtilsTest();
-               object.testPercentile();
         }
     }
 
@@ -142,6 +118,22 @@ public class StatUtilsTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.StatUtilsTest object = new org.apache.commons.math3.stat.StatUtilsTest();
                object.testNormalize2();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testMean() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.StatUtilsTest object = new org.apache.commons.math3.stat.StatUtilsTest();
+               object.testMean();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testPercentile() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.StatUtilsTest object = new org.apache.commons.math3.stat.StatUtilsTest();
+               object.testPercentile();
         }
     }
 

@@ -72,3 +72,7 @@ jpf-nhandler/onthefly/*.java
 META-INF/
 
 junit*.properties
+
+coverage.xml
+.externalToolBuilders/
+lib/math6.jar

@@ -5,28 +5,10 @@ import org.junit.Test;
 
 public class DfpTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testNextAfter() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.dfp.DfpTest object = new org.apache.commons.math3.dfp.DfpTest();
-               object.setUp();
-               object.testNextAfter();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testDivide() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.dfp.DfpTest object = new org.apache.commons.math3.dfp.DfpTest();
-               object.setUp();
-               object.testDivide();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testToString() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -208,6 +190,24 @@ public class DfpTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
+    public void testDivide() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.dfp.DfpTest object = new org.apache.commons.math3.dfp.DfpTest();
+               object.setUp();
+               object.testDivide();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testNextAfter() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.dfp.DfpTest object = new org.apache.commons.math3.dfp.DfpTest();
+               object.setUp();
+               object.testNextAfter();
+        }
+    }
+
+    @Test(timeout=1000000)
     public void testAdd() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.dfp.DfpTest object = new org.apache.commons.math3.dfp.DfpTest();
@@ -253,33 +253,6 @@ public class DfpTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testHash() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.dfp.DfpTest object = new org.apache.commons.math3.dfp.DfpTest();
-               object.setUp();
-               object.testHash();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testAddField() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.dfp.DfpTest object = new org.apache.commons.math3.dfp.DfpTest();
-               object.setUp();
-               object.testAddField();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testLinearCombinationFaFa() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.dfp.DfpTest object = new org.apache.commons.math3.dfp.DfpTest();
-               object.setUp();
-               object.testLinearCombinationFaFa();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testAddDouble() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.dfp.DfpTest object = new org.apache.commons.math3.dfp.DfpTest();
@@ -294,6 +267,15 @@ public class DfpTest extends TestJPF {
                org.apache.commons.math3.dfp.DfpTest object = new org.apache.commons.math3.dfp.DfpTest();
                object.setUp();
                object.testSubtractField();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testAddField() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.dfp.DfpTest object = new org.apache.commons.math3.dfp.DfpTest();
+               object.setUp();
+               object.testAddField();
         }
     }
 
@@ -577,6 +559,15 @@ public class DfpTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
+    public void testLinearCombinationFaFa() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.dfp.DfpTest object = new org.apache.commons.math3.dfp.DfpTest();
+               object.setUp();
+               object.testLinearCombinationFaFa();
+        }
+    }
+
+    @Test(timeout=1000000)
     public void testLinearCombinationDaFa() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.dfp.DfpTest object = new org.apache.commons.math3.dfp.DfpTest();
@@ -654,6 +645,15 @@ public class DfpTest extends TestJPF {
                org.apache.commons.math3.dfp.DfpTest object = new org.apache.commons.math3.dfp.DfpTest();
                object.setUp();
                object.testEquals();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testHash() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.dfp.DfpTest object = new org.apache.commons.math3.dfp.DfpTest();
+               object.setUp();
+               object.testHash();
         }
     }
 

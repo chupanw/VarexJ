@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class CovarianceTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testConsistency() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.correlation.CovarianceTest object = new org.apache.commons.math3.stat.correlation.CovarianceTest();
-               object.testConsistency();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testLongly() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -46,6 +38,14 @@ public class CovarianceTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.correlation.CovarianceTest object = new org.apache.commons.math3.stat.correlation.CovarianceTest();
                object.testInsufficientData();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testConsistency() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.correlation.CovarianceTest object = new org.apache.commons.math3.stat.correlation.CovarianceTest();
+               object.testConsistency();
         }
     }
 

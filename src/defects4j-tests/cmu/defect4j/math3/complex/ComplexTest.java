@@ -5,10 +5,90 @@ import org.junit.Test;
 
 public class ComplexTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1000000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testSerial();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testCos() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testCos();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testAcos() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testAcos();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testSin() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testSin();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testAsin() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testAsin();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testTan() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testTan();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testAtan() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testAtan();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testCosh() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testCosh();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testSinh() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testSinh();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testTanh() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testTanh();
+        }
+    }
+
     @Test(timeout=1000000)
     public void testConstructorNaN() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -834,90 +914,10 @@ public class ComplexTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testSerial();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testConstructor() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
                object.testConstructor();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testCos() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testCos();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testAcos() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testAcos();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testSin() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testSin();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testAsin() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testAsin();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testTan() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testTan();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testAtan() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testAtan();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testCosh() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testCosh();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testSinh() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testSinh();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testTanh() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testTanh();
         }
     }
 

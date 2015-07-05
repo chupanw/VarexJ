@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class CorrelatedRandomVectorGeneratorTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1000000)
-    public void testRank() throws Exception {
+    public void testMath226() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.CorrelatedRandomVectorGeneratorTest object = new org.apache.commons.math3.random.CorrelatedRandomVectorGeneratorTest();
-               object.testRank();
+               object.testMath226();
         }
     }
 
@@ -42,10 +42,10 @@ public class CorrelatedRandomVectorGeneratorTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testMath226() throws Exception {
+    public void testRank() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.CorrelatedRandomVectorGeneratorTest object = new org.apache.commons.math3.random.CorrelatedRandomVectorGeneratorTest();
-               object.testMath226();
+               object.testRank();
         }
     }
 

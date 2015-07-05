@@ -5,10 +5,18 @@ import org.junit.Test;
 
 public class EnumeratedIntegerDistributionTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1000000)
+    public void testSample() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest();
+               object.testSample();
+        }
+    }
+
     @Test(timeout=1000000)
     public void testExceptions() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -70,14 +78,6 @@ public class EnumeratedIntegerDistributionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest();
                object.testIsSupportConnected();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testSample() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest();
-               object.testSample();
         }
     }
 

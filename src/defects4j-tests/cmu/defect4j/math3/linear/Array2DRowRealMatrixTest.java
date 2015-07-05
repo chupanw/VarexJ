@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class Array2DRowRealMatrixTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1000000)
-    public void testScalarAdd() throws Exception {
+    public void testSerial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
-               object.testScalarAdd();
+               object.testSerial();
         }
     }
 
@@ -38,6 +38,14 @@ public class Array2DRowRealMatrixTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
                object.testEqualsAndHashCode();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testScalarAdd() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
+               object.testScalarAdd();
         }
     }
 
@@ -294,14 +302,6 @@ public class Array2DRowRealMatrixTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
                object.testWalk();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
-               object.testSerial();
         }
     }
 

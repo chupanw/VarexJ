@@ -5,23 +5,23 @@ import org.junit.Test;
 
 public class DormandPrince54IntegratorTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1000000)
-    public void testMinStep() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+    public void testBackward() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest();
-               object.testMinStep();
+               object.testBackward();
         }
     }
 
     @Test(timeout=1000000)
-    public void testIncreasingTolerance() throws Exception {
+    public void testKepler() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest();
-               object.testIncreasingTolerance();
+               object.testKepler();
         }
     }
 
@@ -58,18 +58,18 @@ public class DormandPrince54IntegratorTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testBackward() throws Exception {
+    public void testIncreasingTolerance() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest();
-               object.testBackward();
+               object.testIncreasingTolerance();
         }
     }
 
     @Test(timeout=1000000)
-    public void testKepler() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
+    public void testMinStep() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest();
-               object.testKepler();
+               object.testMinStep();
         }
     }
 

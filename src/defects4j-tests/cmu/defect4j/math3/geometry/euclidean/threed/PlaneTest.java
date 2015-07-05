@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class PlaneTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -18,14 +18,6 @@ public class PlaneTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testSimilar() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
-               object.testSimilar();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testIntersection() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
@@ -34,10 +26,10 @@ public class PlaneTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testOffset() throws Exception {
+    public void testSimilar() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
-               object.testOffset();
+               object.testSimilar();
         }
     }
 
@@ -46,6 +38,14 @@ public class PlaneTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
                object.testPoint();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testOffset() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
+               object.testOffset();
         }
     }
 

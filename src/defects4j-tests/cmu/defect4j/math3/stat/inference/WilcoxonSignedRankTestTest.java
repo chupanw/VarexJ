@@ -5,23 +5,23 @@ import org.junit.Test;
 
 public class WilcoxonSignedRankTestTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testWilcoxonSignedRankInputValidation() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.inference.WilcoxonSignedRankTestTest object = new org.apache.commons.math3.stat.inference.WilcoxonSignedRankTestTest();
-               object.testWilcoxonSignedRankInputValidation();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testWilcoxonSignedRankSimple() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.inference.WilcoxonSignedRankTestTest object = new org.apache.commons.math3.stat.inference.WilcoxonSignedRankTestTest();
                object.testWilcoxonSignedRankSimple();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testWilcoxonSignedRankInputValidation() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.inference.WilcoxonSignedRankTestTest object = new org.apache.commons.math3.stat.inference.WilcoxonSignedRankTestTest();
+               object.testWilcoxonSignedRankInputValidation();
         }
     }
 

@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class FieldRotationDSTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -14,14 +14,6 @@ public class FieldRotationDSTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
                object.testDerivatives();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testCompose() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
-               object.testCompose();
         }
     }
 
@@ -150,6 +142,14 @@ public class FieldRotationDSTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
                object.testIssue801();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testCompose() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
+               object.testCompose();
         }
     }
 

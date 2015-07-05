@@ -130,8 +130,35 @@
 
     <target name="-compile-defects4j-tests" if="have_tests" depends="-compile-annotations,-compile-main,-compile-classes">
         <mkdir dir="build/defects4j-tests" />
-        <javac srcdir="src/defects4j-tests" destdir="build/defects4j-tests" includes="**/NormalDistributionTest.java" includeantruntime="false" debug="${debug}" deprecation="${deprecation}">
+        <javac srcdir="src/defects4j-tests" destdir="build/defects4j-tests" includes="**/NormalDistributionTest2.java" includeantruntime="false" debug="${debug}" deprecation="${deprecation}">
             <!--<exclude name="cmu/defect4j/math3/**"/>-->
+
+			<include name="**/SimplexSolverTest.java" />
+			<include name="**/MultiStartMultivariateOptimizerTest.java" />
+			<include name="**/NonLinearConjugateGradientOptimizerTest.java" />
+			<include name="**/PowellOptimizerTest.java" />
+			<include name="**/SimplexOptimizerMultiDirectionalTest.java" />
+			<include name="**/SimplexOptimizerNelderMeadTest.java" />
+			<include name="**/MultiStartMultivariateVectorOptimizerTest.java" />
+			<include name="**/AbstractLeastSquaresOptimizerTest.java" />
+			<include name="**/GaussNewtonOptimizerTest.java" />
+			<include name="**/LevenbergMarquardtOptimizerTest.java" />
+			<include name="**/MultiStartUnivariateOptimizerTest.java" />
+			<include name="**/SmoothingPolynomiaBicubicSplineInterpolatorTest.java" />
+			<include name="**/CurveFitterTest.java" />
+			<include name="**/GaussianFitterTest.java" />
+			<include name="**/HarmonicFitterTest.java" />
+			<include name="**/PolynomiaFitterTest.java" />
+			<include name="**/SimplexSolverTest.java" />
+			<include name="**/MultivariateFunctionMappingAdapterTest.java" />
+			<include name="**/NonLinearConjugateGradientOptimizerTest.java" />
+			<include name="**/BOBYQAOptimizerTest.java" />
+			<include name="**/CMAESOptimizerTest.java" />
+			<include name="**/MinpackTest.java" />
+			<include name="**/BrentOptimizerTest.java" />
+
+
+
             <compilerarg value="-XDenableSunApiLintControl" />
             <compilerarg value="-Xlint:all,-sunapi,-serial,-rawtypes,-unchecked" />
             <classpath>
@@ -559,7 +586,7 @@
                     <!--<include name="**/joda/**/Test*.class"/>-->
 					<!--<include name="**/lang3/**/*Test.class" />-->
                     <!--<include name="**/google/**/*Test.class" />-->
-                    <include name="**/math3/**/*Test.class" />
+                    <!--<include name="**/math3/**/*Test.class" />-->
 
                     <!--Partial test for debugging-->
                     <!--<include name="**/math3/**/differentiation/DSCompilerTest.class"/>-->
@@ -570,6 +597,32 @@
                     <!--<include name="**/lang3/math/NumberUtilsTest.class"/>-->
                     <!--<exclude name="**/lang3/ArrayUtilsAddTest.class" />-->
                     <!--<exclude name="**/lang3/AnnotationUtilsTest.class"/>-->
+
+					<!--For observing real patches-->
+					<!--<include name="**/SimplexSolverTest.class" />-->
+					<!--<include name="**/MultiStartMultivariateOptimizerTest.class" />-->
+					<!--<include name="**/NonLinearConjugateGradientOptimizerTest.class" />-->
+					<include name="**/optim/nonlinear/scalar/noderiv/PowellOptimizerTest.class" />
+					<!--<include name="**/SimplexOptimizerMultiDirectionalTest.class" />-->
+					<!--<include name="**/SimplexOptimizerNelderMeadTest.class" />-->
+					<!--<include name="**/MultiStartMultivariateVectorOptimizerTest.class" />-->
+					<!--<include name="**/AbstractLeastSquaresOptimizerTest.class" />-->
+					<!--<include name="**/GaussNewtonOptimizerTest.class" />-->
+					<!--<include name="**/LevenbergMarquardtOptimizerTest.class" />-->
+					<!--<include name="**/MultiStartUnivariateOptimizerTest.class" />-->
+					<!--<include name="**/SmoothingPolynomiaBicubicSplineInterpolatorTest.class" />-->
+					<!--<include name="**/CurveFitterTest.class" />-->
+					<!--<include name="**/GaussianFitterTest.class" />-->
+					<!--<include name="**/HarmonicFitterTest.class" />-->
+					<!--<include name="**/PolynomiaFitterTest.class" />-->
+					<!--<include name="**/SimplexSolverTest.class" />-->
+					<!--<include name="**/MultivariateFunctionMappingAdapterTest.class" />-->
+					<!--<include name="**/NonLinearConjugateGradientOptimizerTest.class" />-->
+					<!--<include name="**/BOBYQAOptimizerTest.class" />-->
+					<!--<include name="**/CMAESOptimizerTest.class" />-->
+					<!--<include name="**/MinpackTest.class" />-->
+					<!--<include name="**/BrentOptimizerTest.class" />-->
+
 
 
                     <exclude name="**/*$*.class" />

@@ -5,16 +5,34 @@ import org.junit.Test;
 
 public class EigenDecompositionTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1000000)
+    public void testSquareRoot() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.EigenDecompositionTest object = new org.apache.commons.math3.linear.EigenDecompositionTest();
+               object.setUp();
+               object.testSquareRoot();
+        }
+    }
+
     @Test(timeout=1000000)
     public void testDimensions() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.EigenDecompositionTest object = new org.apache.commons.math3.linear.EigenDecompositionTest();
                object.setUp();
                object.testDimensions();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testVOrthogonal() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.EigenDecompositionTest object = new org.apache.commons.math3.linear.EigenDecompositionTest();
+               object.setUp();
+               object.testVOrthogonal();
         }
     }
 
@@ -240,24 +258,6 @@ public class EigenDecompositionTest extends TestJPF {
                org.apache.commons.math3.linear.EigenDecompositionTest object = new org.apache.commons.math3.linear.EigenDecompositionTest();
                object.setUp();
                object.testZeroDivide();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testSquareRoot() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.EigenDecompositionTest object = new org.apache.commons.math3.linear.EigenDecompositionTest();
-               object.setUp();
-               object.testSquareRoot();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testVOrthogonal() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.EigenDecompositionTest object = new org.apache.commons.math3.linear.EigenDecompositionTest();
-               object.setUp();
-               object.testVOrthogonal();
         }
     }
 

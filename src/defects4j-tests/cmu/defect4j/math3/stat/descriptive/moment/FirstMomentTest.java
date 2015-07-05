@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class FirstMomentTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testEqualsAndHashCode() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.moment.FirstMomentTest object = new org.apache.commons.math3.stat.descriptive.moment.FirstMomentTest();
-               object.testEqualsAndHashCode();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testSerial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -26,10 +18,10 @@ public class FirstMomentTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testConsistency() throws Exception {
+    public void testEqualsAndHashCode() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.moment.FirstMomentTest object = new org.apache.commons.math3.stat.descriptive.moment.FirstMomentTest();
-               object.testConsistency();
+               object.testEqualsAndHashCode();
         }
     }
 
@@ -54,6 +46,14 @@ public class FirstMomentTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.moment.FirstMomentTest object = new org.apache.commons.math3.stat.descriptive.moment.FirstMomentTest();
                object.testCopyConsistency();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testConsistency() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.moment.FirstMomentTest object = new org.apache.commons.math3.stat.descriptive.moment.FirstMomentTest();
+               object.testConsistency();
         }
     }
 

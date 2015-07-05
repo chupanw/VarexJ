@@ -5,25 +5,16 @@ import org.junit.Test;
 
 public class HypergeometricDistributionTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1000000)
-    public void testMoments() throws Exception {
+    public void testDegenerateNoFailures() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.HypergeometricDistributionTest object = new org.apache.commons.math3.distribution.HypergeometricDistributionTest();
                object.setUp();
-               object.testMoments();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testPreconditions() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.HypergeometricDistributionTest object = new org.apache.commons.math3.distribution.HypergeometricDistributionTest();
-               object.setUp();
-               object.testPreconditions();
+               object.testDegenerateNoFailures();
         }
     }
 
@@ -42,15 +33,6 @@ public class HypergeometricDistributionTest extends TestJPF {
                org.apache.commons.math3.distribution.HypergeometricDistributionTest object = new org.apache.commons.math3.distribution.HypergeometricDistributionTest();
                object.setUp();
                object.testDegenerateFullSample();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testDegenerateNoFailures() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.HypergeometricDistributionTest object = new org.apache.commons.math3.distribution.HypergeometricDistributionTest();
-               object.setUp();
-               object.testDegenerateNoFailures();
         }
     }
 
@@ -91,11 +73,29 @@ public class HypergeometricDistributionTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testMath1021() throws Exception {
+    public void testPreconditions() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.HypergeometricDistributionTest object = new org.apache.commons.math3.distribution.HypergeometricDistributionTest();
                object.setUp();
-               object.testMath1021();
+               object.testPreconditions();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testMoments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.HypergeometricDistributionTest object = new org.apache.commons.math3.distribution.HypergeometricDistributionTest();
+               object.setUp();
+               object.testMoments();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testIllegalArguments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.HypergeometricDistributionTest object = new org.apache.commons.math3.distribution.HypergeometricDistributionTest();
+               object.setUp();
+               object.testIllegalArguments();
         }
     }
 
@@ -141,15 +141,6 @@ public class HypergeometricDistributionTest extends TestJPF {
                org.apache.commons.math3.distribution.HypergeometricDistributionTest object = new org.apache.commons.math3.distribution.HypergeometricDistributionTest();
                object.setUp();
                object.testSampling();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testIllegalArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.HypergeometricDistributionTest object = new org.apache.commons.math3.distribution.HypergeometricDistributionTest();
-               object.setUp();
-               object.testIllegalArguments();
         }
     }
 

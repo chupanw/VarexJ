@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class AbstractRandomGeneratorTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -127,24 +127,6 @@ public class AbstractRandomGeneratorTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testNextIntIAE() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.random.AbstractRandomGeneratorTest object = new org.apache.commons.math3.random.AbstractRandomGeneratorTest();
-               object.setUp();
-               object.testNextIntIAE();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testNextIntExtremeValues() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.random.AbstractRandomGeneratorTest object = new org.apache.commons.math3.random.AbstractRandomGeneratorTest();
-               object.setUp();
-               object.testNextIntExtremeValues();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testNextLongExtremeValues() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.AbstractRandomGeneratorTest object = new org.apache.commons.math3.random.AbstractRandomGeneratorTest();
@@ -159,6 +141,15 @@ public class AbstractRandomGeneratorTest extends TestJPF {
                org.apache.commons.math3.random.AbstractRandomGeneratorTest object = new org.apache.commons.math3.random.AbstractRandomGeneratorTest();
                object.setUp();
                object.testNextUniformExtremeValues();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testNextIntIAE() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.random.AbstractRandomGeneratorTest object = new org.apache.commons.math3.random.AbstractRandomGeneratorTest();
+               object.setUp();
+               object.testNextIntIAE();
         }
     }
 
@@ -222,6 +213,15 @@ public class AbstractRandomGeneratorTest extends TestJPF {
                org.apache.commons.math3.random.AbstractRandomGeneratorTest object = new org.apache.commons.math3.random.AbstractRandomGeneratorTest();
                object.setUp();
                object.testNextLongNegativeRange();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testNextIntExtremeValues() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.random.AbstractRandomGeneratorTest object = new org.apache.commons.math3.random.AbstractRandomGeneratorTest();
+               object.setUp();
+               object.testNextIntExtremeValues();
         }
     }
 

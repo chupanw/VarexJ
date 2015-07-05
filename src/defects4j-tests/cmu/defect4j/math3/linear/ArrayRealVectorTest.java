@@ -5,26 +5,10 @@ import org.junit.Test;
 
 public class ArrayRealVectorTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testGetDataRef() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.ArrayRealVectorTest object = new org.apache.commons.math3.linear.ArrayRealVectorTest();
-               object.testGetDataRef();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testPredicates() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.ArrayRealVectorTest object = new org.apache.commons.math3.linear.ArrayRealVectorTest();
-               object.testPredicates();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testConstructors() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -42,6 +26,22 @@ public class ArrayRealVectorTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
+    public void testGetDataRef() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.ArrayRealVectorTest object = new org.apache.commons.math3.linear.ArrayRealVectorTest();
+               object.testGetDataRef();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testPredicates() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.ArrayRealVectorTest object = new org.apache.commons.math3.linear.ArrayRealVectorTest();
+               object.testPredicates();
+        }
+    }
+
+    @Test(timeout=1000000)
     public void testIterator() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.ArrayRealVectorTest object = new org.apache.commons.math3.linear.ArrayRealVectorTest();
@@ -50,18 +50,18 @@ public class ArrayRealVectorTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testGetEntry() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.ArrayRealVectorTest object = new org.apache.commons.math3.linear.ArrayRealVectorTest();
-               object.testGetEntry();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testSerial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.ArrayRealVectorTest object = new org.apache.commons.math3.linear.ArrayRealVectorTest();
                object.testSerial();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testEquals() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.ArrayRealVectorTest object = new org.apache.commons.math3.linear.ArrayRealVectorTest();
+               object.testEquals();
         }
     }
 
@@ -82,18 +82,18 @@ public class ArrayRealVectorTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testGetEntryInvalidIndex2() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
-               org.apache.commons.math3.linear.ArrayRealVectorTest object = new org.apache.commons.math3.linear.ArrayRealVectorTest();
-               object.testGetEntryInvalidIndex2();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testSetEntry() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.ArrayRealVectorTest object = new org.apache.commons.math3.linear.ArrayRealVectorTest();
                object.testSetEntry();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testGetEntryInvalidIndex2() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
+               org.apache.commons.math3.linear.ArrayRealVectorTest object = new org.apache.commons.math3.linear.ArrayRealVectorTest();
+               object.testGetEntryInvalidIndex2();
         }
     }
 
@@ -866,10 +866,10 @@ public class ArrayRealVectorTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testEquals() throws Exception {
+    public void testGetEntry() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.ArrayRealVectorTest object = new org.apache.commons.math3.linear.ArrayRealVectorTest();
-               object.testEquals();
+               object.testGetEntry();
         }
     }
 

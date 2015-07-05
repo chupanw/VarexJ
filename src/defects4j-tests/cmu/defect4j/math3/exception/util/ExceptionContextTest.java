@@ -5,23 +5,23 @@ import org.junit.Test;
 
 public class ExceptionContextTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testNoArgAddMessage() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.exception.util.ExceptionContextTest object = new org.apache.commons.math3.exception.util.ExceptionContextTest();
-               object.testNoArgAddMessage();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testMessageChain() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.exception.util.ExceptionContextTest object = new org.apache.commons.math3.exception.util.ExceptionContextTest();
                object.testMessageChain();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testNoArgAddMessage() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.exception.util.ExceptionContextTest object = new org.apache.commons.math3.exception.util.ExceptionContextTest();
+               object.testNoArgAddMessage();
         }
     }
 

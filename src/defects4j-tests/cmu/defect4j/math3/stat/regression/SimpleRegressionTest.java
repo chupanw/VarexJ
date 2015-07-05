@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class SimpleRegressionTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testClear() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.regression.SimpleRegressionTest object = new org.apache.commons.math3.stat.regression.SimpleRegressionTest();
-               object.testClear();
-        }
-    }
-
     @Test(timeout=1000000)
     public void testRandom() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -26,10 +18,10 @@ public class SimpleRegressionTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testAppend() throws Exception {
+    public void testNaNs() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.SimpleRegressionTest object = new org.apache.commons.math3.stat.regression.SimpleRegressionTest();
-               object.testAppend();
+               object.testNaNs();
         }
     }
 
@@ -78,6 +70,14 @@ public class SimpleRegressionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.SimpleRegressionTest object = new org.apache.commons.math3.stat.regression.SimpleRegressionTest();
                object.testCorr();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testClear() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.regression.SimpleRegressionTest object = new org.apache.commons.math3.stat.regression.SimpleRegressionTest();
+               object.testClear();
         }
     }
 
@@ -166,14 +166,6 @@ public class SimpleRegressionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.SimpleRegressionTest object = new org.apache.commons.math3.stat.regression.SimpleRegressionTest();
                object.testRemoveMultiplePastEmpty();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testNaNs() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.regression.SimpleRegressionTest object = new org.apache.commons.math3.stat.regression.SimpleRegressionTest();
-               object.testNaNs();
         }
     }
 

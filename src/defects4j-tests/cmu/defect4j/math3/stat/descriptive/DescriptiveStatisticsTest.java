@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class DescriptiveStatisticsTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -14,6 +14,14 @@ public class DescriptiveStatisticsTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.DescriptiveStatisticsTest object = new org.apache.commons.math3.stat.descriptive.DescriptiveStatisticsTest();
                object.testToString();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testCopy() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.DescriptiveStatisticsTest object = new org.apache.commons.math3.stat.descriptive.DescriptiveStatisticsTest();
+               object.testCopy();
         }
     }
 
@@ -78,14 +86,6 @@ public class DescriptiveStatisticsTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.DescriptiveStatisticsTest object = new org.apache.commons.math3.stat.descriptive.DescriptiveStatisticsTest();
                object.testSummaryConsistency();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testCopy() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.DescriptiveStatisticsTest object = new org.apache.commons.math3.stat.descriptive.DescriptiveStatisticsTest();
-               object.testCopy();
         }
     }
 

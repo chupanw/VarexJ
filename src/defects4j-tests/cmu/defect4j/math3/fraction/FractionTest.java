@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class FractionTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/commons-math-3.1-SNAPSHOT.jar"};
+    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1000000)
-    public void testDivide() throws Exception {
+    public void testSerial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fraction.FractionTest object = new org.apache.commons.math3.fraction.FractionTest();
-               object.testDivide();
+               object.testSerial();
         }
     }
 
@@ -22,6 +22,30 @@ public class FractionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fraction.FractionTest object = new org.apache.commons.math3.fraction.FractionTest();
                object.testToString();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testIntValue() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.FractionTest object = new org.apache.commons.math3.fraction.FractionTest();
+               object.testIntValue();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testIntegerOverflow() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.FractionTest object = new org.apache.commons.math3.fraction.FractionTest();
+               object.testIntegerOverflow();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testMath835() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.FractionTest object = new org.apache.commons.math3.fraction.FractionTest();
+               object.testMath835();
         }
     }
 
@@ -42,14 +66,6 @@ public class FractionTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testCompareTo() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.FractionTest object = new org.apache.commons.math3.fraction.FractionTest();
-               object.testCompareTo();
-        }
-    }
-
-    @Test(timeout=1000000)
     public void testDigitLimitConstructor() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fraction.FractionTest object = new org.apache.commons.math3.fraction.FractionTest();
@@ -62,6 +78,14 @@ public class FractionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fraction.FractionTest object = new org.apache.commons.math3.fraction.FractionTest();
                object.testEpsilonLimitConstructor();
+        }
+    }
+
+    @Test(timeout=1000000)
+    public void testCompareTo() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.FractionTest object = new org.apache.commons.math3.fraction.FractionTest();
+               object.testCompareTo();
         }
     }
 
@@ -122,18 +146,10 @@ public class FractionTest extends TestJPF {
     }
 
     @Test(timeout=1000000)
-    public void testSerial() throws Exception {
+    public void testDivide() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fraction.FractionTest object = new org.apache.commons.math3.fraction.FractionTest();
-               object.testSerial();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testIntValue() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.FractionTest object = new org.apache.commons.math3.fraction.FractionTest();
-               object.testIntValue();
+               object.testDivide();
         }
     }
 
@@ -190,22 +206,6 @@ public class FractionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fraction.FractionTest object = new org.apache.commons.math3.fraction.FractionTest();
                object.testAbs();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testIntegerOverflow() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.FractionTest object = new org.apache.commons.math3.fraction.FractionTest();
-               object.testIntegerOverflow();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testMath835() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.FractionTest object = new org.apache.commons.math3.fraction.FractionTest();
-               object.testMath835();
         }
     }
 
