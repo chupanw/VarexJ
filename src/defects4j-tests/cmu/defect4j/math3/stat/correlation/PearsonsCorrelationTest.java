@@ -5,43 +5,11 @@ import org.junit.Test;
 
 public class PearsonsCorrelationTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testLongly() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest object = new org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest();
-               object.testLongly();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testSwissFertility() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest object = new org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest();
-               object.testSwissFertility();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testInsufficientData() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest object = new org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest();
-               object.testInsufficientData();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testConsistency() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest object = new org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest();
-               object.testConsistency();
-        }
-    }
-
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testConstant() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest object = new org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest();
@@ -49,15 +17,39 @@ public class PearsonsCorrelationTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
-    public void testCovarianceConsistency() throws Exception {
+    @Test(timeout=60000)
+    public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest object = new org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest();
-               object.testCovarianceConsistency();
+               object.testConsistency();
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
+    public void testLongly() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest object = new org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest();
+               object.testLongly();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testSwissFertility() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest object = new org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest();
+               object.testSwissFertility();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testInsufficientData() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest object = new org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest();
+               object.testInsufficientData();
+        }
+    }
+
+    @Test(timeout=60000)
     public void testPValueNearZero() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest object = new org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest();
@@ -65,11 +57,19 @@ public class PearsonsCorrelationTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testStdErrorConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest object = new org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest();
                object.testStdErrorConsistency();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testCovarianceConsistency() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest object = new org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest();
+               object.testCovarianceConsistency();
         }
     }
 

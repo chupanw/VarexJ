@@ -5,11 +5,11 @@ import org.junit.Test;
 
 public class DerivativeStructureTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testTooLargeOrder() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -17,15 +17,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
-    public void testWrongVariableIndex() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
-               org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
-               object.testWrongVariableIndex();
-        }
-    }
-
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMissingOrders() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -33,7 +25,15 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
+    public void testWrongVariableIndex() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
+               org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
+               object.testWrongVariableIndex();
+        }
+    }
+
+    @Test(timeout=60000)
     public void testVariableWithoutDerivative0() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -41,7 +41,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testVariableWithoutDerivative1() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -49,7 +49,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testVariable() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -57,7 +57,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testConstant() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -65,7 +65,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testPrimitiveAdd() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -73,7 +73,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAdd() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -81,7 +81,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testPrimitiveSubtract() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -89,7 +89,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSubtract() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -97,7 +97,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testPrimitiveMultiply() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -105,7 +105,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMultiply() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -113,7 +113,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testNegate() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -121,7 +121,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testReciprocal() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -129,7 +129,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testPow() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -137,7 +137,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testExpression() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -145,7 +145,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCompositionOneVariableX() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -153,7 +153,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testTrigo() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -161,7 +161,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSqrtDefinition() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -169,7 +169,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testRootNSingularity() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -177,7 +177,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSqrtPow2() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -185,7 +185,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCbrtDefinition() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -193,7 +193,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCbrtPow3() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -201,7 +201,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testPowReciprocalPow() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -209,7 +209,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testHypotDefinition() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -217,7 +217,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testHypotNoOverflow() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -225,7 +225,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testHypotNeglectible() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -233,7 +233,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testHypotSpecial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -241,7 +241,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testPrimitiveRemainder() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -249,7 +249,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testRemainder() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -257,7 +257,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testExp() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -265,7 +265,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testExpm1Definition() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -273,7 +273,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLog() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -281,7 +281,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLog1pDefinition() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -289,7 +289,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLog10Definition() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -297,7 +297,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLogExp() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -305,7 +305,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLog1pExpm1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -313,7 +313,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLog10Power() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -321,7 +321,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSinCos() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -329,7 +329,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSinAsin() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -337,7 +337,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCosAcos() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -345,7 +345,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testTanAtan() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -353,7 +353,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testTangentDefinition() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -361,7 +361,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAtan2() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -369,7 +369,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAtan2SpecialCases() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -377,7 +377,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSinhDefinition() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -385,7 +385,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCoshDefinition() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -393,7 +393,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testTanhDefinition() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -401,7 +401,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSinhAsinh() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -409,7 +409,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCoshAcosh() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -417,7 +417,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testTanhAtanh() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -425,7 +425,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCompositionOneVariableY() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -433,7 +433,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testTaylorPolynomial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -441,7 +441,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testTaylorAtan2() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -449,7 +449,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAbs() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -457,7 +457,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSignum() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -465,7 +465,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCeilFloorRintLong() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -473,7 +473,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCopySign() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -481,7 +481,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testToDegreesDefinition() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -489,7 +489,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testToRadiansDefinition() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -497,7 +497,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testDegRad() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -505,7 +505,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testComposeMismatchedDimensions() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -513,7 +513,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCompose() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -521,7 +521,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testField() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -529,7 +529,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testOneParameterConstructor() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -537,7 +537,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testOneOrderConstructor() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -545,7 +545,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLinearCombination1DSDS() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -553,7 +553,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLinearCombination1DoubleDS() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -561,7 +561,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLinearCombination2DSDS() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -569,7 +569,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLinearCombination2DoubleDS() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -577,7 +577,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSerialization() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -585,23 +585,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
-    public void testAddDouble() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
-               object.testAddDouble();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testSubtractField() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
-               object.testSubtractField();
-        }
-    }
-
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAddField() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -609,7 +593,23 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
+    public void testAddDouble() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
+               object.testAddDouble();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testSubtractField() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
+               object.testSubtractField();
+        }
+    }
+
+    @Test(timeout=60000)
     public void testSubtractDouble() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -617,7 +617,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMultiplyField() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -625,7 +625,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMultiplyDouble() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -633,7 +633,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMultiplyInt() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -641,7 +641,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testDivideField() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -649,7 +649,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testDivideDouble() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -657,7 +657,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testRemainderField() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -665,7 +665,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testRemainderDouble() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -673,7 +673,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCos() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -681,7 +681,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAcos() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -689,7 +689,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSin() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -697,7 +697,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAsin() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -705,7 +705,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testTan() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -713,7 +713,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAtan() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -721,7 +721,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCosh() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -729,7 +729,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAcosh() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -737,7 +737,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSinh() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -745,7 +745,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAsinh() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -753,7 +753,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testTanh() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -761,7 +761,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAtanh() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -769,7 +769,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSqrt() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -777,7 +777,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCbrt() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -785,7 +785,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testHypot() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -793,7 +793,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testRootN() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -801,7 +801,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testPowField() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -809,7 +809,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testPowDouble() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -817,7 +817,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testPowInt() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -825,7 +825,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testExpm1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -833,7 +833,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLog1p() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -841,7 +841,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCeil() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -849,7 +849,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testFloor() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -857,7 +857,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testRint() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -865,7 +865,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testRound() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -873,7 +873,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCopySignField() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -881,7 +881,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCopySignDouble() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -889,7 +889,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testScalb() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -897,7 +897,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLinearCombinationFaFa() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -905,7 +905,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLinearCombinationDaFa() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -913,7 +913,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLinearCombinationFF2() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -921,7 +921,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLinearCombinationDF2() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -929,7 +929,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLinearCombinationFF3() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -937,7 +937,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLinearCombinationDF3() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -945,7 +945,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLinearCombinationFF4() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -953,7 +953,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLinearCombinationDF4() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -961,7 +961,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testGetField() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -969,7 +969,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testEquals() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
@@ -977,7 +977,7 @@ public class DerivativeStructureTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testHash() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();

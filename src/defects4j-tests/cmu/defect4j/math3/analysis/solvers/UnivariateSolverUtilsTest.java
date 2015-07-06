@@ -5,11 +5,19 @@ import org.junit.Test;
 
 public class UnivariateSolverUtilsTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
+    public void testBadEndpoints() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalArgumentException", config)) {
+               org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest object = new org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest();
+               object.testBadEndpoints();
+        }
+    }
+
+    @Test(timeout=60000)
     public void testSolveNull() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalArgumentException", config)) {
                org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest object = new org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest();
@@ -17,7 +25,7 @@ public class UnivariateSolverUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSolveBadEndpoints() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalArgumentException", config)) {
                org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest object = new org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest();
@@ -25,7 +33,7 @@ public class UnivariateSolverUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSolveBadAccuracy() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest object = new org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest();
@@ -33,7 +41,7 @@ public class UnivariateSolverUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSolveSin() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest object = new org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest();
@@ -41,7 +49,7 @@ public class UnivariateSolverUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSolveAccuracyNull() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalArgumentException", config)) {
                org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest object = new org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest();
@@ -49,7 +57,7 @@ public class UnivariateSolverUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSolveAccuracySin() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest object = new org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest();
@@ -57,7 +65,7 @@ public class UnivariateSolverUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSolveNoRoot() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalArgumentException", config)) {
                org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest object = new org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest();
@@ -65,7 +73,7 @@ public class UnivariateSolverUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testBracketSin() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest object = new org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest();
@@ -73,7 +81,7 @@ public class UnivariateSolverUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testBracketEndpointRoot() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest object = new org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest();
@@ -81,7 +89,7 @@ public class UnivariateSolverUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testNullFunction() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalArgumentException", config)) {
                org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest object = new org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest();
@@ -89,7 +97,7 @@ public class UnivariateSolverUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testBadInitial() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalArgumentException", config)) {
                org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest object = new org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest();
@@ -97,7 +105,7 @@ public class UnivariateSolverUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testBadMaximumIterations() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalArgumentException", config)) {
                org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest object = new org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest();
@@ -105,19 +113,11 @@ public class UnivariateSolverUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMisc() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest object = new org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest();
                object.testMisc();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testBadEndpoints() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalArgumentException", config)) {
-               org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest object = new org.apache.commons.math3.analysis.solvers.UnivariateSolverUtilsTest();
-               object.testBadEndpoints();
         }
     }
 

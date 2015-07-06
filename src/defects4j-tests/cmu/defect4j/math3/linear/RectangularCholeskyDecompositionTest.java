@@ -5,11 +5,11 @@ import org.junit.Test;
 
 public class RectangularCholeskyDecompositionTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testDecomposition3x3() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest object = new org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest();
@@ -17,7 +17,7 @@ public class RectangularCholeskyDecompositionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testFullRank() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest object = new org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest();
@@ -25,7 +25,7 @@ public class RectangularCholeskyDecompositionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMath789() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest object = new org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest();

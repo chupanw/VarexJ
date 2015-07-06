@@ -5,11 +5,11 @@ import org.junit.Test;
 
 public class ArithmeticUtilsTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testPow() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -17,15 +17,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
-    public void test0Choose0() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
-               object.test0Choose0();
-        }
-    }
-
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAddAndCheck() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -33,7 +25,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAddAndCheckLong() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -41,7 +33,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testBinomialCoefficient() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -49,7 +41,15 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
+    public void test0Choose0() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
+               object.test0Choose0();
+        }
+    }
+
+    @Test(timeout=60000)
     public void testBinomialCoefficientFail() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -57,7 +57,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testBinomialCoefficientLarge() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -65,7 +65,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testFactorial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -73,7 +73,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testFactorialFail() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -81,7 +81,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testGcd() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -89,7 +89,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testGcdConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -97,7 +97,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testGcdLong() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -105,7 +105,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLcm() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -113,7 +113,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testLcmLong() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -121,7 +121,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMulAndCheck() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -129,7 +129,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMulAndCheckLong() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -137,7 +137,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSubAndCheck() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -145,7 +145,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSubAndCheckErrorMessage() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -153,7 +153,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSubAndCheckLong() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -161,7 +161,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testIsPowerOfTwo() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -169,7 +169,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testStirlingS2() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -177,7 +177,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testStirlingS2NegativeN() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NotPositiveException", config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -185,7 +185,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testStirlingS2LargeK() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -193,7 +193,7 @@ public class ArithmeticUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testStirlingS2Overflow() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathArithmeticException", config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();

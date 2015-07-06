@@ -5,11 +5,11 @@ import org.junit.Test;
 
 public class BrentOptimizerTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMath832() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
@@ -17,7 +17,7 @@ public class BrentOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testBoundaries() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
@@ -25,23 +25,7 @@ public class BrentOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
-    public void testSinMin() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
-               object.testSinMin();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testSinMinWithValueChecker() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
-               object.testSinMinWithValueChecker();
-        }
-    }
-
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testQuinticMin() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
@@ -49,7 +33,23 @@ public class BrentOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
+    public void testSinMin() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
+               object.testSinMin();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testSinMinWithValueChecker() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
+               object.testSinMinWithValueChecker();
+        }
+    }
+
+    @Test(timeout=60000)
     public void testQuinticMinStatistics() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
@@ -57,7 +57,7 @@ public class BrentOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testQuinticMax() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
@@ -65,7 +65,7 @@ public class BrentOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMinEndpoints() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
@@ -73,7 +73,7 @@ public class BrentOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testKeepInitIfBest() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
@@ -81,7 +81,7 @@ public class BrentOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMath855() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();

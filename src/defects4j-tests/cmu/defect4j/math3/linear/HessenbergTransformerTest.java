@@ -5,11 +5,19 @@ import org.junit.Test;
 
 public class HessenbergTransformerTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
+    public void testNonSquare() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.HessenbergTransformerTest object = new org.apache.commons.math3.linear.HessenbergTransformerTest();
+               object.testNonSquare();
+        }
+    }
+
+    @Test(timeout=60000)
     public void testAEqualPHPt() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.HessenbergTransformerTest object = new org.apache.commons.math3.linear.HessenbergTransformerTest();
@@ -17,7 +25,7 @@ public class HessenbergTransformerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testPOrthogonal() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.HessenbergTransformerTest object = new org.apache.commons.math3.linear.HessenbergTransformerTest();
@@ -25,7 +33,7 @@ public class HessenbergTransformerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testPTOrthogonal() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.HessenbergTransformerTest object = new org.apache.commons.math3.linear.HessenbergTransformerTest();
@@ -33,7 +41,7 @@ public class HessenbergTransformerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testHessenbergForm() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.HessenbergTransformerTest object = new org.apache.commons.math3.linear.HessenbergTransformerTest();
@@ -41,7 +49,7 @@ public class HessenbergTransformerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testRandomData() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.HessenbergTransformerTest object = new org.apache.commons.math3.linear.HessenbergTransformerTest();
@@ -49,7 +57,7 @@ public class HessenbergTransformerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testRandomDataNormalDistribution() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.HessenbergTransformerTest object = new org.apache.commons.math3.linear.HessenbergTransformerTest();
@@ -57,7 +65,7 @@ public class HessenbergTransformerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMatricesValues5() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.HessenbergTransformerTest object = new org.apache.commons.math3.linear.HessenbergTransformerTest();
@@ -65,19 +73,11 @@ public class HessenbergTransformerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMatricesValues3() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.HessenbergTransformerTest object = new org.apache.commons.math3.linear.HessenbergTransformerTest();
                object.testMatricesValues3();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testNonSquare() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.HessenbergTransformerTest object = new org.apache.commons.math3.linear.HessenbergTransformerTest();
-               object.testNonSquare();
         }
     }
 
