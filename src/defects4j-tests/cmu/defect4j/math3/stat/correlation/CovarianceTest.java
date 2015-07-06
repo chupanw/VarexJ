@@ -5,43 +5,19 @@ import org.junit.Test;
 
 public class CovarianceTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testLongly() throws Exception {
+    @Test(timeout=60000)
+    public void testConstant() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.correlation.CovarianceTest object = new org.apache.commons.math3.stat.correlation.CovarianceTest();
-               object.testLongly();
+               object.testConstant();
         }
     }
 
-    @Test(timeout=1000000)
-    public void testSwissFertility() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.correlation.CovarianceTest object = new org.apache.commons.math3.stat.correlation.CovarianceTest();
-               object.testSwissFertility();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testOneColumn() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.correlation.CovarianceTest object = new org.apache.commons.math3.stat.correlation.CovarianceTest();
-               object.testOneColumn();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testInsufficientData() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.correlation.CovarianceTest object = new org.apache.commons.math3.stat.correlation.CovarianceTest();
-               object.testInsufficientData();
-        }
-    }
-
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.correlation.CovarianceTest object = new org.apache.commons.math3.stat.correlation.CovarianceTest();
@@ -49,11 +25,35 @@ public class CovarianceTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
-    public void testConstant() throws Exception {
+    @Test(timeout=60000)
+    public void testLongly() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.correlation.CovarianceTest object = new org.apache.commons.math3.stat.correlation.CovarianceTest();
-               object.testConstant();
+               object.testLongly();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testSwissFertility() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.correlation.CovarianceTest object = new org.apache.commons.math3.stat.correlation.CovarianceTest();
+               object.testSwissFertility();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testOneColumn() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.correlation.CovarianceTest object = new org.apache.commons.math3.stat.correlation.CovarianceTest();
+               object.testOneColumn();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testInsufficientData() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.correlation.CovarianceTest object = new org.apache.commons.math3.stat.correlation.CovarianceTest();
+               object.testInsufficientData();
         }
     }
 

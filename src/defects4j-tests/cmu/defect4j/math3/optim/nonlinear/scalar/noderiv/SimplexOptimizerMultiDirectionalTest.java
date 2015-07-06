@@ -5,11 +5,11 @@ import org.junit.Test;
 
 public class SimplexOptimizerMultiDirectionalTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMinimize1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest();
@@ -17,7 +17,7 @@ public class SimplexOptimizerMultiDirectionalTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMinimize2() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest();
@@ -25,7 +25,7 @@ public class SimplexOptimizerMultiDirectionalTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMaximize1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest();
@@ -33,7 +33,7 @@ public class SimplexOptimizerMultiDirectionalTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMaximize2() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest();
@@ -41,7 +41,7 @@ public class SimplexOptimizerMultiDirectionalTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testPowell() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest();
@@ -49,7 +49,7 @@ public class SimplexOptimizerMultiDirectionalTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMath283() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest();
@@ -57,19 +57,19 @@ public class SimplexOptimizerMultiDirectionalTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
-    public void testRosenbrock() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest();
-               object.testRosenbrock();
-        }
-    }
-
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testBoundsUnsupported() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathUnsupportedOperationException", config)) {
                org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest();
                object.testBoundsUnsupported();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testRosenbrock() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest();
+               object.testRosenbrock();
         }
     }
 

@@ -17,11 +17,11 @@ import java.util.LinkedList;
  */
 public class MathTestGenerator extends TestGenerator {
 
-    private String config = "\"+nhandler.delegateUnhandledNative\", \"+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar\"";
+    private String config = "\"+interaction=interaction\", \"+search.class= .search.RandomSearch\", \"+nhandler.delegateUnhandledNative\", \"+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar\"";
 
     public static void main(String[] args) {
         MathTestGenerator generator = new MathTestGenerator();
-        generator.timeout = 1000000;
+        generator.timeout = 60000;
         generator.searchTest();
     }
 

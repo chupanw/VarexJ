@@ -5,11 +5,19 @@ import org.junit.Test;
 
 public class BicubicSplineInterpolatorTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
+    public void testPreconditions() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest();
+               object.testPreconditions();
+        }
+    }
+
+    @Test(timeout=60000)
     public void testPlane() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest();
@@ -17,19 +25,11 @@ public class BicubicSplineInterpolatorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testParaboloid() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest();
                object.testParaboloid();
-        }
-    }
-
-    @Test(timeout=1000000)
-    public void testPreconditions() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatorTest();
-               object.testPreconditions();
         }
     }
 

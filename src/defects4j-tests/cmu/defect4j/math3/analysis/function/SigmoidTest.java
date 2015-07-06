@@ -5,11 +5,11 @@ import org.junit.Test;
 
 public class SigmoidTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testSomeValues() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.SigmoidTest object = new org.apache.commons.math3.analysis.function.SigmoidTest();
@@ -17,7 +17,7 @@ public class SigmoidTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testDerivativeLargeArguments() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.SigmoidTest object = new org.apache.commons.math3.analysis.function.SigmoidTest();
@@ -25,7 +25,7 @@ public class SigmoidTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testParametricUsage1() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NullArgumentException", config)) {
                org.apache.commons.math3.analysis.function.SigmoidTest object = new org.apache.commons.math3.analysis.function.SigmoidTest();
@@ -33,7 +33,7 @@ public class SigmoidTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testParametricUsage2() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
                org.apache.commons.math3.analysis.function.SigmoidTest object = new org.apache.commons.math3.analysis.function.SigmoidTest();
@@ -41,7 +41,7 @@ public class SigmoidTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testParametricUsage3() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NullArgumentException", config)) {
                org.apache.commons.math3.analysis.function.SigmoidTest object = new org.apache.commons.math3.analysis.function.SigmoidTest();
@@ -49,7 +49,7 @@ public class SigmoidTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testParametricUsage4() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
                org.apache.commons.math3.analysis.function.SigmoidTest object = new org.apache.commons.math3.analysis.function.SigmoidTest();
@@ -57,7 +57,7 @@ public class SigmoidTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testParametricValue() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.SigmoidTest object = new org.apache.commons.math3.analysis.function.SigmoidTest();
@@ -65,7 +65,7 @@ public class SigmoidTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testDerivative() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.SigmoidTest object = new org.apache.commons.math3.analysis.function.SigmoidTest();
@@ -73,7 +73,7 @@ public class SigmoidTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testDerivativesHighOrder() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.SigmoidTest object = new org.apache.commons.math3.analysis.function.SigmoidTest();

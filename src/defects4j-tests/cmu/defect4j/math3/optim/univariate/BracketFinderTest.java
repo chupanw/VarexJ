@@ -5,11 +5,11 @@ import org.junit.Test;
 
 public class BracketFinderTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCubicMin() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.univariate.BracketFinderTest object = new org.apache.commons.math3.optim.univariate.BracketFinderTest();
@@ -17,7 +17,7 @@ public class BracketFinderTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testCubicMax() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.univariate.BracketFinderTest object = new org.apache.commons.math3.optim.univariate.BracketFinderTest();
@@ -25,7 +25,7 @@ public class BracketFinderTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testMinimumIsOnIntervalBoundary() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.univariate.BracketFinderTest object = new org.apache.commons.math3.optim.univariate.BracketFinderTest();
@@ -33,7 +33,7 @@ public class BracketFinderTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testIntervalBoundsOrdering() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.univariate.BracketFinderTest object = new org.apache.commons.math3.optim.univariate.BracketFinderTest();

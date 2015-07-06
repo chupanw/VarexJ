@@ -599,29 +599,29 @@
                     <!--<exclude name="**/lang3/AnnotationUtilsTest.class"/>-->
 
 					<!--For observing real patches-->
-					<!--<include name="**/SimplexSolverTest.class" />-->
-					<!--<include name="**/MultiStartMultivariateOptimizerTest.class" />-->
-					<!--<include name="**/NonLinearConjugateGradientOptimizerTest.class" />-->
+					<include name="**/SimplexSolverTest.class" />
+					<include name="**/MultiStartMultivariateOptimizerTest.class" />
+					<include name="**/NonLinearConjugateGradientOptimizerTest.class" />
 					<include name="**/optim/nonlinear/scalar/noderiv/PowellOptimizerTest.class" />
-					<!--<include name="**/SimplexOptimizerMultiDirectionalTest.class" />-->
-					<!--<include name="**/SimplexOptimizerNelderMeadTest.class" />-->
-					<!--<include name="**/MultiStartMultivariateVectorOptimizerTest.class" />-->
-					<!--<include name="**/AbstractLeastSquaresOptimizerTest.class" />-->
-					<!--<include name="**/GaussNewtonOptimizerTest.class" />-->
-					<!--<include name="**/LevenbergMarquardtOptimizerTest.class" />-->
-					<!--<include name="**/MultiStartUnivariateOptimizerTest.class" />-->
-					<!--<include name="**/SmoothingPolynomiaBicubicSplineInterpolatorTest.class" />-->
-					<!--<include name="**/CurveFitterTest.class" />-->
-					<!--<include name="**/GaussianFitterTest.class" />-->
-					<!--<include name="**/HarmonicFitterTest.class" />-->
-					<!--<include name="**/PolynomiaFitterTest.class" />-->
-					<!--<include name="**/SimplexSolverTest.class" />-->
-					<!--<include name="**/MultivariateFunctionMappingAdapterTest.class" />-->
-					<!--<include name="**/NonLinearConjugateGradientOptimizerTest.class" />-->
-					<!--<include name="**/BOBYQAOptimizerTest.class" />-->
-					<!--<include name="**/CMAESOptimizerTest.class" />-->
-					<!--<include name="**/MinpackTest.class" />-->
-					<!--<include name="**/BrentOptimizerTest.class" />-->
+					<include name="**/SimplexOptimizerMultiDirectionalTest.class" />
+					<include name="**/SimplexOptimizerNelderMeadTest.class" />
+					<include name="**/MultiStartMultivariateVectorOptimizerTest.class" />
+					<include name="**/AbstractLeastSquaresOptimizerTest.class" />
+					<include name="**/GaussNewtonOptimizerTest.class" />
+					<include name="**/LevenbergMarquardtOptimizerTest.class" />
+					<include name="**/MultiStartUnivariateOptimizerTest.class" />
+					<include name="**/SmoothingPolynomiaBicubicSplineInterpolatorTest.class" />
+					<include name="**/CurveFitterTest.class" />
+					<include name="**/GaussianFitterTest.class" />
+					<include name="**/HarmonicFitterTest.class" />
+					<include name="**/PolynomiaFitterTest.class" />
+					<include name="**/SimplexSolverTest.class" />
+					<include name="**/MultivariateFunctionMappingAdapterTest.class" />
+					<include name="**/NonLinearConjugateGradientOptimizerTest.class" />
+					<include name="**/BOBYQAOptimizerTest.class" />
+					<include name="**/CMAESOptimizerTest.class" />
+					<include name="**/MinpackTest.class" />
+					<include name="**/BrentOptimizerTest.class" />
 
 
 

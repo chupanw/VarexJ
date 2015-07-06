@@ -5,19 +5,19 @@ import org.junit.Test;
 
 public class SqrtTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
-    public void testDerivativesHighOrder() throws Exception {
+    @Test(timeout=60000)
+    public void testComparison() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.SqrtTest object = new org.apache.commons.math3.analysis.function.SqrtTest();
-               object.testDerivativesHighOrder();
+               object.testComparison();
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testDerivativeComparison() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.SqrtTest object = new org.apache.commons.math3.analysis.function.SqrtTest();
@@ -25,11 +25,11 @@ public class SqrtTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
-    public void testComparison() throws Exception {
+    @Test(timeout=60000)
+    public void testDerivativesHighOrder() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.SqrtTest object = new org.apache.commons.math3.analysis.function.SqrtTest();
-               object.testComparison();
+               object.testDerivativesHighOrder();
         }
     }
 

@@ -5,11 +5,11 @@ import org.junit.Test;
 
 public class AggregateSummaryStatisticsTest extends TestJPF {
 
-    private final String[] config = {"+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAggregation() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.AggregateSummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.AggregateSummaryStatisticsTest();
@@ -17,7 +17,7 @@ public class AggregateSummaryStatisticsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAggregationConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.AggregateSummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.AggregateSummaryStatisticsTest();
@@ -25,7 +25,7 @@ public class AggregateSummaryStatisticsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAggregate() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.AggregateSummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.AggregateSummaryStatisticsTest();
@@ -33,7 +33,7 @@ public class AggregateSummaryStatisticsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAggregateDegenerate() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.AggregateSummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.AggregateSummaryStatisticsTest();
@@ -41,7 +41,7 @@ public class AggregateSummaryStatisticsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=1000000)
+    @Test(timeout=60000)
     public void testAggregateSpecialValues() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.AggregateSummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.AggregateSummaryStatisticsTest();
