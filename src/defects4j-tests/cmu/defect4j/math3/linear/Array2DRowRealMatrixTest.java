@@ -5,66 +5,10 @@ import org.junit.Test;
 
 public class Array2DRowRealMatrixTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testAdd() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
-               object.testAdd();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testMultiply() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
-               object.testMultiply();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testEqualsAndHashCode() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
-               object.testEqualsAndHashCode();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
-               object.testSerial();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testScalarAdd() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
-               object.testScalarAdd();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testNorm() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
-               object.testNorm();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testToString() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
-               object.testToString();
-        }
-    }
-
     @Test(timeout=60000)
     public void testDimensions() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -318,6 +262,62 @@ public class Array2DRowRealMatrixTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
                object.testWalk();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testAdd() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
+               object.testAdd();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testMultiply() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
+               object.testMultiply();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testNorm() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
+               object.testNorm();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testToString() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
+               object.testToString();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
+               object.testSerial();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testScalarAdd() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
+               object.testScalarAdd();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testEqualsAndHashCode() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.Array2DRowRealMatrixTest object = new org.apache.commons.math3.linear.Array2DRowRealMatrixTest();
+               object.testEqualsAndHashCode();
         }
     }
 

@@ -5,46 +5,10 @@ import org.junit.Test;
 
 public class FastMathTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testAtan2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.FastMathTest object = new org.apache.commons.math3.util.FastMathTest();
-               object.setUp();
-               object.testAtan2();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testAtan2SpecialCases() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.FastMathTest object = new org.apache.commons.math3.util.FastMathTest();
-               object.setUp();
-               object.testAtan2SpecialCases();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testConstants() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.FastMathTest object = new org.apache.commons.math3.util.FastMathTest();
-               object.setUp();
-               object.testConstants();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testNextAfter() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.FastMathTest object = new org.apache.commons.math3.util.FastMathTest();
-               object.setUp();
-               object.testNextAfter();
-        }
-    }
-
     @Test(timeout=60000)
     public void testMinMaxDouble() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -438,6 +402,42 @@ public class FastMathTest extends TestJPF {
                org.apache.commons.math3.util.FastMathTest object = new org.apache.commons.math3.util.FastMathTest();
                object.setUp();
                object.testIntPow();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testAtan2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.FastMathTest object = new org.apache.commons.math3.util.FastMathTest();
+               object.setUp();
+               object.testAtan2();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testAtan2SpecialCases() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.FastMathTest object = new org.apache.commons.math3.util.FastMathTest();
+               object.setUp();
+               object.testAtan2SpecialCases();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testConstants() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.FastMathTest object = new org.apache.commons.math3.util.FastMathTest();
+               object.setUp();
+               object.testConstants();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testNextAfter() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.FastMathTest object = new org.apache.commons.math3.util.FastMathTest();
+               object.setUp();
+               object.testNextAfter();
         }
     }
 

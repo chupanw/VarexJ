@@ -5,23 +5,31 @@ import org.junit.Test;
 
 public class LineTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testAbscissa() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.twod.LineTest object = new org.apache.commons.math3.geometry.euclidean.twod.LineTest();
-               object.testAbscissa();
-        }
-    }
-
     @Test(timeout=60000)
     public void testPointAt() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.LineTest object = new org.apache.commons.math3.geometry.euclidean.twod.LineTest();
                object.testPointAt();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testOffset() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.twod.LineTest object = new org.apache.commons.math3.geometry.euclidean.twod.LineTest();
+               object.testOffset();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testAbscissa() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.twod.LineTest object = new org.apache.commons.math3.geometry.euclidean.twod.LineTest();
+               object.testAbscissa();
         }
     }
 
@@ -54,14 +62,6 @@ public class LineTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.LineTest object = new org.apache.commons.math3.geometry.euclidean.twod.LineTest();
                object.testDistance();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testOffset() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.twod.LineTest object = new org.apache.commons.math3.geometry.euclidean.twod.LineTest();
-               object.testOffset();
         }
     }
 

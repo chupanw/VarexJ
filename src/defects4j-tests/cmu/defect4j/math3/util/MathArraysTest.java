@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class MathArraysTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testScale() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.MathArraysTest object = new org.apache.commons.math3.util.MathArraysTest();
-               object.testScale();
-        }
-    }
-
     @Test(timeout=60000)
     public void testScaleInPlace() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -310,6 +302,14 @@ public class MathArraysTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.MathArraysTest object = new org.apache.commons.math3.util.MathArraysTest();
                object.testNormalizeArray();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testScale() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.MathArraysTest object = new org.apache.commons.math3.util.MathArraysTest();
+               object.testScale();
         }
     }
 

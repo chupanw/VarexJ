@@ -5,28 +5,10 @@ import org.junit.Test;
 
 public class ResizableDoubleArrayTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testEqualsAndHashCode() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
-               object.setUp();
-               object.testEqualsAndHashCode();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testConstructors() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
-               object.setUp();
-               object.testConstructors();
-        }
-    }
-
     @Test(timeout=60000)
     public void testAdd1000() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -145,11 +127,20 @@ public class ResizableDoubleArrayTest extends TestJPF {
     }
 
     @Test(timeout=60000)
-    public void testMinMax() throws Exception {
+    public void testConstructors() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
                object.setUp();
-               object.testMinMax();
+               object.testConstructors();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testEqualsAndHashCode() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
+               object.setUp();
+               object.testEqualsAndHashCode();
         }
     }
 
@@ -159,6 +150,15 @@ public class ResizableDoubleArrayTest extends TestJPF {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
                object.setUp();
                object.testGetValues();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testMinMax() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
+               object.setUp();
+               object.testMinMax();
         }
     }
 

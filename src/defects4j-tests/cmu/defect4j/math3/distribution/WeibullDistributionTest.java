@@ -5,25 +5,25 @@ import org.junit.Test;
 
 public class WeibullDistributionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testBeta() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.WeibullDistributionTest object = new org.apache.commons.math3.distribution.WeibullDistributionTest();
-               object.setUp();
-               object.testBeta();
-        }
-    }
-
     @Test(timeout=60000)
     public void testAlpha() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.WeibullDistributionTest object = new org.apache.commons.math3.distribution.WeibullDistributionTest();
                object.setUp();
                object.testAlpha();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testBeta() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.WeibullDistributionTest object = new org.apache.commons.math3.distribution.WeibullDistributionTest();
+               object.setUp();
+               object.testBeta();
         }
     }
 
@@ -100,6 +100,15 @@ public class WeibullDistributionTest extends TestJPF {
     }
 
     @Test(timeout=60000)
+    public void testDistributionClone() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.WeibullDistributionTest object = new org.apache.commons.math3.distribution.WeibullDistributionTest();
+               object.setUp();
+               object.testDistributionClone();
+        }
+    }
+
+    @Test(timeout=60000)
     public void testIsSupportLowerBoundInclusive() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.WeibullDistributionTest object = new org.apache.commons.math3.distribution.WeibullDistributionTest();
@@ -114,15 +123,6 @@ public class WeibullDistributionTest extends TestJPF {
                org.apache.commons.math3.distribution.WeibullDistributionTest object = new org.apache.commons.math3.distribution.WeibullDistributionTest();
                object.setUp();
                object.testIsSupportUpperBoundInclusive();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testDistributionClone() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.WeibullDistributionTest object = new org.apache.commons.math3.distribution.WeibullDistributionTest();
-               object.setUp();
-               object.testDistributionClone();
         }
     }
 

@@ -5,10 +5,18 @@ import org.junit.Test;
 
 public class EnumeratedRealDistributionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=60000)
+    public void testSample() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.EnumeratedRealDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedRealDistributionTest();
+               object.testSample();
+        }
+    }
+
     @Test(timeout=60000)
     public void testDensity() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -34,18 +42,18 @@ public class EnumeratedRealDistributionTest extends TestJPF {
     }
 
     @Test(timeout=60000)
-    public void testIssue942() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.EnumeratedRealDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedRealDistributionTest();
-               object.testIssue942();
-        }
-    }
-
-    @Test(timeout=60000)
     public void testExceptions() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.EnumeratedRealDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedRealDistributionTest();
                object.testExceptions();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testIssue942() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.EnumeratedRealDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedRealDistributionTest();
+               object.testIssue942();
         }
     }
 
@@ -102,14 +110,6 @@ public class EnumeratedRealDistributionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.EnumeratedRealDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedRealDistributionTest();
                object.testIsSupportConnected();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testSample() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.EnumeratedRealDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedRealDistributionTest();
-               object.testSample();
         }
     }
 

@@ -5,23 +5,39 @@ import org.junit.Test;
 
 public class LogitTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=60000)
-    public void testPreconditions1() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
+    public void testDerivativesHighOrder() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
-               object.testPreconditions1();
+               object.testDerivativesHighOrder();
         }
     }
 
     @Test(timeout=60000)
-    public void testPreconditions2() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
+    public void testDerivativesWithInverseFunction() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
-               object.testPreconditions2();
+               object.testDerivativesWithInverseFunction();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testValueWithInverseFunction() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
+               object.testValueWithInverseFunction();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testDerivative() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
+               object.testDerivative();
         }
     }
 
@@ -98,34 +114,18 @@ public class LogitTest extends TestJPF {
     }
 
     @Test(timeout=60000)
-    public void testDerivative() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
+    public void testPreconditions1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
                org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
-               object.testDerivative();
+               object.testPreconditions1();
         }
     }
 
     @Test(timeout=60000)
-    public void testDerivativesHighOrder() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
+    public void testPreconditions2() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
                org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
-               object.testDerivativesHighOrder();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testValueWithInverseFunction() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
-               object.testValueWithInverseFunction();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testDerivativesWithInverseFunction() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
-               object.testDerivativesWithInverseFunction();
+               object.testPreconditions2();
         }
     }
 

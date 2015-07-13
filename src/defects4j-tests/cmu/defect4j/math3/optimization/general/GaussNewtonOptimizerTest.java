@@ -5,34 +5,10 @@ import org.junit.Test;
 
 public class GaussNewtonOptimizerTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testCircleFittingBadInit() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.ConvergenceException", config)) {
-               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
-               object.testCircleFittingBadInit();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testHahn1() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.ConvergenceException", config)) {
-               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
-               object.testHahn1();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testMaxEvaluations() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.TooManyEvaluationsException", config)) {
-               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
-               object.testMaxEvaluations();
-        }
-    }
-
     @Test(timeout=60000)
     public void testMoreEstimatedParametersSimple() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.ConvergenceException", config)) {
@@ -50,50 +26,34 @@ public class GaussNewtonOptimizerTest extends TestJPF {
     }
 
     @Test(timeout=60000)
+    public void testMaxEvaluations() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.TooManyEvaluationsException", config)) {
+               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
+               object.testMaxEvaluations();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testCircleFittingBadInit() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.ConvergenceException", config)) {
+               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
+               object.testCircleFittingBadInit();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testHahn1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.ConvergenceException", config)) {
+               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
+               object.testHahn1();
+        }
+    }
+
+    @Test(timeout=60000)
     public void testNonInvertible() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.ConvergenceException", config)) {
                org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
                object.testNonInvertible();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testQRColumnsPermutation() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
-               object.testQRColumnsPermutation();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testInconsistentSizes1() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
-               object.testInconsistentSizes1();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testInconsistentSizes2() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
-               object.testInconsistentSizes2();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testCircleFittingGoodInit() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
-               object.testCircleFittingGoodInit();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testKirby2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
-               object.testKirby2();
         }
     }
 
@@ -158,6 +118,46 @@ public class GaussNewtonOptimizerTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
                object.testCircleFitting();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testQRColumnsPermutation() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
+               object.testQRColumnsPermutation();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testInconsistentSizes1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
+               object.testInconsistentSizes1();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testInconsistentSizes2() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
+               object.testInconsistentSizes2();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testCircleFittingGoodInit() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
+               object.testCircleFittingGoodInit();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testKirby2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optimization.general.GaussNewtonOptimizerTest();
+               object.testKirby2();
         }
     }
 

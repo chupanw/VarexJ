@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class HermiteInterpolatorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=60000)
-    public void testQuadratic() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
+    public void testEmptySample() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NoDataException", config)) {
                org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest();
-               object.testQuadratic();
+               object.testEmptySample();
         }
     }
 
@@ -26,6 +26,14 @@ public class HermiteInterpolatorTest extends TestJPF {
     }
 
     @Test(timeout=60000)
+    public void testRandomPolynomialsValuesOnly() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest();
+               object.testRandomPolynomialsValuesOnly();
+        }
+    }
+
+    @Test(timeout=60000)
     public void testMixedDerivatives() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest();
@@ -34,10 +42,10 @@ public class HermiteInterpolatorTest extends TestJPF {
     }
 
     @Test(timeout=60000)
-    public void testRandomPolynomialsValuesOnly() throws Exception {
+    public void testQuadratic() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest();
-               object.testRandomPolynomialsValuesOnly();
+               object.testQuadratic();
         }
     }
 
@@ -86,14 +94,6 @@ public class HermiteInterpolatorTest extends TestJPF {
         if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
                org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest();
                object.testDuplicatedAbscissa();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testEmptySample() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NoDataException", config)) {
-               org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest();
-               object.testEmptySample();
         }
     }
 

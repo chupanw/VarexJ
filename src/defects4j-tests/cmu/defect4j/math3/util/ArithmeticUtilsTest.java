@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class ArithmeticUtilsTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -14,6 +14,14 @@ public class ArithmeticUtilsTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
                object.testPow();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void test0Choose0() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
+               object.test0Choose0();
         }
     }
 
@@ -38,14 +46,6 @@ public class ArithmeticUtilsTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
                object.testBinomialCoefficient();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void test0Choose0() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
-               object.test0Choose0();
         }
     }
 

@@ -5,23 +5,23 @@ import org.junit.Test;
 
 public class FieldHermiteInterpolatorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testQuadratic() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
-               object.testQuadratic();
-        }
-    }
-
     @Test(timeout=60000)
     public void testZero() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
                object.testZero();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testRandomPolynomialsValuesOnly() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
+               object.testRandomPolynomialsValuesOnly();
         }
     }
 
@@ -34,10 +34,10 @@ public class FieldHermiteInterpolatorTest extends TestJPF {
     }
 
     @Test(timeout=60000)
-    public void testRandomPolynomialsValuesOnly() throws Exception {
+    public void testQuadratic() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
-               object.testRandomPolynomialsValuesOnly();
+               object.testQuadratic();
         }
     }
 

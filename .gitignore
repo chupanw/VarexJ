@@ -75,4 +75,6 @@ junit*.properties
 
 coverage.xml
 .externalToolBuilders/
-lib/math6.jar
+Notify.sh
+PassingList.txt
+GlobalPassing.txt

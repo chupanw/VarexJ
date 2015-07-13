@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class RandomKeyTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -26,14 +26,6 @@ public class RandomKeyTest extends TestJPF {
     }
 
     @Test(timeout=60000)
-    public void testConstructor2() throws Exception {
-        if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
-               org.apache.commons.math3.genetics.RandomKeyTest object = new org.apache.commons.math3.genetics.RandomKeyTest();
-               object.testConstructor2();
-        }
-    }
-
-    @Test(timeout=60000)
     public void testDecode() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.genetics.RandomKeyTest object = new org.apache.commons.math3.genetics.RandomKeyTest();
@@ -46,6 +38,14 @@ public class RandomKeyTest extends TestJPF {
         if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
                org.apache.commons.math3.genetics.RandomKeyTest object = new org.apache.commons.math3.genetics.RandomKeyTest();
                object.testInvalidRepresentation();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testConstructor2() throws Exception {
+        if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
+               org.apache.commons.math3.genetics.RandomKeyTest object = new org.apache.commons.math3.genetics.RandomKeyTest();
+               object.testConstructor2();
         }
     }
 

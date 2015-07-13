@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class ListPopulationTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -22,6 +22,14 @@ public class ListPopulationTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.genetics.ListPopulationTest object = new org.apache.commons.math3.genetics.ListPopulationTest();
                object.testChromosomes();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testIterator() throws Exception {
+        if (verifyUnhandledException("java.lang.UnsupportedOperationException", config)) {
+               org.apache.commons.math3.genetics.ListPopulationTest object = new org.apache.commons.math3.genetics.ListPopulationTest();
+               object.testIterator();
         }
     }
 
@@ -70,14 +78,6 @@ public class ListPopulationTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
                org.apache.commons.math3.genetics.ListPopulationTest object = new org.apache.commons.math3.genetics.ListPopulationTest();
                object.testAddTooManyChromosomesSingleCall();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testIterator() throws Exception {
-        if (verifyUnhandledException("java.lang.UnsupportedOperationException", config)) {
-               org.apache.commons.math3.genetics.ListPopulationTest object = new org.apache.commons.math3.genetics.ListPopulationTest();
-               object.testIterator();
         }
     }
 

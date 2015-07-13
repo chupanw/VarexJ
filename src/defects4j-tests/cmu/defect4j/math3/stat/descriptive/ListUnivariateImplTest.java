@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class ListUnivariateImplTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -14,14 +14,6 @@ public class ListUnivariateImplTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest();
                object.testSerialization();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testStats() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest();
-               object.testStats();
         }
     }
 
@@ -46,6 +38,14 @@ public class ListUnivariateImplTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest();
                object.testProductAndGeometricMean();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testStats() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest();
+               object.testStats();
         }
     }
 

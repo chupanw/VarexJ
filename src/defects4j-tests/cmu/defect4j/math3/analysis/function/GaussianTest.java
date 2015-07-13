@@ -5,15 +5,31 @@ import org.junit.Test;
 
 public class GaussianTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=60000)
+    public void testPreconditions() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
+               org.apache.commons.math3.analysis.function.GaussianTest object = new org.apache.commons.math3.analysis.function.GaussianTest();
+               object.testPreconditions();
+        }
+    }
+
     @Test(timeout=60000)
     public void testSomeValues() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.GaussianTest object = new org.apache.commons.math3.analysis.function.GaussianTest();
                object.testSomeValues();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testLargeArguments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.function.GaussianTest object = new org.apache.commons.math3.analysis.function.GaussianTest();
+               object.testLargeArguments();
         }
     }
 
@@ -94,22 +110,6 @@ public class GaussianTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.GaussianTest object = new org.apache.commons.math3.analysis.function.GaussianTest();
                object.testParametricValue();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testPreconditions() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
-               org.apache.commons.math3.analysis.function.GaussianTest object = new org.apache.commons.math3.analysis.function.GaussianTest();
-               object.testPreconditions();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testLargeArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.function.GaussianTest object = new org.apache.commons.math3.analysis.function.GaussianTest();
-               object.testLargeArguments();
         }
     }
 

@@ -5,10 +5,19 @@ import org.junit.Test;
 
 public class ZipfDistributionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=60000)
+    public void testMoments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.ZipfDistributionTest object = new org.apache.commons.math3.distribution.ZipfDistributionTest();
+               object.setUp();
+               object.testMoments();
+        }
+    }
+
     @Test(timeout=60000)
     public void testPreconditions1() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
@@ -24,15 +33,6 @@ public class ZipfDistributionTest extends TestJPF {
                org.apache.commons.math3.distribution.ZipfDistributionTest object = new org.apache.commons.math3.distribution.ZipfDistributionTest();
                object.setUp();
                object.testPreconditions2();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testMoments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.ZipfDistributionTest object = new org.apache.commons.math3.distribution.ZipfDistributionTest();
-               object.setUp();
-               object.testMoments();
         }
     }
 

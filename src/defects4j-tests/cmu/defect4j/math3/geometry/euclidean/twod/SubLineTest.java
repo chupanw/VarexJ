@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class SubLineTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -42,18 +42,18 @@ public class SubLineTest extends TestJPF {
     }
 
     @Test(timeout=60000)
-    public void testHalfInfiniteNeg() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.twod.SubLineTest object = new org.apache.commons.math3.geometry.euclidean.twod.SubLineTest();
-               object.testHalfInfiniteNeg();
-        }
-    }
-
-    @Test(timeout=60000)
     public void testHalfInfinitePos() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.SubLineTest object = new org.apache.commons.math3.geometry.euclidean.twod.SubLineTest();
                object.testHalfInfinitePos();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testHalfInfiniteNeg() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.twod.SubLineTest object = new org.apache.commons.math3.geometry.euclidean.twod.SubLineTest();
+               object.testHalfInfiniteNeg();
         }
     }
 

@@ -17,7 +17,7 @@ import java.util.LinkedList;
  */
 public class MathTestGenerator extends TestGenerator {
 
-    private String config = "\"+interaction=interaction\", \"+search.class= .search.RandomSearch\", \"+nhandler.delegateUnhandledNative\", \"+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar\"";
+    private String config = "\"+interaction=interaction\", \"+search.class= .search.RandomSearch\", \"+nhandler.delegateUnhandledNative\", \"+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar\"";
 
     public static void main(String[] args) {
         MathTestGenerator generator = new MathTestGenerator();
@@ -29,7 +29,7 @@ public class MathTestGenerator extends TestGenerator {
     public void searchTest() {
         //cpwTODO: deal with @After
         FileDetector detector = new FileDetector("java");
-        File[] files = detector.detect("/Users/chupanw/Projects/defects4j-checkout/math6b/src/test/java/");
+        File[] files = detector.detect("/Users/chupanw/Projects/defects4j-checkout/math7b/src/test/java/");
 
         for (File file : files) {
             String filepath = file.getAbsolutePath();

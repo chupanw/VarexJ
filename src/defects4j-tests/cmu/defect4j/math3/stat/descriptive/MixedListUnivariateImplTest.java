@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class MixedListUnivariateImplTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testStats() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.MixedListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.MixedListUnivariateImplTest();
-               object.testStats();
-        }
-    }
-
     @Test(timeout=60000)
     public void testN0andN1Conditions() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -38,6 +30,14 @@ public class MixedListUnivariateImplTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.MixedListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.MixedListUnivariateImplTest();
                object.testProductAndGeometricMean();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testStats() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.MixedListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.MixedListUnivariateImplTest();
+               object.testStats();
         }
     }
 

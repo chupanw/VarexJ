@@ -5,74 +5,10 @@ import org.junit.Test;
 
 public class GammaTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testInvGamma1pm1() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
-               object.testInvGamma1pm1();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testInvGamma1pm1Precondition1() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
-               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
-               object.testInvGamma1pm1Precondition1();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testInvGamma1pm1Precondition2() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
-               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
-               object.testInvGamma1pm1Precondition2();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testLogGamma1p() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
-               object.testLogGamma1p();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testLogGamma1pPrecondition1() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
-               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
-               object.testLogGamma1pPrecondition1();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testLogGamma1pPrecondition2() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
-               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
-               object.testLogGamma1pPrecondition2();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testGamma() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
-               object.testGamma();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testGammaNegativeInteger() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
-               object.testGammaNegativeInteger();
-        }
-    }
-
     @Test(timeout=60000)
     public void testLogGamma() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -206,6 +142,70 @@ public class GammaTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
                object.testLogGammaPrecondition2();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testInvGamma1pm1() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
+               object.testInvGamma1pm1();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testInvGamma1pm1Precondition1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
+               object.testInvGamma1pm1Precondition1();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testInvGamma1pm1Precondition2() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
+               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
+               object.testInvGamma1pm1Precondition2();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testLogGamma1p() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
+               object.testLogGamma1p();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testLogGamma1pPrecondition1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
+               object.testLogGamma1pPrecondition1();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testLogGamma1pPrecondition2() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
+               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
+               object.testLogGamma1pPrecondition2();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testGamma() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
+               object.testGamma();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testGammaNegativeInteger() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
+               object.testGammaNegativeInteger();
         }
     }
 

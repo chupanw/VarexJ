@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class StorelessCovarianceTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -26,18 +26,18 @@ public class StorelessCovarianceTest extends TestJPF {
     }
 
     @Test(timeout=60000)
-    public void testLonglySimpleCov() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.correlation.StorelessCovarianceTest object = new org.apache.commons.math3.stat.correlation.StorelessCovarianceTest();
-               object.testLonglySimpleCov();
-        }
-    }
-
-    @Test(timeout=60000)
     public void testLonglyByRow() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.correlation.StorelessCovarianceTest object = new org.apache.commons.math3.stat.correlation.StorelessCovarianceTest();
                object.testLonglyByRow();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testLonglySimpleCov() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.correlation.StorelessCovarianceTest object = new org.apache.commons.math3.stat.correlation.StorelessCovarianceTest();
+               object.testLonglySimpleCov();
         }
     }
 

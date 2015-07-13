@@ -18,6 +18,9 @@
 //
 package gov.nasa.jpf.util.test;
 
+import de.fosd.typechef.featureexpr.FeatureExpr;
+import de.fosd.typechef.featureexpr.FeatureExprFactory;
+import de.fosd.typechef.featureexpr.FeatureExprParser;
 import gov.nasa.jpf.Config;
 import gov.nasa.jpf.Error;
 import gov.nasa.jpf.JPF;
@@ -29,18 +32,17 @@ import gov.nasa.jpf.util.DevNullPrintStream;
 import gov.nasa.jpf.util.JPFSiteUtils;
 import gov.nasa.jpf.util.Reflection;
 import gov.nasa.jpf.util.TypeRef;
-import gov.nasa.jpf.vm.ExceptionInfo;
-import gov.nasa.jpf.vm.NoUncaughtExceptionsProperty;
-import gov.nasa.jpf.vm.NotDeadlockedProperty;
+import gov.nasa.jpf.vm.*;
+import org.apache.commons.math3.analysis.integration.IterativeLegendreGaussIntegrator;
 
-import java.io.PrintStream;
-import java.io.PrintWriter;
+import java.io.*;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -93,6 +95,13 @@ public abstract class TestJPF implements JPFShell {
 
     @FilterField
     protected String sutClassName;
+
+    /**
+     * @author: chupanw
+     * Probably not a good design, but help uncaught exceptions escape.
+     * Check this set to find uncaught exceptions.
+     */
+    public static HashSet<ExceptionInfo> uncaughtExceptionSet = new HashSet<>();
 
     static class GlobalArg {
         String key;
@@ -658,7 +667,12 @@ public abstract class TestJPF implements JPFShell {
         try {
             method.invoke(target);
         } catch (InvocationTargetException e) {
-            throw e.getCause();
+//            throw e.getCause();
+            // Cannot throw exception here because this is the last handler.
+            // If thrown and VM could not find a handler, exception will cause the VM to terminate.
+            e.getCause().printStackTrace();
+        } catch (Throwable ee){
+            ee.printStackTrace();
         }
     }
 
@@ -681,6 +695,7 @@ public abstract class TestJPF implements JPFShell {
      * start JPF, it is never executed under JPF
      */
     protected JPF createAndRunJPF(StackTraceElement testMethod, String[] args) {
+        uncaughtExceptionSet.clear();
         JPF jpf = createJPF(testMethod, args);
         if (jpf != null) {
             jpf.run();
@@ -826,18 +841,28 @@ public abstract class TestJPF implements JPFShell {
             return jpf;
         }
 
-        List<Error> errors = jpf.getSearchErrors();
-
-        // Shoe outputs for GenProg
+        // Show outputs for GenProg
         System.out.println("\n================ GenProg ================");
-        for (int i = 0; i < errors.size(); i++) {
-            Error e = errors.get(i);
-            Property errorProperty = e.getProperty();
-            assert errorProperty instanceof NoUncaughtExceptionsProperty;
-            ExceptionInfo xi = ((NoUncaughtExceptionsProperty) errorProperty).getUncaughtExceptionInfo();
-            System.out.println("Pass if: " + xi.getCtx().not());
+        System.out.println("Found " + uncaughtExceptionSet.size() + " uncaught exceptions");
+        Iterator<ExceptionInfo> itr = uncaughtExceptionSet.iterator();
+        FeatureExpr passIf = FeatureExprFactory.True();
+        while (itr.hasNext()) {
+            ExceptionInfo xi = itr.next();
+            passIf = passIf.andNot(xi.getCtx());
         }
+        System.out.println("Pass if: " + passIf);
+        System.out.println("Satisfiable: " + passIf.isSatisfiable());
+//        FeatureExprParser parser = new FeatureExprParser(FeatureExprFactory.bdd());
+//        parser.parse()
+        writePassCond(passIf);
+
         System.out.println("================ GenProg ================\n");
+
+        if (uncaughtExceptionSet.size() > 0) {
+            fail("JPF found uncaught exceptions");
+        }
+
+        List<Error> errors = jpf.getSearchErrors();
 
         if ((errors != null) && (errors.size() > 0)) {
             fail("JPF found unexpected errors: " + (errors.get(0)).getDescription());
@@ -880,46 +905,88 @@ public abstract class TestJPF implements JPFShell {
             return jpf;
         }
 
-        Error error = jpf.getLastError();
-        if (error != null) {
-            // Expect to have only one error
-            assert jpf.getSearchErrors().size() == 1;
-            Property errorProperty = error.getProperty();
-            if (errorProperty instanceof NoUncaughtExceptionsProperty) {
-                ExceptionInfo xi = ((NoUncaughtExceptionsProperty) errorProperty).getUncaughtExceptionInfo();
-
-//        // Search for exact type of Exception, not including its parent classes
-//        String xn = xi.getExceptionClassname();
-//        if (!xn.equals(xClassName)) {
-//          fail("JPF caught wrong exception: " + xn + ", expected: " + xClassName);
-//        }
-                // Search for Exception including its parent classes
+        ArrayList<ExceptionInfo> unexpectedExceptions = new ArrayList<>();
+        if (uncaughtExceptionSet.size() > 0){
+            boolean foundException = false;
+            boolean foundDetail = false;
+            Iterator<ExceptionInfo> itr = uncaughtExceptionSet.iterator();
+            while (itr.hasNext()) {
+                ExceptionInfo xi = itr.next();
                 HashSet<String> exceptionNameSet = xi.getExceptionClassnames();
                 String xn = xi.getExceptionClassname();
-                if (!exceptionNameSet.contains(xClassName)) {
-                    System.out.println("\n================ GenProg ================");
-                    System.out.println("Pass if: " + xi.getCtx().not());
-                    System.out.println("================ GenProg ================\n");
-                    fail("JPF caught wrong exception: " + xn + ", expected: " + xClassName);
-                }
-
-
-                if (details != null) {
-                    String gotDetails = xi.getDetails();
-                    if (gotDetails == null) {
-                        fail("JPF caught the right exception but no details, expected: " + details);
-                    } else {
-                        if (!gotDetails.endsWith(details)) {
-                            fail("JPF caught the right exception but the details were wrong: " + gotDetails + ", expected: " + details);
+                if (exceptionNameSet.contains(xn)) {
+                    foundException = true;
+                    if (details != null){
+                        String gotDetails = xi.getDetails();
+                        if (gotDetails == null && gotDetails.endsWith(details)) {
+                            foundDetail = true;
                         }
                     }
                 }
-            } else { // error not a NoUncaughtExceptionsProperty
-                fail("JPF failed to catch exception executing: ", args, ("expected " + xClassName));
+                else {
+                    unexpectedExceptions.add(xi);
+                }
             }
-        } else { // no error
+
+            // Show outputs for GenProg
+            System.out.println("\n================ GenProg ================");
+            FeatureExpr passIf = FeatureExprFactory.True();
+            for (int i = 0; i < unexpectedExceptions.size(); i++){
+                ExceptionInfo unxi = unexpectedExceptions.get(i);
+                passIf = passIf.andNot(unxi.getCtx());
+            }
+            System.out.println("Pass if: " + passIf);
+            System.out.println("================ GenProg ================\n");
+
+            if (foundException){
+                if (details != null && !foundDetail){
+                    fail("JPF caught the right exception but the details were wrong. " + "expected: " + details);
+                }
+            }
+            else{
+                fail("JPF caught wrong exception. " + "expected: " + xClassName);
+            }
+        }
+        else{
             fail("JPF failed to catch exception executing: ", args, ("expected " + xClassName));
         }
+
+
+//        Error error = jpf.getLastError();
+//        if (error != null) {
+//            // Expect to have only one error
+//            assert jpf.getSearchErrors().size() == 1;
+//            Property errorProperty = error.getProperty();
+//            if (errorProperty instanceof NoUncaughtExceptionsProperty) {
+//                ExceptionInfo xi = ((NoUncaughtExceptionsProperty) errorProperty).getUncaughtExceptionInfo();
+//
+////        // Search for exact type of Exception, not including its parent classes
+////        String xn = xi.getExceptionClassname();
+////        if (!xn.equals(xClassName)) {
+////          fail("JPF caught wrong exception: " + xn + ", expected: " + xClassName);
+////        }
+//                // Search for Exception including its parent classes
+//                HashSet<String> exceptionNameSet = xi.getExceptionClassnames();
+//                String xn = xi.getExceptionClassname();
+//                if (!exceptionNameSet.contains(xClassName)) {
+//                    fail("JPF caught wrong exception: " + xn + ", expected: " + xClassName);
+//                }
+//                if (details != null) {
+//                    String gotDetails = xi.getDetails();
+//                    if (gotDetails == null) {
+//                        fail("JPF caught the right exception but no details, expected: " + details);
+//                    } else {
+//                        if (!gotDetails.endsWith(details)) {
+//                            fail("JPF caught the right exception but the details were wrong: " + gotDetails + ", expected: " + details);
+//                        }
+//                    }
+//                }
+//            } else { // error not a NoUncaughtExceptionsProperty
+//                fail("JPF failed to catch exception executing: ", args, ("expected " + xClassName));
+//            }
+//        } else { // no error
+//            fail("JPF failed to catch exception executing: ", args, ("expected " + xClassName));
+//        }
 
         return jpf;
     }
@@ -1234,5 +1301,62 @@ public abstract class TestJPF implements JPFShell {
 
     public static void assertTrue(boolean cond) {
         assertTrue("", cond);
+    }
+
+    private void writePassCond(FeatureExpr passExpr) {
+        try {
+            File passCondFile = new File("PassingList.txt");
+            FileWriter writer = new FileWriter(passCondFile, true);
+            StackTraceElement caller = (new Throwable()).getStackTrace()[3];
+            String testClsName = caller.getClassName();
+            testClsName = "org.apache.commons." + testClsName.substring(13);
+            String testMthName = caller.getMethodName();
+            if (passExpr.isTautology()) {
+                writer.write("[*] " + testClsName + "::" + testMthName + "\n");
+            }
+            else if (passExpr.isContradiction()) {
+                writer.write("[x] " + testClsName + "::" + testMthName + "\n");
+            }
+            else{
+                writer.write("[?] " + testClsName + "::" + testMthName + "\n");
+            }
+            writer.write("    Fail if: ");
+            int counter = 1;
+            for (ExceptionInfo xi : uncaughtExceptionSet) {
+                writer.write("(" + counter + ") ");
+                writer.write(xi.getCtx().toString() + " ");
+                counter++;
+            }
+            writer.write("\n");
+            writer.write("    Pass if: ");
+            writer.write(passExpr.toString() + "\n");
+            writer.flush();
+            writer.close();
+
+            if (passExpr.isContradiction()) {
+                return;
+            }
+            File globalFile = new File("GlobalPassing.txt");
+            if (globalFile.exists()) {
+                BufferedReader globalReader = new BufferedReader(new FileReader(globalFile));
+                String line = globalReader.readLine();
+                FeatureExprParser parser = new FeatureExprParser(FeatureExprFactory.dflt());
+                FeatureExpr globalExpr = parser.parse(line);
+                globalExpr = globalExpr.and(passExpr);
+                globalReader.close();
+                FileWriter writer2 = new FileWriter(globalFile);
+                writer2.write(globalExpr.toString());
+                writer2.flush();
+                writer2.close();
+            }
+            else {
+                FileWriter writer2 = new FileWriter(globalFile);
+                writer2.write(passExpr.toString());
+                writer2.flush();
+                writer2.close();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

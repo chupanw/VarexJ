@@ -130,34 +130,8 @@
 
     <target name="-compile-defects4j-tests" if="have_tests" depends="-compile-annotations,-compile-main,-compile-classes">
         <mkdir dir="build/defects4j-tests" />
-        <javac srcdir="src/defects4j-tests" destdir="build/defects4j-tests" includes="**/NormalDistributionTest2.java" includeantruntime="false" debug="${debug}" deprecation="${deprecation}">
+        <javac srcdir="src/defects4j-tests" destdir="build/defects4j-tests" includeantruntime="false" debug="${debug}" deprecation="${deprecation}">
             <!--<exclude name="cmu/defect4j/math3/**"/>-->
-
-			<include name="**/SimplexSolverTest.java" />
-			<include name="**/MultiStartMultivariateOptimizerTest.java" />
-			<include name="**/NonLinearConjugateGradientOptimizerTest.java" />
-			<include name="**/PowellOptimizerTest.java" />
-			<include name="**/SimplexOptimizerMultiDirectionalTest.java" />
-			<include name="**/SimplexOptimizerNelderMeadTest.java" />
-			<include name="**/MultiStartMultivariateVectorOptimizerTest.java" />
-			<include name="**/AbstractLeastSquaresOptimizerTest.java" />
-			<include name="**/GaussNewtonOptimizerTest.java" />
-			<include name="**/LevenbergMarquardtOptimizerTest.java" />
-			<include name="**/MultiStartUnivariateOptimizerTest.java" />
-			<include name="**/SmoothingPolynomiaBicubicSplineInterpolatorTest.java" />
-			<include name="**/CurveFitterTest.java" />
-			<include name="**/GaussianFitterTest.java" />
-			<include name="**/HarmonicFitterTest.java" />
-			<include name="**/PolynomiaFitterTest.java" />
-			<include name="**/SimplexSolverTest.java" />
-			<include name="**/MultivariateFunctionMappingAdapterTest.java" />
-			<include name="**/NonLinearConjugateGradientOptimizerTest.java" />
-			<include name="**/BOBYQAOptimizerTest.java" />
-			<include name="**/CMAESOptimizerTest.java" />
-			<include name="**/MinpackTest.java" />
-			<include name="**/BrentOptimizerTest.java" />
-
-
 
             <compilerarg value="-XDenableSunApiLintControl" />
             <compilerarg value="-Xlint:all,-sunapi,-serial,-rawtypes,-unchecked" />
@@ -513,13 +487,16 @@
 
 	</target>
 
-	<target name="test_cpw" depends="build" description="run core regression tests" if="have_tests">
+	<target name="test-server" depends="build" description="Run defects4j test cases in the server" if="have_tests">
 		<condition property="junit.usefile">
 			<!-- don't set if this is running from within an IDE that collects output -->
 			<not>
 				<isset property="netbeans.home" />
 			</not>
 		</condition>
+
+        <delete file="PassingList.txt"/>
+        <delete file="GlobalPassing.txt"/>
 
 		<junit printsummary="on" showoutput="off" haltonfailure="no" logfailedtests="true" failureproperty="test.failed" dir="${basedir}" fork="yes" forkmode="perTest" maxmemory="2048m" outputtoformatters="true">
 			<formatter type="plain" usefile="${junit.usefile}" />
@@ -530,27 +507,26 @@
 
 			<classpath>
 				<path refid="lib.path" />
-				<pathelement location="lib/*" />
-				<pathelement location="lib/GPL/*" />
-				<pathelement location="build/tests" />
+                <pathelement location="build/defects4j-tests" />
 				<pathelement location="build/classes" />
 				<pathelement location="build/annotations" />
 			</classpath>
 			<formatter type="xml" />
-			<batchtest todir="build/tests">
-				<fileset dir="build/tests">
-					<exclude name="**/JPF_*.class" />
-					<!--<include name="**cmu/*/ZipMeTest.class" />-->
-					<include name="**cmu/**/PrevaylerTest.class" />
+			<batchtest todir="build/defects4j-tests">
+				<fileset dir="build/defects4j-tests">
+                    <!--<include name="**/math3/**/Test.class" />-->
+                    <include name="**/math3/ode/nonstiff/DormandPrince853IntegratorTest.class"/>
 				</fileset>
 			</batchtest>
 
 		</junit>
 
-		<junitreport todir="build/tests">
-			<fileset dir="build/tests" includes="TEST-*.xml" />
-			<report todir="build/tests" />
+		<junitreport todir="build/defects4j-tests">
+			<fileset dir="build/defects4j-tests" includes="TEST-*.xml" />
+			<report todir="build/defects4j-tests/report" />
 		</junitreport>
+
+        <exec executable="./Notify.sh"/>
 
 
 	</target>
@@ -563,6 +539,9 @@
 				<isset property="netbeans.home" />
 			</not>
 		</condition>
+
+        <delete file="GlobalPassing.txt"/>
+        <delete file="PassingList.txt"/>
 
 		<junit printsummary="on" showoutput="on" haltonfailure="no" logfailedtests="true" failureproperty="test.failed" dir="${basedir}" fork="yes" forkmode="perTest" maxmemory="4096m" outputtoformatters="true">
 			<formatter type="plain" usefile="${junit.usefile}" />
@@ -599,33 +578,83 @@
                     <!--<exclude name="**/lang3/AnnotationUtilsTest.class"/>-->
 
 					<!--For observing real patches-->
-					<include name="**/SimplexSolverTest.class" />
-					<include name="**/MultiStartMultivariateOptimizerTest.class" />
-					<include name="**/NonLinearConjugateGradientOptimizerTest.class" />
-					<include name="**/optim/nonlinear/scalar/noderiv/PowellOptimizerTest.class" />
-					<include name="**/SimplexOptimizerMultiDirectionalTest.class" />
-					<include name="**/SimplexOptimizerNelderMeadTest.class" />
-					<include name="**/MultiStartMultivariateVectorOptimizerTest.class" />
-					<include name="**/AbstractLeastSquaresOptimizerTest.class" />
-					<include name="**/GaussNewtonOptimizerTest.class" />
-					<include name="**/LevenbergMarquardtOptimizerTest.class" />
-					<include name="**/MultiStartUnivariateOptimizerTest.class" />
-					<include name="**/SmoothingPolynomiaBicubicSplineInterpolatorTest.class" />
-					<include name="**/CurveFitterTest.class" />
-					<include name="**/GaussianFitterTest.class" />
-					<include name="**/HarmonicFitterTest.class" />
-					<include name="**/PolynomiaFitterTest.class" />
-					<include name="**/SimplexSolverTest.class" />
-					<include name="**/MultivariateFunctionMappingAdapterTest.class" />
-					<include name="**/NonLinearConjugateGradientOptimizerTest.class" />
-					<include name="**/BOBYQAOptimizerTest.class" />
-					<include name="**/CMAESOptimizerTest.class" />
-					<include name="**/MinpackTest.class" />
-					<include name="**/BrentOptimizerTest.class" />
+					<!--<include name="**/SimplexSolverTest.class" />-->
+					<!--<include name="**/MultiStartMultivariateOptimizerTest.class" />-->
+					<!--<include name="**/NonLinearConjugateGradientOptimizerTest.class" />-->
+					<!--<include name="**/optim/nonlinear/scalar/noderiv/PowellOptimizerTest.class" />-->
+					<!--<include name="**/noderiv/SimplexOptimizerMultiDirectionalTest.class" />-->
+					<!--<include name="**/noderiv/SimplexOptimizerNelderMeadTest.class" />-->
+					<!--<include name="**/MultiStartMultivariateVectorOptimizerTest.class" />-->
+					<!--<include name="**/AbstractLeastSquaresOptimizerTest.class" />-->
+					<!--<include name="**/jacobian/GaussNewtonOptimizerTest.class" />-->
+					<!--<include name="**/jacobian/LevenbergMarquardtOptimizerTest.class" />-->
+					<!--<include name="**/SmoothingPolynomiaBicubicSplineInterpolatorTest.class" />-->
+					<!--<include name="**/CurveFitterTest.class" />-->
+					<!--<include name="**/GaussianFitterTest.class" />-->
+					<!--<include name="**/HarmonicFitterTest.class" />-->
+					<!--<include name="**/PolynomiaFitterTest.class" />-->
+					<!--<include name="**/MultivariateFunctionMappingAdapterTest.class" />-->
+					<!--<include name="**/NonLinearConjugateGradientOptimizerTest.class" />-->
+					<!--<include name="**/BOBYQAOptimizerTest.class" />-->
+					<!--<include name="**/noderiv/CMAESOptimizerTest.class" />-->
+					<!--<include name="**/MinpackTest.class" />-->
+					<!--<include name="**/BrentOptimizerTest.class" />-->
 
+					<!--Observing Bug7 in Math-->
 
+					<!--<include name="**/math3/analysis/integration/gauss/LegendreHighPrecisionTest.class"/>-->
+					<!--<include name="**/math3/genetics/FixedElapsedTimeTest.class"/>-->
+					<!--<include name="**/math3/geometry/euclidean/threed/FieldRotationDfpTest.class"/>-->
+					<!--<include name="**/math3/ode/ContinuousOutputModelTest.class"/>-->
+					<!--<include name="**/math3/ode/FirstOrderConverterTest.class"/>-->
+					<!--<include name="**/math3/ode/JacobianMatricesTest.class"/>-->
+					<!--<include name="**/math3/ode/events/EventStateTest.class"/>-->
+					<!--<include name="**/math3/ode/events/OverlappingEventsTest.class"/>-->
+					<!--<include name="**/math3/ode/events/ReappearingEventTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/AdamsBashforthIntegratorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/AdamsMoultonIntegratorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/ClassicalRungeKuttaIntegratorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/ClassicalRungeKuttaStepInterpolatorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/DormandPrince54IntegratorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/DormandPrince54StepInterpolatorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/DormandPrince853IntegratorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/DormandPrince853StepInterpolatorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/EulerIntegratorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/EulerStepInterpolatorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/GillIntegratorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/GillStepInterpolatorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/GraggBulirschStoerIntegratorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/GraggBulirschStoerStepInterpolatorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/HighamHall54IntegratorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/HighamHall54StepInterpolatorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/MidpointIntegratorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/MidpointStepInterpolatorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/ThreeEighthesIntegratorTest.class"/>-->
+					<!--<include name="**/math3/ode/nonstiff/ThreeEighthesStepInterpolatorTest.class"/>-->
+					<!--<include name="**/math3/ode/sampling/NordsieckStepInterpolatorTest.class"/>-->
+					<!--<include name="**/math3/ode/sampling/StepNormalizerOutputOverlapTest.class"/>-->
+					<!--<include name="**/math3/ode/sampling/StepNormalizerOutputTest.class"/>-->
+					<!--<include name="**/math3/ode/sampling/StepNormalizerTest.class"/>-->
+					<!--<include name="**/math3/optim/nonlinear/scalar/noderiv/BOBYQAOptimizerTest.class"/>-->
+					<!--<include name="**/math3/optim/nonlinear/scalar/noderiv/CMAESOptimizerTest.class"/>-->
+					<!--<include name="**/math3/optimization/direct/BOBYQAOptimizerTest.class"/>-->
+					<!--<include name="**/math3/optimization/direct/CMAESOptimizerTest.class"/>-->
+					<!--<include name="**/math3/optimization/fitting/PolynomialFitterTest.class"/>-->
+					<!--<include name="**/math3/random/AbstractRandomGeneratorTest.class"/>-->
+					<!--<include name="**/math3/random/BitsStreamGeneratorTest.class"/>-->
+					<!--<include name="**/math3/random/EmpiricalDistributionTest.class"/>-->
+					<!--<include name="**/math3/random/ISAACTest.class"/>-->
+					<!--<include name="**/math3/random/MersenneTwisterTest.class"/>-->
+					<!--<include name="**/math3/random/RandomDataGeneratorTest.class"/>-->
+					<!--<include name="**/math3/random/Well1024aTest.class"/>-->
+					<!--<include name="**/math3/random/Well19937aTest.class"/>-->
+					<!--<include name="**/math3/random/Well19937cTest.class"/>-->
+					<!--<include name="**/math3/random/Well44497aTest.class"/>-->
+					<!--<include name="**/math3/random/Well44497bTest.class"/>-->
+					<!--<include name="**/math3/random/Well512aTest.class"/>-->
+					<!--<include name="**/math3/util/FastMathTest.class"/>-->
 
-                    <exclude name="**/*$*.class" />
+					<exclude name="**/*$*.class" />
 				</fileset>
 			</batchtest>
 
@@ -633,180 +662,10 @@
 
 		<junitreport todir="build/defects4j-tests">
 			<fileset dir="build/defects4j-tests" includes="TEST-*.xml" />
-			<report todir="build/defects4j-tests" />
+            <report todir="build/defects4j-tests/report" />
 		</junitreport>
 
 
-	</target>
-
-	<target name="test_math3_parallel" depends="build" description="run math3 test cases with 4 groups">
-		<parallel threadcount="8">
-			<echo message="running parallel"/>
-			<antcall target="test_math3_group1">
-			</antcall>
-			<antcall target="test_math3_group2">
-			</antcall>
-			<antcall target="test_math3_group3">
-            </antcall>
-			<antcall target="test_math3_group4">
-            </antcall>
-		</parallel>
-	</target>
-
-
-	<target name="test_math3_group1" description="run the group 1 of math3 tests">
-		<mkdir dir="build/defects4j-tests/group1"/>
-		<condition property="junit.usefile">
-			<!-- don't set if this is running from within an IDE that collects output -->
-			<not>
-				<isset property="netbeans.home" />
-			</not>
-		</condition>
-		<junit printsummary="on" showoutput="on" haltonfailure="no" logfailedtests="true" failureproperty="test.failed" dir="${basedir}" fork="yes" forkmode="perTest" maxmemory="2048m" outputtoformatters="true">
-			<formatter type="plain" usefile="${junit.usefile}" />
-			<assertions>
-				<enable />
-			</assertions>
-			<classpath>
-				<path refid="lib.path" />
-				<!--JPF need this to run the test cases using the JPF-->
-				<pathelement location="build/defects4j-tests" />
-				<pathelement location="build/classes" />
-				<pathelement location="build/annotations" />
-			</classpath>
-			<formatter type="xml" />
-			<batchtest todir="build/defects4j-tests/group1">
-				<fileset dir="build/defects4j-tests">
-					<include name="**/math3/analysis/*Test.class" />
-					<include name="**/math3/complex/*Test.class" />
-					<include name="**/math3/dfp/*Test.class" />
-					<include name="**/math3/distribution/*Test.class" />
-					<include name="**/math3/exception/*Test.class" />
-					<include name="**/math3/util/*Test.class"/>
-					<exclude name="**/*$*.class" />
-				</fileset>
-			</batchtest>
-		</junit>
-		<junitreport todir="build/defects4j-tests/group1">
-			<fileset dir="build/defects4j-tests/group1" includes="TEST-*.xml" />
-			<report todir="build/defects4j-tests/group1" />
-		</junitreport>
-	</target>
-
-	<target name="test_math3_group2" description="run the group 2 of math3 tests" >
-		<mkdir dir="build/defects4j-tests/group2"/>
-		<condition property="junit.usefile">
-			<!-- don't set if this is running from within an IDE that collects output -->
-			<not>
-				<isset property="netbeans.home" />
-			</not>
-		</condition>
-		<junit printsummary="on" showoutput="on" haltonfailure="no" logfailedtests="true" failureproperty="test.failed" dir="${basedir}" fork="yes" forkmode="perTest" maxmemory="2048m" outputtoformatters="true">
-			<formatter type="plain" usefile="${junit.usefile}" />
-			<assertions>
-				<enable />
-			</assertions>
-			<classpath>
-				<path refid="lib.path" />
-				<!--JPF need this to run the test cases using the JPF-->
-				<pathelement location="build/defects4j-tests" />
-				<pathelement location="build/classes" />
-				<pathelement location="build/annotations" />
-			</classpath>
-			<formatter type="xml" />
-			<batchtest todir="build/defects4j-tests/group2">
-				<fileset dir="build/defects4j-tests">
-					<include name="**/math3/filter/*Test.class" />
-					<include name="**/math3/fitting/*Test.class" />
-					<include name="**/math3/fraction/*Test.class" />
-					<include name="**/math3/genetics/*Test.class" />
-					<include name="**/math3/geometry/*Test.class" />
-					<include name="**/math3/RetryRunnerTest.class"/>
-					<exclude name="**/*$*.class" />
-				</fileset>
-			</batchtest>
-		</junit>
-		<junitreport todir="build/defects4j-tests/group2">
-			<fileset dir="build/defects4j-tests/group2" includes="TEST-*.xml" />
-			<report todir="build/defects4j-tests/group2" />
-		</junitreport>
-	</target>
-
-	<target name="test_math3_group3" description="run the group 3 of math3 tests">
-		<mkdir dir="build/defects4j-tests/group3"/>
-		<condition property="junit.usefile">
-			<!-- don't set if this is running from within an IDE that collects output -->
-			<not>
-				<isset property="netbeans.home" />
-			</not>
-		</condition>
-		<junit printsummary="on" showoutput="on" haltonfailure="no" logfailedtests="true" failureproperty="test.failed" dir="${basedir}" fork="yes" forkmode="perTest" maxmemory="2048m" outputtoformatters="true">
-			<formatter type="plain" usefile="${junit.usefile}" />
-			<assertions>
-				<enable />
-			</assertions>
-			<classpath>
-				<path refid="lib.path" />
-				<!--JPF need this to run the test cases using the JPF-->
-				<pathelement location="build/defects4j-tests" />
-				<pathelement location="build/classes" />
-				<pathelement location="build/annotations" />
-			</classpath>
-			<formatter type="xml" />
-			<batchtest todir="build/defects4j-tests/group3">
-				<fileset dir="build/defects4j-tests">
-					<include name="**/math3/linear/*Test.class" />
-					<include name="**/math3/ml/*Test.class" />
-					<include name="**/math3/ode/*Test.class" />
-					<include name="**/math3/optim/*Test.class" />
-					<include name="**/math3/optimization/*Test.class" />
-					<exclude name="**/*$*.class" />
-				</fileset>
-			</batchtest>
-		</junit>
-		<junitreport todir="build/defects4j-tests/group3">
-			<fileset dir="build/defects4j-tests/group3" includes="TEST-*.xml" />
-			<report todir="build/defects4j-tests/group3" />
-		</junitreport>
-	</target>
-
-	<target name="test_math3_group4" description="run the group 4 of math3 tests" >
-		<echo message="running group4"/>
-		<mkdir dir="build/defects4j-tests/group4"/>
-		<condition property="junit.usefile">
-			<!-- don't set if this is running from within an IDE that collects output -->
-			<not>
-				<isset property="netbeans.home" />
-			</not>
-		</condition>
-		<junit printsummary="on" showoutput="on" haltonfailure="no" logfailedtests="true" failureproperty="test.failed" dir="${basedir}" fork="yes" forkmode="perTest" maxmemory="2048m" outputtoformatters="true">
-			<formatter type="plain" usefile="${junit.usefile}" />
-			<assertions>
-				<enable />
-			</assertions>
-			<classpath>
-				<path refid="lib.path" />
-				<!--JPF need this to run the test cases using the JPF-->
-				<pathelement location="build/defects4j-tests" />
-				<pathelement location="build/classes" />
-				<pathelement location="build/annotations" />
-			</classpath>
-			<formatter type="xml" />
-			<batchtest todir="build/defects4j-tests/group4">
-				<fileset dir="build/defects4j-tests">
-					<include name="**/math3/primes/*Test.class" />
-					<include name="**/math3/random/*Test.class" />
-					<include name="**/math3/special/*Test.class" />
-					<include name="**/math3/stat/*Test.class" />
-					<include name="**/math3/transform/*Test.class" />
-					<exclude name="**/*$*.class" />
-				</fileset>
-			</batchtest>
-		</junit>
-		<junitreport todir="build/defects4j-tests/group4">
-			<fileset dir="build/defects4j-tests/group4" includes="TEST-*.xml" />
-			<report todir="build/defects4j-tests/group4" />
-		</junitreport>
 	</target>
 
 </project>

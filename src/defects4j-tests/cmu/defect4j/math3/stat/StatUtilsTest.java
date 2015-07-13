@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class StatUtilsTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -18,10 +18,10 @@ public class StatUtilsTest extends TestJPF {
     }
 
     @Test(timeout=60000)
-    public void testMean() throws Exception {
+    public void testN0andN1Conditions() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.StatUtilsTest object = new org.apache.commons.math3.stat.StatUtilsTest();
-               object.testMean();
+               object.testN0andN1Conditions();
         }
     }
 
@@ -30,14 +30,6 @@ public class StatUtilsTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.StatUtilsTest object = new org.apache.commons.math3.stat.StatUtilsTest();
                object.testStats();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testN0andN1Conditions() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.StatUtilsTest object = new org.apache.commons.math3.stat.StatUtilsTest();
-               object.testN0andN1Conditions();
         }
     }
 
@@ -134,6 +126,14 @@ public class StatUtilsTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.StatUtilsTest object = new org.apache.commons.math3.stat.StatUtilsTest();
                object.testNormalize2();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testMean() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.StatUtilsTest object = new org.apache.commons.math3.stat.StatUtilsTest();
+               object.testMean();
         }
     }
 

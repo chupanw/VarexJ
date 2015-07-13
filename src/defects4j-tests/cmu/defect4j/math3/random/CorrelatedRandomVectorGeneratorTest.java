@@ -5,23 +5,15 @@ import org.junit.Test;
 
 public class CorrelatedRandomVectorGeneratorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=60000)
-    public void testMath226() throws Exception {
+    public void testRank() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.CorrelatedRandomVectorGeneratorTest object = new org.apache.commons.math3.random.CorrelatedRandomVectorGeneratorTest();
-               object.testMath226();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testRootMatrix() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.random.CorrelatedRandomVectorGeneratorTest object = new org.apache.commons.math3.random.CorrelatedRandomVectorGeneratorTest();
-               object.testRootMatrix();
+               object.testRank();
         }
     }
 
@@ -42,10 +34,18 @@ public class CorrelatedRandomVectorGeneratorTest extends TestJPF {
     }
 
     @Test(timeout=60000)
-    public void testRank() throws Exception {
+    public void testRootMatrix() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.CorrelatedRandomVectorGeneratorTest object = new org.apache.commons.math3.random.CorrelatedRandomVectorGeneratorTest();
-               object.testRank();
+               object.testRootMatrix();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testMath226() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.random.CorrelatedRandomVectorGeneratorTest object = new org.apache.commons.math3.random.CorrelatedRandomVectorGeneratorTest();
+               object.testMath226();
         }
     }
 

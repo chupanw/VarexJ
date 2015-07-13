@@ -5,23 +5,15 @@ import org.junit.Test;
 
 public class MultivariateNormalMixtureModelDistributionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=60000)
-    public void testDensities() throws Exception {
+    public void testNonUnitWeightSum() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.MultivariateNormalMixtureModelDistributionTest object = new org.apache.commons.math3.distribution.MultivariateNormalMixtureModelDistributionTest();
-               object.testDensities();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testSampling() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.MultivariateNormalMixtureModelDistributionTest object = new org.apache.commons.math3.distribution.MultivariateNormalMixtureModelDistributionTest();
-               object.testSampling();
+               object.testNonUnitWeightSum();
         }
     }
 
@@ -42,10 +34,18 @@ public class MultivariateNormalMixtureModelDistributionTest extends TestJPF {
     }
 
     @Test(timeout=60000)
-    public void testNonUnitWeightSum() throws Exception {
+    public void testDensities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.MultivariateNormalMixtureModelDistributionTest object = new org.apache.commons.math3.distribution.MultivariateNormalMixtureModelDistributionTest();
-               object.testNonUnitWeightSum();
+               object.testDensities();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testSampling() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.MultivariateNormalMixtureModelDistributionTest object = new org.apache.commons.math3.distribution.MultivariateNormalMixtureModelDistributionTest();
+               object.testSampling();
         }
     }
 

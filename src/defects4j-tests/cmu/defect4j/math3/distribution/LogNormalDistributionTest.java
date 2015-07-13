@@ -5,34 +5,10 @@ import org.junit.Test;
 
 public class LogNormalDistributionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testDensity() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.LogNormalDistributionTest object = new org.apache.commons.math3.distribution.LogNormalDistributionTest();
-               object.testDensity();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testInverseCumulativeProbabilityExtremes() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.LogNormalDistributionTest object = new org.apache.commons.math3.distribution.LogNormalDistributionTest();
-               object.testInverseCumulativeProbabilityExtremes();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testPreconditions() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
-               org.apache.commons.math3.distribution.LogNormalDistributionTest object = new org.apache.commons.math3.distribution.LogNormalDistributionTest();
-               object.testPreconditions();
-        }
-    }
-
     @Test(timeout=60000)
     public void testQuantiles() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -70,6 +46,30 @@ public class LogNormalDistributionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.LogNormalDistributionTest object = new org.apache.commons.math3.distribution.LogNormalDistributionTest();
                object.testMeanVariance();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testDensity() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.LogNormalDistributionTest object = new org.apache.commons.math3.distribution.LogNormalDistributionTest();
+               object.testDensity();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testInverseCumulativeProbabilityExtremes() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.LogNormalDistributionTest object = new org.apache.commons.math3.distribution.LogNormalDistributionTest();
+               object.testInverseCumulativeProbabilityExtremes();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testPreconditions() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
+               org.apache.commons.math3.distribution.LogNormalDistributionTest object = new org.apache.commons.math3.distribution.LogNormalDistributionTest();
+               object.testPreconditions();
         }
     }
 
@@ -122,6 +122,14 @@ public class LogNormalDistributionTest extends TestJPF {
     }
 
     @Test(timeout=60000)
+    public void testDistributionClone() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.LogNormalDistributionTest object = new org.apache.commons.math3.distribution.LogNormalDistributionTest();
+               object.testDistributionClone();
+        }
+    }
+
+    @Test(timeout=60000)
     public void testIsSupportLowerBoundInclusive() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.LogNormalDistributionTest object = new org.apache.commons.math3.distribution.LogNormalDistributionTest();
@@ -134,14 +142,6 @@ public class LogNormalDistributionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.LogNormalDistributionTest object = new org.apache.commons.math3.distribution.LogNormalDistributionTest();
                object.testIsSupportUpperBoundInclusive();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testDistributionClone() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.LogNormalDistributionTest object = new org.apache.commons.math3.distribution.LogNormalDistributionTest();
-               object.testDistributionClone();
         }
     }
 

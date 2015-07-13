@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class MinTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -30,6 +30,22 @@ public class MinTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.MinTest object = new org.apache.commons.math3.stat.descriptive.rank.MinTest();
                object.testSerialization();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.rank.MinTest object = new org.apache.commons.math3.stat.descriptive.rank.MinTest();
+               object.testSerial();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testConsistency() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.rank.MinTest object = new org.apache.commons.math3.stat.descriptive.rank.MinTest();
+               object.testConsistency();
         }
     }
 
@@ -62,22 +78,6 @@ public class MinTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.MinTest object = new org.apache.commons.math3.stat.descriptive.rank.MinTest();
                object.testCopyConsistency();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testConsistency() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.rank.MinTest object = new org.apache.commons.math3.stat.descriptive.rank.MinTest();
-               object.testConsistency();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.rank.MinTest object = new org.apache.commons.math3.stat.descriptive.rank.MinTest();
-               object.testSerial();
         }
     }
 

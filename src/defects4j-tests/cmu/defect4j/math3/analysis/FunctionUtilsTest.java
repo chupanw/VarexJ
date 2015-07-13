@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class FunctionUtilsTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -34,6 +34,14 @@ public class FunctionUtilsTest extends TestJPF {
     }
 
     @Test(timeout=60000)
+    public void testComposeDifferentiable() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.FunctionUtilsTest object = new org.apache.commons.math3.analysis.FunctionUtilsTest();
+               object.testComposeDifferentiable();
+        }
+    }
+
+    @Test(timeout=60000)
     public void testAddDifferentiable() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.FunctionUtilsTest object = new org.apache.commons.math3.analysis.FunctionUtilsTest();
@@ -46,14 +54,6 @@ public class FunctionUtilsTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.FunctionUtilsTest object = new org.apache.commons.math3.analysis.FunctionUtilsTest();
                object.testCombine();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testComposeDifferentiable() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.FunctionUtilsTest object = new org.apache.commons.math3.analysis.FunctionUtilsTest();
-               object.testComposeDifferentiable();
         }
     }
 

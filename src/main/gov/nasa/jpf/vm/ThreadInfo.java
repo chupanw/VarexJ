@@ -33,6 +33,7 @@ import gov.nasa.jpf.util.IntVector;
 import gov.nasa.jpf.util.JPFLogger;
 import gov.nasa.jpf.util.Predicate;
 import gov.nasa.jpf.util.StringSetMatcher;
+import gov.nasa.jpf.util.test.TestJPF;
 import gov.nasa.jpf.vm.choice.BreakGenerator;
 import gov.nasa.jpf.vm.choice.ThreadChoiceFromSet;
 
@@ -1618,6 +1619,12 @@ public Conditional<Instruction> getPC () {
     // hence the MJIEnv calling context might not be set (no Method or ClassInfo)
     // on the other hand, we don't want to re-implement all the MJIEnv accessor methods
 	  print(pw, "if " +  Conditional.getCTXString(ctx) + ":\n");
+
+    if (getCallerStackFrame().prev.getClassInfo().getName().equals("gov.nasa.jpf.util.test.TestJPF")) {
+      TestJPF.uncaughtExceptionSet.add(new ExceptionInfo(ctx, this, getElementInfo(objRef)));
+    }
+
+
     print(pw, env.getClassInfo(objRef).getName());
     Conditional<Integer> msgRef = env.getReferenceField(ctx,objRef, "detailMessage");
     for (Entry<Integer, FeatureExpr> e : msgRef.toMap().entrySet()) {
@@ -2685,7 +2692,7 @@ public Conditional<Instruction> executeInstruction () {
     
     if (mi.isSynchronized()){
       int oref = mi.isStatic() ?  mi.getClassInfo().getClassObjectRef() : top.getThis();
-      ElementInfo ei = getModifiableElementInfo( oref);
+      ElementInfo ei = getModifiableElementInfo(oref);
       
       ei.lock(this);
       
@@ -2902,13 +2909,13 @@ public Conditional<Instruction> executeInstruction () {
     eiThread.setIntField(ctx, "priority", new One<>(Thread.NORM_PRIORITY));
 
     ClassInfo ciPermit = sysCl.getResolvedClassInfo(ctx, "java.lang.Thread$Permit");
-    ElementInfo eiPermit = heap.newObject( ctx, ciPermit, this);
+    ElementInfo eiPermit = heap.newObject(ctx, ciPermit, this);
     eiPermit.setBooleanField(ctx, "blockPark", new One<>(true));
     eiThread.setReferenceField(ctx, "permit", new One<>(eiPermit.getObjectRef()));
 
     addToThreadGroup(ctx, eiGroup);
     
-    addId( objRef, id);
+    addId(objRef, id);
 
     //--- set the thread running
     setState(ThreadInfo.State.RUNNING);

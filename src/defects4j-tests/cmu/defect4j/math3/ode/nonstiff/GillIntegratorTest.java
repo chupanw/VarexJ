@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class GillIntegratorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -30,14 +30,6 @@ public class GillIntegratorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.GillIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GillIntegratorTest();
                object.testBigStep();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testDimensionCheck() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.ode.nonstiff.GillIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GillIntegratorTest();
-               object.testDimensionCheck();
         }
     }
 
@@ -70,6 +62,14 @@ public class GillIntegratorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.GillIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GillIntegratorTest();
                object.testStepSize();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testDimensionCheck() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.ode.nonstiff.GillIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GillIntegratorTest();
+               object.testDimensionCheck();
         }
     }
 

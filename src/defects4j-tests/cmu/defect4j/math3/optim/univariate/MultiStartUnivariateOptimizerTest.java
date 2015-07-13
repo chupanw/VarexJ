@@ -5,10 +5,18 @@ import org.junit.Test;
 
 public class MultiStartUnivariateOptimizerTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=60000)
+    public void testSinMin() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.univariate.MultiStartUnivariateOptimizerTest object = new org.apache.commons.math3.optim.univariate.MultiStartUnivariateOptimizerTest();
+               object.testSinMin();
+        }
+    }
+
     @Test(timeout=60000)
     public void testQuinticMin() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -18,10 +26,10 @@ public class MultiStartUnivariateOptimizerTest extends TestJPF {
     }
 
     @Test(timeout=60000)
-    public void testSinMin() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
+    public void testMissingSearchInterval() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalStateException", config)) {
                org.apache.commons.math3.optim.univariate.MultiStartUnivariateOptimizerTest object = new org.apache.commons.math3.optim.univariate.MultiStartUnivariateOptimizerTest();
-               object.testSinMin();
+               object.testMissingSearchInterval();
         }
     }
 
@@ -38,14 +46,6 @@ public class MultiStartUnivariateOptimizerTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.univariate.MultiStartUnivariateOptimizerTest object = new org.apache.commons.math3.optim.univariate.MultiStartUnivariateOptimizerTest();
                object.testBadFunction();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testMissingSearchInterval() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalStateException", config)) {
-               org.apache.commons.math3.optim.univariate.MultiStartUnivariateOptimizerTest object = new org.apache.commons.math3.optim.univariate.MultiStartUnivariateOptimizerTest();
-               object.testMissingSearchInterval();
         }
     }
 

@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class DormandPrince54IntegratorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -22,6 +22,22 @@ public class DormandPrince54IntegratorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest();
                object.testIncreasingTolerance();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testBackward() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest();
+               object.testBackward();
+        }
+    }
+
+    @Test(timeout=60000)
+    public void testKepler() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest();
+               object.testKepler();
         }
     }
 
@@ -54,22 +70,6 @@ public class DormandPrince54IntegratorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest();
                object.testVariableSteps();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testBackward() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest();
-               object.testBackward();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testKepler() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest();
-               object.testKepler();
         }
     }
 
