@@ -24,6 +24,7 @@ import gov.nasa.jpf.vm.Verify;
 
 import java.io.File;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class TraceTest extends TestJPF {
@@ -94,7 +95,9 @@ public class TraceTest extends TestJPF {
   }
 
   // the method that runs JPF
-  @Test public void testErrorTrace () {
+  @Test
+  @Ignore
+  public void testErrorTrace () {
     File tf = new File(TRACE);
 
     try {
