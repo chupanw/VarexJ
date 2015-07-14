@@ -18,18 +18,10 @@ public class SumSqTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testSerialization() throws Exception {
+    public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.summary.SumSqTest object = new org.apache.commons.math3.stat.descriptive.summary.SumSqTest();
-               object.testSerialization();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.summary.SumSqTest object = new org.apache.commons.math3.stat.descriptive.summary.SumSqTest();
-               object.testSerial();
+               object.testConsistency();
         }
     }
 
@@ -66,10 +58,18 @@ public class SumSqTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testConsistency() throws Exception {
+    public void testSerialization() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.summary.SumSqTest object = new org.apache.commons.math3.stat.descriptive.summary.SumSqTest();
-               object.testConsistency();
+               object.testSerialization();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.summary.SumSqTest object = new org.apache.commons.math3.stat.descriptive.summary.SumSqTest();
+               object.testSerial();
         }
     }
 

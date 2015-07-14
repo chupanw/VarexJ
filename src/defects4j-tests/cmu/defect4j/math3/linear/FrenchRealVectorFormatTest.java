@@ -10,94 +10,6 @@ public class FrenchRealVectorFormatTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testSimpleNoDecimals() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
-               object.testSimpleNoDecimals();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSimpleWithDecimals() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
-               object.testSimpleWithDecimals();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSimpleWithDecimalsTrunc() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
-               object.testSimpleWithDecimalsTrunc();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testNan() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
-               object.testNan();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testPositiveInfinity() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
-               object.testPositiveInfinity();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testParseSimpleNoDecimals() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
-               object.testParseSimpleNoDecimals();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testParseSimpleWithDecimals() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
-               object.testParseSimpleWithDecimals();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testParseSimpleWithDecimalsTrunc() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
-               object.testParseSimpleWithDecimalsTrunc();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testParseNan() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
-               object.testParseNan();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testParsePositiveInfinity() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
-               object.testParsePositiveInfinity();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testConstructorSingleFormat() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
-               object.testConstructorSingleFormat();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testNegativeX() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
@@ -226,14 +138,6 @@ public class FrenchRealVectorFormatTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testDefaultFormatRealVectorImpl() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
-               object.testDefaultFormatRealVectorImpl();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testParseNoComponents() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
@@ -242,10 +146,106 @@ public class FrenchRealVectorFormatTest extends TestJPF {
     }
 
     @Test(timeout=600000)
+    public void testDefaultFormatRealVectorImpl() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
+               object.testDefaultFormatRealVectorImpl();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testParseManyComponents() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
                object.testParseManyComponents();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSimpleNoDecimals() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
+               object.testSimpleNoDecimals();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSimpleWithDecimals() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
+               object.testSimpleWithDecimals();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSimpleWithDecimalsTrunc() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
+               object.testSimpleWithDecimalsTrunc();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNan() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
+               object.testNan();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testPositiveInfinity() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
+               object.testPositiveInfinity();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testParseSimpleNoDecimals() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
+               object.testParseSimpleNoDecimals();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testParseSimpleWithDecimals() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
+               object.testParseSimpleWithDecimals();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testParseSimpleWithDecimalsTrunc() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
+               object.testParseSimpleWithDecimalsTrunc();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testParseNan() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
+               object.testParseNan();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testParsePositiveInfinity() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
+               object.testParsePositiveInfinity();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testConstructorSingleFormat() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.FrenchRealVectorFormatTest object = new org.apache.commons.math3.linear.FrenchRealVectorFormatTest();
+               object.testConstructorSingleFormat();
         }
     }
 

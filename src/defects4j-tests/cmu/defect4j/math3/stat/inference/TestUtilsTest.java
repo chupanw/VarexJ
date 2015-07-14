@@ -50,14 +50,6 @@ public class TestUtilsTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testSmallSamples() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.inference.TestUtilsTest object = new org.apache.commons.math3.stat.inference.TestUtilsTest();
-               object.testSmallSamples();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testOneSampleT() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.inference.TestUtilsTest object = new org.apache.commons.math3.stat.inference.TestUtilsTest();
@@ -118,6 +110,14 @@ public class TestUtilsTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.inference.TestUtilsTest object = new org.apache.commons.math3.stat.inference.TestUtilsTest();
                object.testGTestIndependance();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSmallSamples() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.inference.TestUtilsTest object = new org.apache.commons.math3.stat.inference.TestUtilsTest();
+               object.testSmallSamples();
         }
     }
 

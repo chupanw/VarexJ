@@ -10,14 +10,6 @@ public class MinTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testSpecialValues() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.rank.MinTest object = new org.apache.commons.math3.stat.descriptive.rank.MinTest();
-               object.testSpecialValues();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testNaNs() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.MinTest object = new org.apache.commons.math3.stat.descriptive.rank.MinTest();
@@ -26,18 +18,18 @@ public class MinTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testSerialization() throws Exception {
+    public void testSpecialValues() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.MinTest object = new org.apache.commons.math3.stat.descriptive.rank.MinTest();
-               object.testSerialization();
+               object.testSpecialValues();
         }
     }
 
     @Test(timeout=600000)
-    public void testSerial() throws Exception {
+    public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.MinTest object = new org.apache.commons.math3.stat.descriptive.rank.MinTest();
-               object.testSerial();
+               object.testConsistency();
         }
     }
 
@@ -74,10 +66,18 @@ public class MinTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testConsistency() throws Exception {
+    public void testSerialization() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.MinTest object = new org.apache.commons.math3.stat.descriptive.rank.MinTest();
-               object.testConsistency();
+               object.testSerialization();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.rank.MinTest object = new org.apache.commons.math3.stat.descriptive.rank.MinTest();
+               object.testSerial();
         }
     }
 

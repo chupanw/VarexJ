@@ -10,18 +10,18 @@ public class LocalizedFormatsTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testMessageNumber() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.exception.util.LocalizedFormatsTest object = new org.apache.commons.math3.exception.util.LocalizedFormatsTest();
-               object.testMessageNumber();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testAllKeysPresentInPropertiesFiles() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.exception.util.LocalizedFormatsTest object = new org.apache.commons.math3.exception.util.LocalizedFormatsTest();
                object.testAllKeysPresentInPropertiesFiles();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testMessageNumber() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.exception.util.LocalizedFormatsTest object = new org.apache.commons.math3.exception.util.LocalizedFormatsTest();
+               object.testMessageNumber();
         }
     }
 

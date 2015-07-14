@@ -34,6 +34,14 @@ public class GillIntegratorTest extends TestJPF {
     }
 
     @Test(timeout=600000)
+    public void testUnstableDerivative() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.GillIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GillIntegratorTest();
+               object.testUnstableDerivative();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testBackward() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.GillIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GillIntegratorTest();
@@ -62,14 +70,6 @@ public class GillIntegratorTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
                org.apache.commons.math3.ode.nonstiff.GillIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GillIntegratorTest();
                object.testDimensionCheck();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testUnstableDerivative() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.GillIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GillIntegratorTest();
-               object.testUnstableDerivative();
         }
     }
 

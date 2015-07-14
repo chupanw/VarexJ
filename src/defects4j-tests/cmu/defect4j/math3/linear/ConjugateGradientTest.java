@@ -10,14 +10,6 @@ public class ConjugateGradientTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testDimensionMismatchSolution() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.linear.ConjugateGradientTest object = new org.apache.commons.math3.linear.ConjugateGradientTest();
-               object.testDimensionMismatchSolution();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testNonSquareOperator() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.linear.NonSquareOperatorException", config)) {
                org.apache.commons.math3.linear.ConjugateGradientTest object = new org.apache.commons.math3.linear.ConjugateGradientTest();
@@ -30,6 +22,14 @@ public class ConjugateGradientTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
                org.apache.commons.math3.linear.ConjugateGradientTest object = new org.apache.commons.math3.linear.ConjugateGradientTest();
                object.testDimensionMismatchRightHandSide();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testDimensionMismatchSolution() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.linear.ConjugateGradientTest object = new org.apache.commons.math3.linear.ConjugateGradientTest();
+               object.testDimensionMismatchSolution();
         }
     }
 

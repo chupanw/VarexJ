@@ -10,118 +10,6 @@ public class SymmLQTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testDimensionMismatchSolution() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
-               object.testDimensionMismatchSolution();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testNonSquareOperator() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.linear.NonSquareOperatorException", config)) {
-               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
-               object.testNonSquareOperator();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testDimensionMismatchRightHandSide() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
-               object.testDimensionMismatchRightHandSide();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testUnpreconditionedSolution() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
-               object.testUnpreconditionedSolution();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testUnpreconditionedInPlaceSolutionWithInitialGuess() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
-               object.testUnpreconditionedInPlaceSolutionWithInitialGuess();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testUnpreconditionedSolutionWithInitialGuess() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
-               object.testUnpreconditionedSolutionWithInitialGuess();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testNonSquarePreconditioner() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.linear.NonSquareOperatorException", config)) {
-               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
-               object.testNonSquarePreconditioner();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testMismatchedOperatorDimensions() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
-               object.testMismatchedOperatorDimensions();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testNonPositiveDefinitePreconditioner() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.linear.NonPositiveDefiniteOperatorException", config)) {
-               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
-               object.testNonPositiveDefinitePreconditioner();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testPreconditionedSolution() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
-               object.testPreconditionedSolution();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testPreconditionedSolution2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
-               object.testPreconditionedSolution2();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testEventManagement() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
-               object.testEventManagement();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testUnpreconditionedNormOfResidual() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
-               object.testUnpreconditionedNormOfResidual();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testPreconditionedNormOfResidual() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
-               object.testPreconditionedNormOfResidual();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testSolveSaunders1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
@@ -294,6 +182,118 @@ public class SymmLQTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.linear.NonSelfAdjointOperatorException", config)) {
                org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
                object.testNonSelfAdjointPreconditioner();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNonSquareOperator() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.linear.NonSquareOperatorException", config)) {
+               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
+               object.testNonSquareOperator();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testDimensionMismatchRightHandSide() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
+               object.testDimensionMismatchRightHandSide();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testDimensionMismatchSolution() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
+               object.testDimensionMismatchSolution();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testUnpreconditionedSolution() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
+               object.testUnpreconditionedSolution();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testUnpreconditionedInPlaceSolutionWithInitialGuess() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
+               object.testUnpreconditionedInPlaceSolutionWithInitialGuess();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testUnpreconditionedSolutionWithInitialGuess() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
+               object.testUnpreconditionedSolutionWithInitialGuess();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNonSquarePreconditioner() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.linear.NonSquareOperatorException", config)) {
+               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
+               object.testNonSquarePreconditioner();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testMismatchedOperatorDimensions() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
+               object.testMismatchedOperatorDimensions();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNonPositiveDefinitePreconditioner() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.linear.NonPositiveDefiniteOperatorException", config)) {
+               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
+               object.testNonPositiveDefinitePreconditioner();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testPreconditionedSolution() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
+               object.testPreconditionedSolution();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testPreconditionedSolution2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
+               object.testPreconditionedSolution2();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testEventManagement() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
+               object.testEventManagement();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testUnpreconditionedNormOfResidual() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
+               object.testUnpreconditionedNormOfResidual();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testPreconditionedNormOfResidual() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SymmLQTest object = new org.apache.commons.math3.linear.SymmLQTest();
+               object.testPreconditionedNormOfResidual();
         }
     }
 

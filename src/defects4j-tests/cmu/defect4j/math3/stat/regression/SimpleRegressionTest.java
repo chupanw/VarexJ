@@ -10,6 +10,22 @@ public class SimpleRegressionTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testRandom() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.regression.SimpleRegressionTest object = new org.apache.commons.math3.stat.regression.SimpleRegressionTest();
+               object.testRandom();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNaNs() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.regression.SimpleRegressionTest object = new org.apache.commons.math3.stat.regression.SimpleRegressionTest();
+               object.testNaNs();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testRegressIfaceMethod() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.SimpleRegressionTest object = new org.apache.commons.math3.stat.regression.SimpleRegressionTest();
@@ -150,22 +166,6 @@ public class SimpleRegressionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.SimpleRegressionTest object = new org.apache.commons.math3.stat.regression.SimpleRegressionTest();
                object.testRemoveMultiplePastEmpty();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testRandom() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.regression.SimpleRegressionTest object = new org.apache.commons.math3.stat.regression.SimpleRegressionTest();
-               object.testRandom();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testNaNs() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.regression.SimpleRegressionTest object = new org.apache.commons.math3.stat.regression.SimpleRegressionTest();
-               object.testNaNs();
         }
     }
 

@@ -18,18 +18,18 @@ public class BigRealFieldTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.BigRealFieldTest object = new org.apache.commons.math3.util.BigRealFieldTest();
-               object.testSerial();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testOne() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealFieldTest object = new org.apache.commons.math3.util.BigRealFieldTest();
                object.testOne();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.BigRealFieldTest object = new org.apache.commons.math3.util.BigRealFieldTest();
+               object.testSerial();
         }
     }
 

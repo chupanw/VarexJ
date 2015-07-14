@@ -10,18 +10,18 @@ public class MultivariateDifferentiableVectorMultiStartOptimizerTest extends Tes
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testNoOptimum() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.optimization.MultivariateDifferentiableVectorMultiStartOptimizerTest$TestException", config)) {
-               org.apache.commons.math3.optimization.MultivariateDifferentiableVectorMultiStartOptimizerTest object = new org.apache.commons.math3.optimization.MultivariateDifferentiableVectorMultiStartOptimizerTest();
-               object.testNoOptimum();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testTrivial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.MultivariateDifferentiableVectorMultiStartOptimizerTest object = new org.apache.commons.math3.optimization.MultivariateDifferentiableVectorMultiStartOptimizerTest();
                object.testTrivial();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNoOptimum() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.optimization.MultivariateDifferentiableVectorMultiStartOptimizerTest$TestException", config)) {
+               org.apache.commons.math3.optimization.MultivariateDifferentiableVectorMultiStartOptimizerTest object = new org.apache.commons.math3.optimization.MultivariateDifferentiableVectorMultiStartOptimizerTest();
+               object.testNoOptimum();
         }
     }
 

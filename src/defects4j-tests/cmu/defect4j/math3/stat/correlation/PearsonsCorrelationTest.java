@@ -10,10 +10,10 @@ public class PearsonsCorrelationTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testConstant() throws Exception {
+    public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest object = new org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest();
-               object.testConstant();
+               object.testConsistency();
         }
     }
 
@@ -66,10 +66,10 @@ public class PearsonsCorrelationTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testConsistency() throws Exception {
+    public void testConstant() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest object = new org.apache.commons.math3.stat.correlation.PearsonsCorrelationTest();
-               object.testConsistency();
+               object.testConstant();
         }
     }
 

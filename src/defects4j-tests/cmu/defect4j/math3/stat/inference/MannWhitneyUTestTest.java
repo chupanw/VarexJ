@@ -10,18 +10,18 @@ public class MannWhitneyUTestTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testMannWhitneyUSimple() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.inference.MannWhitneyUTestTest object = new org.apache.commons.math3.stat.inference.MannWhitneyUTestTest();
-               object.testMannWhitneyUSimple();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testBigDataSet() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.inference.MannWhitneyUTestTest object = new org.apache.commons.math3.stat.inference.MannWhitneyUTestTest();
                object.testBigDataSet();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testMannWhitneyUSimple() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.inference.MannWhitneyUTestTest object = new org.apache.commons.math3.stat.inference.MannWhitneyUTestTest();
+               object.testMannWhitneyUSimple();
         }
     }
 

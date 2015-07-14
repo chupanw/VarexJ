@@ -10,26 +10,10 @@ public class PolynomialFunctionNewtonFormTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testDerivative() throws Exception {
+    public void testQuadraticFunction() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialFunctionNewtonFormTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionNewtonFormTest();
-               object.testDerivative();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testQuinticFunction() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.polynomials.PolynomialFunctionNewtonFormTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionNewtonFormTest();
-               object.testQuinticFunction();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testParameters() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.polynomials.PolynomialFunctionNewtonFormTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionNewtonFormTest();
-               object.testParameters();
+               object.testQuadraticFunction();
         }
     }
 
@@ -42,10 +26,26 @@ public class PolynomialFunctionNewtonFormTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testQuadraticFunction() throws Exception {
+    public void testQuinticFunction() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialFunctionNewtonFormTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionNewtonFormTest();
-               object.testQuadraticFunction();
+               object.testQuinticFunction();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testDerivative() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.polynomials.PolynomialFunctionNewtonFormTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionNewtonFormTest();
+               object.testDerivative();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testParameters() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.polynomials.PolynomialFunctionNewtonFormTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionNewtonFormTest();
+               object.testParameters();
         }
     }
 

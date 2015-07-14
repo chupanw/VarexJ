@@ -10,14 +10,6 @@ public class KMeansPlusPlusClustererTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void dimension2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.clustering.KMeansPlusPlusClustererTest object = new org.apache.commons.math3.stat.clustering.KMeansPlusPlusClustererTest();
-               object.dimension2();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testPerformClusterAnalysisDegenerate() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.clustering.KMeansPlusPlusClustererTest object = new org.apache.commons.math3.stat.clustering.KMeansPlusPlusClustererTest();
@@ -30,6 +22,14 @@ public class KMeansPlusPlusClustererTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.clustering.KMeansPlusPlusClustererTest object = new org.apache.commons.math3.stat.clustering.KMeansPlusPlusClustererTest();
                object.testCertainSpace();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void dimension2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.clustering.KMeansPlusPlusClustererTest object = new org.apache.commons.math3.stat.clustering.KMeansPlusPlusClustererTest();
+               object.dimension2();
         }
     }
 

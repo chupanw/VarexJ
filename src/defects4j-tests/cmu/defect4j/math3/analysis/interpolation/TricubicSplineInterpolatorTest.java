@@ -10,10 +10,10 @@ public class TricubicSplineInterpolatorTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testPlane() throws Exception {
+    public void testWave() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatorTest();
-               object.testPlane();
+               object.testWave();
         }
     }
 
@@ -26,10 +26,10 @@ public class TricubicSplineInterpolatorTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testWave() throws Exception {
+    public void testPlane() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatorTest();
-               object.testWave();
+               object.testPlane();
         }
     }
 

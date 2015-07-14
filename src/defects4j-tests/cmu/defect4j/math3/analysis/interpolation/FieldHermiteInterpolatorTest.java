@@ -18,26 +18,18 @@ public class FieldHermiteInterpolatorTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testMixedDerivatives() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
-               object.testMixedDerivatives();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testDuplicatedAbscissa() throws Exception {
-        if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
-               org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
-               object.testDuplicatedAbscissa();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testQuadratic() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
                object.testQuadratic();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testMixedDerivatives() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
+               object.testMixedDerivatives();
         }
     }
 
@@ -102,6 +94,14 @@ public class FieldHermiteInterpolatorTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NoDataException", config)) {
                org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
                object.testEmptySampleDerivative();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testDuplicatedAbscissa() throws Exception {
+        if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
+               org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
+               object.testDuplicatedAbscissa();
         }
     }
 

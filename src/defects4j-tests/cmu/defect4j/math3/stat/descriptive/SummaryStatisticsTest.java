@@ -10,10 +10,10 @@ public class SummaryStatisticsTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testSerialization() throws Exception {
+    public void testSetterInjection() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest();
-               object.testSerialization();
+               object.testSetterInjection();
         }
     }
 
@@ -22,6 +22,22 @@ public class SummaryStatisticsTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest();
                object.testEqualsAndHashCode();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSerialization() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest();
+               object.testSerialization();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testCopy() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest();
+               object.testCopy();
         }
     }
 
@@ -94,22 +110,6 @@ public class SummaryStatisticsTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest();
                object.testOverrideGeoMeanWithMathClass();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testCopy() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest();
-               object.testCopy();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSetterInjection() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest object = new org.apache.commons.math3.stat.descriptive.SummaryStatisticsTest();
-               object.testSetterInjection();
         }
     }
 

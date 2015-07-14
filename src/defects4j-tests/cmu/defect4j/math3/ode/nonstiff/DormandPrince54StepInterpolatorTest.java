@@ -10,6 +10,14 @@ public class DormandPrince54StepInterpolatorTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void checkClone() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.DormandPrince54StepInterpolatorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54StepInterpolatorTest();
+               object.checkClone();
+        }
+    }
+
+    @Test(timeout=600000)
     public void derivativesConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince54StepInterpolatorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54StepInterpolatorTest();
@@ -22,14 +30,6 @@ public class DormandPrince54StepInterpolatorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince54StepInterpolatorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54StepInterpolatorTest();
                object.serialization();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void checkClone() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.DormandPrince54StepInterpolatorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54StepInterpolatorTest();
-               object.checkClone();
         }
     }
 

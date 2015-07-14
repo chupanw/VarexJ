@@ -10,6 +10,15 @@ public class ZipfDistributionTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testMoments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.ZipfDistributionTest object = new org.apache.commons.math3.distribution.ZipfDistributionTest();
+               object.setUp();
+               object.testMoments();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testPreconditions1() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
                org.apache.commons.math3.distribution.ZipfDistributionTest object = new org.apache.commons.math3.distribution.ZipfDistributionTest();
@@ -24,15 +33,6 @@ public class ZipfDistributionTest extends TestJPF {
                org.apache.commons.math3.distribution.ZipfDistributionTest object = new org.apache.commons.math3.distribution.ZipfDistributionTest();
                object.setUp();
                object.testPreconditions2();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testMoments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.ZipfDistributionTest object = new org.apache.commons.math3.distribution.ZipfDistributionTest();
-               object.setUp();
-               object.testMoments();
         }
     }
 

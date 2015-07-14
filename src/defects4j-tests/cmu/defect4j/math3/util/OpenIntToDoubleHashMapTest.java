@@ -10,6 +10,33 @@ public class OpenIntToDoubleHashMapTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testConcurrentModification() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.OpenIntToDoubleHashMapTest object = new org.apache.commons.math3.util.OpenIntToDoubleHashMapTest();
+               object.setUp();
+               object.testConcurrentModification();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testIterator() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.OpenIntToDoubleHashMapTest object = new org.apache.commons.math3.util.OpenIntToDoubleHashMapTest();
+               object.setUp();
+               object.testIterator();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testCopy() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.OpenIntToDoubleHashMapTest object = new org.apache.commons.math3.util.OpenIntToDoubleHashMapTest();
+               object.setUp();
+               object.testCopy();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testPutAndGetWith0ExpectedSize() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.OpenIntToDoubleHashMapTest object = new org.apache.commons.math3.util.OpenIntToDoubleHashMapTest();
@@ -132,33 +159,6 @@ public class OpenIntToDoubleHashMapTest extends TestJPF {
                org.apache.commons.math3.util.OpenIntToDoubleHashMapTest object = new org.apache.commons.math3.util.OpenIntToDoubleHashMapTest();
                object.setUp();
                object.testPutKeysWithCollision2();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testIterator() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.OpenIntToDoubleHashMapTest object = new org.apache.commons.math3.util.OpenIntToDoubleHashMapTest();
-               object.setUp();
-               object.testIterator();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testCopy() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.OpenIntToDoubleHashMapTest object = new org.apache.commons.math3.util.OpenIntToDoubleHashMapTest();
-               object.setUp();
-               object.testCopy();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testConcurrentModification() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.OpenIntToDoubleHashMapTest object = new org.apache.commons.math3.util.OpenIntToDoubleHashMapTest();
-               object.setUp();
-               object.testConcurrentModification();
         }
     }
 

@@ -10,10 +10,18 @@ public class RRQRSolverTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testRank() throws Exception {
+    public void testSolve() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.RRQRSolverTest object = new org.apache.commons.math3.linear.RRQRSolverTest();
-               object.testRank();
+               object.testSolve();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSolveDimensionErrors() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.RRQRSolverTest object = new org.apache.commons.math3.linear.RRQRSolverTest();
+               object.testSolveDimensionErrors();
         }
     }
 
@@ -34,26 +42,18 @@ public class RRQRSolverTest extends TestJPF {
     }
 
     @Test(timeout=600000)
+    public void testRank() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.RRQRSolverTest object = new org.apache.commons.math3.linear.RRQRSolverTest();
+               object.testRank();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testUnderdetermined() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.RRQRSolverTest object = new org.apache.commons.math3.linear.RRQRSolverTest();
                object.testUnderdetermined();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSolve() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.RRQRSolverTest object = new org.apache.commons.math3.linear.RRQRSolverTest();
-               object.testSolve();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSolveDimensionErrors() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.RRQRSolverTest object = new org.apache.commons.math3.linear.RRQRSolverTest();
-               object.testSolveDimensionErrors();
         }
     }
 

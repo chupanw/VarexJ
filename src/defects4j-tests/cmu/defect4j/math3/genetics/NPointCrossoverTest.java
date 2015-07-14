@@ -10,14 +10,6 @@ public class NPointCrossoverTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testNumberIsTooLargeException() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
-               org.apache.commons.math3.genetics.NPointCrossoverTest object = new org.apache.commons.math3.genetics.NPointCrossoverTest();
-               object.testNumberIsTooLargeException();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testCrossover() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.genetics.NPointCrossoverTest object = new org.apache.commons.math3.genetics.NPointCrossoverTest();
@@ -46,6 +38,14 @@ public class NPointCrossoverTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalArgumentException", config)) {
                org.apache.commons.math3.genetics.NPointCrossoverTest object = new org.apache.commons.math3.genetics.NPointCrossoverTest();
                object.testCrossoverInvalidFixedLengthChromosomeSecond();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNumberIsTooLargeException() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
+               org.apache.commons.math3.genetics.NPointCrossoverTest object = new org.apache.commons.math3.genetics.NPointCrossoverTest();
+               object.testNumberIsTooLargeException();
         }
     }
 

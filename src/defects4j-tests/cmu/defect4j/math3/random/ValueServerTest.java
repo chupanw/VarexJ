@@ -10,20 +10,20 @@ public class ValueServerTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testFixedSeed() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.random.ValueServerTest object = new org.apache.commons.math3.random.ValueServerTest();
-               object.setUp();
-               object.testFixedSeed();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testNextDigest() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.ValueServerTest object = new org.apache.commons.math3.random.ValueServerTest();
                object.setUp();
                object.testNextDigest();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testFixedSeed() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.random.ValueServerTest object = new org.apache.commons.math3.random.ValueServerTest();
+               object.setUp();
+               object.testFixedSeed();
         }
     }
 

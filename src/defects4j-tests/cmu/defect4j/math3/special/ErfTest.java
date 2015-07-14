@@ -18,6 +18,14 @@ public class ErfTest extends TestJPF {
     }
 
     @Test(timeout=600000)
+    public void testErf0() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
+               object.testErf0();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testErf1960() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
@@ -38,14 +46,6 @@ public class ErfTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
                object.testErf2807();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testErf0() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
-               object.testErf0();
         }
     }
 

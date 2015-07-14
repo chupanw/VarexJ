@@ -10,6 +10,42 @@ public class FractionFormatTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testParseOne1() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.FractionFormatTest object = new org.apache.commons.math3.fraction.FractionFormatTest();
+               object.setUp();
+               object.testParseOne1();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testParseOne2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.FractionFormatTest object = new org.apache.commons.math3.fraction.FractionFormatTest();
+               object.setUp();
+               object.testParseOne2();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testParseZero1() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.FractionFormatTest object = new org.apache.commons.math3.fraction.FractionFormatTest();
+               object.setUp();
+               object.testParseZero1();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testParseZero2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.FractionFormatTest object = new org.apache.commons.math3.fraction.FractionFormatTest();
+               object.setUp();
+               object.testParseZero2();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testFormat() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fraction.FractionFormatTest object = new org.apache.commons.math3.fraction.FractionFormatTest();
@@ -168,42 +204,6 @@ public class FractionFormatTest extends TestJPF {
                org.apache.commons.math3.fraction.FractionFormatTest object = new org.apache.commons.math3.fraction.FractionFormatTest();
                object.setUp();
                object.testDoubleFormat();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testParseOne1() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.FractionFormatTest object = new org.apache.commons.math3.fraction.FractionFormatTest();
-               object.setUp();
-               object.testParseOne1();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testParseOne2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.FractionFormatTest object = new org.apache.commons.math3.fraction.FractionFormatTest();
-               object.setUp();
-               object.testParseOne2();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testParseZero1() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.FractionFormatTest object = new org.apache.commons.math3.fraction.FractionFormatTest();
-               object.setUp();
-               object.testParseZero1();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testParseZero2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.FractionFormatTest object = new org.apache.commons.math3.fraction.FractionFormatTest();
-               object.setUp();
-               object.testParseZero2();
         }
     }
 

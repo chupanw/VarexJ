@@ -10,6 +10,14 @@ public class SimplexOptimizerNelderMeadTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testRosenbrock() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.direct.SimplexOptimizerNelderMeadTest object = new org.apache.commons.math3.optimization.direct.SimplexOptimizerNelderMeadTest();
+               object.testRosenbrock();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testMinimize1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.direct.SimplexOptimizerNelderMeadTest object = new org.apache.commons.math3.optimization.direct.SimplexOptimizerNelderMeadTest();
@@ -26,18 +34,18 @@ public class SimplexOptimizerNelderMeadTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testLeastSquares2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.direct.SimplexOptimizerNelderMeadTest object = new org.apache.commons.math3.optimization.direct.SimplexOptimizerNelderMeadTest();
-               object.testLeastSquares2();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testMaximize1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.direct.SimplexOptimizerNelderMeadTest object = new org.apache.commons.math3.optimization.direct.SimplexOptimizerNelderMeadTest();
                object.testMaximize1();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testLeastSquares2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.direct.SimplexOptimizerNelderMeadTest object = new org.apache.commons.math3.optimization.direct.SimplexOptimizerNelderMeadTest();
+               object.testLeastSquares2();
         }
     }
 
@@ -78,14 +86,6 @@ public class SimplexOptimizerNelderMeadTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.TooManyEvaluationsException", config)) {
                org.apache.commons.math3.optimization.direct.SimplexOptimizerNelderMeadTest object = new org.apache.commons.math3.optimization.direct.SimplexOptimizerNelderMeadTest();
                object.testMaxIterations();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testRosenbrock() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.direct.SimplexOptimizerNelderMeadTest object = new org.apache.commons.math3.optimization.direct.SimplexOptimizerNelderMeadTest();
-               object.testRosenbrock();
         }
     }
 

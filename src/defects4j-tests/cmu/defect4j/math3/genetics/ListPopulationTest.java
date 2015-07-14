@@ -10,10 +10,10 @@ public class ListPopulationTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testIterator() throws Exception {
-        if (verifyUnhandledException("java.lang.UnsupportedOperationException", config)) {
+    public void testGetFittestChromosome() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.genetics.ListPopulationTest object = new org.apache.commons.math3.genetics.ListPopulationTest();
-               object.testIterator();
+               object.testGetFittestChromosome();
         }
     }
 
@@ -22,14 +22,6 @@ public class ListPopulationTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.genetics.ListPopulationTest object = new org.apache.commons.math3.genetics.ListPopulationTest();
                object.testChromosomes();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testGetFittestChromosome() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.genetics.ListPopulationTest object = new org.apache.commons.math3.genetics.ListPopulationTest();
-               object.testGetFittestChromosome();
         }
     }
 
@@ -78,6 +70,14 @@ public class ListPopulationTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
                org.apache.commons.math3.genetics.ListPopulationTest object = new org.apache.commons.math3.genetics.ListPopulationTest();
                object.testAddTooManyChromosomesSingleCall();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testIterator() throws Exception {
+        if (verifyUnhandledException("java.lang.UnsupportedOperationException", config)) {
+               org.apache.commons.math3.genetics.ListPopulationTest object = new org.apache.commons.math3.genetics.ListPopulationTest();
+               object.testIterator();
         }
     }
 

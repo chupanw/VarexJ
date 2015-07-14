@@ -50,18 +50,18 @@ public class BracketingNthOrderBrentSolverTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testIssue716() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest();
-               object.testIssue716();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testFasterThanNewton() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest();
                object.testFasterThanNewton();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testIssue716() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest();
+               object.testIssue716();
         }
     }
 

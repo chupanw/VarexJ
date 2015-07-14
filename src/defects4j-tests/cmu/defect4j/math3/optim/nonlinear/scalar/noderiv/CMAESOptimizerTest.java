@@ -10,86 +10,6 @@ public class CMAESOptimizerTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testInitOutofbounds1() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
-               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
-               object.testInitOutofbounds1();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testInitOutofbounds2() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
-               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
-               object.testInitOutofbounds2();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testInputSigmaNegative() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NotPositiveException", config)) {
-               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
-               object.testInputSigmaNegative();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testInputSigmaOutOfRange() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
-               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
-               object.testInputSigmaOutOfRange();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testInputSigmaDimensionMismatch() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
-               object.testInputSigmaDimensionMismatch();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testCigarWithBoundaries() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
-               object.testCigarWithBoundaries();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testDiagonalRosen() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
-               object.testDiagonalRosen();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testMath864() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
-               object.testMath864();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testFitAccuracyDependsOnBoundary() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
-               object.testFitAccuracyDependsOnBoundary();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSphere() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
-               object.testSphere();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testBoundariesDimensionMismatch() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
                org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
@@ -198,6 +118,86 @@ public class CMAESOptimizerTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
                object.testConstrainedRosen();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testInitOutofbounds1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
+               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
+               object.testInitOutofbounds1();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testInitOutofbounds2() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
+               object.testInitOutofbounds2();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testInputSigmaNegative() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NotPositiveException", config)) {
+               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
+               object.testInputSigmaNegative();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testInputSigmaOutOfRange() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
+               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
+               object.testInputSigmaOutOfRange();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testInputSigmaDimensionMismatch() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
+               object.testInputSigmaDimensionMismatch();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testCigarWithBoundaries() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
+               object.testCigarWithBoundaries();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testDiagonalRosen() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
+               object.testDiagonalRosen();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testMath864() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
+               object.testMath864();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testFitAccuracyDependsOnBoundary() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
+               object.testFitAccuracyDependsOnBoundary();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSphere() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest();
+               object.testSphere();
         }
     }
 

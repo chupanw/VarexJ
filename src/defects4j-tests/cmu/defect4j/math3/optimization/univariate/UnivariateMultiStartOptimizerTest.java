@@ -10,10 +10,10 @@ public class UnivariateMultiStartOptimizerTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testBadFunction() throws Exception {
+    public void testQuinticMin() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.univariate.UnivariateMultiStartOptimizerTest object = new org.apache.commons.math3.optimization.univariate.UnivariateMultiStartOptimizerTest();
-               object.testBadFunction();
+               object.testQuinticMin();
         }
     }
 
@@ -26,10 +26,10 @@ public class UnivariateMultiStartOptimizerTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testQuinticMin() throws Exception {
+    public void testBadFunction() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.univariate.UnivariateMultiStartOptimizerTest object = new org.apache.commons.math3.optimization.univariate.UnivariateMultiStartOptimizerTest();
-               object.testQuinticMin();
+               object.testBadFunction();
         }
     }
 

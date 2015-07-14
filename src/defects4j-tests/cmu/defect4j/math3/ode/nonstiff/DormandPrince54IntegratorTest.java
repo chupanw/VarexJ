@@ -10,22 +10,6 @@ public class DormandPrince54IntegratorTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testMinStep() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
-               org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest();
-               object.testMinStep();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testIncreasingTolerance() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest();
-               object.testIncreasingTolerance();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testBackward() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest();
@@ -38,6 +22,22 @@ public class DormandPrince54IntegratorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest();
                object.testKepler();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testMinStep() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+               org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest();
+               object.testMinStep();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testIncreasingTolerance() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince54IntegratorTest();
+               object.testIncreasingTolerance();
         }
     }
 

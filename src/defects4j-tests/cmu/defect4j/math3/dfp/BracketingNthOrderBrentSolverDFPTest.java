@@ -10,24 +10,6 @@ public class BracketingNthOrderBrentSolverDFPTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testInsufficientOrder3() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
-               org.apache.commons.math3.dfp.BracketingNthOrderBrentSolverDFPTest object = new org.apache.commons.math3.dfp.BracketingNthOrderBrentSolverDFPTest();
-               object.setUp();
-               object.testInsufficientOrder3();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testConvergenceOnFunctionAccuracy() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.dfp.BracketingNthOrderBrentSolverDFPTest object = new org.apache.commons.math3.dfp.BracketingNthOrderBrentSolverDFPTest();
-               object.setUp();
-               object.testConvergenceOnFunctionAccuracy();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testConstructorOK() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.dfp.BracketingNthOrderBrentSolverDFPTest object = new org.apache.commons.math3.dfp.BracketingNthOrderBrentSolverDFPTest();
@@ -42,6 +24,24 @@ public class BracketingNthOrderBrentSolverDFPTest extends TestJPF {
                org.apache.commons.math3.dfp.BracketingNthOrderBrentSolverDFPTest object = new org.apache.commons.math3.dfp.BracketingNthOrderBrentSolverDFPTest();
                object.setUp();
                object.testNeta();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testInsufficientOrder3() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+               org.apache.commons.math3.dfp.BracketingNthOrderBrentSolverDFPTest object = new org.apache.commons.math3.dfp.BracketingNthOrderBrentSolverDFPTest();
+               object.setUp();
+               object.testInsufficientOrder3();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testConvergenceOnFunctionAccuracy() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.dfp.BracketingNthOrderBrentSolverDFPTest object = new org.apache.commons.math3.dfp.BracketingNthOrderBrentSolverDFPTest();
+               object.setUp();
+               object.testConvergenceOnFunctionAccuracy();
         }
     }
 

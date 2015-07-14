@@ -10,20 +10,20 @@ public class GLSMultipleLinearRegressionTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void cannotAddNullYSampleData() throws Exception {
-        if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
-               org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest();
-               object.setUp();
-               object.cannotAddNullYSampleData();
-        }
-    }
-
-    @Test(timeout=600000)
     public void cannotAddXSampleData() throws Exception {
         if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
                org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest();
                object.setUp();
                object.cannotAddXSampleData();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void cannotAddNullYSampleData() throws Exception {
+        if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
+               org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest();
+               object.setUp();
+               object.cannotAddNullYSampleData();
         }
     }
 
@@ -118,15 +118,6 @@ public class GLSMultipleLinearRegressionTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void canEstimateRegressionParameters() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest();
-               object.setUp();
-               object.canEstimateRegressionParameters();
-        }
-    }
-
-    @Test(timeout=600000)
     public void canEstimateRegressionParametersVariance() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest();
@@ -136,20 +127,29 @@ public class GLSMultipleLinearRegressionTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void canEstimateRegressandVariance() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest();
-               object.setUp();
-               object.canEstimateRegressandVariance();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testNewSample() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest();
                object.setUp();
                object.testNewSample();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void canEstimateRegressionParameters() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest();
+               object.setUp();
+               object.canEstimateRegressionParameters();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void canEstimateRegressandVariance() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.GLSMultipleLinearRegressionTest();
+               object.setUp();
+               object.canEstimateRegressandVariance();
         }
     }
 

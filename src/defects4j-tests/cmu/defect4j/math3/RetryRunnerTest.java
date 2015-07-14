@@ -10,18 +10,18 @@ public class RetryRunnerTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testRetryFailAlways() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalStateException", config)) {
-               org.apache.commons.math3.RetryRunnerTest object = new org.apache.commons.math3.RetryRunnerTest();
-               object.testRetryFailAlways();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testRetryFailSometimes() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.RetryRunnerTest object = new org.apache.commons.math3.RetryRunnerTest();
                object.testRetryFailSometimes();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testRetryFailAlways() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalStateException", config)) {
+               org.apache.commons.math3.RetryRunnerTest object = new org.apache.commons.math3.RetryRunnerTest();
+               object.testRetryFailAlways();
         }
     }
 

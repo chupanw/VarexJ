@@ -10,18 +10,18 @@ public class IntervalTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testInfinite() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.oned.IntervalTest object = new org.apache.commons.math3.geometry.euclidean.oned.IntervalTest();
-               object.testInfinite();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testSinglePoint() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.oned.IntervalTest object = new org.apache.commons.math3.geometry.euclidean.oned.IntervalTest();
                object.testSinglePoint();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testInfinite() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.oned.IntervalTest object = new org.apache.commons.math3.geometry.euclidean.oned.IntervalTest();
+               object.testInfinite();
         }
     }
 

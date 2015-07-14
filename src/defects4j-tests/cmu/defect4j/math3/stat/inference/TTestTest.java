@@ -10,15 +10,6 @@ public class TTestTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testSmallSamples() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.inference.TTestTest object = new org.apache.commons.math3.stat.inference.TTestTest();
-               object.setUp();
-               object.testSmallSamples();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testOneSampleT() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.inference.TTestTest object = new org.apache.commons.math3.stat.inference.TTestTest();
@@ -60,6 +51,15 @@ public class TTestTest extends TestJPF {
                org.apache.commons.math3.stat.inference.TTestTest object = new org.apache.commons.math3.stat.inference.TTestTest();
                object.setUp();
                object.testPaired();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSmallSamples() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.inference.TTestTest object = new org.apache.commons.math3.stat.inference.TTestTest();
+               object.setUp();
+               object.testSmallSamples();
         }
     }
 

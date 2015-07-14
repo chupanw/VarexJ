@@ -10,11 +10,20 @@ public class HypergeometricDistributionTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testAccessors() throws Exception {
+    public void testMoments() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.HypergeometricDistributionTest object = new org.apache.commons.math3.distribution.HypergeometricDistributionTest();
                object.setUp();
-               object.testAccessors();
+               object.testMoments();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testLargeValues() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.HypergeometricDistributionTest object = new org.apache.commons.math3.distribution.HypergeometricDistributionTest();
+               object.setUp();
+               object.testLargeValues();
         }
     }
 
@@ -24,6 +33,15 @@ public class HypergeometricDistributionTest extends TestJPF {
                org.apache.commons.math3.distribution.HypergeometricDistributionTest object = new org.apache.commons.math3.distribution.HypergeometricDistributionTest();
                object.setUp();
                object.testDegenerateNoFailures();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testAccessors() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.HypergeometricDistributionTest object = new org.apache.commons.math3.distribution.HypergeometricDistributionTest();
+               object.setUp();
+               object.testAccessors();
         }
     }
 
@@ -42,15 +60,6 @@ public class HypergeometricDistributionTest extends TestJPF {
                org.apache.commons.math3.distribution.HypergeometricDistributionTest object = new org.apache.commons.math3.distribution.HypergeometricDistributionTest();
                object.setUp();
                object.testDegenerateFullSample();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testLargeValues() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.HypergeometricDistributionTest object = new org.apache.commons.math3.distribution.HypergeometricDistributionTest();
-               object.setUp();
-               object.testLargeValues();
         }
     }
 
@@ -78,15 +87,6 @@ public class HypergeometricDistributionTest extends TestJPF {
                org.apache.commons.math3.distribution.HypergeometricDistributionTest object = new org.apache.commons.math3.distribution.HypergeometricDistributionTest();
                object.setUp();
                object.testPreconditions();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testMoments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.HypergeometricDistributionTest object = new org.apache.commons.math3.distribution.HypergeometricDistributionTest();
-               object.setUp();
-               object.testMoments();
         }
     }
 

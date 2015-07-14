@@ -10,14 +10,6 @@ public class DBSCANClustererTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testCluster() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.clustering.DBSCANClustererTest object = new org.apache.commons.math3.stat.clustering.DBSCANClustererTest();
-               object.testCluster();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testSingleLink() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.clustering.DBSCANClustererTest object = new org.apache.commons.math3.stat.clustering.DBSCANClustererTest();
@@ -62,6 +54,14 @@ public class DBSCANClustererTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NullArgumentException", config)) {
                org.apache.commons.math3.stat.clustering.DBSCANClustererTest object = new org.apache.commons.math3.stat.clustering.DBSCANClustererTest();
                object.testNullDataset();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testCluster() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.clustering.DBSCANClustererTest object = new org.apache.commons.math3.stat.clustering.DBSCANClustererTest();
+               object.testCluster();
         }
     }
 

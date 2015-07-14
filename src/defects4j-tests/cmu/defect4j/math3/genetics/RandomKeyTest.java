@@ -10,6 +10,14 @@ public class RandomKeyTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testIsSame() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.genetics.RandomKeyTest object = new org.apache.commons.math3.genetics.RandomKeyTest();
+               object.testIsSame();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testConstructor1() throws Exception {
         if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
                org.apache.commons.math3.genetics.RandomKeyTest object = new org.apache.commons.math3.genetics.RandomKeyTest();
@@ -78,14 +86,6 @@ public class RandomKeyTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.genetics.RandomKeyTest object = new org.apache.commons.math3.genetics.RandomKeyTest();
                object.testEqualRepr();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testIsSame() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.genetics.RandomKeyTest object = new org.apache.commons.math3.genetics.RandomKeyTest();
-               object.testIsSame();
         }
     }
 

@@ -10,10 +10,10 @@ public class SpearmansRankCorrelationTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testConstant() throws Exception {
+    public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.correlation.SpearmansRankCorrelationTest object = new org.apache.commons.math3.stat.correlation.SpearmansRankCorrelationTest();
-               object.testConstant();
+               object.testConsistency();
         }
     }
 
@@ -58,10 +58,10 @@ public class SpearmansRankCorrelationTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testConsistency() throws Exception {
+    public void testConstant() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.correlation.SpearmansRankCorrelationTest object = new org.apache.commons.math3.stat.correlation.SpearmansRankCorrelationTest();
-               object.testConsistency();
+               object.testConstant();
         }
     }
 

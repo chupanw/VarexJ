@@ -10,6 +10,14 @@ public class HarmonicFitterTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testPreconditions1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+               org.apache.commons.math3.fitting.HarmonicFitterTest object = new org.apache.commons.math3.fitting.HarmonicFitterTest();
+               object.testPreconditions1();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testInitialGuess() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fitting.HarmonicFitterTest object = new org.apache.commons.math3.fitting.HarmonicFitterTest();
@@ -54,14 +62,6 @@ public class HarmonicFitterTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalStateException", config)) {
                org.apache.commons.math3.fitting.HarmonicFitterTest object = new org.apache.commons.math3.fitting.HarmonicFitterTest();
                object.testMath844();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testPreconditions1() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
-               org.apache.commons.math3.fitting.HarmonicFitterTest object = new org.apache.commons.math3.fitting.HarmonicFitterTest();
-               object.testPreconditions1();
         }
     }
 

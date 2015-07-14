@@ -10,11 +10,11 @@ public class PoissonDistributionTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testNegativeMean() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
+    public void testMoments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.PoissonDistributionTest object = new org.apache.commons.math3.distribution.PoissonDistributionTest();
                object.setUp();
-               object.testNegativeMean();
+               object.testMoments();
         }
     }
 
@@ -24,6 +24,15 @@ public class PoissonDistributionTest extends TestJPF {
                org.apache.commons.math3.distribution.PoissonDistributionTest object = new org.apache.commons.math3.distribution.PoissonDistributionTest();
                object.setUp();
                object.testNormalApproximateProbability();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNegativeMean() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
+               org.apache.commons.math3.distribution.PoissonDistributionTest object = new org.apache.commons.math3.distribution.PoissonDistributionTest();
+               object.setUp();
+               object.testNegativeMean();
         }
     }
 
@@ -69,15 +78,6 @@ public class PoissonDistributionTest extends TestJPF {
                org.apache.commons.math3.distribution.PoissonDistributionTest object = new org.apache.commons.math3.distribution.PoissonDistributionTest();
                object.setUp();
                object.testLargeMeanInverseCumulativeProbability();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testMoments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.PoissonDistributionTest object = new org.apache.commons.math3.distribution.PoissonDistributionTest();
-               object.setUp();
-               object.testMoments();
         }
     }
 

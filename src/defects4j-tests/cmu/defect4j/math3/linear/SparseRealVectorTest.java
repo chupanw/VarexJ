@@ -10,6 +10,22 @@ public class SparseRealVectorTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testConstructors() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
+               object.testConstructors();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testConcurrentModification() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
+               object.testConcurrentModification();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testMap() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
@@ -26,22 +42,6 @@ public class SparseRealVectorTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testConcurrentModification() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
-               object.testConcurrentModification();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testConstructors() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
-               object.testConstructors();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testEquals() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
@@ -50,10 +50,10 @@ public class SparseRealVectorTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testSerial() throws Exception {
+    public void testIterator() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
-               object.testSerial();
+               object.testIterator();
         }
     }
 
@@ -66,10 +66,10 @@ public class SparseRealVectorTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testIterator() throws Exception {
+    public void testGetDimension() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
-               object.testIterator();
+               object.testGetDimension();
         }
     }
 
@@ -86,14 +86,6 @@ public class SparseRealVectorTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
                org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
                object.testGetEntryInvalidIndex2();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testGetDimension() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
-               object.testGetDimension();
         }
     }
 
@@ -854,6 +846,14 @@ public class SparseRealVectorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
                object.testWalkInOptimizedOrderChangingVisitor3();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
+               object.testSerial();
         }
     }
 

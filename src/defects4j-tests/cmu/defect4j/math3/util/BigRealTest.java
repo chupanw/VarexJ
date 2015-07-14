@@ -10,50 +10,10 @@ public class BigRealTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testAdd() throws Exception {
+    public void testConstructor() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
-               object.testAdd();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSubtract() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
-               object.testSubtract();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testMultiply() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
-               object.testMultiply();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testNegate() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
-               object.testNegate();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testReciprocal() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
-               object.testReciprocal();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
-               object.testSerial();
+               object.testConstructor();
         }
     }
 
@@ -98,10 +58,42 @@ public class BigRealTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testConstructor() throws Exception {
+    public void testAdd() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
-               object.testConstructor();
+               object.testAdd();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSubtract() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
+               object.testSubtract();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testMultiply() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
+               object.testMultiply();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNegate() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
+               object.testNegate();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testReciprocal() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
+               object.testReciprocal();
         }
     }
 
@@ -118,6 +110,14 @@ public class BigRealTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathArithmeticException", config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
                object.testReciprocalOfZero();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
+               object.testSerial();
         }
     }
 

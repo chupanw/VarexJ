@@ -10,18 +10,10 @@ public class FastFourierTransformerTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testAdHocData() throws Exception {
+    public void testSinFunction() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.transform.FastFourierTransformerTest object = new org.apache.commons.math3.transform.FastFourierTransformerTest();
-               object.testAdHocData();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testTransformFunctionNotStrictlyPositiveNumberOfSamples() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.transform.FastFourierTransformerTest object = new org.apache.commons.math3.transform.FastFourierTransformerTest();
-               object.testTransformFunctionNotStrictlyPositiveNumberOfSamples();
+               object.testSinFunction();
         }
     }
 
@@ -34,10 +26,10 @@ public class FastFourierTransformerTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testTransformComplexSizeNotAPowerOfTwo() throws Exception {
+    public void testTransformFunctionNotStrictlyPositiveNumberOfSamples() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.transform.FastFourierTransformerTest object = new org.apache.commons.math3.transform.FastFourierTransformerTest();
-               object.testTransformComplexSizeNotAPowerOfTwo();
+               object.testTransformFunctionNotStrictlyPositiveNumberOfSamples();
         }
     }
 
@@ -46,6 +38,14 @@ public class FastFourierTransformerTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.transform.FastFourierTransformerTest object = new org.apache.commons.math3.transform.FastFourierTransformerTest();
                object.testTransformRealSizeNotAPowerOfTwo();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testTransformComplexSizeNotAPowerOfTwo() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.transform.FastFourierTransformerTest object = new org.apache.commons.math3.transform.FastFourierTransformerTest();
+               object.testTransformComplexSizeNotAPowerOfTwo();
         }
     }
 
@@ -98,10 +98,10 @@ public class FastFourierTransformerTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testSinFunction() throws Exception {
+    public void testAdHocData() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.transform.FastFourierTransformerTest object = new org.apache.commons.math3.transform.FastFourierTransformerTest();
-               object.testSinFunction();
+               object.testAdHocData();
         }
     }
 

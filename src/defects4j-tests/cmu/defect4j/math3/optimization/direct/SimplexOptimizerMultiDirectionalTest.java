@@ -10,6 +10,14 @@ public class SimplexOptimizerMultiDirectionalTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testRosenbrock() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.direct.SimplexOptimizerMultiDirectionalTest object = new org.apache.commons.math3.optimization.direct.SimplexOptimizerMultiDirectionalTest();
+               object.testRosenbrock();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testMinimize1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.direct.SimplexOptimizerMultiDirectionalTest object = new org.apache.commons.math3.optimization.direct.SimplexOptimizerMultiDirectionalTest();
@@ -54,14 +62,6 @@ public class SimplexOptimizerMultiDirectionalTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.direct.SimplexOptimizerMultiDirectionalTest object = new org.apache.commons.math3.optimization.direct.SimplexOptimizerMultiDirectionalTest();
                object.testMath283();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testRosenbrock() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.direct.SimplexOptimizerMultiDirectionalTest object = new org.apache.commons.math3.optimization.direct.SimplexOptimizerMultiDirectionalTest();
-               object.testRosenbrock();
         }
     }
 

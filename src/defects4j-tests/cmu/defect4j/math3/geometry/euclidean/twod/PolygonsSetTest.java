@@ -18,18 +18,18 @@ public class PolygonsSetTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testSimplyConnected() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest object = new org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest();
-               object.testSimplyConnected();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testStair() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest object = new org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest();
                object.testStair();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSimplyConnected() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest object = new org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest();
+               object.testSimplyConnected();
         }
     }
 

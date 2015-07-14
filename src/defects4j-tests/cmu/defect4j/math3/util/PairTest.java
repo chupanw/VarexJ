@@ -18,18 +18,18 @@ public class PairTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testHashCode() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.PairTest object = new org.apache.commons.math3.util.PairTest();
-               object.testHashCode();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testAccessor() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.PairTest object = new org.apache.commons.math3.util.PairTest();
                object.testAccessor();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testHashCode() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.PairTest object = new org.apache.commons.math3.util.PairTest();
+               object.testHashCode();
         }
     }
 

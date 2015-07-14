@@ -10,6 +10,14 @@ public class HermiteInterpolatorTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testEmptySample() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NoDataException", config)) {
+               org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest();
+               object.testEmptySample();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testZero() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest();
@@ -18,26 +26,18 @@ public class HermiteInterpolatorTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testMixedDerivatives() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest();
-               object.testMixedDerivatives();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testDuplicatedAbscissa() throws Exception {
-        if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
-               org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest();
-               object.testDuplicatedAbscissa();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testQuadratic() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest();
                object.testQuadratic();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testMixedDerivatives() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest();
+               object.testMixedDerivatives();
         }
     }
 
@@ -90,10 +90,10 @@ public class HermiteInterpolatorTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testEmptySample() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NoDataException", config)) {
+    public void testDuplicatedAbscissa() throws Exception {
+        if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
                org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.HermiteInterpolatorTest();
-               object.testEmptySample();
+               object.testDuplicatedAbscissa();
         }
     }
 

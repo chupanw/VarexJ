@@ -18,18 +18,18 @@ public class ElitisticListPopulationTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testSetElitismRate() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.genetics.ElitisticListPopulationTest object = new org.apache.commons.math3.genetics.ElitisticListPopulationTest();
-               object.testSetElitismRate();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testSetElitismRateTooLow() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
                org.apache.commons.math3.genetics.ElitisticListPopulationTest object = new org.apache.commons.math3.genetics.ElitisticListPopulationTest();
                object.testSetElitismRateTooLow();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSetElitismRate() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.genetics.ElitisticListPopulationTest object = new org.apache.commons.math3.genetics.ElitisticListPopulationTest();
+               object.testSetElitismRate();
         }
     }
 

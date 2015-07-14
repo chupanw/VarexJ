@@ -10,33 +10,6 @@ public class FrequencyTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testAdd() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.FrequencyTest object = new org.apache.commons.math3.stat.FrequencyTest();
-               object.setUp();
-               object.testAdd();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.FrequencyTest object = new org.apache.commons.math3.stat.FrequencyTest();
-               object.setUp();
-               object.testSerial();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testToString() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.FrequencyTest object = new org.apache.commons.math3.stat.FrequencyTest();
-               object.setUp();
-               object.testToString();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testCounts() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.FrequencyTest object = new org.apache.commons.math3.stat.FrequencyTest();
@@ -105,6 +78,33 @@ public class FrequencyTest extends TestJPF {
                org.apache.commons.math3.stat.FrequencyTest object = new org.apache.commons.math3.stat.FrequencyTest();
                object.setUp();
                object.testMergeCollection();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testAdd() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.FrequencyTest object = new org.apache.commons.math3.stat.FrequencyTest();
+               object.setUp();
+               object.testAdd();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testToString() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.FrequencyTest object = new org.apache.commons.math3.stat.FrequencyTest();
+               object.setUp();
+               object.testToString();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.FrequencyTest object = new org.apache.commons.math3.stat.FrequencyTest();
+               object.setUp();
+               object.testSerial();
         }
     }
 

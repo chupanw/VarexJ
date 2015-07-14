@@ -26,18 +26,10 @@ public class SumTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testSerialization() throws Exception {
+    public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.summary.SumTest object = new org.apache.commons.math3.stat.descriptive.summary.SumTest();
-               object.testSerialization();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.summary.SumTest object = new org.apache.commons.math3.stat.descriptive.summary.SumTest();
-               object.testSerial();
+               object.testConsistency();
         }
     }
 
@@ -74,10 +66,18 @@ public class SumTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testConsistency() throws Exception {
+    public void testSerialization() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.summary.SumTest object = new org.apache.commons.math3.stat.descriptive.summary.SumTest();
-               object.testConsistency();
+               object.testSerialization();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.summary.SumTest object = new org.apache.commons.math3.stat.descriptive.summary.SumTest();
+               object.testSerial();
         }
     }
 

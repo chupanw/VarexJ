@@ -18,18 +18,18 @@ public class BigFractionFieldTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.BigFractionFieldTest object = new org.apache.commons.math3.fraction.BigFractionFieldTest();
-               object.testSerial();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testOne() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fraction.BigFractionFieldTest object = new org.apache.commons.math3.fraction.BigFractionFieldTest();
                object.testOne();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.BigFractionFieldTest object = new org.apache.commons.math3.fraction.BigFractionFieldTest();
+               object.testSerial();
         }
     }
 

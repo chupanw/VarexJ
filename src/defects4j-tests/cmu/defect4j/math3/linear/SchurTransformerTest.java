@@ -10,34 +10,10 @@ public class SchurTransformerTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testAEqualPTPt() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SchurTransformerTest object = new org.apache.commons.math3.linear.SchurTransformerTest();
-               object.testAEqualPTPt();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSchurForm() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SchurTransformerTest object = new org.apache.commons.math3.linear.SchurTransformerTest();
-               object.testSchurForm();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testNonSquare() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SchurTransformerTest object = new org.apache.commons.math3.linear.SchurTransformerTest();
                object.testNonSquare();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testMath848() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SchurTransformerTest object = new org.apache.commons.math3.linear.SchurTransformerTest();
-               object.testMath848();
         }
     }
 
@@ -70,6 +46,30 @@ public class SchurTransformerTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SchurTransformerTest object = new org.apache.commons.math3.linear.SchurTransformerTest();
                object.testRandomDataNormalDistribution();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testMath848() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SchurTransformerTest object = new org.apache.commons.math3.linear.SchurTransformerTest();
+               object.testMath848();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testAEqualPTPt() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SchurTransformerTest object = new org.apache.commons.math3.linear.SchurTransformerTest();
+               object.testAEqualPTPt();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSchurForm() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SchurTransformerTest object = new org.apache.commons.math3.linear.SchurTransformerTest();
+               object.testSchurForm();
         }
     }
 

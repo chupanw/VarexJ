@@ -10,6 +10,30 @@ public class SparseFieldMatrixTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testSubMatrix() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SparseFieldMatrixTest object = new org.apache.commons.math3.linear.SparseFieldMatrixTest();
+               object.testSubMatrix();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testEqualsAndHashCode() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SparseFieldMatrixTest object = new org.apache.commons.math3.linear.SparseFieldMatrixTest();
+               object.testEqualsAndHashCode();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testScalarAdd() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SparseFieldMatrixTest object = new org.apache.commons.math3.linear.SparseFieldMatrixTest();
+               object.testScalarAdd();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testAdd() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseFieldMatrixTest object = new org.apache.commons.math3.linear.SparseFieldMatrixTest();
@@ -22,14 +46,6 @@ public class SparseFieldMatrixTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseFieldMatrixTest object = new org.apache.commons.math3.linear.SparseFieldMatrixTest();
                object.testMultiply();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testEqualsAndHashCode() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SparseFieldMatrixTest object = new org.apache.commons.math3.linear.SparseFieldMatrixTest();
-               object.testEqualsAndHashCode();
         }
     }
 
@@ -182,22 +198,6 @@ public class SparseFieldMatrixTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseFieldMatrixTest object = new org.apache.commons.math3.linear.SparseFieldMatrixTest();
                object.testSetSubMatrix();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSubMatrix() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SparseFieldMatrixTest object = new org.apache.commons.math3.linear.SparseFieldMatrixTest();
-               object.testSubMatrix();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testScalarAdd() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SparseFieldMatrixTest object = new org.apache.commons.math3.linear.SparseFieldMatrixTest();
-               object.testScalarAdd();
         }
     }
 

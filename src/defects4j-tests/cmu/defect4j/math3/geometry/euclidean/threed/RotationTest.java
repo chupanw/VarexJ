@@ -10,14 +10,6 @@ public class RotationTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testCompose() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.RotationTest object = new org.apache.commons.math3.geometry.euclidean.threed.RotationTest();
-               object.testCompose();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testIdentity() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.RotationTest object = new org.apache.commons.math3.geometry.euclidean.threed.RotationTest();
@@ -26,18 +18,18 @@ public class RotationTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testRevert() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.RotationTest object = new org.apache.commons.math3.geometry.euclidean.threed.RotationTest();
-               object.testRevert();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testAxisAngle() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.RotationTest object = new org.apache.commons.math3.geometry.euclidean.threed.RotationTest();
                object.testAxisAngle();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testRevert() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.RotationTest object = new org.apache.commons.math3.geometry.euclidean.threed.RotationTest();
+               object.testRevert();
         }
     }
 
@@ -126,6 +118,14 @@ public class RotationTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.RotationTest object = new org.apache.commons.math3.geometry.euclidean.threed.RotationTest();
                object.testIssue801();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testCompose() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.RotationTest object = new org.apache.commons.math3.geometry.euclidean.threed.RotationTest();
+               object.testCompose();
         }
     }
 

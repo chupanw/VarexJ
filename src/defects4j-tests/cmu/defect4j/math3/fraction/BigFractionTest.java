@@ -10,66 +10,10 @@ public class BigFractionTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testAdd() throws Exception {
+    public void testConstructor() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
-               object.testAdd();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSubtract() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
-               object.testSubtract();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testMultiply() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
-               object.testMultiply();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testNegate() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
-               object.testNegate();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testReciprocal() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
-               object.testReciprocal();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testPow() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
-               object.testPow();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testAbs() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
-               object.testAbs();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
-               object.testSerial();
+               object.testConstructor();
         }
     }
 
@@ -210,6 +154,62 @@ public class BigFractionTest extends TestJPF {
     }
 
     @Test(timeout=600000)
+    public void testAdd() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
+               object.testAdd();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSubtract() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
+               object.testSubtract();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testMultiply() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
+               object.testMultiply();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNegate() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
+               object.testNegate();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testReciprocal() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
+               object.testReciprocal();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testPow() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
+               object.testPow();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testAbs() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
+               object.testAbs();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testIntValue() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
@@ -218,10 +218,10 @@ public class BigFractionTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testConstructor() throws Exception {
+    public void testSerial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fraction.BigFractionTest object = new org.apache.commons.math3.fraction.BigFractionTest();
-               object.testConstructor();
+               object.testSerial();
         }
     }
 

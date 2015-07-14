@@ -10,6 +10,14 @@ public class MultiStartMultivariateVectorOptimizerTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testTrivial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.nonlinear.vector.MultiStartMultivariateVectorOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.MultiStartMultivariateVectorOptimizerTest();
+               object.testTrivial();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testGetOptimaBeforeOptimize() throws Exception {
         if (verifyUnhandledException("java.lang.NullPointerException", config)) {
                org.apache.commons.math3.optim.nonlinear.vector.MultiStartMultivariateVectorOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.MultiStartMultivariateVectorOptimizerTest();
@@ -30,14 +38,6 @@ public class MultiStartMultivariateVectorOptimizerTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.optim.nonlinear.vector.MultiStartMultivariateVectorOptimizerTest$TestException", config)) {
                org.apache.commons.math3.optim.nonlinear.vector.MultiStartMultivariateVectorOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.MultiStartMultivariateVectorOptimizerTest();
                object.testNoOptimum();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testTrivial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.nonlinear.vector.MultiStartMultivariateVectorOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.MultiStartMultivariateVectorOptimizerTest();
-               object.testTrivial();
         }
     }
 

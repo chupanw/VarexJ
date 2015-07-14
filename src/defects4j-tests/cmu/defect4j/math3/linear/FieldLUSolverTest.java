@@ -10,6 +10,22 @@ public class FieldLUSolverTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testSingular() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.FieldLUSolverTest object = new org.apache.commons.math3.linear.FieldLUSolverTest();
+               object.testSingular();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSolveSingularityErrors() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.FieldLUSolverTest object = new org.apache.commons.math3.linear.FieldLUSolverTest();
+               object.testSolveSingularityErrors();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testSolve() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.FieldLUSolverTest object = new org.apache.commons.math3.linear.FieldLUSolverTest();
@@ -30,22 +46,6 @@ public class FieldLUSolverTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.FieldLUSolverTest object = new org.apache.commons.math3.linear.FieldLUSolverTest();
                object.testDeterminant();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSingular() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.FieldLUSolverTest object = new org.apache.commons.math3.linear.FieldLUSolverTest();
-               object.testSingular();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSolveSingularityErrors() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.FieldLUSolverTest object = new org.apache.commons.math3.linear.FieldLUSolverTest();
-               object.testSolveSingularityErrors();
         }
     }
 

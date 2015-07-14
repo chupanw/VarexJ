@@ -10,18 +10,18 @@ public class AbstractRealDistributionTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testDiscontinuous() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.AbstractRealDistributionTest object = new org.apache.commons.math3.distribution.AbstractRealDistributionTest();
-               object.testDiscontinuous();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testContinuous() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.AbstractRealDistributionTest object = new org.apache.commons.math3.distribution.AbstractRealDistributionTest();
                object.testContinuous();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testDiscontinuous() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.AbstractRealDistributionTest object = new org.apache.commons.math3.distribution.AbstractRealDistributionTest();
+               object.testDiscontinuous();
         }
     }
 

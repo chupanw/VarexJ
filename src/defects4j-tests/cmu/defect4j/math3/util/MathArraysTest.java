@@ -10,6 +10,14 @@ public class MathArraysTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testScale() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.MathArraysTest object = new org.apache.commons.math3.util.MathArraysTest();
+               object.testScale();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testScaleInPlace() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.MathArraysTest object = new org.apache.commons.math3.util.MathArraysTest();
@@ -302,14 +310,6 @@ public class MathArraysTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.MathArraysTest object = new org.apache.commons.math3.util.MathArraysTest();
                object.testNormalizeArray();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testScale() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.MathArraysTest object = new org.apache.commons.math3.util.MathArraysTest();
-               object.testScale();
         }
     }
 

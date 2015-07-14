@@ -10,18 +10,10 @@ public class EuclideanDoublePointTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testSerial() throws Exception {
+    public void testDistance() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.clustering.EuclideanDoublePointTest object = new org.apache.commons.math3.stat.clustering.EuclideanDoublePointTest();
-               object.testSerial();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testArrayIsReference() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.clustering.EuclideanDoublePointTest object = new org.apache.commons.math3.stat.clustering.EuclideanDoublePointTest();
-               object.testArrayIsReference();
+               object.testDistance();
         }
     }
 
@@ -34,10 +26,18 @@ public class EuclideanDoublePointTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testDistance() throws Exception {
+    public void testArrayIsReference() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.clustering.EuclideanDoublePointTest object = new org.apache.commons.math3.stat.clustering.EuclideanDoublePointTest();
-               object.testDistance();
+               object.testArrayIsReference();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.clustering.EuclideanDoublePointTest object = new org.apache.commons.math3.stat.clustering.EuclideanDoublePointTest();
+               object.testSerial();
         }
     }
 

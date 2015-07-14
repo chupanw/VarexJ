@@ -10,10 +10,18 @@ public class LUSolverTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testThreshold() throws Exception {
+    public void testSingular() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.LUSolverTest object = new org.apache.commons.math3.linear.LUSolverTest();
-               object.testThreshold();
+               object.testSingular();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSolveSingularityErrors() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.LUSolverTest object = new org.apache.commons.math3.linear.LUSolverTest();
+               object.testSolveSingularityErrors();
         }
     }
 
@@ -42,18 +50,10 @@ public class LUSolverTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testSingular() throws Exception {
+    public void testThreshold() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.LUSolverTest object = new org.apache.commons.math3.linear.LUSolverTest();
-               object.testSingular();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSolveSingularityErrors() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.LUSolverTest object = new org.apache.commons.math3.linear.LUSolverTest();
-               object.testSolveSingularityErrors();
+               object.testThreshold();
         }
     }
 

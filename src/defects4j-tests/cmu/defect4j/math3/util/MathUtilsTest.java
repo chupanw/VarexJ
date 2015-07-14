@@ -18,14 +18,6 @@ public class MathUtilsTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testArrayHash() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.MathUtilsTest object = new org.apache.commons.math3.util.MathUtilsTest();
-               object.testArrayHash();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testPermutedArrayHash() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.MathUtilsTest object = new org.apache.commons.math3.util.MathUtilsTest();
@@ -158,6 +150,14 @@ public class MathUtilsTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathArithmeticException", config)) {
                org.apache.commons.math3.util.MathUtilsTest object = new org.apache.commons.math3.util.MathUtilsTest();
                object.testCopySignByte2();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testArrayHash() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.MathUtilsTest object = new org.apache.commons.math3.util.MathUtilsTest();
+               object.testArrayHash();
         }
     }
 

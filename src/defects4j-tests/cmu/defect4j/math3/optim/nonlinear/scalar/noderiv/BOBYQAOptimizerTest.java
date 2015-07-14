@@ -10,14 +10,6 @@ public class BOBYQAOptimizerTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testSphere() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.BOBYQAOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.BOBYQAOptimizerTest();
-               object.testSphere();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testInitOutOfBounds() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
                org.apache.commons.math3.optim.nonlinear.scalar.noderiv.BOBYQAOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.BOBYQAOptimizerTest();
@@ -158,6 +150,14 @@ public class BOBYQAOptimizerTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.nonlinear.scalar.noderiv.BOBYQAOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.BOBYQAOptimizerTest();
                object.testConstrainedRosenWithMoreInterpolationPoints();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSphere() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.BOBYQAOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.BOBYQAOptimizerTest();
+               object.testSphere();
         }
     }
 

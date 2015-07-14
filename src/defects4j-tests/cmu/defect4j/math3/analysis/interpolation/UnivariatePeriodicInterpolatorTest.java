@@ -10,14 +10,6 @@ public class UnivariatePeriodicInterpolatorTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testSine() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.interpolation.UnivariatePeriodicInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.UnivariatePeriodicInterpolatorTest();
-               object.testSine();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testLessThanOnePeriodCoverage() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.UnivariatePeriodicInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.UnivariatePeriodicInterpolatorTest();
@@ -46,6 +38,14 @@ public class UnivariatePeriodicInterpolatorTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NonMonotonicSequenceException", config)) {
                org.apache.commons.math3.analysis.interpolation.UnivariatePeriodicInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.UnivariatePeriodicInterpolatorTest();
                object.testUnsortedSamples();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSine() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.interpolation.UnivariatePeriodicInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.UnivariatePeriodicInterpolatorTest();
+               object.testSine();
         }
     }
 

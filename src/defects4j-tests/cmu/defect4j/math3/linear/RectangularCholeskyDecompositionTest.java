@@ -10,18 +10,18 @@ public class RectangularCholeskyDecompositionTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testMath789() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest object = new org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest();
-               object.testMath789();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testDecomposition3x3() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest object = new org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest();
                object.testDecomposition3x3();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testMath789() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest object = new org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest();
+               object.testMath789();
         }
     }
 

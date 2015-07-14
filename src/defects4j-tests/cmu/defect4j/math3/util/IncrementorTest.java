@@ -10,22 +10,6 @@ public class IncrementorTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testConstructor1() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.IncrementorTest object = new org.apache.commons.math3.util.IncrementorTest();
-               object.testConstructor1();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testConstructor2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.IncrementorTest object = new org.apache.commons.math3.util.IncrementorTest();
-               object.testConstructor2();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testCanIncrement1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.IncrementorTest object = new org.apache.commons.math3.util.IncrementorTest();
@@ -86,6 +70,22 @@ public class IncrementorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.IncrementorTest object = new org.apache.commons.math3.util.IncrementorTest();
                object.testBulkIncrement();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testConstructor1() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.IncrementorTest object = new org.apache.commons.math3.util.IncrementorTest();
+               object.testConstructor1();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testConstructor2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.IncrementorTest object = new org.apache.commons.math3.util.IncrementorTest();
+               object.testConstructor2();
         }
     }
 

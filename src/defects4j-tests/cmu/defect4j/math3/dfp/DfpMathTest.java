@@ -10,20 +10,20 @@ public class DfpMathTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testPow() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.dfp.DfpMathTest object = new org.apache.commons.math3.dfp.DfpMathTest();
-               object.setUp();
-               object.testPow();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testSin() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.dfp.DfpMathTest object = new org.apache.commons.math3.dfp.DfpMathTest();
                object.setUp();
                object.testSin();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testPow() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.dfp.DfpMathTest object = new org.apache.commons.math3.dfp.DfpMathTest();
+               object.setUp();
+               object.testPow();
         }
     }
 

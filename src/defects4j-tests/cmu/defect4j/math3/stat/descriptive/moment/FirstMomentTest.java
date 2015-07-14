@@ -10,18 +10,10 @@ public class FirstMomentTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testSerialization() throws Exception {
+    public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.moment.FirstMomentTest object = new org.apache.commons.math3.stat.descriptive.moment.FirstMomentTest();
-               object.testSerialization();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.moment.FirstMomentTest object = new org.apache.commons.math3.stat.descriptive.moment.FirstMomentTest();
-               object.testSerial();
+               object.testConsistency();
         }
     }
 
@@ -58,10 +50,18 @@ public class FirstMomentTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testConsistency() throws Exception {
+    public void testSerialization() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.moment.FirstMomentTest object = new org.apache.commons.math3.stat.descriptive.moment.FirstMomentTest();
-               object.testConsistency();
+               object.testSerialization();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.moment.FirstMomentTest object = new org.apache.commons.math3.stat.descriptive.moment.FirstMomentTest();
+               object.testSerial();
         }
     }
 

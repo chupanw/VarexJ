@@ -19,20 +19,20 @@ public class ContinuousOutputModelTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testModelsMerging() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.ContinuousOutputModelTest object = new org.apache.commons.math3.ode.ContinuousOutputModelTest();
-               object.setUp();
-               object.testModelsMerging();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testRandomAccess() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.ContinuousOutputModelTest object = new org.apache.commons.math3.ode.ContinuousOutputModelTest();
                object.setUp();
                object.testRandomAccess();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testModelsMerging() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.ContinuousOutputModelTest object = new org.apache.commons.math3.ode.ContinuousOutputModelTest();
+               object.setUp();
+               object.testModelsMerging();
         }
     }
 

@@ -10,14 +10,6 @@ public class StandardDeviationTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testPopulation() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.moment.StandardDeviationTest object = new org.apache.commons.math3.stat.descriptive.moment.StandardDeviationTest();
-               object.testPopulation();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testNaN() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.moment.StandardDeviationTest object = new org.apache.commons.math3.stat.descriptive.moment.StandardDeviationTest();
@@ -26,18 +18,18 @@ public class StandardDeviationTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testSerialization() throws Exception {
+    public void testPopulation() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.moment.StandardDeviationTest object = new org.apache.commons.math3.stat.descriptive.moment.StandardDeviationTest();
-               object.testSerialization();
+               object.testPopulation();
         }
     }
 
     @Test(timeout=600000)
-    public void testSerial() throws Exception {
+    public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.moment.StandardDeviationTest object = new org.apache.commons.math3.stat.descriptive.moment.StandardDeviationTest();
-               object.testSerial();
+               object.testConsistency();
         }
     }
 
@@ -74,10 +66,18 @@ public class StandardDeviationTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testConsistency() throws Exception {
+    public void testSerialization() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.moment.StandardDeviationTest object = new org.apache.commons.math3.stat.descriptive.moment.StandardDeviationTest();
-               object.testConsistency();
+               object.testSerialization();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.moment.StandardDeviationTest object = new org.apache.commons.math3.stat.descriptive.moment.StandardDeviationTest();
+               object.testSerial();
         }
     }
 

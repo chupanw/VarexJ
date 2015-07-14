@@ -10,6 +10,14 @@ public class Decimal64Test extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testDivide() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
+               object.testDivide();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testAdd() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
@@ -50,14 +58,6 @@ public class Decimal64Test extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testDivide() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
-               object.testDivide();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testIsNaN() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
@@ -74,54 +74,6 @@ public class Decimal64Test extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testExp() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
-               object.testExp();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testLog() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
-               object.testLog();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testAtan2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
-               object.testAtan2();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testAbs() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
-               object.testAbs();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSignum() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
-               object.testSignum();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testAddField() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
-               object.testAddField();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testAddDouble() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
@@ -134,6 +86,14 @@ public class Decimal64Test extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
                object.testSubtractField();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testAddField() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
+               object.testAddField();
         }
     }
 
@@ -510,6 +470,46 @@ public class Decimal64Test extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
                object.testHash();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testExp() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
+               object.testExp();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testLog() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
+               object.testLog();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testAtan2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
+               object.testAtan2();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testAbs() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
+               object.testAbs();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSignum() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.Decimal64Test object = new org.apache.commons.math3.util.Decimal64Test();
+               object.testSignum();
         }
     }
 

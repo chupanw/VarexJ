@@ -10,14 +10,6 @@ public class ArithmeticUtilsTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testPow() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
-               object.testPow();
-        }
-    }
-
-    @Test(timeout=600000)
     public void test0Choose0() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
@@ -198,6 +190,14 @@ public class ArithmeticUtilsTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathArithmeticException", config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
                object.testStirlingS2Overflow();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testPow() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
+               object.testPow();
         }
     }
 

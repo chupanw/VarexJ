@@ -10,6 +10,14 @@ public class BicubicSplineInterpolatingFunctionTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testPreconditions() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatingFunctionTest object = new org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatingFunctionTest();
+               object.testPreconditions();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testPlane() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatingFunctionTest object = new org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatingFunctionTest();
@@ -38,14 +46,6 @@ public class BicubicSplineInterpolatingFunctionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatingFunctionTest object = new org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatingFunctionTest();
                object.testMatchingPartialDerivatives();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testPreconditions() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatingFunctionTest object = new org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatingFunctionTest();
-               object.testPreconditions();
         }
     }
 

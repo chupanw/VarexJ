@@ -10,18 +10,18 @@ public class DormandPrince853IntegratorTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testMinStep() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+    public void testUnstableDerivative() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
-               object.testMinStep();
+               object.testUnstableDerivative();
         }
     }
 
     @Test(timeout=600000)
-    public void testIncreasingTolerance() throws Exception {
+    public void testEventsScheduling() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
-               object.testIncreasingTolerance();
+               object.testEventsScheduling();
         }
     }
 
@@ -50,6 +50,38 @@ public class DormandPrince853IntegratorTest extends TestJPF {
     }
 
     @Test(timeout=600000)
+    public void testNullIntervalCheck() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+               org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
+               object.testNullIntervalCheck();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testTooLargeFirstStep() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
+               object.testTooLargeFirstStep();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testMinStep() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+               org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
+               object.testMinStep();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testIncreasingTolerance() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
+               object.testIncreasingTolerance();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testDimensionCheck() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
@@ -70,38 +102,6 @@ public class DormandPrince853IntegratorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
                object.testVariableSteps();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testTooLargeFirstStep() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
-               object.testTooLargeFirstStep();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testUnstableDerivative() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
-               object.testUnstableDerivative();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testNullIntervalCheck() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
-               org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
-               object.testNullIntervalCheck();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testEventsScheduling() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
-               object.testEventsScheduling();
         }
     }
 

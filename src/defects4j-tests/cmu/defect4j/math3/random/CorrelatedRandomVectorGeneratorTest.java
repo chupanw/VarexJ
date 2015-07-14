@@ -10,10 +10,10 @@ public class CorrelatedRandomVectorGeneratorTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testRank() throws Exception {
+    public void testMath226() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.CorrelatedRandomVectorGeneratorTest object = new org.apache.commons.math3.random.CorrelatedRandomVectorGeneratorTest();
-               object.testRank();
+               object.testMath226();
         }
     }
 
@@ -42,10 +42,10 @@ public class CorrelatedRandomVectorGeneratorTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testMath226() throws Exception {
+    public void testRank() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.CorrelatedRandomVectorGeneratorTest object = new org.apache.commons.math3.random.CorrelatedRandomVectorGeneratorTest();
-               object.testMath226();
+               object.testRank();
         }
     }
 

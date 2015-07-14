@@ -10,14 +10,6 @@ public class SimplexTableauTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.linear.SimplexTableauTest object = new org.apache.commons.math3.optim.linear.SimplexTableauTest();
-               object.testSerial();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testInitialization() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.linear.SimplexTableauTest object = new org.apache.commons.math3.optim.linear.SimplexTableauTest();
@@ -38,6 +30,14 @@ public class SimplexTableauTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.linear.SimplexTableauTest object = new org.apache.commons.math3.optim.linear.SimplexTableauTest();
                object.testTableauWithNoArtificialVars();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.linear.SimplexTableauTest object = new org.apache.commons.math3.optim.linear.SimplexTableauTest();
+               object.testSerial();
         }
     }
 

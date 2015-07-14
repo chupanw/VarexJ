@@ -10,30 +10,6 @@ public class FieldVector3DTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testAdd() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
-               object.testAdd();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSubtract() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
-               object.testSubtract();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testNegate() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
-               object.testNegate();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testEquals() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
@@ -54,38 +30,6 @@ public class FieldVector3DTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
                object.testInfinite();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testWrongDimension() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
-               object.testWrongDimension();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testNorm() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
-               object.testNorm();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testNormalize() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
-               object.testNormalize();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testToString() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
-               object.testToString();
         }
     }
 
@@ -254,6 +198,62 @@ public class FieldVector3DTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
                object.testCrossProduct();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testAdd() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
+               object.testAdd();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSubtract() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
+               object.testSubtract();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNegate() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
+               object.testNegate();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testWrongDimension() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
+               object.testWrongDimension();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNorm() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
+               object.testNorm();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNormalize() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
+               object.testNormalize();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testToString() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldVector3DTest();
+               object.testToString();
         }
     }
 

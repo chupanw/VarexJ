@@ -10,6 +10,22 @@ public class FieldMatrixImplTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testEqualsAndHashCode() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.FieldMatrixImplTest object = new org.apache.commons.math3.linear.FieldMatrixImplTest();
+               object.testEqualsAndHashCode();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testScalarAdd() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.FieldMatrixImplTest object = new org.apache.commons.math3.linear.FieldMatrixImplTest();
+               object.testScalarAdd();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testAdd() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.FieldMatrixImplTest object = new org.apache.commons.math3.linear.FieldMatrixImplTest();
@@ -22,22 +38,6 @@ public class FieldMatrixImplTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.FieldMatrixImplTest object = new org.apache.commons.math3.linear.FieldMatrixImplTest();
                object.testMultiply();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.FieldMatrixImplTest object = new org.apache.commons.math3.linear.FieldMatrixImplTest();
-               object.testSerial();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testEqualsAndHashCode() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.FieldMatrixImplTest object = new org.apache.commons.math3.linear.FieldMatrixImplTest();
-               object.testEqualsAndHashCode();
         }
     }
 
@@ -298,10 +298,10 @@ public class FieldMatrixImplTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testScalarAdd() throws Exception {
+    public void testSerial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.FieldMatrixImplTest object = new org.apache.commons.math3.linear.FieldMatrixImplTest();
-               object.testScalarAdd();
+               object.testSerial();
         }
     }
 

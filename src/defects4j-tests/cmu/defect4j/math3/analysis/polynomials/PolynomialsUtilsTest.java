@@ -10,18 +10,18 @@ public class PolynomialsUtilsTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testChebyshevBounds() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
-               object.testChebyshevBounds();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testFirstChebyshevPolynomials() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
                object.testFirstChebyshevPolynomials();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testChebyshevBounds() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
+               object.testChebyshevBounds();
         }
     }
 

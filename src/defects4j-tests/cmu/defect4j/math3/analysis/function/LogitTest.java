@@ -10,6 +10,22 @@ public class LogitTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testPreconditions1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
+               org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
+               object.testPreconditions1();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testPreconditions2() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
+               org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
+               object.testPreconditions2();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testDerivativesHighOrder() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
@@ -102,22 +118,6 @@ public class LogitTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
                object.testDerivativeLargeArguments();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testPreconditions1() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
-               org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
-               object.testPreconditions1();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testPreconditions2() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
-               org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
-               object.testPreconditions2();
         }
     }
 

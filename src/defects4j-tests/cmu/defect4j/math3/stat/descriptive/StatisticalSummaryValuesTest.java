@@ -10,18 +10,18 @@ public class StatisticalSummaryValuesTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testSerialization() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.StatisticalSummaryValuesTest object = new org.apache.commons.math3.stat.descriptive.StatisticalSummaryValuesTest();
-               object.testSerialization();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testEqualsAndHashCode() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.StatisticalSummaryValuesTest object = new org.apache.commons.math3.stat.descriptive.StatisticalSummaryValuesTest();
                object.testEqualsAndHashCode();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSerialization() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.StatisticalSummaryValuesTest object = new org.apache.commons.math3.stat.descriptive.StatisticalSummaryValuesTest();
+               object.testSerialization();
         }
     }
 

@@ -10,6 +10,14 @@ public class LegendreGaussIntegratorTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testIssue464() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.integration.LegendreGaussIntegratorTest object = new org.apache.commons.math3.analysis.integration.LegendreGaussIntegratorTest();
+               object.testIssue464();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testSinFunction() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.integration.LegendreGaussIntegratorTest object = new org.apache.commons.math3.analysis.integration.LegendreGaussIntegratorTest();
@@ -30,14 +38,6 @@ public class LegendreGaussIntegratorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.integration.LegendreGaussIntegratorTest object = new org.apache.commons.math3.analysis.integration.LegendreGaussIntegratorTest();
                object.testExactIntegration();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testIssue464() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.integration.LegendreGaussIntegratorTest object = new org.apache.commons.math3.analysis.integration.LegendreGaussIntegratorTest();
-               object.testIssue464();
         }
     }
 

@@ -18,18 +18,18 @@ public class ComplexFieldTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexFieldTest object = new org.apache.commons.math3.complex.ComplexFieldTest();
-               object.testSerial();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testOne() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.complex.ComplexFieldTest object = new org.apache.commons.math3.complex.ComplexFieldTest();
                object.testOne();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexFieldTest object = new org.apache.commons.math3.complex.ComplexFieldTest();
+               object.testSerial();
         }
     }
 

@@ -42,18 +42,18 @@ public class PolynomialFunctionTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testString() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.polynomials.PolynomialFunctionTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionTest();
-               object.testString();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testfirstDerivativeComparison() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialFunctionTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionTest();
                object.testfirstDerivativeComparison();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testString() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.polynomials.PolynomialFunctionTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionTest();
+               object.testString();
         }
     }
 

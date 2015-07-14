@@ -10,18 +10,18 @@ public class LineTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testContains() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.LineTest object = new org.apache.commons.math3.geometry.euclidean.threed.LineTest();
-               object.testContains();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testRevert() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.LineTest object = new org.apache.commons.math3.geometry.euclidean.threed.LineTest();
                object.testRevert();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testContains() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.LineTest object = new org.apache.commons.math3.geometry.euclidean.threed.LineTest();
+               object.testContains();
         }
     }
 

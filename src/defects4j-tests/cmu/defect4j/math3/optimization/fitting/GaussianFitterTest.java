@@ -10,14 +10,6 @@ public class GaussianFitterTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testFit01() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.fitting.GaussianFitterTest object = new org.apache.commons.math3.optimization.fitting.GaussianFitterTest();
-               object.testFit01();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testFit02() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalArgumentException", config)) {
                org.apache.commons.math3.optimization.fitting.GaussianFitterTest object = new org.apache.commons.math3.optimization.fitting.GaussianFitterTest();
@@ -30,6 +22,14 @@ public class GaussianFitterTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalArgumentException", config)) {
                org.apache.commons.math3.optimization.fitting.GaussianFitterTest object = new org.apache.commons.math3.optimization.fitting.GaussianFitterTest();
                object.testFit03();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testFit01() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.fitting.GaussianFitterTest object = new org.apache.commons.math3.optimization.fitting.GaussianFitterTest();
+               object.testFit01();
         }
     }
 

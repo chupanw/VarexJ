@@ -10,18 +10,18 @@ public class GaussNewtonOptimizerTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testCircleFittingBadInit() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.ConvergenceException", config)) {
+    public void testMaxEvaluations() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.TooManyEvaluationsException", config)) {
                org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest();
-               object.testCircleFittingBadInit();
+               object.testMaxEvaluations();
         }
     }
 
     @Test(timeout=600000)
-    public void testHahn1() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.ConvergenceException", config)) {
+    public void testConstraintsUnsupported() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.MathUnsupportedOperationException", config)) {
                org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest();
-               object.testHahn1();
+               object.testConstraintsUnsupported();
         }
     }
 
@@ -42,66 +42,26 @@ public class GaussNewtonOptimizerTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testMaxEvaluations() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.TooManyEvaluationsException", config)) {
+    public void testCircleFittingBadInit() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.ConvergenceException", config)) {
                org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest();
-               object.testMaxEvaluations();
+               object.testCircleFittingBadInit();
         }
     }
 
     @Test(timeout=600000)
-    public void testConstraintsUnsupported() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.MathUnsupportedOperationException", config)) {
+    public void testHahn1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.ConvergenceException", config)) {
                org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest();
-               object.testConstraintsUnsupported();
+               object.testHahn1();
         }
     }
 
     @Test(timeout=600000)
-    public void testGetIterations() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
+    public void testNonInvertible() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.ConvergenceException", config)) {
                org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest();
-               object.testGetIterations();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testQRColumnsPermutation() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest();
-               object.testQRColumnsPermutation();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testInconsistentSizes1() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest();
-               object.testInconsistentSizes1();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testInconsistentSizes2() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest();
-               object.testInconsistentSizes2();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testCircleFittingGoodInit() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest();
-               object.testCircleFittingGoodInit();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testKirby2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest();
-               object.testKirby2();
+               object.testNonInvertible();
         }
     }
 
@@ -170,10 +130,50 @@ public class GaussNewtonOptimizerTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testNonInvertible() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.ConvergenceException", config)) {
+    public void testGetIterations() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest();
-               object.testNonInvertible();
+               object.testGetIterations();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testQRColumnsPermutation() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest();
+               object.testQRColumnsPermutation();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testInconsistentSizes1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest();
+               object.testInconsistentSizes1();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testInconsistentSizes2() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest();
+               object.testInconsistentSizes2();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testCircleFittingGoodInit() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest();
+               object.testCircleFittingGoodInit();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testKirby2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest();
+               object.testKirby2();
         }
     }
 

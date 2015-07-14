@@ -10,6 +10,14 @@ public class MultivariateFunctionPenaltyAdapterTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
+    public void testStartSimplexOutsideRange() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.direct.MultivariateFunctionPenaltyAdapterTest object = new org.apache.commons.math3.optimization.direct.MultivariateFunctionPenaltyAdapterTest();
+               object.testStartSimplexOutsideRange();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testStartSimplexInsideRange() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.direct.MultivariateFunctionPenaltyAdapterTest object = new org.apache.commons.math3.optimization.direct.MultivariateFunctionPenaltyAdapterTest();
@@ -38,14 +46,6 @@ public class MultivariateFunctionPenaltyAdapterTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.direct.MultivariateFunctionPenaltyAdapterTest object = new org.apache.commons.math3.optimization.direct.MultivariateFunctionPenaltyAdapterTest();
                object.testHalfBounded();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testStartSimplexOutsideRange() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.direct.MultivariateFunctionPenaltyAdapterTest object = new org.apache.commons.math3.optimization.direct.MultivariateFunctionPenaltyAdapterTest();
-               object.testStartSimplexOutsideRange();
         }
     }
 

@@ -10,10 +10,10 @@ public class UnmodifiableArrayRealVectorTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=600000)
-    public void testSparseIterator() throws Exception {
+    public void testIterator() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest object = new org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest();
-               object.testSparseIterator();
+               object.testIterator();
         }
     }
 
@@ -42,14 +42,6 @@ public class UnmodifiableArrayRealVectorTest extends TestJPF {
     }
 
     @Test(timeout=600000)
-    public void testIterator() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest object = new org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest();
-               object.testIterator();
-        }
-    }
-
-    @Test(timeout=600000)
     public void testSetEntry() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathUnsupportedOperationException", config)) {
                org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest object = new org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest();
@@ -70,6 +62,14 @@ public class UnmodifiableArrayRealVectorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest object = new org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest();
                object.testGetSubVector();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSparseIterator() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest object = new org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest();
+               object.testSparseIterator();
         }
     }
 
