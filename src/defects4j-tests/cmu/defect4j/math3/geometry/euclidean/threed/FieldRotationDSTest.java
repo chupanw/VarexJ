@@ -9,15 +9,15 @@ public class FieldRotationDSTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testIdentity() throws Exception {
+    @Test(timeout=600000)
+    public void testDerivatives() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
-               object.testIdentity();
+               object.testDerivatives();
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testAxisAngle() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
@@ -25,7 +25,7 @@ public class FieldRotationDSTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testRevert() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
@@ -33,7 +33,15 @@ public class FieldRotationDSTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void testIdentity() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
+               object.testIdentity();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testVectorOnePair() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
@@ -41,7 +49,7 @@ public class FieldRotationDSTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testVectorTwoPairs() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
@@ -49,7 +57,7 @@ public class FieldRotationDSTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testMatrix() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
@@ -57,7 +65,7 @@ public class FieldRotationDSTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testAngles() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
@@ -65,7 +73,7 @@ public class FieldRotationDSTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSingularities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
@@ -73,7 +81,7 @@ public class FieldRotationDSTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testQuaternion() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
@@ -81,7 +89,7 @@ public class FieldRotationDSTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testComposeInverse() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
@@ -89,7 +97,7 @@ public class FieldRotationDSTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testDoubleVectors() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
@@ -97,7 +105,7 @@ public class FieldRotationDSTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testDoubleRotations() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
@@ -105,7 +113,7 @@ public class FieldRotationDSTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testArray() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
@@ -113,7 +121,7 @@ public class FieldRotationDSTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testApplyInverseTo() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
@@ -121,7 +129,7 @@ public class FieldRotationDSTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testIssue639() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
@@ -129,7 +137,7 @@ public class FieldRotationDSTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testIssue801() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
@@ -137,19 +145,11 @@ public class FieldRotationDSTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testCompose() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
                object.testCompose();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testDerivatives() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest object = new org.apache.commons.math3.geometry.euclidean.threed.FieldRotationDSTest();
-               object.testDerivatives();
         }
     }
 

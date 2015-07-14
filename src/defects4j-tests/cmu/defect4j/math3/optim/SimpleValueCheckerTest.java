@@ -9,15 +9,7 @@ public class SimpleValueCheckerTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testIterationCheckPrecondition() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
-               org.apache.commons.math3.optim.SimpleValueCheckerTest object = new org.apache.commons.math3.optim.SimpleValueCheckerTest();
-               object.testIterationCheckPrecondition();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testIterationCheck() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.SimpleValueCheckerTest object = new org.apache.commons.math3.optim.SimpleValueCheckerTest();
@@ -25,7 +17,15 @@ public class SimpleValueCheckerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void testIterationCheckPrecondition() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
+               org.apache.commons.math3.optim.SimpleValueCheckerTest object = new org.apache.commons.math3.optim.SimpleValueCheckerTest();
+               object.testIterationCheckPrecondition();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testIterationCheckDisabled() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.SimpleValueCheckerTest object = new org.apache.commons.math3.optim.SimpleValueCheckerTest();

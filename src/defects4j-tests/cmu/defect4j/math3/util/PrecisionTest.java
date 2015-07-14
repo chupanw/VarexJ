@@ -9,15 +9,7 @@ public class PrecisionTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testMath475() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
-               object.testMath475();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testEqualsWithRelativeTolerance() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
@@ -25,7 +17,15 @@ public class PrecisionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void testMath475() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
+               object.testMath475();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testEqualsIncludingNaN() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
@@ -33,7 +33,7 @@ public class PrecisionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testEqualsWithAllowedDelta() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
@@ -41,7 +41,7 @@ public class PrecisionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testEqualsIncludingNaNWithAllowedDelta() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
@@ -49,7 +49,7 @@ public class PrecisionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testFloatEqualsWithAllowedUlps() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
@@ -57,7 +57,7 @@ public class PrecisionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testEqualsWithAllowedUlps() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
@@ -65,7 +65,7 @@ public class PrecisionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testEqualsIncludingNaNWithAllowedUlps() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
@@ -73,7 +73,7 @@ public class PrecisionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testCompareToEpsilon() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
@@ -81,7 +81,7 @@ public class PrecisionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testCompareToMaxUlps() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
@@ -89,7 +89,7 @@ public class PrecisionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testRoundDouble() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
@@ -97,7 +97,7 @@ public class PrecisionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testRoundFloat() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
@@ -105,7 +105,7 @@ public class PrecisionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testIssue721() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
@@ -113,7 +113,7 @@ public class PrecisionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testRepresentableDelta() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();
@@ -121,7 +121,7 @@ public class PrecisionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testMath843() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.PrecisionTest object = new org.apache.commons.math3.util.PrecisionTest();

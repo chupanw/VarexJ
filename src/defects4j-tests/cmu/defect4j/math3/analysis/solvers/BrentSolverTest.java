@@ -9,7 +9,7 @@ public class BrentSolverTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSinZero() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.BrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BrentSolverTest();
@@ -17,7 +17,7 @@ public class BrentSolverTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testQuinticZero() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.BrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BrentSolverTest();
@@ -25,7 +25,7 @@ public class BrentSolverTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testRootEndpoints() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.BrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BrentSolverTest();
@@ -33,7 +33,7 @@ public class BrentSolverTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testBadEndpoints() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.BrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BrentSolverTest();
@@ -41,19 +41,19 @@ public class BrentSolverTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
-    public void testMath832() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.solvers.BrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BrentSolverTest();
-               object.testMath832();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testInitialGuess() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.BrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BrentSolverTest();
                object.testInitialGuess();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testMath832() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.solvers.BrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BrentSolverTest();
+               object.testMath832();
         }
     }
 

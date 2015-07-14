@@ -9,7 +9,7 @@ public class MullerSolverTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSinFunction() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.MullerSolverTest object = new org.apache.commons.math3.analysis.solvers.MullerSolverTest();
@@ -17,7 +17,7 @@ public class MullerSolverTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testQuinticFunction() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.MullerSolverTest object = new org.apache.commons.math3.analysis.solvers.MullerSolverTest();
@@ -25,7 +25,7 @@ public class MullerSolverTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testParameters() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.MullerSolverTest object = new org.apache.commons.math3.analysis.solvers.MullerSolverTest();
@@ -33,7 +33,7 @@ public class MullerSolverTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testExpm1Function() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.MullerSolverTest object = new org.apache.commons.math3.analysis.solvers.MullerSolverTest();

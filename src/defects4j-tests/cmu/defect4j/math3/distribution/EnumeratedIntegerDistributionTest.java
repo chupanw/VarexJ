@@ -9,7 +9,7 @@ public class EnumeratedIntegerDistributionTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSample() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest();
@@ -17,7 +17,7 @@ public class EnumeratedIntegerDistributionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testExceptions() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest();
@@ -25,7 +25,7 @@ public class EnumeratedIntegerDistributionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testProbability() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest();
@@ -33,7 +33,7 @@ public class EnumeratedIntegerDistributionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testCumulativeProbability() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest();
@@ -41,7 +41,7 @@ public class EnumeratedIntegerDistributionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testGetNumericalMean() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest();
@@ -49,7 +49,7 @@ public class EnumeratedIntegerDistributionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testGetNumericalVariance() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest();
@@ -57,7 +57,7 @@ public class EnumeratedIntegerDistributionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testGetSupportLowerBound() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest();
@@ -65,7 +65,7 @@ public class EnumeratedIntegerDistributionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testGetSupportUpperBound() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest();
@@ -73,7 +73,7 @@ public class EnumeratedIntegerDistributionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testIsSupportConnected() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest object = new org.apache.commons.math3.distribution.EnumeratedIntegerDistributionTest();

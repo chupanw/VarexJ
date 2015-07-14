@@ -9,25 +9,7 @@ public class ContinuousOutputModelTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testRandomAccess() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.ContinuousOutputModelTest object = new org.apache.commons.math3.ode.ContinuousOutputModelTest();
-               object.setUp();
-               object.testRandomAccess();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testBoundaries() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.ContinuousOutputModelTest object = new org.apache.commons.math3.ode.ContinuousOutputModelTest();
-               object.setUp();
-               object.testBoundaries();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testModelsMerging() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.ContinuousOutputModelTest object = new org.apache.commons.math3.ode.ContinuousOutputModelTest();
@@ -36,7 +18,25 @@ public class ContinuousOutputModelTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void testBoundaries() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.ContinuousOutputModelTest object = new org.apache.commons.math3.ode.ContinuousOutputModelTest();
+               object.setUp();
+               object.testBoundaries();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testRandomAccess() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.ContinuousOutputModelTest object = new org.apache.commons.math3.ode.ContinuousOutputModelTest();
+               object.setUp();
+               object.testRandomAccess();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testErrorConditions() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.ContinuousOutputModelTest object = new org.apache.commons.math3.ode.ContinuousOutputModelTest();

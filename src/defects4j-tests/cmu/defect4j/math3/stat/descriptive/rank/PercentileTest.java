@@ -9,15 +9,7 @@ public class PercentileTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void test5() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.rank.PercentileTest object = new org.apache.commons.math3.stat.descriptive.rank.PercentileTest();
-               object.test5();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testLowPercentile() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.PercentileTest object = new org.apache.commons.math3.stat.descriptive.rank.PercentileTest();
@@ -25,23 +17,15 @@ public class PercentileTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
-    public void testNISTExample() throws Exception {
+    @Test(timeout=600000)
+    public void test5() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.PercentileTest object = new org.apache.commons.math3.stat.descriptive.rank.PercentileTest();
-               object.testNISTExample();
+               object.test5();
         }
     }
 
-    @Test(timeout=60000)
-    public void testPercentile() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.rank.PercentileTest object = new org.apache.commons.math3.stat.descriptive.rank.PercentileTest();
-               object.testPercentile();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testHighPercentile() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.PercentileTest object = new org.apache.commons.math3.stat.descriptive.rank.PercentileTest();
@@ -49,7 +33,23 @@ public class PercentileTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void testPercentile() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.rank.PercentileTest object = new org.apache.commons.math3.stat.descriptive.rank.PercentileTest();
+               object.testPercentile();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNISTExample() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.rank.PercentileTest object = new org.apache.commons.math3.stat.descriptive.rank.PercentileTest();
+               object.testNISTExample();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testNullEmpty() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.PercentileTest object = new org.apache.commons.math3.stat.descriptive.rank.PercentileTest();
@@ -57,7 +57,7 @@ public class PercentileTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSingleton() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.PercentileTest object = new org.apache.commons.math3.stat.descriptive.rank.PercentileTest();
@@ -65,7 +65,7 @@ public class PercentileTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSetQuantile() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.PercentileTest object = new org.apache.commons.math3.stat.descriptive.rank.PercentileTest();
@@ -73,7 +73,7 @@ public class PercentileTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSpecialValues() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.PercentileTest object = new org.apache.commons.math3.stat.descriptive.rank.PercentileTest();
@@ -81,7 +81,15 @@ public class PercentileTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void testCopy() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.rank.PercentileTest object = new org.apache.commons.math3.stat.descriptive.rank.PercentileTest();
+               object.testCopy();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testEvaluation() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.PercentileTest object = new org.apache.commons.math3.stat.descriptive.rank.PercentileTest();
@@ -89,7 +97,7 @@ public class PercentileTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testEvaluateArraySegment() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.PercentileTest object = new org.apache.commons.math3.stat.descriptive.rank.PercentileTest();
@@ -97,7 +105,7 @@ public class PercentileTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testEvaluateArraySegmentWeighted() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.PercentileTest object = new org.apache.commons.math3.stat.descriptive.rank.PercentileTest();
@@ -105,19 +113,11 @@ public class PercentileTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testWeightedConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.PercentileTest object = new org.apache.commons.math3.stat.descriptive.rank.PercentileTest();
                object.testWeightedConsistency();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testCopy() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.rank.PercentileTest object = new org.apache.commons.math3.stat.descriptive.rank.PercentileTest();
-               object.testCopy();
         }
     }
 

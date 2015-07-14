@@ -21,7 +21,11 @@ public class MathTestGenerator extends TestGenerator {
 
     public static void main(String[] args) {
         MathTestGenerator generator = new MathTestGenerator();
-        generator.timeout = 60000;
+        generator.timeout =
+//                1800000; // half an hour
+                600000; // ten minutes
+//                60000; // one minute
+
         generator.searchTest();
     }
 
@@ -29,7 +33,7 @@ public class MathTestGenerator extends TestGenerator {
     public void searchTest() {
         //cpwTODO: deal with @After
         FileDetector detector = new FileDetector("java");
-        File[] files = detector.detect("/Users/chupanw/Projects/defects4j-checkout/math7b/src/test/java/");
+        File[] files = detector.detect("/Users/chupanw/Projects/defects4j-checkout/math6b/src/test/java/");
 
         for (File file : files) {
             String filepath = file.getAbsolutePath();

@@ -9,7 +9,15 @@ public class MixedListUnivariateImplTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void testStats() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.MixedListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.MixedListUnivariateImplTest();
+               object.testStats();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testN0andN1Conditions() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.MixedListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.MixedListUnivariateImplTest();
@@ -17,7 +25,7 @@ public class MixedListUnivariateImplTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSkewAndKurtosis() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.MixedListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.MixedListUnivariateImplTest();
@@ -25,19 +33,11 @@ public class MixedListUnivariateImplTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testProductAndGeometricMean() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.MixedListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.MixedListUnivariateImplTest();
                object.testProductAndGeometricMean();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testStats() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.MixedListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.MixedListUnivariateImplTest();
-               object.testStats();
         }
     }
 

@@ -9,7 +9,7 @@ public class ListUnivariateImplTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSerialization() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest();
@@ -17,7 +17,15 @@ public class ListUnivariateImplTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void testStats() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest();
+               object.testStats();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testN0andN1Conditions() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest();
@@ -25,7 +33,7 @@ public class ListUnivariateImplTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSkewAndKurtosis() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest();
@@ -33,19 +41,11 @@ public class ListUnivariateImplTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testProductAndGeometricMean() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest();
                object.testProductAndGeometricMean();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testStats() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest object = new org.apache.commons.math3.stat.descriptive.ListUnivariateImplTest();
-               object.testStats();
         }
     }
 

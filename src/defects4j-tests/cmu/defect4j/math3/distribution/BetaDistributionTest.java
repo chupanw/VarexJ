@@ -9,15 +9,7 @@ public class BetaDistributionTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testDensity() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.BetaDistributionTest object = new org.apache.commons.math3.distribution.BetaDistributionTest();
-               object.testDensity();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testCumulative() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.BetaDistributionTest object = new org.apache.commons.math3.distribution.BetaDistributionTest();
@@ -25,7 +17,15 @@ public class BetaDistributionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void testDensity() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.BetaDistributionTest object = new org.apache.commons.math3.distribution.BetaDistributionTest();
+               object.testDensity();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testMoments() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.BetaDistributionTest object = new org.apache.commons.math3.distribution.BetaDistributionTest();

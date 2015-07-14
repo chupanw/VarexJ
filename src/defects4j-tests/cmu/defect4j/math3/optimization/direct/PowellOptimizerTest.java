@@ -9,7 +9,7 @@ public class PowellOptimizerTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testQuadratic() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.direct.PowellOptimizerTest object = new org.apache.commons.math3.optimization.direct.PowellOptimizerTest();
@@ -17,15 +17,7 @@ public class PowellOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
-    public void testRelativeToleranceOnScaledValues() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.direct.PowellOptimizerTest object = new org.apache.commons.math3.optimization.direct.PowellOptimizerTest();
-               object.testRelativeToleranceOnScaledValues();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSumSinc() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.direct.PowellOptimizerTest object = new org.apache.commons.math3.optimization.direct.PowellOptimizerTest();
@@ -33,11 +25,19 @@ public class PowellOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testMaximizeQuadratic() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.direct.PowellOptimizerTest object = new org.apache.commons.math3.optimization.direct.PowellOptimizerTest();
                object.testMaximizeQuadratic();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testRelativeToleranceOnScaledValues() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.direct.PowellOptimizerTest object = new org.apache.commons.math3.optimization.direct.PowellOptimizerTest();
+               object.testRelativeToleranceOnScaledValues();
         }
     }
 

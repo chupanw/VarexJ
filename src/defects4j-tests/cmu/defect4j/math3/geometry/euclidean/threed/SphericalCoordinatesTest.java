@@ -9,7 +9,15 @@ public class SphericalCoordinatesTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void testSerialization() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.SphericalCoordinatesTest object = new org.apache.commons.math3.geometry.euclidean.threed.SphericalCoordinatesTest();
+               object.testSerialization();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testCoordinatesStoC() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.SphericalCoordinatesTest object = new org.apache.commons.math3.geometry.euclidean.threed.SphericalCoordinatesTest();
@@ -17,7 +25,7 @@ public class SphericalCoordinatesTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testCoordinatesCtoS() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.SphericalCoordinatesTest object = new org.apache.commons.math3.geometry.euclidean.threed.SphericalCoordinatesTest();
@@ -25,7 +33,7 @@ public class SphericalCoordinatesTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testGradient() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.SphericalCoordinatesTest object = new org.apache.commons.math3.geometry.euclidean.threed.SphericalCoordinatesTest();
@@ -33,19 +41,11 @@ public class SphericalCoordinatesTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testHessian() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.SphericalCoordinatesTest object = new org.apache.commons.math3.geometry.euclidean.threed.SphericalCoordinatesTest();
                object.testHessian();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testSerialization() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.SphericalCoordinatesTest object = new org.apache.commons.math3.geometry.euclidean.threed.SphericalCoordinatesTest();
-               object.testSerialization();
         }
     }
 
