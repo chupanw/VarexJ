@@ -101,7 +101,7 @@ public abstract class TestJPF implements JPFShell {
      * Probably not a good design, but help uncaught exceptions escape.
      * Check this set to find uncaught exceptions.
      */
-    public static HashSet<ExceptionInfo> uncaughtExceptionSet = new HashSet<>();
+    public static HashSet<UncaughtException> uncaughtExceptionSet = new HashSet<>();
 
     static class GlobalArg {
         String key;
@@ -844,10 +844,10 @@ public abstract class TestJPF implements JPFShell {
         // Show outputs for GenProg
         System.out.println("\n================ GenProg ================");
         System.out.println("Found " + uncaughtExceptionSet.size() + " uncaught exceptions");
-        Iterator<ExceptionInfo> itr = uncaughtExceptionSet.iterator();
+        Iterator<UncaughtException> itr = uncaughtExceptionSet.iterator();
         FeatureExpr passIf = FeatureExprFactory.True();
         while (itr.hasNext()) {
-            ExceptionInfo xi = itr.next();
+            UncaughtException xi = itr.next();
             passIf = passIf.andNot(xi.getCtx());
         }
         System.out.println("Pass if: " + passIf);
@@ -905,20 +905,19 @@ public abstract class TestJPF implements JPFShell {
             return jpf;
         }
 
-        ArrayList<ExceptionInfo> unexpectedExceptions = new ArrayList<>();
+        ArrayList<UncaughtException> unexpectedExceptions = new ArrayList<>();
         if (uncaughtExceptionSet.size() > 0){
             boolean foundException = false;
             boolean foundDetail = false;
-            Iterator<ExceptionInfo> itr = uncaughtExceptionSet.iterator();
+            Iterator<UncaughtException> itr = uncaughtExceptionSet.iterator();
             while (itr.hasNext()) {
-                ExceptionInfo xi = itr.next();
+                UncaughtException xi = itr.next();
                 HashSet<String> exceptionNameSet = xi.getExceptionClassnames();
-                String xn = xi.getExceptionClassname();
-                if (exceptionNameSet.contains(xn)) {
+                if (exceptionNameSet.contains(xClassName)) {
                     foundException = true;
                     if (details != null){
                         String gotDetails = xi.getDetails();
-                        if (gotDetails == null && gotDetails.endsWith(details)) {
+                        if (gotDetails != null && gotDetails.endsWith(details)) {
                             foundDetail = true;
                         }
                     }
@@ -932,11 +931,13 @@ public abstract class TestJPF implements JPFShell {
             System.out.println("\n================ GenProg ================");
             FeatureExpr passIf = FeatureExprFactory.True();
             for (int i = 0; i < unexpectedExceptions.size(); i++){
-                ExceptionInfo unxi = unexpectedExceptions.get(i);
+                UncaughtException unxi = unexpectedExceptions.get(i);
                 passIf = passIf.andNot(unxi.getCtx());
             }
             System.out.println("Pass if: " + passIf);
+            writePassCond(passIf);
             System.out.println("================ GenProg ================\n");
+
 
             if (foundException){
                 if (details != null && !foundDetail){
@@ -946,47 +947,42 @@ public abstract class TestJPF implements JPFShell {
             else{
                 fail("JPF caught wrong exception. " + "expected: " + xClassName);
             }
+            return jpf;
         }
-        else{
+
+        Error error = jpf.getLastError();
+        if (error != null) {
+            Property errorProperty = error.getProperty();
+            if (errorProperty instanceof NoUncaughtExceptionsProperty) {
+                ExceptionInfo xi = ((NoUncaughtExceptionsProperty) errorProperty).getUncaughtExceptionInfo();
+
+//        // Search for exact type of Exception, not including its parent classes
+//        String xn = xi.getExceptionClassname();
+//        if (!xn.equals(xClassName)) {
+//          fail("JPF caught wrong exception: " + xn + ", expected: " + xClassName);
+//        }
+                // Search for Exception including its parent classes
+                HashSet<String> exceptionNameSet = xi.getExceptionClassnames();
+                String xn = xi.getExceptionClassname();
+                if (!exceptionNameSet.contains(xClassName)) {
+                    fail("JPF caught wrong exception: " + xn + ", expected: " + xClassName);
+                }
+                if (details != null) {
+                    String gotDetails = xi.getDetails();
+                    if (gotDetails == null) {
+                        fail("JPF caught the right exception but no details, expected: " + details);
+                    } else {
+                        if (!gotDetails.endsWith(details)) {
+                            fail("JPF caught the right exception but the details were wrong: " + gotDetails + ", expected: " + details);
+                        }
+                    }
+                }
+            } else { // error not a NoUncaughtExceptionsProperty
+                fail("JPF failed to catch exception executing: ", args, ("expected " + xClassName));
+            }
+        } else { // no error
             fail("JPF failed to catch exception executing: ", args, ("expected " + xClassName));
         }
-
-
-//        Error error = jpf.getLastError();
-//        if (error != null) {
-//            // Expect to have only one error
-//            assert jpf.getSearchErrors().size() == 1;
-//            Property errorProperty = error.getProperty();
-//            if (errorProperty instanceof NoUncaughtExceptionsProperty) {
-//                ExceptionInfo xi = ((NoUncaughtExceptionsProperty) errorProperty).getUncaughtExceptionInfo();
-//
-////        // Search for exact type of Exception, not including its parent classes
-////        String xn = xi.getExceptionClassname();
-////        if (!xn.equals(xClassName)) {
-////          fail("JPF caught wrong exception: " + xn + ", expected: " + xClassName);
-////        }
-//                // Search for Exception including its parent classes
-//                HashSet<String> exceptionNameSet = xi.getExceptionClassnames();
-//                String xn = xi.getExceptionClassname();
-//                if (!exceptionNameSet.contains(xClassName)) {
-//                    fail("JPF caught wrong exception: " + xn + ", expected: " + xClassName);
-//                }
-//                if (details != null) {
-//                    String gotDetails = xi.getDetails();
-//                    if (gotDetails == null) {
-//                        fail("JPF caught the right exception but no details, expected: " + details);
-//                    } else {
-//                        if (!gotDetails.endsWith(details)) {
-//                            fail("JPF caught the right exception but the details were wrong: " + gotDetails + ", expected: " + details);
-//                        }
-//                    }
-//                }
-//            } else { // error not a NoUncaughtExceptionsProperty
-//                fail("JPF failed to catch exception executing: ", args, ("expected " + xClassName));
-//            }
-//        } else { // no error
-//            fail("JPF failed to catch exception executing: ", args, ("expected " + xClassName));
-//        }
 
         return jpf;
     }
@@ -1093,6 +1089,12 @@ public abstract class TestJPF implements JPFShell {
                 if (propertyCls == e.getProperty().getClass()) {
                     return jpf; // success, we got the sucker
                 }
+            }
+        }
+
+        if (uncaughtExceptionSet.size() > 0) {
+            if (propertyCls == NoUncaughtExceptionsProperty.class) {
+                return jpf;
             }
         }
 
@@ -1309,6 +1311,10 @@ public abstract class TestJPF implements JPFShell {
             FileWriter writer = new FileWriter(passCondFile, true);
             StackTraceElement caller = (new Throwable()).getStackTrace()[3];
             String testClsName = caller.getClassName();
+            // Skip test cases that are not in defects4j project
+            if (!testClsName.startsWith("edu.cmu")) {
+                return;
+            }
             testClsName = "org.apache.commons." + testClsName.substring(13);
             String testMthName = caller.getMethodName();
             if (passExpr.isTautology()) {
@@ -1322,7 +1328,7 @@ public abstract class TestJPF implements JPFShell {
             }
             writer.write("    Fail if: ");
             int counter = 1;
-            for (ExceptionInfo xi : uncaughtExceptionSet) {
+            for (UncaughtException xi : uncaughtExceptionSet) {
                 writer.write("(" + counter + ") ");
                 writer.write(xi.getCtx().toString() + " ");
                 counter++;

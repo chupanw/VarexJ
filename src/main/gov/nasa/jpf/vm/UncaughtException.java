@@ -21,6 +21,7 @@ package gov.nasa.jpf.vm;
 import gov.nasa.jpf.util.Printable;
 
 import java.io.PrintWriter;
+import java.util.HashSet;
 
 import cmu.conditional.Conditional;
 import cmu.conditional.One;
@@ -45,15 +46,38 @@ public class UncaughtException extends RuntimeException implements Printable {
   String     xClsName;
   Conditional<String>     details;
 
+  // Store the context for TestJPF to read
+  final FeatureExpr ctx;
+
+  // Store the exception name set for TestJPF to read
+  final HashSet<String> parentExceptionSet;
+
   //ArrayList  stackTrace; // unused -pcd
 
   public UncaughtException (FeatureExpr ctx, ThreadInfo ti, int objRef) {
+    this.ctx = ctx;
     thread = ti;
     xObjRef = objRef;
     
     ElementInfo ei = ti.getElementInfo(xObjRef);
     xClsName = ei.getClassInfo().getName();
     details = ei.getStringField(ctx, "detailMessage");
+    this.parentExceptionSet = (new ExceptionInfo(ctx, ti, ei)).getExceptionClassnames();
+  }
+
+  public HashSet<String> getExceptionClassnames(){
+    return parentExceptionSet;
+  }
+
+  public FeatureExpr getCtx() {
+    return ctx;
+  }
+
+  // This specific detail format is checked by TestJPF
+  public String getDetails() {
+    assert details != null : "getDetails() called on no-detail objects";
+    assert details instanceof One : "getDetails() called on choice objects";
+    return xClsName + " : " + details.getValue();
   }
   
   public String getRawMessage () {

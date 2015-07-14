@@ -1620,8 +1620,11 @@ public Conditional<Instruction> getPC () {
     // on the other hand, we don't want to re-implement all the MJIEnv accessor methods
 	  print(pw, "if " +  Conditional.getCTXString(ctx) + ":\n");
 
-    if (getCallerStackFrame().prev.getClassInfo().getName().equals("gov.nasa.jpf.util.test.TestJPF")) {
-      TestJPF.uncaughtExceptionSet.add(new ExceptionInfo(ctx, this, getElementInfo(objRef)));
+    // In some cases, exceptions are thrown deliberately (e.g. SharedPropagationTest)
+    if (getCallerStackFrame().prev != null) {
+      if (getCallerStackFrame().prev.getClassInfo().getName().equals("gov.nasa.jpf.util.test.TestJPF")) {
+        TestJPF.uncaughtExceptionSet.add(new UncaughtException(ctx, this, objRef));
+      }
     }
 
 
