@@ -9,7 +9,7 @@ public class BigRealTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testAdd() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -17,7 +17,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSubtract() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -25,7 +25,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testMultiply() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -33,7 +33,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testNegate() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -41,7 +41,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testReciprocal() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -49,23 +49,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
-    public void testDivisionByZero() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.MathArithmeticException", config)) {
-               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
-               object.testDivisionByZero();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testReciprocalOfZero() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.MathArithmeticException", config)) {
-               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
-               object.testReciprocalOfZero();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSerial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -73,23 +57,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
-    public void testConstructor() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
-               object.testConstructor();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testDivide() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
-               object.testDivide();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testCompareTo() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -97,7 +65,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testDoubleValue() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -105,7 +73,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testBigDecimalValue() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -113,11 +81,43 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testEqualsAndHashCode() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
                object.testEqualsAndHashCode();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testDivide() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
+               object.testDivide();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testConstructor() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
+               object.testConstructor();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testDivisionByZero() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.MathArithmeticException", config)) {
+               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
+               object.testDivisionByZero();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testReciprocalOfZero() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.MathArithmeticException", config)) {
+               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
+               object.testReciprocalOfZero();
         }
     }
 

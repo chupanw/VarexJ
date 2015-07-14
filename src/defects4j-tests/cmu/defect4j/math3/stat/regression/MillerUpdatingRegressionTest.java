@@ -9,7 +9,7 @@ public class MillerUpdatingRegressionTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testLongly() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest object = new org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest();
@@ -17,7 +17,7 @@ public class MillerUpdatingRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testHasIntercept() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest object = new org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest();
@@ -25,7 +25,7 @@ public class MillerUpdatingRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testAddObsGetNClear() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest object = new org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest();
@@ -33,7 +33,7 @@ public class MillerUpdatingRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testNegativeTestAddObs() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest object = new org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest();
@@ -41,7 +41,7 @@ public class MillerUpdatingRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testNegativeTestAddMultipleObs() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest object = new org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest();
@@ -49,7 +49,7 @@ public class MillerUpdatingRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testRegressAirlineConstantExternal() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest object = new org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest();
@@ -57,7 +57,7 @@ public class MillerUpdatingRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testRegressAirlineConstantInternal() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest object = new org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest();
@@ -65,7 +65,7 @@ public class MillerUpdatingRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testFilippelli() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest object = new org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest();
@@ -73,7 +73,7 @@ public class MillerUpdatingRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testWampler1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest object = new org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest();
@@ -81,7 +81,7 @@ public class MillerUpdatingRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testWampler2() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest object = new org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest();
@@ -89,7 +89,7 @@ public class MillerUpdatingRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testWampler3() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest object = new org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest();
@@ -97,7 +97,7 @@ public class MillerUpdatingRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testOneRedundantColumn() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest object = new org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest();
@@ -105,7 +105,7 @@ public class MillerUpdatingRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testThreeRedundantColumn() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest object = new org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest();
@@ -113,7 +113,7 @@ public class MillerUpdatingRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testPCorr() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest object = new org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest();
@@ -121,7 +121,7 @@ public class MillerUpdatingRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testHdiag() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest object = new org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest();
@@ -129,7 +129,7 @@ public class MillerUpdatingRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testHdiagConstant() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest object = new org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest();
@@ -137,7 +137,7 @@ public class MillerUpdatingRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSubsetRegression() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest object = new org.apache.commons.math3.stat.regression.MillerUpdatingRegressionTest();

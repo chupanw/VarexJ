@@ -9,31 +9,7 @@ public class GraggBulirschStoerIntegratorTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testTooLargeFirstStep() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
-               object.testTooLargeFirstStep();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testNullIntervalCheck() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
-               org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
-               object.testNullIntervalCheck();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testUnstableDerivative() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
-               object.testUnstableDerivative();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testMinStep() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
                org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
@@ -41,7 +17,7 @@ public class GraggBulirschStoerIntegratorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testIncreasingTolerance() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
@@ -49,47 +25,15 @@ public class GraggBulirschStoerIntegratorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
-    public void testBackward() throws Exception {
+    @Test(timeout=600000)
+    public void testIssue596() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
-               object.testBackward();
+               object.testIssue596();
         }
     }
 
-    @Test(timeout=60000)
-    public void testKepler() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
-               object.testKepler();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testDimensionCheck() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
-               object.testDimensionCheck();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testEvents() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
-               object.testEvents();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testVariableSteps() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
-               object.testVariableSteps();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testIntegratorControls() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
@@ -97,11 +41,67 @@ public class GraggBulirschStoerIntegratorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
-    public void testIssue596() throws Exception {
+    @Test(timeout=600000)
+    public void testBackward() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
-               object.testIssue596();
+               object.testBackward();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testKepler() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
+               object.testKepler();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testDimensionCheck() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
+               object.testDimensionCheck();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testEvents() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
+               object.testEvents();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testVariableSteps() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
+               object.testVariableSteps();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testTooLargeFirstStep() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
+               object.testTooLargeFirstStep();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testUnstableDerivative() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
+               object.testUnstableDerivative();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNullIntervalCheck() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+               org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegratorTest();
+               object.testNullIntervalCheck();
         }
     }
 

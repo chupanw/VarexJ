@@ -9,15 +9,7 @@ public class SmoothingPolynomialBicubicSplineInterpolatorTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testPreconditions() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.interpolation.SmoothingPolynomialBicubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.SmoothingPolynomialBicubicSplineInterpolatorTest();
-               object.testPreconditions();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testPlane() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.SmoothingPolynomialBicubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.SmoothingPolynomialBicubicSplineInterpolatorTest();
@@ -25,11 +17,19 @@ public class SmoothingPolynomialBicubicSplineInterpolatorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testParaboloid() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.SmoothingPolynomialBicubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.SmoothingPolynomialBicubicSplineInterpolatorTest();
                object.testParaboloid();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testPreconditions() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.interpolation.SmoothingPolynomialBicubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.SmoothingPolynomialBicubicSplineInterpolatorTest();
+               object.testPreconditions();
         }
     }
 

@@ -9,7 +9,7 @@ public class LocalizedFormatsTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testMessageNumber() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.exception.util.LocalizedFormatsTest object = new org.apache.commons.math3.exception.util.LocalizedFormatsTest();
@@ -17,7 +17,7 @@ public class LocalizedFormatsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testAllKeysPresentInPropertiesFiles() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.exception.util.LocalizedFormatsTest object = new org.apache.commons.math3.exception.util.LocalizedFormatsTest();
@@ -25,7 +25,7 @@ public class LocalizedFormatsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testAllPropertiesCorrespondToKeys() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.exception.util.LocalizedFormatsTest object = new org.apache.commons.math3.exception.util.LocalizedFormatsTest();
@@ -33,7 +33,7 @@ public class LocalizedFormatsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testNoMissingFrenchTranslation() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.exception.util.LocalizedFormatsTest object = new org.apache.commons.math3.exception.util.LocalizedFormatsTest();
@@ -41,7 +41,7 @@ public class LocalizedFormatsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testNoOpEnglishTranslation() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.exception.util.LocalizedFormatsTest object = new org.apache.commons.math3.exception.util.LocalizedFormatsTest();
@@ -49,7 +49,7 @@ public class LocalizedFormatsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testVariablePartsConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.exception.util.LocalizedFormatsTest object = new org.apache.commons.math3.exception.util.LocalizedFormatsTest();

@@ -9,15 +9,7 @@ public class ArrayFieldVectorTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testConstructors() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.ArrayFieldVectorTest object = new org.apache.commons.math3.linear.ArrayFieldVectorTest();
-               object.testConstructors();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSerial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.ArrayFieldVectorTest object = new org.apache.commons.math3.linear.ArrayFieldVectorTest();
@@ -25,7 +17,7 @@ public class ArrayFieldVectorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testMisc() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.ArrayFieldVectorTest object = new org.apache.commons.math3.linear.ArrayFieldVectorTest();
@@ -33,7 +25,15 @@ public class ArrayFieldVectorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void testConstructors() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.ArrayFieldVectorTest object = new org.apache.commons.math3.linear.ArrayFieldVectorTest();
+               object.testConstructors();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testDataInOut() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.ArrayFieldVectorTest object = new org.apache.commons.math3.linear.ArrayFieldVectorTest();
@@ -41,7 +41,7 @@ public class ArrayFieldVectorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testMapFunctions() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.ArrayFieldVectorTest object = new org.apache.commons.math3.linear.ArrayFieldVectorTest();
@@ -49,7 +49,7 @@ public class ArrayFieldVectorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testBasicFunctions() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.ArrayFieldVectorTest object = new org.apache.commons.math3.linear.ArrayFieldVectorTest();
@@ -57,7 +57,7 @@ public class ArrayFieldVectorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testZeroVectors() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.ArrayFieldVectorTest object = new org.apache.commons.math3.linear.ArrayFieldVectorTest();
@@ -65,7 +65,7 @@ public class ArrayFieldVectorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testOuterProduct() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.ArrayFieldVectorTest object = new org.apache.commons.math3.linear.ArrayFieldVectorTest();

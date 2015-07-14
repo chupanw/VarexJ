@@ -9,15 +9,7 @@ public class AbstractLeastSquaresOptimizerTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testComputeSigma() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizerTest object = new org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizerTest();
-               object.testComputeSigma();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testGetChiSquare() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizerTest object = new org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizerTest();
@@ -25,11 +17,19 @@ public class AbstractLeastSquaresOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testGetRMS() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizerTest object = new org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizerTest();
                object.testGetRMS();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testComputeSigma() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizerTest object = new org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizerTest();
+               object.testComputeSigma();
         }
     }
 

@@ -9,7 +9,7 @@ public class NotStrictlyPositiveExceptionTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testAccessors() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.exception.NotStrictlyPositiveExceptionTest object = new org.apache.commons.math3.exception.NotStrictlyPositiveExceptionTest();

@@ -9,7 +9,7 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testLongly() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
@@ -18,7 +18,7 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSwissFertility() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
@@ -27,25 +27,7 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
-    public void testYVariance() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
-               object.setUp();
-               object.testYVariance();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testNewSample2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
-               object.setUp();
-               object.testNewSample2();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testWampler1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
@@ -54,7 +36,7 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testWampler2() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
@@ -63,7 +45,7 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testWampler3() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
@@ -72,7 +54,7 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testWampler4() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
@@ -81,7 +63,7 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testPerfectFit() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
@@ -90,16 +72,7 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
-    public void cannotAddSampleDataWithSizeMismatch() throws Exception {
-        if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
-               org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
-               object.setUp();
-               object.cannotAddSampleDataWithSizeMismatch();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testHat() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
@@ -108,7 +81,7 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testNewSampleDataYNull() throws Exception {
         if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
@@ -117,7 +90,7 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testNewSampleDataXNull() throws Exception {
         if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
@@ -126,16 +99,34 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
-    public void canEstimateRegressionParameters() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
+    @Test(timeout=600000)
+    public void cannotAddSampleDataWithSizeMismatch() throws Exception {
+        if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
                object.setUp();
-               object.canEstimateRegressionParameters();
+               object.cannotAddSampleDataWithSizeMismatch();
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void testYVariance() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
+               object.setUp();
+               object.testYVariance();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNewSample2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
+               object.setUp();
+               object.testNewSample2();
+        }
+    }
+
+    @Test(timeout=600000)
     public void canEstimateResiduals() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
@@ -144,16 +135,16 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
-    public void testNewSample() throws Exception {
+    @Test(timeout=600000)
+    public void canEstimateRegressionParameters() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
                object.setUp();
-               object.testNewSample();
+               object.canEstimateRegressionParameters();
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void canEstimateRegressionParametersVariance() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
@@ -162,7 +153,7 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void canEstimateRegressandVariance() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
@@ -171,7 +162,16 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void testNewSample() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
+               object.setUp();
+               object.testNewSample();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testNewSampleNullData() throws Exception {
         if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
@@ -180,7 +180,7 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testNewSampleInvalidData() throws Exception {
         if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
@@ -189,7 +189,7 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testNewSampleInsufficientData() throws Exception {
         if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
@@ -198,7 +198,7 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testXSampleDataNull() throws Exception {
         if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();
@@ -207,7 +207,7 @@ public class OLSMultipleLinearRegressionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testYSampleDataNull() throws Exception {
         if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
                org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest object = new org.apache.commons.math3.stat.regression.OLSMultipleLinearRegressionTest();

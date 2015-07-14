@@ -9,23 +9,7 @@ public class FastHadamardTransformerTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void test4Points() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.transform.FastHadamardTransformerTest object = new org.apache.commons.math3.transform.FastHadamardTransformerTest();
-               object.test4Points();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testNoIntInverse() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.transform.FastHadamardTransformerTest object = new org.apache.commons.math3.transform.FastHadamardTransformerTest();
-               object.testNoIntInverse();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void test8Points() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.transform.FastHadamardTransformerTest object = new org.apache.commons.math3.transform.FastHadamardTransformerTest();
@@ -33,7 +17,23 @@ public class FastHadamardTransformerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void test4Points() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.transform.FastHadamardTransformerTest object = new org.apache.commons.math3.transform.FastHadamardTransformerTest();
+               object.test4Points();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNoIntInverse() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.transform.FastHadamardTransformerTest object = new org.apache.commons.math3.transform.FastHadamardTransformerTest();
+               object.testNoIntInverse();
+        }
+    }
+
+    @Test(timeout=600000)
     public void test3Points() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.transform.FastHadamardTransformerTest object = new org.apache.commons.math3.transform.FastHadamardTransformerTest();

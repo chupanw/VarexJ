@@ -9,15 +9,15 @@ public class TricubicSplineInterpolatorTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testWave() throws Exception {
+    @Test(timeout=600000)
+    public void testPlane() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatorTest();
-               object.testWave();
+               object.testPlane();
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testPreconditions() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatorTest();
@@ -25,11 +25,11 @@ public class TricubicSplineInterpolatorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
-    public void testPlane() throws Exception {
+    @Test(timeout=600000)
+    public void testWave() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatorTest();
-               object.testPlane();
+               object.testWave();
         }
     }
 

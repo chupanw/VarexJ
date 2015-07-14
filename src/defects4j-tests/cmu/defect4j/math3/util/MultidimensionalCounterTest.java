@@ -9,7 +9,7 @@ public class MultidimensionalCounterTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testAccessors() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.MultidimensionalCounterTest object = new org.apache.commons.math3.util.MultidimensionalCounterTest();
@@ -17,7 +17,15 @@ public class MultidimensionalCounterTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void testPreconditions() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.MultidimensionalCounterTest object = new org.apache.commons.math3.util.MultidimensionalCounterTest();
+               object.testPreconditions();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testIteratorPreconditions() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.MultidimensionalCounterTest object = new org.apache.commons.math3.util.MultidimensionalCounterTest();
@@ -25,7 +33,7 @@ public class MultidimensionalCounterTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testMulti2UniConversion() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.MultidimensionalCounterTest object = new org.apache.commons.math3.util.MultidimensionalCounterTest();
@@ -33,19 +41,11 @@ public class MultidimensionalCounterTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testIterationConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.MultidimensionalCounterTest object = new org.apache.commons.math3.util.MultidimensionalCounterTest();
                object.testIterationConsistency();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testPreconditions() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.MultidimensionalCounterTest object = new org.apache.commons.math3.util.MultidimensionalCounterTest();
-               object.testPreconditions();
         }
     }
 

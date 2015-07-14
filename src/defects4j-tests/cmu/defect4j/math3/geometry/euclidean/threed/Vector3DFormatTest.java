@@ -9,143 +9,7 @@ public class Vector3DFormatTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testNegativeX() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.testNegativeX();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testNegativeY() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.testNegativeY();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testNegativeZ() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.testNegativeZ();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testNonDefaultSetting() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.testNonDefaultSetting();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testDefaultFormatVector3D() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.testDefaultFormatVector3D();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void tesNegativeInfinity() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.tesNegativeInfinity();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testParseIgnoredWhitespace() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.testParseIgnoredWhitespace();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testParseNegativeX() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.testParseNegativeX();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testParseNegativeY() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.testParseNegativeY();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testParseNegativeZ() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.testParseNegativeZ();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testParseNegativeAll() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.testParseNegativeAll();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testParseZeroX() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.testParseZeroX();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testParseNonDefaultSetting() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.testParseNonDefaultSetting();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testParseNegativeInfinity() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.testParseNegativeInfinity();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testForgottenPrefix() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.testForgottenPrefix();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testForgottenSeparator() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.testForgottenSeparator();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testForgottenSuffix() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.testForgottenSuffix();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSimpleNoDecimals() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
@@ -153,7 +17,7 @@ public class Vector3DFormatTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSimpleWithDecimals() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
@@ -161,7 +25,7 @@ public class Vector3DFormatTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSimpleWithDecimalsTrunc() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
@@ -169,7 +33,7 @@ public class Vector3DFormatTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testNan() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
@@ -177,7 +41,7 @@ public class Vector3DFormatTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testPositiveInfinity() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
@@ -185,7 +49,7 @@ public class Vector3DFormatTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testParseSimpleNoDecimals() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
@@ -193,7 +57,7 @@ public class Vector3DFormatTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testParseSimpleWithDecimals() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
@@ -201,7 +65,7 @@ public class Vector3DFormatTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testParseSimpleWithDecimalsTrunc() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
@@ -209,7 +73,7 @@ public class Vector3DFormatTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testParseNan() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
@@ -217,7 +81,7 @@ public class Vector3DFormatTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testParsePositiveInfinity() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
@@ -225,11 +89,147 @@ public class Vector3DFormatTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testConstructorSingleFormat() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
                object.testConstructorSingleFormat();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNegativeX() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.testNegativeX();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNegativeY() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.testNegativeY();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNegativeZ() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.testNegativeZ();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testNonDefaultSetting() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.testNonDefaultSetting();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testDefaultFormatVector3D() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.testDefaultFormatVector3D();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void tesNegativeInfinity() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.tesNegativeInfinity();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testParseIgnoredWhitespace() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.testParseIgnoredWhitespace();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testParseNegativeX() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.testParseNegativeX();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testParseNegativeY() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.testParseNegativeY();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testParseNegativeZ() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.testParseNegativeZ();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testParseNegativeAll() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.testParseNegativeAll();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testParseZeroX() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.testParseZeroX();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testParseNonDefaultSetting() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.testParseNonDefaultSetting();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testParseNegativeInfinity() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.testParseNegativeInfinity();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testForgottenPrefix() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.testForgottenPrefix();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testForgottenSeparator() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.testForgottenSeparator();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testForgottenSuffix() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.testForgottenSuffix();
         }
     }
 

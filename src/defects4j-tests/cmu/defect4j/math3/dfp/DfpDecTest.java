@@ -9,7 +9,7 @@ public class DfpDecTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testRound() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.dfp.DfpDecTest object = new org.apache.commons.math3.dfp.DfpDecTest();
@@ -18,7 +18,7 @@ public class DfpDecTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testRoundDecimal10() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.dfp.DfpDecTest object = new org.apache.commons.math3.dfp.DfpDecTest();
@@ -27,7 +27,7 @@ public class DfpDecTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testNextAfter() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.dfp.DfpDecTest object = new org.apache.commons.math3.dfp.DfpDecTest();

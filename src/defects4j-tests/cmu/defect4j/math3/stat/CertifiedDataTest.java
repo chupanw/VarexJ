@@ -9,19 +9,19 @@ public class CertifiedDataTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testSummaryStatistics() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.CertifiedDataTest object = new org.apache.commons.math3.stat.CertifiedDataTest();
-               object.testSummaryStatistics();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testDescriptiveStatistics() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.CertifiedDataTest object = new org.apache.commons.math3.stat.CertifiedDataTest();
                object.testDescriptiveStatistics();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testSummaryStatistics() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.CertifiedDataTest object = new org.apache.commons.math3.stat.CertifiedDataTest();
+               object.testSummaryStatistics();
         }
     }
 

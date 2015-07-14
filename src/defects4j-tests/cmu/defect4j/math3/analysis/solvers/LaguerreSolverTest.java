@@ -9,7 +9,7 @@ public class LaguerreSolverTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testQuinticFunction() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.LaguerreSolverTest object = new org.apache.commons.math3.analysis.solvers.LaguerreSolverTest();
@@ -17,23 +17,15 @@ public class LaguerreSolverTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
-    public void testQuadraticFunction() throws Exception {
+    @Test(timeout=600000)
+    public void testParameters() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.LaguerreSolverTest object = new org.apache.commons.math3.analysis.solvers.LaguerreSolverTest();
-               object.testQuadraticFunction();
+               object.testParameters();
         }
     }
 
-    @Test(timeout=60000)
-    public void testLinearFunction() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.solvers.LaguerreSolverTest object = new org.apache.commons.math3.analysis.solvers.LaguerreSolverTest();
-               object.testLinearFunction();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testQuinticFunction2() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.LaguerreSolverTest object = new org.apache.commons.math3.analysis.solvers.LaguerreSolverTest();
@@ -41,11 +33,19 @@ public class LaguerreSolverTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
-    public void testParameters() throws Exception {
+    @Test(timeout=600000)
+    public void testLinearFunction() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.LaguerreSolverTest object = new org.apache.commons.math3.analysis.solvers.LaguerreSolverTest();
-               object.testParameters();
+               object.testLinearFunction();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testQuadraticFunction() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.solvers.LaguerreSolverTest object = new org.apache.commons.math3.analysis.solvers.LaguerreSolverTest();
+               object.testQuadraticFunction();
         }
     }
 

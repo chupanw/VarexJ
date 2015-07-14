@@ -9,7 +9,7 @@ public class EigenSolverTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testNonInvertible() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.EigenSolverTest object = new org.apache.commons.math3.linear.EigenSolverTest();
@@ -17,15 +17,7 @@ public class EigenSolverTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
-    public void testInvertible() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.EigenSolverTest object = new org.apache.commons.math3.linear.EigenSolverTest();
-               object.testInvertible();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSolve() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.EigenSolverTest object = new org.apache.commons.math3.linear.EigenSolverTest();
@@ -33,7 +25,15 @@ public class EigenSolverTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void testInvertible() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.EigenSolverTest object = new org.apache.commons.math3.linear.EigenSolverTest();
+               object.testInvertible();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testSolveDimensionErrors() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.EigenSolverTest object = new org.apache.commons.math3.linear.EigenSolverTest();

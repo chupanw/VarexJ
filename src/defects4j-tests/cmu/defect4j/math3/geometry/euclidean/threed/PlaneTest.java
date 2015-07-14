@@ -9,63 +9,7 @@ public class PlaneTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testOffset() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
-               object.testOffset();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testPoint() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
-               object.testPoint();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testThreePoints() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
-               object.testThreePoints();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testRotate() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
-               object.testRotate();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testTranslate() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
-               object.testTranslate();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testIntersection2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
-               object.testIntersection2();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testIntersection3() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
-               object.testIntersection3();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testContains() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
@@ -73,7 +17,7 @@ public class PlaneTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSimilar() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
@@ -81,11 +25,67 @@ public class PlaneTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testIntersection() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
                object.testIntersection();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testOffset() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
+               object.testOffset();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testPoint() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
+               object.testPoint();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testThreePoints() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
+               object.testThreePoints();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testRotate() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
+               object.testRotate();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testTranslate() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
+               object.testTranslate();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testIntersection2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
+               object.testIntersection2();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testIntersection3() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.PlaneTest object = new org.apache.commons.math3.geometry.euclidean.threed.PlaneTest();
+               object.testIntersection3();
         }
     }
 

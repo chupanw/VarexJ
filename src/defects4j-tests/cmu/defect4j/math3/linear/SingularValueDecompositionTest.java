@@ -9,15 +9,7 @@ public class SingularValueDecompositionTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testDimensions() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SingularValueDecompositionTest object = new org.apache.commons.math3.linear.SingularValueDecompositionTest();
-               object.testDimensions();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testRank() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SingularValueDecompositionTest object = new org.apache.commons.math3.linear.SingularValueDecompositionTest();
@@ -25,7 +17,7 @@ public class SingularValueDecompositionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testMoreRows() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SingularValueDecompositionTest object = new org.apache.commons.math3.linear.SingularValueDecompositionTest();
@@ -33,7 +25,7 @@ public class SingularValueDecompositionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testMoreColumns() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SingularValueDecompositionTest object = new org.apache.commons.math3.linear.SingularValueDecompositionTest();
@@ -41,7 +33,7 @@ public class SingularValueDecompositionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testHadamard() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SingularValueDecompositionTest object = new org.apache.commons.math3.linear.SingularValueDecompositionTest();
@@ -49,7 +41,7 @@ public class SingularValueDecompositionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testStability1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SingularValueDecompositionTest object = new org.apache.commons.math3.linear.SingularValueDecompositionTest();
@@ -57,7 +49,7 @@ public class SingularValueDecompositionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testStability2() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SingularValueDecompositionTest object = new org.apache.commons.math3.linear.SingularValueDecompositionTest();
@@ -65,7 +57,7 @@ public class SingularValueDecompositionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testConditionNumber() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SingularValueDecompositionTest object = new org.apache.commons.math3.linear.SingularValueDecompositionTest();
@@ -73,7 +65,7 @@ public class SingularValueDecompositionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testInverseConditionNumber() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SingularValueDecompositionTest object = new org.apache.commons.math3.linear.SingularValueDecompositionTest();
@@ -81,7 +73,7 @@ public class SingularValueDecompositionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testIssue947() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SingularValueDecompositionTest object = new org.apache.commons.math3.linear.SingularValueDecompositionTest();
@@ -89,7 +81,7 @@ public class SingularValueDecompositionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testAEqualUSVt() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SingularValueDecompositionTest object = new org.apache.commons.math3.linear.SingularValueDecompositionTest();
@@ -97,7 +89,7 @@ public class SingularValueDecompositionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testUOrthogonal() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SingularValueDecompositionTest object = new org.apache.commons.math3.linear.SingularValueDecompositionTest();
@@ -105,11 +97,19 @@ public class SingularValueDecompositionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testVOrthogonal() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SingularValueDecompositionTest object = new org.apache.commons.math3.linear.SingularValueDecompositionTest();
                object.testVOrthogonal();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testDimensions() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SingularValueDecompositionTest object = new org.apache.commons.math3.linear.SingularValueDecompositionTest();
+               object.testDimensions();
         }
     }
 

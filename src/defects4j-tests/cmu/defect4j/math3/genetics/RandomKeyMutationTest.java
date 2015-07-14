@@ -9,7 +9,7 @@ public class RandomKeyMutationTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testMutate() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.genetics.RandomKeyMutationTest object = new org.apache.commons.math3.genetics.RandomKeyMutationTest();

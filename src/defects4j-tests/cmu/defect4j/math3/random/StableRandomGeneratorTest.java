@@ -9,7 +9,7 @@ public class StableRandomGeneratorTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testNextDouble() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.StableRandomGeneratorTest object = new org.apache.commons.math3.random.StableRandomGeneratorTest();
@@ -17,7 +17,7 @@ public class StableRandomGeneratorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testGaussianCase() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.StableRandomGeneratorTest object = new org.apache.commons.math3.random.StableRandomGeneratorTest();
@@ -25,7 +25,7 @@ public class StableRandomGeneratorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testCauchyCase() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.StableRandomGeneratorTest object = new org.apache.commons.math3.random.StableRandomGeneratorTest();
@@ -33,7 +33,15 @@ public class StableRandomGeneratorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void testBetaRangeAboveOne() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.random.StableRandomGeneratorTest object = new org.apache.commons.math3.random.StableRandomGeneratorTest();
+               object.testBetaRangeAboveOne();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testAlphaRangeBelowZero() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.StableRandomGeneratorTest object = new org.apache.commons.math3.random.StableRandomGeneratorTest();
@@ -41,7 +49,7 @@ public class StableRandomGeneratorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testAlphaRangeAboveTwo() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.StableRandomGeneratorTest object = new org.apache.commons.math3.random.StableRandomGeneratorTest();
@@ -49,19 +57,11 @@ public class StableRandomGeneratorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testBetaRangeBelowMinusOne() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.StableRandomGeneratorTest object = new org.apache.commons.math3.random.StableRandomGeneratorTest();
                object.testBetaRangeBelowMinusOne();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testBetaRangeAboveOne() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.random.StableRandomGeneratorTest object = new org.apache.commons.math3.random.StableRandomGeneratorTest();
-               object.testBetaRangeAboveOne();
         }
     }
 

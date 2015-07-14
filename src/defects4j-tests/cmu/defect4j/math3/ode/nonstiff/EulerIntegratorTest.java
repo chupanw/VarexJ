@@ -9,7 +9,7 @@ public class EulerIntegratorTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testDecreasingSteps() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.EulerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.EulerIntegratorTest();
@@ -17,7 +17,7 @@ public class EulerIntegratorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSmallStep() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.EulerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.EulerIntegratorTest();
@@ -25,7 +25,7 @@ public class EulerIntegratorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testBigStep() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.EulerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.EulerIntegratorTest();
@@ -33,7 +33,7 @@ public class EulerIntegratorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testBackward() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.EulerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.EulerIntegratorTest();
@@ -41,7 +41,7 @@ public class EulerIntegratorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testStepSize() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.EulerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.EulerIntegratorTest();
@@ -49,7 +49,7 @@ public class EulerIntegratorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testDimensionCheck() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
                org.apache.commons.math3.ode.nonstiff.EulerIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.EulerIntegratorTest();

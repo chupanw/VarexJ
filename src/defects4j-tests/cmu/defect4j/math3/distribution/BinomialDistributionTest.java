@@ -9,16 +9,7 @@ public class BinomialDistributionTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testMoments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.BinomialDistributionTest object = new org.apache.commons.math3.distribution.BinomialDistributionTest();
-               object.setUp();
-               object.testMoments();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testDegenerate0() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.BinomialDistributionTest object = new org.apache.commons.math3.distribution.BinomialDistributionTest();
@@ -27,7 +18,7 @@ public class BinomialDistributionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testDegenerate1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.BinomialDistributionTest object = new org.apache.commons.math3.distribution.BinomialDistributionTest();
@@ -36,7 +27,7 @@ public class BinomialDistributionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testMath718() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.BinomialDistributionTest object = new org.apache.commons.math3.distribution.BinomialDistributionTest();
@@ -45,7 +36,25 @@ public class BinomialDistributionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
+    public void testMoments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.BinomialDistributionTest object = new org.apache.commons.math3.distribution.BinomialDistributionTest();
+               object.setUp();
+               object.testMoments();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testIllegalArguments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.BinomialDistributionTest object = new org.apache.commons.math3.distribution.BinomialDistributionTest();
+               object.setUp();
+               object.testIllegalArguments();
+        }
+    }
+
+    @Test(timeout=600000)
     public void testDensities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.BinomialDistributionTest object = new org.apache.commons.math3.distribution.BinomialDistributionTest();
@@ -54,7 +63,7 @@ public class BinomialDistributionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testCumulativeProbabilities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.BinomialDistributionTest object = new org.apache.commons.math3.distribution.BinomialDistributionTest();
@@ -63,7 +72,7 @@ public class BinomialDistributionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testInverseCumulativeProbabilities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.BinomialDistributionTest object = new org.apache.commons.math3.distribution.BinomialDistributionTest();
@@ -72,7 +81,7 @@ public class BinomialDistributionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testConsistencyAtSupportBounds() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.BinomialDistributionTest object = new org.apache.commons.math3.distribution.BinomialDistributionTest();
@@ -81,21 +90,12 @@ public class BinomialDistributionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSampling() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.BinomialDistributionTest object = new org.apache.commons.math3.distribution.BinomialDistributionTest();
                object.setUp();
                object.testSampling();
-        }
-    }
-
-    @Test(timeout=60000)
-    public void testIllegalArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.BinomialDistributionTest object = new org.apache.commons.math3.distribution.BinomialDistributionTest();
-               object.setUp();
-               object.testIllegalArguments();
         }
     }
 

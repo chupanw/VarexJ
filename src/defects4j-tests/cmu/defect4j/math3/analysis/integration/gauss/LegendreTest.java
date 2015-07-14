@@ -9,7 +9,7 @@ public class LegendreTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testCos() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.integration.gauss.LegendreTest object = new org.apache.commons.math3.analysis.integration.gauss.LegendreTest();
@@ -17,7 +17,7 @@ public class LegendreTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testInverse() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.integration.gauss.LegendreTest object = new org.apache.commons.math3.analysis.integration.gauss.LegendreTest();

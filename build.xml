@@ -514,8 +514,7 @@
 			<formatter type="xml" />
 			<batchtest todir="build/defects4j-tests">
 				<fileset dir="build/defects4j-tests">
-                    <!--<include name="**/math3/**/Test.class" />-->
-                    <include name="**/math3/ode/nonstiff/DormandPrince853IntegratorTest.class"/>
+					<include name="**/math3/**/*Test.class" />
 				</fileset>
 			</batchtest>
 
@@ -526,7 +525,7 @@
 			<report todir="build/defects4j-tests/report" />
 		</junitreport>
 
-        <exec executable="./Notify.sh"/>
+        <!--<exec executable="./Notify.sh"/>-->
 
 
 	</target>

@@ -9,15 +9,7 @@ public class PowellOptimizerTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=60000)
-    public void testBoundsUnsupported() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.MathUnsupportedOperationException", config)) {
-               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizerTest();
-               object.testBoundsUnsupported();
-        }
-    }
-
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testQuadratic() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizerTest();
@@ -25,15 +17,15 @@ public class PowellOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
-    public void testRelativeToleranceOnScaledValues() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
+    @Test(timeout=600000)
+    public void testBoundsUnsupported() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.MathUnsupportedOperationException", config)) {
                org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizerTest();
-               object.testRelativeToleranceOnScaledValues();
+               object.testBoundsUnsupported();
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testSumSinc() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizerTest();
@@ -41,11 +33,19 @@ public class PowellOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=60000)
+    @Test(timeout=600000)
     public void testMaximizeQuadratic() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizerTest();
                object.testMaximizeQuadratic();
+        }
+    }
+
+    @Test(timeout=600000)
+    public void testRelativeToleranceOnScaledValues() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizerTest();
+               object.testRelativeToleranceOnScaledValues();
         }
     }
 
