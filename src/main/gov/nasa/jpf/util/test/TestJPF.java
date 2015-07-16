@@ -854,7 +854,7 @@ public abstract class TestJPF implements JPFShell {
         System.out.println("Satisfiable: " + passIf.isSatisfiable());
 //        FeatureExprParser parser = new FeatureExprParser(FeatureExprFactory.bdd());
 //        parser.parse()
-        writePassCond(passIf);
+        writePassCond(passIf, null);
 
         System.out.println("================ GenProg ================\n");
 
@@ -935,7 +935,7 @@ public abstract class TestJPF implements JPFShell {
                 passIf = passIf.andNot(unxi.getCtx());
             }
             System.out.println("Pass if: " + passIf);
-            writePassCond(passIf);
+            writePassCond(passIf, unexpectedExceptions);
             System.out.println("================ GenProg ================\n");
 
 
@@ -1305,7 +1305,7 @@ public abstract class TestJPF implements JPFShell {
         assertTrue("", cond);
     }
 
-    private void writePassCond(FeatureExpr passExpr) {
+    private void writePassCond(FeatureExpr passExpr, ArrayList<UncaughtException> unexpected) {
         try {
             File passCondFile = new File("PassingList.txt");
             FileWriter writer = new FileWriter(passCondFile, true);
@@ -1328,10 +1328,19 @@ public abstract class TestJPF implements JPFShell {
             }
             writer.write("    Fail if: ");
             int counter = 1;
-            for (UncaughtException xi : uncaughtExceptionSet) {
-                writer.write("(" + counter + ") ");
-                writer.write(xi.getCtx().toString() + " ");
-                counter++;
+            if (unexpected == null) {
+                for (UncaughtException xi : uncaughtExceptionSet) {
+                    writer.write("(" + counter + ") ");
+                    writer.write(xi.getCtx().toString() + " ");
+                    counter++;
+                }
+            }
+            else{
+                for (UncaughtException xi : unexpected) {
+                    writer.write("(" + counter + ") ");
+                    writer.write(xi.getCtx().toString() + " ");
+                    counter++;
+                }
             }
             writer.write("\n");
             writer.write("    Pass if: ");
