@@ -1312,7 +1312,7 @@ public abstract class TestJPF implements JPFShell {
             StackTraceElement caller = (new Throwable()).getStackTrace()[3];
             String testClsName = caller.getClassName();
             // Skip test cases that are not in defects4j project
-            if (!testClsName.startsWith("edu.cmu")) {
+            if (!testClsName.startsWith("cmu.defect4j")) {
                 return;
             }
             testClsName = "org.apache.commons." + testClsName.substring(13);
