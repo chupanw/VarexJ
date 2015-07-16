@@ -5,23 +5,23 @@ import org.junit.Test;
 
 public class GillStepInterpolatorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
-    public void testDerivativesConsistency() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.GillStepInterpolatorTest object = new org.apache.commons.math3.ode.nonstiff.GillStepInterpolatorTest();
-               object.testDerivativesConsistency();
-        }
-    }
-
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void serialization() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.GillStepInterpolatorTest object = new org.apache.commons.math3.ode.nonstiff.GillStepInterpolatorTest();
                object.serialization();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testDerivativesConsistency() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.GillStepInterpolatorTest object = new org.apache.commons.math3.ode.nonstiff.GillStepInterpolatorTest();
+               object.testDerivativesConsistency();
         }
     }
 

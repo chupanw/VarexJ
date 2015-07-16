@@ -5,11 +5,11 @@ import org.junit.Test;
 
 public class PolynomialsUtilsTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testFirstChebyshevPolynomials() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
@@ -17,7 +17,7 @@ public class PolynomialsUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testChebyshevBounds() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
@@ -25,7 +25,7 @@ public class PolynomialsUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testChebyshevDifferentials() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
@@ -33,7 +33,7 @@ public class PolynomialsUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testChebyshevOrthogonality() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
@@ -41,7 +41,7 @@ public class PolynomialsUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testFirstHermitePolynomials() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
@@ -49,7 +49,7 @@ public class PolynomialsUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testHermiteDifferentials() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
@@ -57,7 +57,7 @@ public class PolynomialsUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testHermiteOrthogonality() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
@@ -65,7 +65,7 @@ public class PolynomialsUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testFirstLaguerrePolynomials() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
@@ -73,7 +73,7 @@ public class PolynomialsUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testLaguerreDifferentials() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
@@ -81,7 +81,7 @@ public class PolynomialsUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testLaguerreOrthogonality() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
@@ -89,7 +89,7 @@ public class PolynomialsUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testFirstLegendrePolynomials() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
@@ -97,7 +97,7 @@ public class PolynomialsUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testLegendreDifferentials() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
@@ -105,7 +105,7 @@ public class PolynomialsUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testLegendreOrthogonality() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
@@ -113,7 +113,7 @@ public class PolynomialsUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testHighDegreeLegendre() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
@@ -121,7 +121,7 @@ public class PolynomialsUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testJacobiLegendre() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
@@ -129,7 +129,7 @@ public class PolynomialsUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testJacobiEvaluationAt1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
@@ -137,7 +137,7 @@ public class PolynomialsUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testJacobiOrthogonality() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();
@@ -145,7 +145,7 @@ public class PolynomialsUtilsTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testShift() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialsUtilsTest();

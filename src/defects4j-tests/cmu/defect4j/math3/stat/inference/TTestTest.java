@@ -5,11 +5,20 @@ import org.junit.Test;
 
 public class TTestTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
+    public void testSmallSamples() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.inference.TTestTest object = new org.apache.commons.math3.stat.inference.TTestTest();
+               object.setUp();
+               object.testSmallSamples();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testOneSampleT() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.inference.TTestTest object = new org.apache.commons.math3.stat.inference.TTestTest();
@@ -18,7 +27,7 @@ public class TTestTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testOneSampleTTest() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.inference.TTestTest object = new org.apache.commons.math3.stat.inference.TTestTest();
@@ -27,7 +36,7 @@ public class TTestTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testTwoSampleTHeterscedastic() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.inference.TTestTest object = new org.apache.commons.math3.stat.inference.TTestTest();
@@ -36,7 +45,7 @@ public class TTestTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testTwoSampleTHomoscedastic() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.inference.TTestTest object = new org.apache.commons.math3.stat.inference.TTestTest();
@@ -45,21 +54,12 @@ public class TTestTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testPaired() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.inference.TTestTest object = new org.apache.commons.math3.stat.inference.TTestTest();
                object.setUp();
                object.testPaired();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSmallSamples() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.inference.TTestTest object = new org.apache.commons.math3.stat.inference.TTestTest();
-               object.setUp();
-               object.testSmallSamples();
         }
     }
 

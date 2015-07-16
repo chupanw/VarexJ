@@ -5,11 +5,11 @@ import org.junit.Test;
 
 public class FieldHermiteInterpolatorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testZero() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
@@ -17,7 +17,7 @@ public class FieldHermiteInterpolatorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testQuadratic() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
@@ -25,7 +25,7 @@ public class FieldHermiteInterpolatorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testMixedDerivatives() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
@@ -33,7 +33,7 @@ public class FieldHermiteInterpolatorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testRandomPolynomialsValuesOnly() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
@@ -41,7 +41,7 @@ public class FieldHermiteInterpolatorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testRandomPolynomialsFirstDerivative() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
@@ -49,7 +49,7 @@ public class FieldHermiteInterpolatorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testSine() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
@@ -57,7 +57,7 @@ public class FieldHermiteInterpolatorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testSquareRoot() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
@@ -65,7 +65,7 @@ public class FieldHermiteInterpolatorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testWikipedia() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
@@ -73,7 +73,7 @@ public class FieldHermiteInterpolatorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testOnePointParabola() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
@@ -81,7 +81,7 @@ public class FieldHermiteInterpolatorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testEmptySampleValue() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NoDataException", config)) {
                org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
@@ -89,7 +89,7 @@ public class FieldHermiteInterpolatorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testEmptySampleDerivative() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NoDataException", config)) {
                org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
@@ -97,7 +97,7 @@ public class FieldHermiteInterpolatorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testDuplicatedAbscissa() throws Exception {
         if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
                org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();

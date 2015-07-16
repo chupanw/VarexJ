@@ -515,6 +515,11 @@
 			<batchtest todir="build/defects4j-tests">
 				<fileset dir="build/defects4j-tests">
 					<include name="**/math3/**/*Test.class" />
+					<exclude name="**/math3/geometry/euclidean/threed/FieldRotationDfpTest.class" />
+					<exclude name="**/math3/optim/nonlinear/scalar/noderiv/BOBYQAOptimizerTest.class" />
+					<exclude name="**/math3/optim/nonlinear/scalar/noderiv/CMAESOptimizerTest.class" />
+					<exclude name="**/math3/optimization/direct/BOBYQAOptimizerTest.class" />
+					<exclude name="**/math3/optimization/direct/CMAESOptimizerTest.class" />
 				</fileset>
 			</batchtest>
 

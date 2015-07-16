@@ -5,11 +5,19 @@ import org.junit.Test;
 
 public class BigRealTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
+               object.testSerial();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testConstructor() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -17,7 +25,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testCompareTo() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -25,7 +33,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testDoubleValue() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -33,7 +41,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testBigDecimalValue() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -41,7 +49,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testEqualsAndHashCode() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -49,7 +57,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testDivide() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -57,7 +65,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testAdd() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -65,7 +73,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testSubtract() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -73,7 +81,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testMultiply() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -81,7 +89,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testNegate() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -89,7 +97,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testReciprocal() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -97,7 +105,7 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testDivisionByZero() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathArithmeticException", config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
@@ -105,19 +113,11 @@ public class BigRealTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testReciprocalOfZero() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathArithmeticException", config)) {
                org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
                object.testReciprocalOfZero();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.BigRealTest object = new org.apache.commons.math3.util.BigRealTest();
-               object.testSerial();
         }
     }
 

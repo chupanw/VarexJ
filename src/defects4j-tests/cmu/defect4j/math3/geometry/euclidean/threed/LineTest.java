@@ -5,19 +5,11 @@ import org.junit.Test;
 
 public class LineTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
-    public void testRevert() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.LineTest object = new org.apache.commons.math3.geometry.euclidean.threed.LineTest();
-               object.testRevert();
-        }
-    }
-
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testContains() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.LineTest object = new org.apache.commons.math3.geometry.euclidean.threed.LineTest();
@@ -25,7 +17,15 @@ public class LineTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
+    public void testRevert() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.LineTest object = new org.apache.commons.math3.geometry.euclidean.threed.LineTest();
+               object.testRevert();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testSimilar() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.LineTest object = new org.apache.commons.math3.geometry.euclidean.threed.LineTest();
@@ -33,7 +33,7 @@ public class LineTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testPointDistance() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.LineTest object = new org.apache.commons.math3.geometry.euclidean.threed.LineTest();
@@ -41,7 +41,7 @@ public class LineTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testLineDistance() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.LineTest object = new org.apache.commons.math3.geometry.euclidean.threed.LineTest();
@@ -49,7 +49,7 @@ public class LineTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testClosest() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.LineTest object = new org.apache.commons.math3.geometry.euclidean.threed.LineTest();
@@ -57,7 +57,7 @@ public class LineTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testIntersection() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.LineTest object = new org.apache.commons.math3.geometry.euclidean.threed.LineTest();

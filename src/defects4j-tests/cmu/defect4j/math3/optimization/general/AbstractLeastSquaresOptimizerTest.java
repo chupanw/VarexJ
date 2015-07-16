@@ -5,11 +5,19 @@ import org.junit.Test;
 
 public class AbstractLeastSquaresOptimizerTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
+    public void testComputeSigma() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizerTest object = new org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizerTest();
+               object.testComputeSigma();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testGetChiSquare() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizerTest object = new org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizerTest();
@@ -17,19 +25,11 @@ public class AbstractLeastSquaresOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testGetRMS() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizerTest object = new org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizerTest();
                object.testGetRMS();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testComputeSigma() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizerTest object = new org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizerTest();
-               object.testComputeSigma();
         }
     }
 

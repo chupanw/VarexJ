@@ -5,11 +5,11 @@ import org.junit.Test;
 
 public class AbstractIntegerDistributionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testCumulativeProbabilitiesSingleArguments() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.AbstractIntegerDistributionTest object = new org.apache.commons.math3.distribution.AbstractIntegerDistributionTest();
@@ -17,7 +17,7 @@ public class AbstractIntegerDistributionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testCumulativeProbabilitiesRangeArguments() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.AbstractIntegerDistributionTest object = new org.apache.commons.math3.distribution.AbstractIntegerDistributionTest();
