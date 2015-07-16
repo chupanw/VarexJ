@@ -9,25 +9,7 @@ public class ResizableDoubleArrayTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
-    public void testConstructors() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
-               object.setUp();
-               object.testConstructors();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testEqualsAndHashCode() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
-               object.setUp();
-               object.testEqualsAndHashCode();
-        }
-    }
-
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testSetElementArbitraryExpansion1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
@@ -36,7 +18,7 @@ public class ResizableDoubleArrayTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testSetElementArbitraryExpansion2() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
@@ -45,7 +27,7 @@ public class ResizableDoubleArrayTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testAddElements() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
@@ -54,7 +36,7 @@ public class ResizableDoubleArrayTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testSetNumberOfElements() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
@@ -63,7 +45,7 @@ public class ResizableDoubleArrayTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testWithInitialCapacity() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
@@ -72,7 +54,7 @@ public class ResizableDoubleArrayTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testWithInitialCapacityAndExpansionFactor() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
@@ -81,7 +63,7 @@ public class ResizableDoubleArrayTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testDiscard() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
@@ -90,7 +72,7 @@ public class ResizableDoubleArrayTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testSubstitute() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
@@ -99,7 +81,7 @@ public class ResizableDoubleArrayTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testMutators() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
@@ -108,7 +90,7 @@ public class ResizableDoubleArrayTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testGetArrayRef() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
@@ -117,7 +99,7 @@ public class ResizableDoubleArrayTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testCompute() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
@@ -126,16 +108,25 @@ public class ResizableDoubleArrayTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
-    public void testAddElementRolling() throws Exception {
+    @Test(timeout=1800000)
+    public void testEqualsAndHashCode() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
                object.setUp();
-               object.testAddElementRolling();
+               object.testEqualsAndHashCode();
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
+    public void testConstructors() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
+               object.setUp();
+               object.testConstructors();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testAdd1000() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
@@ -144,21 +135,30 @@ public class ResizableDoubleArrayTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
-    public void testGetValues() throws Exception {
+    @Test(timeout=1800000)
+    public void testAddElementRolling() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
                object.setUp();
-               object.testGetValues();
+               object.testAddElementRolling();
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testMinMax() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
                object.setUp();
                object.testMinMax();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testGetValues() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
+               object.setUp();
+               object.testGetValues();
         }
     }
 

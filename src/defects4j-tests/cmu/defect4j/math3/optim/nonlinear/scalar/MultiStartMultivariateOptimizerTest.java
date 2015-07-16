@@ -9,19 +9,19 @@ public class MultiStartMultivariateOptimizerTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
-    public void testRosenbrock() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.nonlinear.scalar.MultiStartMultivariateOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.MultiStartMultivariateOptimizerTest();
-               object.testRosenbrock();
-        }
-    }
-
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testCircleFitting() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.nonlinear.scalar.MultiStartMultivariateOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.MultiStartMultivariateOptimizerTest();
                object.testCircleFitting();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testRosenbrock() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.nonlinear.scalar.MultiStartMultivariateOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.scalar.MultiStartMultivariateOptimizerTest();
+               object.testRosenbrock();
         }
     }
 

@@ -9,23 +9,7 @@ public class EuclideanIntegerPointTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
-    public void testDistance() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.clustering.EuclideanIntegerPointTest object = new org.apache.commons.math3.stat.clustering.EuclideanIntegerPointTest();
-               object.testDistance();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testCentroid() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.clustering.EuclideanIntegerPointTest object = new org.apache.commons.math3.stat.clustering.EuclideanIntegerPointTest();
-               object.testCentroid();
-        }
-    }
-
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testArrayIsReference() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.clustering.EuclideanIntegerPointTest object = new org.apache.commons.math3.stat.clustering.EuclideanIntegerPointTest();
@@ -33,11 +17,27 @@ public class EuclideanIntegerPointTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
+    public void testCentroid() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.clustering.EuclideanIntegerPointTest object = new org.apache.commons.math3.stat.clustering.EuclideanIntegerPointTest();
+               object.testCentroid();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testSerial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.clustering.EuclideanIntegerPointTest object = new org.apache.commons.math3.stat.clustering.EuclideanIntegerPointTest();
                object.testSerial();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testDistance() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.clustering.EuclideanIntegerPointTest object = new org.apache.commons.math3.stat.clustering.EuclideanIntegerPointTest();
+               object.testDistance();
         }
     }
 

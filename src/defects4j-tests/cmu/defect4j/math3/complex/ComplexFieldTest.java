@@ -9,7 +9,15 @@ public class ComplexFieldTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexFieldTest object = new org.apache.commons.math3.complex.ComplexFieldTest();
+               object.testSerial();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testZero() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.complex.ComplexFieldTest object = new org.apache.commons.math3.complex.ComplexFieldTest();
@@ -17,19 +25,11 @@ public class ComplexFieldTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testOne() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.complex.ComplexFieldTest object = new org.apache.commons.math3.complex.ComplexFieldTest();
                object.testOne();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexFieldTest object = new org.apache.commons.math3.complex.ComplexFieldTest();
-               object.testSerial();
         }
     }
 

@@ -9,7 +9,7 @@ public class ArgUtilsTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testFlatten() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.exception.util.ArgUtilsTest object = new org.apache.commons.math3.exception.util.ArgUtilsTest();

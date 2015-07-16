@@ -9,7 +9,7 @@ public class PolynomialSplineFunctionTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testConstructor() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialSplineFunctionTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialSplineFunctionTest();
@@ -17,7 +17,7 @@ public class PolynomialSplineFunctionTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testValues() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialSplineFunctionTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialSplineFunctionTest();

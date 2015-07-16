@@ -9,7 +9,7 @@ public class EventStateTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void closeEvents() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.events.EventStateTest object = new org.apache.commons.math3.ode.events.EventStateTest();
@@ -17,7 +17,7 @@ public class EventStateTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testIssue695() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.events.EventStateTest object = new org.apache.commons.math3.ode.events.EventStateTest();

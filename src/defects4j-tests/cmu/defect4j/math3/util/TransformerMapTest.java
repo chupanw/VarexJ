@@ -9,15 +9,7 @@ public class TransformerMapTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
-    public void testContainsTransformer() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.TransformerMapTest object = new org.apache.commons.math3.util.TransformerMapTest();
-               object.testContainsTransformer();
-        }
-    }
-
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testPutTransformer() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.TransformerMapTest object = new org.apache.commons.math3.util.TransformerMapTest();
@@ -25,7 +17,7 @@ public class TransformerMapTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testContainsClass() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.TransformerMapTest object = new org.apache.commons.math3.util.TransformerMapTest();
@@ -33,7 +25,7 @@ public class TransformerMapTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testRemoveTransformer() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.TransformerMapTest object = new org.apache.commons.math3.util.TransformerMapTest();
@@ -41,7 +33,15 @@ public class TransformerMapTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
+    public void testContainsTransformer() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.TransformerMapTest object = new org.apache.commons.math3.util.TransformerMapTest();
+               object.testContainsTransformer();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testClasses() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.TransformerMapTest object = new org.apache.commons.math3.util.TransformerMapTest();
@@ -49,7 +49,7 @@ public class TransformerMapTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testTransformers() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.TransformerMapTest object = new org.apache.commons.math3.util.TransformerMapTest();
@@ -57,19 +57,19 @@ public class TransformerMapTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
-    public void testClear() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.TransformerMapTest object = new org.apache.commons.math3.util.TransformerMapTest();
-               object.testClear();
-        }
-    }
-
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testSerial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.TransformerMapTest object = new org.apache.commons.math3.util.TransformerMapTest();
                object.testSerial();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testClear() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.TransformerMapTest object = new org.apache.commons.math3.util.TransformerMapTest();
+               object.testClear();
         }
     }
 

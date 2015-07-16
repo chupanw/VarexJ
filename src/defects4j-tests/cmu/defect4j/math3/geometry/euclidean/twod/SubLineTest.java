@@ -9,23 +9,7 @@ public class SubLineTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
-    public void testNoEndPoints() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.twod.SubLineTest object = new org.apache.commons.math3.geometry.euclidean.twod.SubLineTest();
-               object.testNoEndPoints();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testEndPoints() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.twod.SubLineTest object = new org.apache.commons.math3.geometry.euclidean.twod.SubLineTest();
-               object.testEndPoints();
-        }
-    }
-
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testNoSegments() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.SubLineTest object = new org.apache.commons.math3.geometry.euclidean.twod.SubLineTest();
@@ -33,7 +17,7 @@ public class SubLineTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testSeveralSegments() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.SubLineTest object = new org.apache.commons.math3.geometry.euclidean.twod.SubLineTest();
@@ -41,7 +25,23 @@ public class SubLineTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
+    public void testEndPoints() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.twod.SubLineTest object = new org.apache.commons.math3.geometry.euclidean.twod.SubLineTest();
+               object.testEndPoints();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testNoEndPoints() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.twod.SubLineTest object = new org.apache.commons.math3.geometry.euclidean.twod.SubLineTest();
+               object.testNoEndPoints();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testHalfInfiniteNeg() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.SubLineTest object = new org.apache.commons.math3.geometry.euclidean.twod.SubLineTest();
@@ -49,7 +49,7 @@ public class SubLineTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testHalfInfinitePos() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.SubLineTest object = new org.apache.commons.math3.geometry.euclidean.twod.SubLineTest();
@@ -57,7 +57,7 @@ public class SubLineTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testIntersectionInsideInside() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.SubLineTest object = new org.apache.commons.math3.geometry.euclidean.twod.SubLineTest();
@@ -65,7 +65,7 @@ public class SubLineTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testIntersectionInsideBoundary() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.SubLineTest object = new org.apache.commons.math3.geometry.euclidean.twod.SubLineTest();
@@ -73,7 +73,7 @@ public class SubLineTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testIntersectionInsideOutside() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.SubLineTest object = new org.apache.commons.math3.geometry.euclidean.twod.SubLineTest();
@@ -81,7 +81,7 @@ public class SubLineTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testIntersectionBoundaryBoundary() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.SubLineTest object = new org.apache.commons.math3.geometry.euclidean.twod.SubLineTest();
@@ -89,7 +89,7 @@ public class SubLineTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testIntersectionBoundaryOutside() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.SubLineTest object = new org.apache.commons.math3.geometry.euclidean.twod.SubLineTest();
@@ -97,7 +97,7 @@ public class SubLineTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testIntersectionOutsideOutside() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.SubLineTest object = new org.apache.commons.math3.geometry.euclidean.twod.SubLineTest();

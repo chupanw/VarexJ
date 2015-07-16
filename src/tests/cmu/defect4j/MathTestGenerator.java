@@ -22,8 +22,8 @@ public class MathTestGenerator extends TestGenerator {
     public static void main(String[] args) {
         MathTestGenerator generator = new MathTestGenerator();
         generator.timeout =
-//                1800000; // half an hour
-                600000; // ten minutes
+                1800000; // half an hour
+//                600000; // ten minutes
 //                60000; // one minute
 
         generator.searchTest();

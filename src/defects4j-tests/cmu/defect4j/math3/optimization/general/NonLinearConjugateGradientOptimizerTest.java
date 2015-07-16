@@ -9,7 +9,7 @@ public class NonLinearConjugateGradientOptimizerTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testTrivial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest object = new org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest();
@@ -17,7 +17,7 @@ public class NonLinearConjugateGradientOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testColumnsPermutation() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest object = new org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest();
@@ -25,7 +25,7 @@ public class NonLinearConjugateGradientOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testNoDependency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest object = new org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest();
@@ -33,7 +33,7 @@ public class NonLinearConjugateGradientOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testOneSet() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest object = new org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest();
@@ -41,7 +41,7 @@ public class NonLinearConjugateGradientOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testTwoSets() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest object = new org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest();
@@ -49,7 +49,7 @@ public class NonLinearConjugateGradientOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testNonInversible() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest object = new org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest();
@@ -57,7 +57,7 @@ public class NonLinearConjugateGradientOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testIllConditioned() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest object = new org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest();
@@ -65,7 +65,7 @@ public class NonLinearConjugateGradientOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testMoreEstimatedParametersSimple() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest object = new org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest();
@@ -73,7 +73,7 @@ public class NonLinearConjugateGradientOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testMoreEstimatedParametersUnsorted() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest object = new org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest();
@@ -81,7 +81,7 @@ public class NonLinearConjugateGradientOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testRedundantEquations() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest object = new org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest();
@@ -89,7 +89,7 @@ public class NonLinearConjugateGradientOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testInconsistentEquations() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest object = new org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest();
@@ -97,7 +97,7 @@ public class NonLinearConjugateGradientOptimizerTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testCircleFitting() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest object = new org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizerTest();

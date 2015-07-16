@@ -9,15 +9,15 @@ public class StatisticalSummaryValuesTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
-    public void testEqualsAndHashCode() throws Exception {
+    @Test(timeout=1800000)
+    public void testToString() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.StatisticalSummaryValuesTest object = new org.apache.commons.math3.stat.descriptive.StatisticalSummaryValuesTest();
-               object.testEqualsAndHashCode();
+               object.testToString();
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testSerialization() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.StatisticalSummaryValuesTest object = new org.apache.commons.math3.stat.descriptive.StatisticalSummaryValuesTest();
@@ -25,11 +25,11 @@ public class StatisticalSummaryValuesTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
-    public void testToString() throws Exception {
+    @Test(timeout=1800000)
+    public void testEqualsAndHashCode() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.StatisticalSummaryValuesTest object = new org.apache.commons.math3.stat.descriptive.StatisticalSummaryValuesTest();
-               object.testToString();
+               object.testEqualsAndHashCode();
         }
     }
 

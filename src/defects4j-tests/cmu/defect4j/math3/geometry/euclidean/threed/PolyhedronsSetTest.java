@@ -9,15 +9,7 @@ public class PolyhedronsSetTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
-    public void testBox() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSetTest object = new org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSetTest();
-               object.testBox();
-        }
-    }
-
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testTetrahedron() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSetTest object = new org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSetTest();
@@ -25,7 +17,15 @@ public class PolyhedronsSetTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
+    public void testBox() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSetTest object = new org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSetTest();
+               object.testBox();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testIsometry() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSetTest object = new org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSetTest();
@@ -33,7 +33,7 @@ public class PolyhedronsSetTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testBuildBox() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSetTest object = new org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSetTest();
@@ -41,7 +41,7 @@ public class PolyhedronsSetTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testCross() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSetTest object = new org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSetTest();
@@ -49,7 +49,7 @@ public class PolyhedronsSetTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testIssue780() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSetTest object = new org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSetTest();

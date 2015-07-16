@@ -9,31 +9,7 @@ public class ThreeEighthesIntegratorTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
-    public void testDecreasingSteps() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest();
-               object.testDecreasingSteps();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testSmallStep() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest();
-               object.testSmallStep();
-        }
-    }
-
-    @Test(timeout=600000)
-    public void testBigStep() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest();
-               object.testBigStep();
-        }
-    }
-
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testBackward() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest();
@@ -41,7 +17,7 @@ public class ThreeEighthesIntegratorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testKepler() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest();
@@ -49,7 +25,7 @@ public class ThreeEighthesIntegratorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void testStepSize() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest();
@@ -57,7 +33,31 @@ public class ThreeEighthesIntegratorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
+    public void testDecreasingSteps() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest();
+               object.testDecreasingSteps();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSmallStep() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest();
+               object.testSmallStep();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testBigStep() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest();
+               object.testBigStep();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testDimensionCheck() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
                org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.ThreeEighthesIntegratorTest();

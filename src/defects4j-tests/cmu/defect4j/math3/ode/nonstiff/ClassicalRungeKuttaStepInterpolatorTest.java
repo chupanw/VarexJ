@@ -9,7 +9,7 @@ public class ClassicalRungeKuttaStepInterpolatorTest extends TestJPF {
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void derivativesConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.ClassicalRungeKuttaStepInterpolatorTest object = new org.apache.commons.math3.ode.nonstiff.ClassicalRungeKuttaStepInterpolatorTest();
@@ -17,7 +17,7 @@ public class ClassicalRungeKuttaStepInterpolatorTest extends TestJPF {
         }
     }
 
-    @Test(timeout=600000)
+    @Test(timeout=1800000)
     public void serialization() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.ClassicalRungeKuttaStepInterpolatorTest object = new org.apache.commons.math3.ode.nonstiff.ClassicalRungeKuttaStepInterpolatorTest();
