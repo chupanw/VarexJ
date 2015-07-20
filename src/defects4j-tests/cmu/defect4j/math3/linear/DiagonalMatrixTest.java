@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class DiagonalMatrixTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -22,22 +22,6 @@ public class DiagonalMatrixTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.DiagonalMatrixTest object = new org.apache.commons.math3.linear.DiagonalMatrixTest();
                object.testSubtract();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testConstructor1() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.DiagonalMatrixTest object = new org.apache.commons.math3.linear.DiagonalMatrixTest();
-               object.testConstructor1();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testConstructor2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.DiagonalMatrixTest object = new org.apache.commons.math3.linear.DiagonalMatrixTest();
-               object.testConstructor2();
         }
     }
 
@@ -82,6 +66,38 @@ public class DiagonalMatrixTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
+    public void testConstructor1() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.DiagonalMatrixTest object = new org.apache.commons.math3.linear.DiagonalMatrixTest();
+               object.testConstructor1();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testConstructor2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.DiagonalMatrixTest object = new org.apache.commons.math3.linear.DiagonalMatrixTest();
+               object.testConstructor2();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testConstructor3() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.DiagonalMatrixTest object = new org.apache.commons.math3.linear.DiagonalMatrixTest();
+               object.testConstructor3();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testCreateError() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.linear.DiagonalMatrixTest object = new org.apache.commons.math3.linear.DiagonalMatrixTest();
+               object.testCreateError();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testCreate() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.DiagonalMatrixTest object = new org.apache.commons.math3.linear.DiagonalMatrixTest();
@@ -90,18 +106,18 @@ public class DiagonalMatrixTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testMultiplyEntry() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.DiagonalMatrixTest object = new org.apache.commons.math3.linear.DiagonalMatrixTest();
-               object.testMultiplyEntry();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testGetData() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.DiagonalMatrixTest object = new org.apache.commons.math3.linear.DiagonalMatrixTest();
                object.testGetData();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testMultiplyEntry() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.DiagonalMatrixTest object = new org.apache.commons.math3.linear.DiagonalMatrixTest();
+               object.testMultiplyEntry();
         }
     }
 
@@ -126,22 +142,6 @@ public class DiagonalMatrixTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
                org.apache.commons.math3.linear.DiagonalMatrixTest object = new org.apache.commons.math3.linear.DiagonalMatrixTest();
                object.testSetNonDiagonalEntry();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testConstructor3() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.DiagonalMatrixTest object = new org.apache.commons.math3.linear.DiagonalMatrixTest();
-               object.testConstructor3();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testCreateError() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.linear.DiagonalMatrixTest object = new org.apache.commons.math3.linear.DiagonalMatrixTest();
-               object.testCreateError();
         }
     }
 

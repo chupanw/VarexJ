@@ -17,7 +17,7 @@ import java.util.LinkedList;
  */
 public class MathTestGenerator extends TestGenerator {
 
-    private String config = "\"+interaction=interaction\", \"+search.class= .search.RandomSearch\", \"+nhandler.delegateUnhandledNative\", \"+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar\"";
+    private String config = "\"+interaction=interaction\", \"+search.class= .search.RandomSearch\", \"+nhandler.delegateUnhandledNative\", \"+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar\"";
 
     public static void main(String[] args) {
         MathTestGenerator generator = new MathTestGenerator();

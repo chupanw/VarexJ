@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class ClassicalRungeKuttaIntegratorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -34,22 +34,6 @@ public class ClassicalRungeKuttaIntegratorTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testSanityChecks() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.ClassicalRungeKuttaIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.ClassicalRungeKuttaIntegratorTest();
-               object.testSanityChecks();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testMissedEndEvent() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.ClassicalRungeKuttaIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.ClassicalRungeKuttaIntegratorTest();
-               object.testMissedEndEvent();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testBackward() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.ClassicalRungeKuttaIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.ClassicalRungeKuttaIntegratorTest();
@@ -62,6 +46,22 @@ public class ClassicalRungeKuttaIntegratorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.ClassicalRungeKuttaIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.ClassicalRungeKuttaIntegratorTest();
                object.testKepler();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testMissedEndEvent() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.ClassicalRungeKuttaIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.ClassicalRungeKuttaIntegratorTest();
+               object.testMissedEndEvent();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSanityChecks() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.ClassicalRungeKuttaIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.ClassicalRungeKuttaIntegratorTest();
+               object.testSanityChecks();
         }
     }
 

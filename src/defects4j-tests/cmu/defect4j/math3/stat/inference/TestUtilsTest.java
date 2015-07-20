@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class TestUtilsTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -82,14 +82,6 @@ public class TestUtilsTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testRootLogLikelihood() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.inference.TestUtilsTest object = new org.apache.commons.math3.stat.inference.TestUtilsTest();
-               object.testRootLogLikelihood();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testChiSquare() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.inference.TestUtilsTest object = new org.apache.commons.math3.stat.inference.TestUtilsTest();
@@ -118,6 +110,14 @@ public class TestUtilsTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.inference.TestUtilsTest object = new org.apache.commons.math3.stat.inference.TestUtilsTest();
                object.testChiSquareZeroCount();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testRootLogLikelihood() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.inference.TestUtilsTest object = new org.apache.commons.math3.stat.inference.TestUtilsTest();
+               object.testRootLogLikelihood();
         }
     }
 

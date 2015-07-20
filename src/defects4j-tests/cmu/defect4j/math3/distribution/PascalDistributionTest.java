@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class PascalDistributionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testMoments() throws Exception {
+    public void testDegenerate1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.PascalDistributionTest object = new org.apache.commons.math3.distribution.PascalDistributionTest();
-               object.testMoments();
+               object.testDegenerate1();
         }
     }
 
@@ -26,10 +26,18 @@ public class PascalDistributionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testDegenerate1() throws Exception {
+    public void testMoments() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.PascalDistributionTest object = new org.apache.commons.math3.distribution.PascalDistributionTest();
-               object.testDegenerate1();
+               object.testMoments();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testIllegalArguments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.PascalDistributionTest object = new org.apache.commons.math3.distribution.PascalDistributionTest();
+               object.testIllegalArguments();
         }
     }
 
@@ -70,14 +78,6 @@ public class PascalDistributionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.PascalDistributionTest object = new org.apache.commons.math3.distribution.PascalDistributionTest();
                object.testSampling();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testIllegalArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.PascalDistributionTest object = new org.apache.commons.math3.distribution.PascalDistributionTest();
-               object.testIllegalArguments();
         }
     }
 

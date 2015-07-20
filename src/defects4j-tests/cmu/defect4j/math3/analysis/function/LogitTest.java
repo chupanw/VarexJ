@@ -5,15 +5,47 @@ import org.junit.Test;
 
 public class LogitTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testDerivative() throws Exception {
+    public void testPreconditions2() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
+               org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
+               object.testPreconditions2();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testPreconditions1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
+               org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
+               object.testPreconditions1();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSomeValues() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
-               object.testDerivative();
+               object.testSomeValues();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testDerivativeLargeArguments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
+               object.testDerivativeLargeArguments();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testParametricUsage1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NullArgumentException", config)) {
+               org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
+               object.testParametricUsage1();
         }
     }
 
@@ -66,30 +98,6 @@ public class LogitTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testSomeValues() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
-               object.testSomeValues();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testDerivativeLargeArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
-               object.testDerivativeLargeArguments();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testParametricUsage1() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NullArgumentException", config)) {
-               org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
-               object.testParametricUsage1();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testDerivativesHighOrder() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
@@ -114,18 +122,10 @@ public class LogitTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testPreconditions2() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
+    public void testDerivative() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
-               object.testPreconditions2();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testPreconditions1() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
-               org.apache.commons.math3.analysis.function.LogitTest object = new org.apache.commons.math3.analysis.function.LogitTest();
-               object.testPreconditions1();
+               object.testDerivative();
         }
     }
 

@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class CMAESOptimizerTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testInitOutofbounds1() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
-               org.apache.commons.math3.optimization.direct.CMAESOptimizerTest object = new org.apache.commons.math3.optimization.direct.CMAESOptimizerTest();
-               object.testInitOutofbounds1();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testBoundariesDimensionMismatch() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
@@ -130,6 +122,22 @@ public class CMAESOptimizerTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
+    public void testSphere() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.direct.CMAESOptimizerTest object = new org.apache.commons.math3.optimization.direct.CMAESOptimizerTest();
+               object.testSphere();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testInitOutofbounds1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
+               org.apache.commons.math3.optimization.direct.CMAESOptimizerTest object = new org.apache.commons.math3.optimization.direct.CMAESOptimizerTest();
+               object.testInitOutofbounds1();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testInitOutofbounds2() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
                org.apache.commons.math3.optimization.direct.CMAESOptimizerTest object = new org.apache.commons.math3.optimization.direct.CMAESOptimizerTest();
@@ -142,6 +150,14 @@ public class CMAESOptimizerTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NotPositiveException", config)) {
                org.apache.commons.math3.optimization.direct.CMAESOptimizerTest object = new org.apache.commons.math3.optimization.direct.CMAESOptimizerTest();
                object.testInputSigmaNegative();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testDiagonalRosen() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.direct.CMAESOptimizerTest object = new org.apache.commons.math3.optimization.direct.CMAESOptimizerTest();
+               object.testDiagonalRosen();
         }
     }
 
@@ -170,14 +186,6 @@ public class CMAESOptimizerTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testDiagonalRosen() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.direct.CMAESOptimizerTest object = new org.apache.commons.math3.optimization.direct.CMAESOptimizerTest();
-               object.testDiagonalRosen();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testMath864() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.direct.CMAESOptimizerTest object = new org.apache.commons.math3.optimization.direct.CMAESOptimizerTest();
@@ -190,14 +198,6 @@ public class CMAESOptimizerTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.direct.CMAESOptimizerTest object = new org.apache.commons.math3.optimization.direct.CMAESOptimizerTest();
                object.testFitAccuracyDependsOnBoundary();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSphere() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.direct.CMAESOptimizerTest object = new org.apache.commons.math3.optimization.direct.CMAESOptimizerTest();
-               object.testSphere();
         }
     }
 

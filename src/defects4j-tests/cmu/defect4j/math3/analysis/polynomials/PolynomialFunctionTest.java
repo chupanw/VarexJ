@@ -5,10 +5,18 @@ import org.junit.Test;
 
 public class PolynomialFunctionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1800000)
+    public void testQuadratic() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.polynomials.PolynomialFunctionTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionTest();
+               object.testQuadratic();
+        }
+    }
+
     @Test(timeout=1800000)
     public void testConstants() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -86,14 +94,6 @@ public class PolynomialFunctionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialFunctionTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionTest();
                object.testLinear();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testQuadratic() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.polynomials.PolynomialFunctionTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionTest();
-               object.testQuadratic();
         }
     }
 

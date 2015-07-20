@@ -5,26 +5,10 @@ import org.junit.Test;
 
 public class GammaTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testLogGamma() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
-               object.testLogGamma();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testRegularizedGammaNanPositive() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
-               object.testRegularizedGammaNanPositive();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testRegularizedGammaPositiveNan() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -206,6 +190,22 @@ public class GammaTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
                object.testGammaNegativeInteger();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testLogGamma() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
+               object.testLogGamma();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testRegularizedGammaNanPositive() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.GammaTest object = new org.apache.commons.math3.special.GammaTest();
+               object.testRegularizedGammaNanPositive();
         }
     }
 

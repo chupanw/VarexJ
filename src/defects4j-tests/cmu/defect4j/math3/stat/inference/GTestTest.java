@@ -5,26 +5,10 @@ import org.junit.Test;
 
 public class GTestTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testUnmatchedArrays() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.inference.GTestTest object = new org.apache.commons.math3.stat.inference.GTestTest();
-               object.testUnmatchedArrays();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testBadAlpha() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.inference.GTestTest object = new org.apache.commons.math3.stat.inference.GTestTest();
-               object.testBadAlpha();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testGTestGoodnesOfFit1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -82,6 +66,14 @@ public class GTestTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
+    public void testUnmatchedArrays() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.inference.GTestTest object = new org.apache.commons.math3.stat.inference.GTestTest();
+               object.testUnmatchedArrays();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testNegativeObservedCounts() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.inference.GTestTest object = new org.apache.commons.math3.stat.inference.GTestTest();
@@ -94,6 +86,14 @@ public class GTestTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.inference.GTestTest object = new org.apache.commons.math3.stat.inference.GTestTest();
                object.testZeroExpectedCounts();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testBadAlpha() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.inference.GTestTest object = new org.apache.commons.math3.stat.inference.GTestTest();
+               object.testBadAlpha();
         }
     }
 

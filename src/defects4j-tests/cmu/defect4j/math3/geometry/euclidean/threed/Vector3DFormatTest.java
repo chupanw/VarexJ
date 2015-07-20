@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class Vector3DFormatTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -98,6 +98,14 @@ public class Vector3DFormatTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
+    public void testNegativeX() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
+               object.testNegativeX();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testNegativeY() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
@@ -110,14 +118,6 @@ public class Vector3DFormatTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
                object.testNegativeZ();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testNegativeX() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DFormatTest();
-               object.testNegativeX();
         }
     }
 

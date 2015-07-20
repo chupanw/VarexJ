@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class TransformerMapTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -26,10 +26,10 @@ public class TransformerMapTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testContainsTransformer() throws Exception {
+    public void testPutTransformer() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.TransformerMapTest object = new org.apache.commons.math3.util.TransformerMapTest();
-               object.testContainsTransformer();
+               object.testPutTransformer();
         }
     }
 
@@ -42,10 +42,10 @@ public class TransformerMapTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testPutTransformer() throws Exception {
+    public void testContainsTransformer() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.TransformerMapTest object = new org.apache.commons.math3.util.TransformerMapTest();
-               object.testPutTransformer();
+               object.testContainsTransformer();
         }
     }
 

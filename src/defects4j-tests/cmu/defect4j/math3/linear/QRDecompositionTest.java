@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class QRDecompositionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testNonInvertible() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.linear.SingularMatrixException", config)) {
+    public void testMatricesValues() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.QRDecompositionTest object = new org.apache.commons.math3.linear.QRDecompositionTest();
-               object.testNonInvertible();
+               object.testMatricesValues();
         }
     }
 
@@ -26,10 +26,10 @@ public class QRDecompositionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testMatricesValues() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
+    public void testNonInvertible() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.linear.SingularMatrixException", config)) {
                org.apache.commons.math3.linear.QRDecompositionTest object = new org.apache.commons.math3.linear.QRDecompositionTest();
-               object.testMatricesValues();
+               object.testNonInvertible();
         }
     }
 

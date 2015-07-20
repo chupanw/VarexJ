@@ -5,10 +5,50 @@ import org.junit.Test;
 
 public class FastMathTestPerformance extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1800000)
+    public void testPow() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.FastMathTestPerformance object = new org.apache.commons.math3.util.FastMathTestPerformance();
+               object.testPow();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testExp() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.FastMathTestPerformance object = new org.apache.commons.math3.util.FastMathTestPerformance();
+               object.testExp();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testLog() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.FastMathTestPerformance object = new org.apache.commons.math3.util.FastMathTestPerformance();
+               object.testLog();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testAtan2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.FastMathTestPerformance object = new org.apache.commons.math3.util.FastMathTestPerformance();
+               object.testAtan2();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testAbs() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.FastMathTestPerformance object = new org.apache.commons.math3.util.FastMathTestPerformance();
+               object.testAbs();
+        }
+    }
+
     @Test(timeout=1800000)
     public void testCos() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -122,42 +162,10 @@ public class FastMathTestPerformance extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testPow() throws Exception {
+    public void testSimpleBenchmark() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.FastMathTestPerformance object = new org.apache.commons.math3.util.FastMathTestPerformance();
-               object.testPow();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testExp() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.FastMathTestPerformance object = new org.apache.commons.math3.util.FastMathTestPerformance();
-               object.testExp();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testLog() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.FastMathTestPerformance object = new org.apache.commons.math3.util.FastMathTestPerformance();
-               object.testLog();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testAtan2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.FastMathTestPerformance object = new org.apache.commons.math3.util.FastMathTestPerformance();
-               object.testAtan2();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testAbs() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.FastMathTestPerformance object = new org.apache.commons.math3.util.FastMathTestPerformance();
-               object.testAbs();
+               object.testSimpleBenchmark();
         }
     }
 
@@ -166,14 +174,6 @@ public class FastMathTestPerformance extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.FastMathTestPerformance object = new org.apache.commons.math3.util.FastMathTestPerformance();
                object.testLog10();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSimpleBenchmark() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.FastMathTestPerformance object = new org.apache.commons.math3.util.FastMathTestPerformance();
-               object.testSimpleBenchmark();
         }
     }
 

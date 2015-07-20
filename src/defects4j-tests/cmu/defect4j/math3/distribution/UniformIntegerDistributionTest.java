@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class UniformIntegerDistributionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -14,6 +14,14 @@ public class UniformIntegerDistributionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.UniformIntegerDistributionTest object = new org.apache.commons.math3.distribution.UniformIntegerDistributionTest();
                object.testMoments();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testIllegalArguments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.UniformIntegerDistributionTest object = new org.apache.commons.math3.distribution.UniformIntegerDistributionTest();
+               object.testIllegalArguments();
         }
     }
 
@@ -54,14 +62,6 @@ public class UniformIntegerDistributionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.UniformIntegerDistributionTest object = new org.apache.commons.math3.distribution.UniformIntegerDistributionTest();
                object.testSampling();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testIllegalArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.UniformIntegerDistributionTest object = new org.apache.commons.math3.distribution.UniformIntegerDistributionTest();
-               object.testIllegalArguments();
         }
     }
 

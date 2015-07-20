@@ -5,10 +5,34 @@ import org.junit.Test;
 
 public class Vector3DTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1800000)
+    public void testAdd() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest();
+               object.testAdd();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSubtract() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest();
+               object.testSubtract();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testNegate() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest();
+               object.testNegate();
+        }
+    }
+
     @Test(timeout=1800000)
     public void testEquals() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -22,6 +46,22 @@ public class Vector3DTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest();
                object.testHash();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testZero() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest();
+               object.testZero();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSpace() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest();
+               object.testSpace();
         }
     }
 
@@ -54,22 +94,6 @@ public class Vector3DTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest();
                object.testToString();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testZero() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest();
-               object.testZero();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testInfinite() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest();
-               object.testInfinite();
         }
     }
 
@@ -242,34 +266,10 @@ public class Vector3DTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testAdd() throws Exception {
+    public void testInfinite() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest();
-               object.testAdd();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSubtract() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest();
-               object.testSubtract();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testNegate() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest();
-               object.testNegate();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSpace() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest object = new org.apache.commons.math3.geometry.euclidean.threed.Vector3DTest();
-               object.testSpace();
+               object.testInfinite();
         }
     }
 

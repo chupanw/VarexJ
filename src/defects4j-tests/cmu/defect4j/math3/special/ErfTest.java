@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class ErfTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -18,10 +18,10 @@ public class ErfTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testErf0() throws Exception {
+    public void testErf1960() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
-               object.testErf0();
+               object.testErf1960();
         }
     }
 
@@ -34,18 +34,18 @@ public class ErfTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testErf1960() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
-               object.testErf1960();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testErf2807() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
                object.testErf2807();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testErf0() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
+               object.testErf0();
         }
     }
 

@@ -5,10 +5,18 @@ import org.junit.Test;
 
 public class ArithmeticUtilsTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1800000)
+    public void testPow() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
+               object.testPow();
+        }
+    }
+
     @Test(timeout=1800000)
     public void test0Choose0() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -190,14 +198,6 @@ public class ArithmeticUtilsTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathArithmeticException", config)) {
                org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
                object.testStirlingS2Overflow();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testPow() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.ArithmeticUtilsTest object = new org.apache.commons.math3.util.ArithmeticUtilsTest();
-               object.testPow();
         }
     }
 

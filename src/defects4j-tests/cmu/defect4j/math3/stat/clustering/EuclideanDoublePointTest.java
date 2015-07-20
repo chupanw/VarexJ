@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class EuclideanDoublePointTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -14,6 +14,14 @@ public class EuclideanDoublePointTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.clustering.EuclideanDoublePointTest object = new org.apache.commons.math3.stat.clustering.EuclideanDoublePointTest();
                object.testSerial();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testDistance() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.clustering.EuclideanDoublePointTest object = new org.apache.commons.math3.stat.clustering.EuclideanDoublePointTest();
+               object.testDistance();
         }
     }
 
@@ -30,14 +38,6 @@ public class EuclideanDoublePointTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.clustering.EuclideanDoublePointTest object = new org.apache.commons.math3.stat.clustering.EuclideanDoublePointTest();
                object.testCentroid();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testDistance() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.clustering.EuclideanDoublePointTest object = new org.apache.commons.math3.stat.clustering.EuclideanDoublePointTest();
-               object.testDistance();
         }
     }
 

@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class BracketingNthOrderBrentSolverTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -14,14 +14,6 @@ public class BracketingNthOrderBrentSolverTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
                org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest();
                object.testInsufficientOrder1();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testConstructorsOK() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest();
-               object.testConstructorsOK();
         }
     }
 
@@ -38,6 +30,14 @@ public class BracketingNthOrderBrentSolverTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
                org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest();
                object.testInsufficientOrder3();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testConstructorsOK() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest();
+               object.testConstructorsOK();
         }
     }
 
@@ -66,14 +66,6 @@ public class BracketingNthOrderBrentSolverTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testSinZero() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest();
-               object.testSinZero();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testQuinticZero() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest();
@@ -94,6 +86,14 @@ public class BracketingNthOrderBrentSolverTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest();
                object.testBadEndpoints();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSinZero() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest();
+               object.testSinZero();
         }
     }
 

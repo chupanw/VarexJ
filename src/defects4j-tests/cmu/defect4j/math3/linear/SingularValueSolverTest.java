@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class SingularValueSolverTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testConditionNumber() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SingularValueSolverTest object = new org.apache.commons.math3.linear.SingularValueSolverTest();
-               object.testConditionNumber();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testSolveDimensionErrors() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -46,6 +38,14 @@ public class SingularValueSolverTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SingularValueSolverTest object = new org.apache.commons.math3.linear.SingularValueSolverTest();
                object.testMath320B();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testConditionNumber() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SingularValueSolverTest object = new org.apache.commons.math3.linear.SingularValueSolverTest();
+               object.testConditionNumber();
         }
     }
 

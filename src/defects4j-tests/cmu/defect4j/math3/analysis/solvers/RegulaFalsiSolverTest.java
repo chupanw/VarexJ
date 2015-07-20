@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class RegulaFalsiSolverTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -14,14 +14,6 @@ public class RegulaFalsiSolverTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.ConvergenceException", config)) {
                org.apache.commons.math3.analysis.solvers.RegulaFalsiSolverTest object = new org.apache.commons.math3.analysis.solvers.RegulaFalsiSolverTest();
                object.testIssue631();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSinZero() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.solvers.RegulaFalsiSolverTest object = new org.apache.commons.math3.analysis.solvers.RegulaFalsiSolverTest();
-               object.testSinZero();
         }
     }
 
@@ -46,6 +38,14 @@ public class RegulaFalsiSolverTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.RegulaFalsiSolverTest object = new org.apache.commons.math3.analysis.solvers.RegulaFalsiSolverTest();
                object.testBadEndpoints();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSinZero() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.solvers.RegulaFalsiSolverTest object = new org.apache.commons.math3.analysis.solvers.RegulaFalsiSolverTest();
+               object.testSinZero();
         }
     }
 

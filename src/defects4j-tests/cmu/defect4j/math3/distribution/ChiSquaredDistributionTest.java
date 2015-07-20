@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class ChiSquaredDistributionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -42,6 +42,14 @@ public class ChiSquaredDistributionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
+    public void testIllegalArguments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.ChiSquaredDistributionTest object = new org.apache.commons.math3.distribution.ChiSquaredDistributionTest();
+               object.testIllegalArguments();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testDensities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.ChiSquaredDistributionTest object = new org.apache.commons.math3.distribution.ChiSquaredDistributionTest();
@@ -74,14 +82,6 @@ public class ChiSquaredDistributionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testIllegalArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.ChiSquaredDistributionTest object = new org.apache.commons.math3.distribution.ChiSquaredDistributionTest();
-               object.testIllegalArguments();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.ChiSquaredDistributionTest object = new org.apache.commons.math3.distribution.ChiSquaredDistributionTest();
@@ -98,6 +98,14 @@ public class ChiSquaredDistributionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
+    public void testDistributionClone() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.ChiSquaredDistributionTest object = new org.apache.commons.math3.distribution.ChiSquaredDistributionTest();
+               object.testDistributionClone();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testIsSupportLowerBoundInclusive() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.ChiSquaredDistributionTest object = new org.apache.commons.math3.distribution.ChiSquaredDistributionTest();
@@ -110,14 +118,6 @@ public class ChiSquaredDistributionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.ChiSquaredDistributionTest object = new org.apache.commons.math3.distribution.ChiSquaredDistributionTest();
                object.testIsSupportUpperBoundInclusive();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testDistributionClone() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.ChiSquaredDistributionTest object = new org.apache.commons.math3.distribution.ChiSquaredDistributionTest();
-               object.testDistributionClone();
         }
     }
 

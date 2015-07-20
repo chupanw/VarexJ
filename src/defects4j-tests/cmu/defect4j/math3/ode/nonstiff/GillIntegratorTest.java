@@ -5,10 +5,18 @@ import org.junit.Test;
 
 public class GillIntegratorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1800000)
+    public void testUnstableDerivative() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.GillIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GillIntegratorTest();
+               object.testUnstableDerivative();
+        }
+    }
+
     @Test(timeout=1800000)
     public void testDecreasingSteps() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -62,14 +70,6 @@ public class GillIntegratorTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
                org.apache.commons.math3.ode.nonstiff.GillIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GillIntegratorTest();
                object.testDimensionCheck();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testUnstableDerivative() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.GillIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.GillIntegratorTest();
-               object.testUnstableDerivative();
         }
     }
 

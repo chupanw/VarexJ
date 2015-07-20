@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class DerivativeStructureTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -18,18 +18,18 @@ public class DerivativeStructureTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testMissingOrders() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
-               object.testMissingOrders();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testTooLargeOrder() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
                org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
                object.testTooLargeOrder();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testMissingOrders() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest object = new org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest();
+               object.testMissingOrders();
         }
     }
 

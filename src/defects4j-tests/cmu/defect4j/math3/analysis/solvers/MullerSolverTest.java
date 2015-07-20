@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class MullerSolverTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testParameters() throws Exception {
+    public void testExpm1Function() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.MullerSolverTest object = new org.apache.commons.math3.analysis.solvers.MullerSolverTest();
-               object.testParameters();
+               object.testExpm1Function();
         }
     }
 
@@ -34,10 +34,10 @@ public class MullerSolverTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testExpm1Function() throws Exception {
+    public void testParameters() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.MullerSolverTest object = new org.apache.commons.math3.analysis.solvers.MullerSolverTest();
-               object.testExpm1Function();
+               object.testParameters();
         }
     }
 

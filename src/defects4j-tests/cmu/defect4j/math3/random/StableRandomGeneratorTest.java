@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class StableRandomGeneratorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testGaussianCase() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.random.StableRandomGeneratorTest object = new org.apache.commons.math3.random.StableRandomGeneratorTest();
-               object.testGaussianCase();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testNextDouble() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -26,10 +18,10 @@ public class StableRandomGeneratorTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testCauchyCase() throws Exception {
+    public void testGaussianCase() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.StableRandomGeneratorTest object = new org.apache.commons.math3.random.StableRandomGeneratorTest();
-               object.testCauchyCase();
+               object.testGaussianCase();
         }
     }
 
@@ -38,6 +30,14 @@ public class StableRandomGeneratorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.StableRandomGeneratorTest object = new org.apache.commons.math3.random.StableRandomGeneratorTest();
                object.testAlphaRangeBelowZero();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testCauchyCase() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.random.StableRandomGeneratorTest object = new org.apache.commons.math3.random.StableRandomGeneratorTest();
+               object.testCauchyCase();
         }
     }
 

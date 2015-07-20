@@ -5,23 +5,23 @@ import org.junit.Test;
 
 public class AVLTreeTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testInsert() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.partitioning.utilities.AVLTreeTest object = new org.apache.commons.math3.geometry.partitioning.utilities.AVLTreeTest();
-               object.testInsert();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testDelete1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.partitioning.utilities.AVLTreeTest object = new org.apache.commons.math3.geometry.partitioning.utilities.AVLTreeTest();
                object.testDelete1();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testInsert() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.partitioning.utilities.AVLTreeTest object = new org.apache.commons.math3.geometry.partitioning.utilities.AVLTreeTest();
+               object.testInsert();
         }
     }
 

@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class RealVectorFormatTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -98,14 +98,6 @@ public class RealVectorFormatTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testDefaultFormatRealVectorImpl() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.RealVectorFormatTest object = new org.apache.commons.math3.linear.RealVectorFormatTest();
-               object.testDefaultFormatRealVectorImpl();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testParseNoComponents() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.RealVectorFormatTest object = new org.apache.commons.math3.linear.RealVectorFormatTest();
@@ -114,10 +106,26 @@ public class RealVectorFormatTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
+    public void testDefaultFormatRealVectorImpl() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.RealVectorFormatTest object = new org.apache.commons.math3.linear.RealVectorFormatTest();
+               object.testDefaultFormatRealVectorImpl();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testParseManyComponents() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.RealVectorFormatTest object = new org.apache.commons.math3.linear.RealVectorFormatTest();
                object.testParseManyComponents();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testNegativeX() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.RealVectorFormatTest object = new org.apache.commons.math3.linear.RealVectorFormatTest();
+               object.testNegativeX();
         }
     }
 
@@ -134,14 +142,6 @@ public class RealVectorFormatTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.RealVectorFormatTest object = new org.apache.commons.math3.linear.RealVectorFormatTest();
                object.testNegativeZ();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testNegativeX() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.RealVectorFormatTest object = new org.apache.commons.math3.linear.RealVectorFormatTest();
-               object.testNegativeX();
         }
     }
 

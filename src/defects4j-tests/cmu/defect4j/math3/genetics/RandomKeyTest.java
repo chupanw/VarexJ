@@ -5,10 +5,18 @@ import org.junit.Test;
 
 public class RandomKeyTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1800000)
+    public void testIsSame() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.genetics.RandomKeyTest object = new org.apache.commons.math3.genetics.RandomKeyTest();
+               object.testIsSame();
+        }
+    }
+
     @Test(timeout=1800000)
     public void testConstructor1() throws Exception {
         if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
@@ -78,14 +86,6 @@ public class RandomKeyTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.genetics.RandomKeyTest object = new org.apache.commons.math3.genetics.RandomKeyTest();
                object.testEqualRepr();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testIsSame() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.genetics.RandomKeyTest object = new org.apache.commons.math3.genetics.RandomKeyTest();
-               object.testIsSame();
         }
     }
 

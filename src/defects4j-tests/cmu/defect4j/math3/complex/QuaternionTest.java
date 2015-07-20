@@ -5,23 +5,15 @@ import org.junit.Test;
 
 public class QuaternionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testAccessors1() throws Exception {
+    public void testConjugate() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.complex.QuaternionTest object = new org.apache.commons.math3.complex.QuaternionTest();
-               object.testAccessors1();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testAccessors2() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.QuaternionTest object = new org.apache.commons.math3.complex.QuaternionTest();
-               object.testAccessors2();
+               object.testConjugate();
         }
     }
 
@@ -54,6 +46,22 @@ public class QuaternionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.complex.QuaternionTest object = new org.apache.commons.math3.complex.QuaternionTest();
                object.testProductQuaternionVector();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testAccessors1() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.QuaternionTest object = new org.apache.commons.math3.complex.QuaternionTest();
+               object.testAccessors1();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testAccessors2() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.QuaternionTest object = new org.apache.commons.math3.complex.QuaternionTest();
+               object.testAccessors2();
         }
     }
 
@@ -174,14 +182,6 @@ public class QuaternionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.complex.QuaternionTest object = new org.apache.commons.math3.complex.QuaternionTest();
                object.testToString();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testConjugate() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.QuaternionTest object = new org.apache.commons.math3.complex.QuaternionTest();
-               object.testConjugate();
         }
     }
 

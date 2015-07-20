@@ -5,15 +5,23 @@ import org.junit.Test;
 
 public class HighamHall54IntegratorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testSanityChecks() throws Exception {
+    public void testMinStep() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+               org.apache.commons.math3.ode.nonstiff.HighamHall54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.HighamHall54IntegratorTest();
+               object.testMinStep();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testIncreasingTolerance() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.HighamHall54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.HighamHall54IntegratorTest();
-               object.testSanityChecks();
+               object.testIncreasingTolerance();
         }
     }
 
@@ -34,18 +42,10 @@ public class HighamHall54IntegratorTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testMinStep() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
-               org.apache.commons.math3.ode.nonstiff.HighamHall54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.HighamHall54IntegratorTest();
-               object.testMinStep();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testIncreasingTolerance() throws Exception {
+    public void testSanityChecks() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.HighamHall54IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.HighamHall54IntegratorTest();
-               object.testIncreasingTolerance();
+               object.testSanityChecks();
         }
     }
 

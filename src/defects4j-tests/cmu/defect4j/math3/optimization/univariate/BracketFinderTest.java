@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class BracketFinderTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -18,18 +18,18 @@ public class BracketFinderTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testCubicMax() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.univariate.BracketFinderTest object = new org.apache.commons.math3.optimization.univariate.BracketFinderTest();
-               object.testCubicMax();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testMinimumIsOnIntervalBoundary() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.univariate.BracketFinderTest object = new org.apache.commons.math3.optimization.univariate.BracketFinderTest();
                object.testMinimumIsOnIntervalBoundary();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testCubicMax() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.univariate.BracketFinderTest object = new org.apache.commons.math3.optimization.univariate.BracketFinderTest();
+               object.testCubicMax();
         }
     }
 

@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class MultiStartUnivariateOptimizerTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -26,10 +26,10 @@ public class MultiStartUnivariateOptimizerTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testBadFunction() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
+    public void testMissingMaxEval() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalStateException", config)) {
                org.apache.commons.math3.optim.univariate.MultiStartUnivariateOptimizerTest object = new org.apache.commons.math3.optim.univariate.MultiStartUnivariateOptimizerTest();
-               object.testBadFunction();
+               object.testMissingMaxEval();
         }
     }
 
@@ -42,10 +42,10 @@ public class MultiStartUnivariateOptimizerTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testMissingMaxEval() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalStateException", config)) {
+    public void testBadFunction() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.univariate.MultiStartUnivariateOptimizerTest object = new org.apache.commons.math3.optim.univariate.MultiStartUnivariateOptimizerTest();
-               object.testMissingMaxEval();
+               object.testBadFunction();
         }
     }
 

@@ -5,15 +5,23 @@ import org.junit.Test;
 
 public class PolynomialFitterTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testSmallError() throws Exception {
+    public void testMath798() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fitting.PolynomialFitterTest object = new org.apache.commons.math3.fitting.PolynomialFitterTest();
-               object.testSmallError();
+               object.testMath798();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testNoError() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fitting.PolynomialFitterTest object = new org.apache.commons.math3.fitting.PolynomialFitterTest();
+               object.testNoError();
         }
     }
 
@@ -22,6 +30,14 @@ public class PolynomialFitterTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fitting.PolynomialFitterTest object = new org.apache.commons.math3.fitting.PolynomialFitterTest();
                object.testFit();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSmallError() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.fitting.PolynomialFitterTest object = new org.apache.commons.math3.fitting.PolynomialFitterTest();
+               object.testSmallError();
         }
     }
 
@@ -62,22 +78,6 @@ public class PolynomialFitterTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.fitting.PolynomialFitterTest object = new org.apache.commons.math3.fitting.PolynomialFitterTest();
                object.testLargeSample();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testMath798() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fitting.PolynomialFitterTest object = new org.apache.commons.math3.fitting.PolynomialFitterTest();
-               object.testMath798();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testNoError() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.fitting.PolynomialFitterTest object = new org.apache.commons.math3.fitting.PolynomialFitterTest();
-               object.testNoError();
         }
     }
 

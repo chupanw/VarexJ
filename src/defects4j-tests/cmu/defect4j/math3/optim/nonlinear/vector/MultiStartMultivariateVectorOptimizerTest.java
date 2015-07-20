@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class MultiStartMultivariateVectorOptimizerTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -18,18 +18,18 @@ public class MultiStartMultivariateVectorOptimizerTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testIssue914() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.nonlinear.vector.MultiStartMultivariateVectorOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.MultiStartMultivariateVectorOptimizerTest();
-               object.testIssue914();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testGetOptimaBeforeOptimize() throws Exception {
         if (verifyUnhandledException("java.lang.NullPointerException", config)) {
                org.apache.commons.math3.optim.nonlinear.vector.MultiStartMultivariateVectorOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.MultiStartMultivariateVectorOptimizerTest();
                object.testGetOptimaBeforeOptimize();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testIssue914() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.nonlinear.vector.MultiStartMultivariateVectorOptimizerTest object = new org.apache.commons.math3.optim.nonlinear.vector.MultiStartMultivariateVectorOptimizerTest();
+               object.testIssue914();
         }
     }
 

@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class FieldHermiteInterpolatorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testZero() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
-               object.testZero();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testQuadratic() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -102,6 +94,14 @@ public class FieldHermiteInterpolatorTest extends TestJPF {
         if (verifyUnhandledException("java.lang.IllegalArgumentException", config)) {
                org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
                object.testDuplicatedAbscissa();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testZero() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.FieldHermiteInterpolatorTest();
+               object.testZero();
         }
     }
 

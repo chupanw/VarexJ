@@ -5,15 +5,23 @@ import org.junit.Test;
 
 public class BrentSolverTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testSinZero() throws Exception {
+    public void testInitialGuess() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.BrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BrentSolverTest();
-               object.testSinZero();
+               object.testInitialGuess();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testMath832() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.solvers.BrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BrentSolverTest();
+               object.testMath832();
         }
     }
 
@@ -42,18 +50,10 @@ public class BrentSolverTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testInitialGuess() throws Exception {
+    public void testSinZero() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.solvers.BrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BrentSolverTest();
-               object.testInitialGuess();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testMath832() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.solvers.BrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BrentSolverTest();
-               object.testMath832();
+               object.testSinZero();
         }
     }
 

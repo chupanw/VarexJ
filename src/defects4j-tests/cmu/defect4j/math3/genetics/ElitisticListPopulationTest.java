@@ -5,10 +5,18 @@ import org.junit.Test;
 
 public class ElitisticListPopulationTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1800000)
+    public void testNextGeneration() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.genetics.ElitisticListPopulationTest object = new org.apache.commons.math3.genetics.ElitisticListPopulationTest();
+               object.testNextGeneration();
+        }
+    }
+
     @Test(timeout=1800000)
     public void testSetElitismRate() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -26,26 +34,18 @@ public class ElitisticListPopulationTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testConstructorTooLow() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
-               org.apache.commons.math3.genetics.ElitisticListPopulationTest object = new org.apache.commons.math3.genetics.ElitisticListPopulationTest();
-               object.testConstructorTooLow();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testNextGeneration() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.genetics.ElitisticListPopulationTest object = new org.apache.commons.math3.genetics.ElitisticListPopulationTest();
-               object.testNextGeneration();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testSetElitismRateTooHigh() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
                org.apache.commons.math3.genetics.ElitisticListPopulationTest object = new org.apache.commons.math3.genetics.ElitisticListPopulationTest();
                object.testSetElitismRateTooHigh();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testConstructorTooLow() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
+               org.apache.commons.math3.genetics.ElitisticListPopulationTest object = new org.apache.commons.math3.genetics.ElitisticListPopulationTest();
+               object.testConstructorTooLow();
         }
     }
 

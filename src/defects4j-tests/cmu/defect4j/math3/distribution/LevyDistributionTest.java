@@ -5,10 +5,19 @@ import org.junit.Test;
 
 public class LevyDistributionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1800000)
+    public void testSupport() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.LevyDistributionTest object = new org.apache.commons.math3.distribution.LevyDistributionTest();
+               object.setUp();
+               object.testSupport();
+        }
+    }
+
     @Test(timeout=1800000)
     public void testParameters() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -19,11 +28,11 @@ public class LevyDistributionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testSupport() throws Exception {
+    public void testIllegalArguments() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.LevyDistributionTest object = new org.apache.commons.math3.distribution.LevyDistributionTest();
                object.setUp();
-               object.testSupport();
+               object.testIllegalArguments();
         }
     }
 
@@ -64,15 +73,6 @@ public class LevyDistributionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testIllegalArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.LevyDistributionTest object = new org.apache.commons.math3.distribution.LevyDistributionTest();
-               object.setUp();
-               object.testIllegalArguments();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.LevyDistributionTest object = new org.apache.commons.math3.distribution.LevyDistributionTest();
@@ -91,6 +91,15 @@ public class LevyDistributionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
+    public void testDistributionClone() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.LevyDistributionTest object = new org.apache.commons.math3.distribution.LevyDistributionTest();
+               object.setUp();
+               object.testDistributionClone();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testIsSupportLowerBoundInclusive() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.LevyDistributionTest object = new org.apache.commons.math3.distribution.LevyDistributionTest();
@@ -105,15 +114,6 @@ public class LevyDistributionTest extends TestJPF {
                org.apache.commons.math3.distribution.LevyDistributionTest object = new org.apache.commons.math3.distribution.LevyDistributionTest();
                object.setUp();
                object.testIsSupportUpperBoundInclusive();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testDistributionClone() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.LevyDistributionTest object = new org.apache.commons.math3.distribution.LevyDistributionTest();
-               object.setUp();
-               object.testDistributionClone();
         }
     }
 

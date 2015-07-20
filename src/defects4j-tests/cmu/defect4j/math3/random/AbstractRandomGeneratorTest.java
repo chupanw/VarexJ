@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class AbstractRandomGeneratorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -127,6 +127,15 @@ public class AbstractRandomGeneratorTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
+    public void testNextIntIAE() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.random.AbstractRandomGeneratorTest object = new org.apache.commons.math3.random.AbstractRandomGeneratorTest();
+               object.setUp();
+               object.testNextIntIAE();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testNextIntExtremeValues() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.AbstractRandomGeneratorTest object = new org.apache.commons.math3.random.AbstractRandomGeneratorTest();
@@ -150,15 +159,6 @@ public class AbstractRandomGeneratorTest extends TestJPF {
                org.apache.commons.math3.random.AbstractRandomGeneratorTest object = new org.apache.commons.math3.random.AbstractRandomGeneratorTest();
                object.setUp();
                object.testNextUniformExtremeValues();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testNextIntIAE() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.random.AbstractRandomGeneratorTest object = new org.apache.commons.math3.random.AbstractRandomGeneratorTest();
-               object.setUp();
-               object.testNextIntIAE();
         }
     }
 

@@ -5,15 +5,39 @@ import org.junit.Test;
 
 public class FunctionUtilsTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testComposeDifferentiable() throws Exception {
+    public void testAdd() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.FunctionUtilsTest object = new org.apache.commons.math3.analysis.FunctionUtilsTest();
-               object.testComposeDifferentiable();
+               object.testAdd();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testMultiply() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.FunctionUtilsTest object = new org.apache.commons.math3.analysis.FunctionUtilsTest();
+               object.testMultiply();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testCompose() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.FunctionUtilsTest object = new org.apache.commons.math3.analysis.FunctionUtilsTest();
+               object.testCompose();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testCombine() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.FunctionUtilsTest object = new org.apache.commons.math3.analysis.FunctionUtilsTest();
+               object.testCombine();
         }
     }
 
@@ -26,18 +50,18 @@ public class FunctionUtilsTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testMultiplyDifferentiable() throws Exception {
+    public void testComposeDifferentiable() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.FunctionUtilsTest object = new org.apache.commons.math3.analysis.FunctionUtilsTest();
-               object.testMultiplyDifferentiable();
+               object.testComposeDifferentiable();
         }
     }
 
     @Test(timeout=1800000)
-    public void testCombine() throws Exception {
+    public void testMultiplyDifferentiable() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.FunctionUtilsTest object = new org.apache.commons.math3.analysis.FunctionUtilsTest();
-               object.testCombine();
+               object.testMultiplyDifferentiable();
         }
     }
 
@@ -126,30 +150,6 @@ public class FunctionUtilsTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.FunctionUtilsTest object = new org.apache.commons.math3.analysis.FunctionUtilsTest();
                object.testToMultivariateDifferentiableFunction();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testAdd() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.FunctionUtilsTest object = new org.apache.commons.math3.analysis.FunctionUtilsTest();
-               object.testAdd();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testMultiply() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.FunctionUtilsTest object = new org.apache.commons.math3.analysis.FunctionUtilsTest();
-               object.testMultiply();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testCompose() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.FunctionUtilsTest object = new org.apache.commons.math3.analysis.FunctionUtilsTest();
-               object.testCompose();
         }
     }
 

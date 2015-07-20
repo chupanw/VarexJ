@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class UnmodifiableArrayRealVectorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -18,10 +18,18 @@ public class UnmodifiableArrayRealVectorTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testIterator() throws Exception {
+    public void testAllButExcluded() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest object = new org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest();
-               object.testIterator();
+               object.testAllButExcluded();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSetSubVector() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.MathUnsupportedOperationException", config)) {
+               org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest object = new org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest();
+               object.testSetSubVector();
         }
     }
 
@@ -58,18 +66,10 @@ public class UnmodifiableArrayRealVectorTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testAllButExcluded() throws Exception {
+    public void testIterator() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest object = new org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest();
-               object.testAllButExcluded();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSetSubVector() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.MathUnsupportedOperationException", config)) {
-               org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest object = new org.apache.commons.math3.linear.UnmodifiableArrayRealVectorTest();
-               object.testSetSubVector();
+               object.testIterator();
         }
     }
 

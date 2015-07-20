@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class FDistributionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testMath785() throws Exception {
+    public void testCumulativeProbabilityExtremes() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.FDistributionTest object = new org.apache.commons.math3.distribution.FDistributionTest();
-               object.testMath785();
+               object.testCumulativeProbabilityExtremes();
         }
     }
 
@@ -22,6 +22,14 @@ public class FDistributionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.FDistributionTest object = new org.apache.commons.math3.distribution.FDistributionTest();
                object.testLargeDegreesOfFreedom();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testMath785() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.FDistributionTest object = new org.apache.commons.math3.distribution.FDistributionTest();
+               object.testMath785();
         }
     }
 
@@ -66,10 +74,10 @@ public class FDistributionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testCumulativeProbabilityExtremes() throws Exception {
+    public void testIllegalArguments() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.FDistributionTest object = new org.apache.commons.math3.distribution.FDistributionTest();
-               object.testCumulativeProbabilityExtremes();
+               object.testIllegalArguments();
         }
     }
 
@@ -106,14 +114,6 @@ public class FDistributionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testIllegalArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.FDistributionTest object = new org.apache.commons.math3.distribution.FDistributionTest();
-               object.testIllegalArguments();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.FDistributionTest object = new org.apache.commons.math3.distribution.FDistributionTest();
@@ -130,6 +130,14 @@ public class FDistributionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
+    public void testDistributionClone() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.FDistributionTest object = new org.apache.commons.math3.distribution.FDistributionTest();
+               object.testDistributionClone();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testIsSupportLowerBoundInclusive() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.FDistributionTest object = new org.apache.commons.math3.distribution.FDistributionTest();
@@ -142,14 +150,6 @@ public class FDistributionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.FDistributionTest object = new org.apache.commons.math3.distribution.FDistributionTest();
                object.testIsSupportUpperBoundInclusive();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testDistributionClone() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.FDistributionTest object = new org.apache.commons.math3.distribution.FDistributionTest();
-               object.testDistributionClone();
         }
     }
 

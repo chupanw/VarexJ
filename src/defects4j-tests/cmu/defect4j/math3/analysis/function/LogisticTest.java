@@ -5,10 +5,82 @@ import org.junit.Test;
 
 public class LogisticTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1800000)
+    public void testPreconditions2() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
+               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
+               object.testPreconditions2();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testPreconditions1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
+               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
+               object.testPreconditions1();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testCompareSigmoid() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
+               object.testCompareSigmoid();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testCompareDerivativeSigmoid() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
+               object.testCompareDerivativeSigmoid();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testGradientComponent0Component4() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
+               object.testGradientComponent0Component4();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testGradientComponent5() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
+               object.testGradientComponent5();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testGradientComponent1Component2Component3() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
+               object.testGradientComponent1Component2Component3();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSomeValues() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
+               object.testSomeValues();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testParametricUsage1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NullArgumentException", config)) {
+               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
+               object.testParametricUsage1();
+        }
+    }
+
     @Test(timeout=1800000)
     public void testParametricUsage2() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
@@ -46,78 +118,6 @@ public class LogisticTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
                org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
                object.testParametricUsage6();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSomeValues() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
-               object.testSomeValues();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testParametricUsage1() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NullArgumentException", config)) {
-               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
-               object.testParametricUsage1();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testPreconditions2() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
-               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
-               object.testPreconditions2();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testCompareSigmoid() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
-               object.testCompareSigmoid();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testPreconditions1() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
-               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
-               object.testPreconditions1();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testCompareDerivativeSigmoid() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
-               object.testCompareDerivativeSigmoid();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testGradientComponent0Component4() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
-               object.testGradientComponent0Component4();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testGradientComponent5() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
-               object.testGradientComponent5();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testGradientComponent1Component2Component3() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.function.LogisticTest object = new org.apache.commons.math3.analysis.function.LogisticTest();
-               object.testGradientComponent1Component2Component3();
         }
     }
 

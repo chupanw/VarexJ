@@ -5,10 +5,98 @@ import org.junit.Test;
 
 public class ComplexTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1800000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testSerial();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testConstructor() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testConstructor();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testAdd() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testAdd();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSubtract() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testSubtract();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testMultiply() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testMultiply();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testNegate() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testNegate();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testReciprocal() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testReciprocal();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testPow() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testPow();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testExp() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testExp();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testLog() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testLog();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testAbs() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
+               object.testAbs();
+        }
+    }
+
     @Test(timeout=1800000)
     public void testCos() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -78,22 +166,6 @@ public class ComplexTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
                object.testTanh();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testSerial();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testConstructor() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testConstructor();
         }
     }
 
@@ -918,78 +990,6 @@ public class ComplexTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
                object.testGetArgumentNaN();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testAdd() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testAdd();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSubtract() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testSubtract();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testMultiply() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testMultiply();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testNegate() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testNegate();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testReciprocal() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testReciprocal();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testPow() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testPow();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testExp() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testExp();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testLog() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testLog();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testAbs() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.complex.ComplexTest object = new org.apache.commons.math3.complex.ComplexTest();
-               object.testAbs();
         }
     }
 

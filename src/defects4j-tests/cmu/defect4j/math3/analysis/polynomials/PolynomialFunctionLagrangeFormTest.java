@@ -5,23 +5,15 @@ import org.junit.Test;
 
 public class PolynomialFunctionLagrangeFormTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testParameters() throws Exception {
+    public void testLinearFunction() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialFunctionLagrangeFormTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionLagrangeFormTest();
-               object.testParameters();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testQuinticFunction() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.polynomials.PolynomialFunctionLagrangeFormTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionLagrangeFormTest();
-               object.testQuinticFunction();
+               object.testLinearFunction();
         }
     }
 
@@ -34,10 +26,18 @@ public class PolynomialFunctionLagrangeFormTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testLinearFunction() throws Exception {
+    public void testQuinticFunction() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialFunctionLagrangeFormTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionLagrangeFormTest();
-               object.testLinearFunction();
+               object.testQuinticFunction();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testParameters() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.polynomials.PolynomialFunctionLagrangeFormTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionLagrangeFormTest();
+               object.testParameters();
         }
     }
 

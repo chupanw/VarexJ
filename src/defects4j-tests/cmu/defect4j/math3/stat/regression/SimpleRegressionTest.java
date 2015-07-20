@@ -5,23 +5,23 @@ import org.junit.Test;
 
 public class SimpleRegressionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testRandom() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.regression.SimpleRegressionTest object = new org.apache.commons.math3.stat.regression.SimpleRegressionTest();
-               object.testRandom();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testNaNs() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.regression.SimpleRegressionTest object = new org.apache.commons.math3.stat.regression.SimpleRegressionTest();
                object.testNaNs();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testRandom() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.regression.SimpleRegressionTest object = new org.apache.commons.math3.stat.regression.SimpleRegressionTest();
+               object.testRandom();
         }
     }
 

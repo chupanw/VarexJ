@@ -5,10 +5,28 @@ import org.junit.Test;
 
 public class EmpiricalDistributionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1800000)
+    public void testSerialization() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.random.EmpiricalDistributionTest object = new org.apache.commons.math3.random.EmpiricalDistributionTest();
+               object.setUp();
+               object.testSerialization();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testDensityIntegrals() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.random.EmpiricalDistributionTest object = new org.apache.commons.math3.random.EmpiricalDistributionTest();
+               object.setUp();
+               object.testDensityIntegrals();
+        }
+    }
+
     @Test(timeout=1800000)
     public void testLoad() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -145,20 +163,11 @@ public class EmpiricalDistributionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testSerialization() throws Exception {
+    public void testIllegalArguments() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.EmpiricalDistributionTest object = new org.apache.commons.math3.random.EmpiricalDistributionTest();
                object.setUp();
-               object.testSerialization();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testDensityIntegrals() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.random.EmpiricalDistributionTest object = new org.apache.commons.math3.random.EmpiricalDistributionTest();
-               object.setUp();
-               object.testDensityIntegrals();
+               object.testIllegalArguments();
         }
     }
 
@@ -199,20 +208,20 @@ public class EmpiricalDistributionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testIllegalArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.random.EmpiricalDistributionTest object = new org.apache.commons.math3.random.EmpiricalDistributionTest();
-               object.setUp();
-               object.testIllegalArguments();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.EmpiricalDistributionTest object = new org.apache.commons.math3.random.EmpiricalDistributionTest();
                object.setUp();
                object.testConsistency();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testDistributionClone() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.random.EmpiricalDistributionTest object = new org.apache.commons.math3.random.EmpiricalDistributionTest();
+               object.setUp();
+               object.testDistributionClone();
         }
     }
 
@@ -231,15 +240,6 @@ public class EmpiricalDistributionTest extends TestJPF {
                org.apache.commons.math3.random.EmpiricalDistributionTest object = new org.apache.commons.math3.random.EmpiricalDistributionTest();
                object.setUp();
                object.testIsSupportUpperBoundInclusive();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testDistributionClone() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.random.EmpiricalDistributionTest object = new org.apache.commons.math3.random.EmpiricalDistributionTest();
-               object.setUp();
-               object.testDistributionClone();
         }
     }
 
