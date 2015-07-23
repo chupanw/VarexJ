@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class BracketingNthOrderBrentSolverTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testConstructorsOK() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest();
-               object.testConstructorsOK();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testInsufficientOrder1() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
@@ -38,6 +30,14 @@ public class BracketingNthOrderBrentSolverTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
                org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest();
                object.testInsufficientOrder3();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testConstructorsOK() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest object = new org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolverTest();
+               object.testConstructorsOK();
         }
     }
 

@@ -5,15 +5,23 @@ import org.junit.Test;
 
 public class RRQRDecompositionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testNonInvertible() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.linear.SingularMatrixException", config)) {
+    public void testRank() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.RRQRDecompositionTest object = new org.apache.commons.math3.linear.RRQRDecompositionTest();
-               object.testNonInvertible();
+               object.testRank();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testAPEqualQR() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.RRQRDecompositionTest object = new org.apache.commons.math3.linear.RRQRDecompositionTest();
+               object.testAPEqualQR();
         }
     }
 
@@ -26,10 +34,10 @@ public class RRQRDecompositionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testRank() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
+    public void testNonInvertible() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.linear.SingularMatrixException", config)) {
                org.apache.commons.math3.linear.RRQRDecompositionTest object = new org.apache.commons.math3.linear.RRQRDecompositionTest();
-               object.testRank();
+               object.testNonInvertible();
         }
     }
 
@@ -54,14 +62,6 @@ public class RRQRDecompositionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.RRQRDecompositionTest object = new org.apache.commons.math3.linear.RRQRDecompositionTest();
                object.testHTrapezoidal();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testAPEqualQR() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.RRQRDecompositionTest object = new org.apache.commons.math3.linear.RRQRDecompositionTest();
-               object.testAPEqualQR();
         }
     }
 

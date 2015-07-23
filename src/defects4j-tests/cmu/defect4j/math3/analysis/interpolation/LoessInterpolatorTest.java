@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class LoessInterpolatorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -14,6 +14,14 @@ public class LoessInterpolatorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.LoessInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.LoessInterpolatorTest();
                object.testOnOnePoint();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testOnTwoPoints() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.interpolation.LoessInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.LoessInterpolatorTest();
+               object.testOnTwoPoints();
         }
     }
 
@@ -34,14 +42,6 @@ public class LoessInterpolatorTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testOnTwoPoints() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.interpolation.LoessInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.LoessInterpolatorTest();
-               object.testOnTwoPoints();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testIncreasingBandwidthIncreasesSmoothness() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.LoessInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.LoessInterpolatorTest();
@@ -50,18 +50,18 @@ public class LoessInterpolatorTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testUnequalSizeArguments() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.analysis.interpolation.LoessInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.LoessInterpolatorTest();
-               object.testUnequalSizeArguments();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testIncreasingRobustnessItersIncreasesSmoothnessWithOutliers() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.LoessInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.LoessInterpolatorTest();
                object.testIncreasingRobustnessItersIncreasesSmoothnessWithOutliers();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testUnequalSizeArguments() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.analysis.interpolation.LoessInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.LoessInterpolatorTest();
+               object.testUnequalSizeArguments();
         }
     }
 

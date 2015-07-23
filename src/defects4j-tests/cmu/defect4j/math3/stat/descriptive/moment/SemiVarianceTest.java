@@ -5,23 +5,15 @@ import org.junit.Test;
 
 public class SemiVarianceTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testSample() throws Exception {
+    public void testSingleDown() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest object = new org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest();
-               object.testSample();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testInsufficientData() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest object = new org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest();
-               object.testInsufficientData();
+               object.testSingleDown();
         }
     }
 
@@ -30,14 +22,6 @@ public class SemiVarianceTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest object = new org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest();
                object.testSingleUp();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSingleDown() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest object = new org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest();
-               object.testSingleDown();
         }
     }
 
@@ -78,6 +62,22 @@ public class SemiVarianceTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest object = new org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest();
                object.testNoVariance();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSample() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest object = new org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest();
+               object.testSample();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testInsufficientData() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest object = new org.apache.commons.math3.stat.descriptive.moment.SemiVarianceTest();
+               object.testInsufficientData();
         }
     }
 

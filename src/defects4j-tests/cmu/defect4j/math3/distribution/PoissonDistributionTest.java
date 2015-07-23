@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class PoissonDistributionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -15,6 +15,15 @@ public class PoissonDistributionTest extends TestJPF {
                org.apache.commons.math3.distribution.PoissonDistributionTest object = new org.apache.commons.math3.distribution.PoissonDistributionTest();
                object.setUp();
                object.testMoments();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testNegativeMean() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
+               org.apache.commons.math3.distribution.PoissonDistributionTest object = new org.apache.commons.math3.distribution.PoissonDistributionTest();
+               object.setUp();
+               object.testNegativeMean();
         }
     }
 
@@ -33,15 +42,6 @@ public class PoissonDistributionTest extends TestJPF {
                org.apache.commons.math3.distribution.PoissonDistributionTest object = new org.apache.commons.math3.distribution.PoissonDistributionTest();
                object.setUp();
                object.testDegenerateInverseCumulativeProbability();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testNegativeMean() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
-               org.apache.commons.math3.distribution.PoissonDistributionTest object = new org.apache.commons.math3.distribution.PoissonDistributionTest();
-               object.setUp();
-               object.testNegativeMean();
         }
     }
 
@@ -82,20 +82,20 @@ public class PoissonDistributionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
+    public void testIllegalArguments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.PoissonDistributionTest object = new org.apache.commons.math3.distribution.PoissonDistributionTest();
+               object.setUp();
+               object.testIllegalArguments();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testDensities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.PoissonDistributionTest object = new org.apache.commons.math3.distribution.PoissonDistributionTest();
                object.setUp();
                object.testDensities();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSampling() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.PoissonDistributionTest object = new org.apache.commons.math3.distribution.PoissonDistributionTest();
-               object.setUp();
-               object.testSampling();
         }
     }
 
@@ -127,11 +127,11 @@ public class PoissonDistributionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testIllegalArguments() throws Exception {
+    public void testSampling() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.PoissonDistributionTest object = new org.apache.commons.math3.distribution.PoissonDistributionTest();
                object.setUp();
-               object.testIllegalArguments();
+               object.testSampling();
         }
     }
 

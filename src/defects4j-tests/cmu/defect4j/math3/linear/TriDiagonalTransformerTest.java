@@ -5,42 +5,10 @@ import org.junit.Test;
 
 public class TriDiagonalTransformerTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testAEqualQTQt() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.TriDiagonalTransformerTest object = new org.apache.commons.math3.linear.TriDiagonalTransformerTest();
-               object.testAEqualQTQt();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testNoAccessBelowDiagonal() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.TriDiagonalTransformerTest object = new org.apache.commons.math3.linear.TriDiagonalTransformerTest();
-               object.testNoAccessBelowDiagonal();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testQTOrthogonal() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.TriDiagonalTransformerTest object = new org.apache.commons.math3.linear.TriDiagonalTransformerTest();
-               object.testQTOrthogonal();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testTTriDiagonal() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.TriDiagonalTransformerTest object = new org.apache.commons.math3.linear.TriDiagonalTransformerTest();
-               object.testTTriDiagonal();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testNonSquare() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -70,6 +38,38 @@ public class TriDiagonalTransformerTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.TriDiagonalTransformerTest object = new org.apache.commons.math3.linear.TriDiagonalTransformerTest();
                object.testQOrthogonal();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testQTOrthogonal() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.TriDiagonalTransformerTest object = new org.apache.commons.math3.linear.TriDiagonalTransformerTest();
+               object.testQTOrthogonal();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testTTriDiagonal() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.TriDiagonalTransformerTest object = new org.apache.commons.math3.linear.TriDiagonalTransformerTest();
+               object.testTTriDiagonal();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testAEqualQTQt() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.TriDiagonalTransformerTest object = new org.apache.commons.math3.linear.TriDiagonalTransformerTest();
+               object.testAEqualQTQt();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testNoAccessBelowDiagonal() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.TriDiagonalTransformerTest object = new org.apache.commons.math3.linear.TriDiagonalTransformerTest();
+               object.testNoAccessBelowDiagonal();
         }
     }
 

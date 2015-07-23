@@ -5,23 +5,31 @@ import org.junit.Test;
 
 public class DormandPrince853IntegratorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testMinStep() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+    public void testEvents() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
-               object.testMinStep();
+               object.testEvents();
         }
     }
 
     @Test(timeout=1800000)
-    public void testIncreasingTolerance() throws Exception {
+    public void testVariableSteps() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
-               object.testIncreasingTolerance();
+               object.testVariableSteps();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testDimensionCheck() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
+               object.testDimensionCheck();
         }
     }
 
@@ -46,6 +54,22 @@ public class DormandPrince853IntegratorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
                object.testKepler();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testMinStep() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+               org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
+               object.testMinStep();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testIncreasingTolerance() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
+               object.testIncreasingTolerance();
         }
     }
 
@@ -78,30 +102,6 @@ public class DormandPrince853IntegratorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
                object.testEventsScheduling();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testDimensionCheck() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
-               object.testDimensionCheck();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testEvents() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
-               object.testEvents();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testVariableSteps() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest();
-               object.testVariableSteps();
         }
     }
 

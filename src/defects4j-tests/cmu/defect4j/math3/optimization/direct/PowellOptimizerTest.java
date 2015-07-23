@@ -5,23 +5,15 @@ import org.junit.Test;
 
 public class PowellOptimizerTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testRelativeToleranceOnScaledValues() throws Exception {
+    public void testQuadratic() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.direct.PowellOptimizerTest object = new org.apache.commons.math3.optimization.direct.PowellOptimizerTest();
-               object.testRelativeToleranceOnScaledValues();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSumSinc() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.direct.PowellOptimizerTest object = new org.apache.commons.math3.optimization.direct.PowellOptimizerTest();
-               object.testSumSinc();
+               object.testQuadratic();
         }
     }
 
@@ -34,10 +26,18 @@ public class PowellOptimizerTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testQuadratic() throws Exception {
+    public void testSumSinc() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.direct.PowellOptimizerTest object = new org.apache.commons.math3.optimization.direct.PowellOptimizerTest();
-               object.testQuadratic();
+               object.testSumSinc();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testRelativeToleranceOnScaledValues() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.direct.PowellOptimizerTest object = new org.apache.commons.math3.optimization.direct.PowellOptimizerTest();
+               object.testRelativeToleranceOnScaledValues();
         }
     }
 

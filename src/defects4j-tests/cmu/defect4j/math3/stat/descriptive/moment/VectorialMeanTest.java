@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class VectorialMeanTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.moment.VectorialMeanTest object = new org.apache.commons.math3.stat.descriptive.moment.VectorialMeanTest();
-               object.testSerial();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testMismatch() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -38,6 +30,14 @@ public class VectorialMeanTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.moment.VectorialMeanTest object = new org.apache.commons.math3.stat.descriptive.moment.VectorialMeanTest();
                object.testBasicStats();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.moment.VectorialMeanTest object = new org.apache.commons.math3.stat.descriptive.moment.VectorialMeanTest();
+               object.testSerial();
         }
     }
 

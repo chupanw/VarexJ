@@ -5,15 +5,23 @@ import org.junit.Test;
 
 public class PolygonsSetTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testIntersection() throws Exception {
+    public void testSimplyConnected() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest object = new org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest();
-               object.testIntersection();
+               object.testSimplyConnected();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testStair() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest object = new org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest();
+               object.testStair();
         }
     }
 
@@ -30,22 +38,6 @@ public class PolygonsSetTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest object = new org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest();
                object.testDisjointPolygons();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testStair() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest object = new org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest();
-               object.testStair();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSimplyConnected() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest object = new org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest();
-               object.testSimplyConnected();
         }
     }
 
@@ -166,6 +158,14 @@ public class PolygonsSetTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest object = new org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest();
                object.testIssue880Complete();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testIntersection() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest object = new org.apache.commons.math3.geometry.euclidean.twod.PolygonsSetTest();
+               object.testIntersection();
         }
     }
 

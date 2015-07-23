@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class TricubicSplineInterpolatorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testPreconditions() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatorTest();
-               object.testPreconditions();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testWave() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -30,6 +22,14 @@ public class TricubicSplineInterpolatorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatorTest();
                object.testPlane();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testPreconditions() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatorTest object = new org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatorTest();
+               object.testPreconditions();
         }
     }
 

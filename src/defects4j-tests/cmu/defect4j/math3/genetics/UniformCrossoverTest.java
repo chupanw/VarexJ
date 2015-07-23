@@ -5,26 +5,10 @@ import org.junit.Test;
 
 public class UniformCrossoverTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testRatioTooLow() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
-               org.apache.commons.math3.genetics.UniformCrossoverTest object = new org.apache.commons.math3.genetics.UniformCrossoverTest();
-               object.testRatioTooLow();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testRatioTooHigh() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
-               org.apache.commons.math3.genetics.UniformCrossoverTest object = new org.apache.commons.math3.genetics.UniformCrossoverTest();
-               object.testRatioTooHigh();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testCrossover() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -54,6 +38,22 @@ public class UniformCrossoverTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.MathIllegalArgumentException", config)) {
                org.apache.commons.math3.genetics.UniformCrossoverTest object = new org.apache.commons.math3.genetics.UniformCrossoverTest();
                object.testCrossoverInvalidFixedLengthChromosomeSecond();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testRatioTooLow() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
+               org.apache.commons.math3.genetics.UniformCrossoverTest object = new org.apache.commons.math3.genetics.UniformCrossoverTest();
+               object.testRatioTooLow();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testRatioTooHigh() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
+               org.apache.commons.math3.genetics.UniformCrossoverTest object = new org.apache.commons.math3.genetics.UniformCrossoverTest();
+               object.testRatioTooHigh();
         }
     }
 

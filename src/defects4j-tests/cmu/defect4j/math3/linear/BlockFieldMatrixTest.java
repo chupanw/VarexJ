@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class BlockFieldMatrixTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testToString() throws Exception {
+    public void testEqualsAndHashCode() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
-               object.testToString();
+               object.testEqualsAndHashCode();
         }
     }
 
@@ -34,26 +34,90 @@ public class BlockFieldMatrixTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testSerial() throws Exception {
+    public void testToString() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
-               object.testSerial();
+               object.testToString();
         }
     }
 
     @Test(timeout=1800000)
-    public void testScalarAdd() throws Exception {
+    public void testSeveralBlocks() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
-               object.testScalarAdd();
+               object.testSeveralBlocks();
         }
     }
 
     @Test(timeout=1800000)
-    public void testEqualsAndHashCode() throws Exception {
+    public void testOperateLarge() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
-               object.testEqualsAndHashCode();
+               object.testOperateLarge();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testOperatePremultiplyLarge() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
+               object.testOperatePremultiplyLarge();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testGetSetMatrixLarge() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
+               object.testGetSetMatrixLarge();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testGetSetRowMatrixLarge() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
+               object.testGetSetRowMatrixLarge();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testGetSetColumnMatrixLarge() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
+               object.testGetSetColumnMatrixLarge();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testGetSetRowVectorLarge() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
+               object.testGetSetRowVectorLarge();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testGetSetColumnVectorLarge() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
+               object.testGetSetColumnVectorLarge();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testGetSetRowLarge() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
+               object.testGetSetRowLarge();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testGetSetColumnLarge() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
+               object.testGetSetColumnLarge();
         }
     }
 
@@ -298,82 +362,18 @@ public class BlockFieldMatrixTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testSeveralBlocks() throws Exception {
+    public void testScalarAdd() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
-               object.testSeveralBlocks();
+               object.testScalarAdd();
         }
     }
 
     @Test(timeout=1800000)
-    public void testOperateLarge() throws Exception {
+    public void testSerial() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
-               object.testOperateLarge();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testOperatePremultiplyLarge() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
-               object.testOperatePremultiplyLarge();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testGetSetMatrixLarge() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
-               object.testGetSetMatrixLarge();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testGetSetRowMatrixLarge() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
-               object.testGetSetRowMatrixLarge();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testGetSetColumnMatrixLarge() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
-               object.testGetSetColumnMatrixLarge();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testGetSetRowVectorLarge() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
-               object.testGetSetRowVectorLarge();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testGetSetColumnVectorLarge() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
-               object.testGetSetColumnVectorLarge();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testGetSetRowLarge() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
-               object.testGetSetRowLarge();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testGetSetColumnLarge() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.BlockFieldMatrixTest object = new org.apache.commons.math3.linear.BlockFieldMatrixTest();
-               object.testGetSetColumnLarge();
+               object.testSerial();
         }
     }
 

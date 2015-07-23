@@ -5,23 +5,23 @@ import org.junit.Test;
 
 public class FiniteDifferencesDifferentiatorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testWrongStepSize() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NotPositiveException", config)) {
-               org.apache.commons.math3.analysis.differentiation.FiniteDifferencesDifferentiatorTest object = new org.apache.commons.math3.analysis.differentiation.FiniteDifferencesDifferentiatorTest();
-               object.testWrongStepSize();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testWrongNumberOfPoints() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
                org.apache.commons.math3.analysis.differentiation.FiniteDifferencesDifferentiatorTest object = new org.apache.commons.math3.analysis.differentiation.FiniteDifferencesDifferentiatorTest();
                object.testWrongNumberOfPoints();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testWrongStepSize() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NotPositiveException", config)) {
+               org.apache.commons.math3.analysis.differentiation.FiniteDifferencesDifferentiatorTest object = new org.apache.commons.math3.analysis.differentiation.FiniteDifferencesDifferentiatorTest();
+               object.testWrongStepSize();
         }
     }
 

@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class MaxTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testNaNs() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.rank.MaxTest object = new org.apache.commons.math3.stat.descriptive.rank.MaxTest();
-               object.testNaNs();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testSpecialValues() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -26,10 +18,18 @@ public class MaxTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testConsistency() throws Exception {
+    public void testNaNs() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.MaxTest object = new org.apache.commons.math3.stat.descriptive.rank.MaxTest();
-               object.testConsistency();
+               object.testNaNs();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testEqualsAndHashCode() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.rank.MaxTest object = new org.apache.commons.math3.stat.descriptive.rank.MaxTest();
+               object.testEqualsAndHashCode();
         }
     }
 
@@ -42,18 +42,10 @@ public class MaxTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testSerial() throws Exception {
+    public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.MaxTest object = new org.apache.commons.math3.stat.descriptive.rank.MaxTest();
-               object.testSerial();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testEqualsAndHashCode() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.rank.MaxTest object = new org.apache.commons.math3.stat.descriptive.rank.MaxTest();
-               object.testEqualsAndHashCode();
+               object.testConsistency();
         }
     }
 
@@ -78,6 +70,14 @@ public class MaxTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.rank.MaxTest object = new org.apache.commons.math3.stat.descriptive.rank.MaxTest();
                object.testCopyConsistency();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.rank.MaxTest object = new org.apache.commons.math3.stat.descriptive.rank.MaxTest();
+               object.testSerial();
         }
     }
 

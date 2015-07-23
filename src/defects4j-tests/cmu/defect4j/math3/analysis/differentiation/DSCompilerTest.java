@@ -5,26 +5,10 @@ import org.junit.Test;
 
 public class DSCompilerTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testIndices() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.analysis.differentiation.DSCompilerTest object = new org.apache.commons.math3.analysis.differentiation.DSCompilerTest();
-               object.testIndices();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testIncompatibleOrder() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.analysis.differentiation.DSCompilerTest object = new org.apache.commons.math3.analysis.differentiation.DSCompilerTest();
-               object.testIncompatibleOrder();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testSize() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -34,10 +18,26 @@ public class DSCompilerTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
+    public void testIndices() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.analysis.differentiation.DSCompilerTest object = new org.apache.commons.math3.analysis.differentiation.DSCompilerTest();
+               object.testIndices();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testIncompatibleParams() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
                org.apache.commons.math3.analysis.differentiation.DSCompilerTest object = new org.apache.commons.math3.analysis.differentiation.DSCompilerTest();
                object.testIncompatibleParams();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testIncompatibleOrder() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.analysis.differentiation.DSCompilerTest object = new org.apache.commons.math3.analysis.differentiation.DSCompilerTest();
+               object.testIncompatibleOrder();
         }
     }
 

@@ -5,10 +5,66 @@ import org.junit.Test;
 
 public class ErfTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1800000)
+    public void testTwoArgumentErf() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
+               object.testTwoArgumentErf();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testErfInvNaN() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
+               object.testErfInvNaN();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testErfInvInfinite() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
+               object.testErfInvInfinite();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testErfInv() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
+               object.testErfInv();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testErfcInvNaN() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
+               object.testErfcInvNaN();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testErfcInvInfinite() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
+               object.testErfcInvInfinite();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testErfcInv() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
+               object.testErfcInv();
+        }
+    }
+
     @Test(timeout=1800000)
     public void testLargeValues() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -78,62 +134,6 @@ public class ErfTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
                object.testErfcMaple();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testTwoArgumentErf() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
-               object.testTwoArgumentErf();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testErfInvNaN() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
-               object.testErfInvNaN();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testErfInvInfinite() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
-               object.testErfInvInfinite();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testErfInv() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
-               object.testErfInv();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testErfcInvNaN() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
-               object.testErfcInvNaN();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testErfcInvInfinite() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
-               object.testErfcInvInfinite();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testErfcInv() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.ErfTest object = new org.apache.commons.math3.special.ErfTest();
-               object.testErfcInv();
         }
     }
 

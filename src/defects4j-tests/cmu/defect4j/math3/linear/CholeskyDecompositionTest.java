@@ -5,15 +5,31 @@ import org.junit.Test;
 
 public class CholeskyDecompositionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testNotSymmetricMatrixException() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.linear.NonSymmetricMatrixException", config)) {
+    public void testNonSquare() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.linear.NonSquareMatrixException", config)) {
                org.apache.commons.math3.linear.CholeskyDecompositionTest object = new org.apache.commons.math3.linear.CholeskyDecompositionTest();
-               object.testNotSymmetricMatrixException();
+               object.testNonSquare();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testMatricesValues() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.CholeskyDecompositionTest object = new org.apache.commons.math3.linear.CholeskyDecompositionTest();
+               object.testMatricesValues();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testDimensions() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.CholeskyDecompositionTest object = new org.apache.commons.math3.linear.CholeskyDecompositionTest();
+               object.testDimensions();
         }
     }
 
@@ -22,6 +38,14 @@ public class CholeskyDecompositionTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.linear.NonPositiveDefiniteMatrixException", config)) {
                org.apache.commons.math3.linear.CholeskyDecompositionTest object = new org.apache.commons.math3.linear.CholeskyDecompositionTest();
                object.testMath274();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testNotSymmetricMatrixException() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.linear.NonSymmetricMatrixException", config)) {
+               org.apache.commons.math3.linear.CholeskyDecompositionTest object = new org.apache.commons.math3.linear.CholeskyDecompositionTest();
+               object.testNotSymmetricMatrixException();
         }
     }
 
@@ -54,30 +78,6 @@ public class CholeskyDecompositionTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.CholeskyDecompositionTest object = new org.apache.commons.math3.linear.CholeskyDecompositionTest();
                object.testLTTransposed();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testNonSquare() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.linear.NonSquareMatrixException", config)) {
-               org.apache.commons.math3.linear.CholeskyDecompositionTest object = new org.apache.commons.math3.linear.CholeskyDecompositionTest();
-               object.testNonSquare();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testMatricesValues() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.CholeskyDecompositionTest object = new org.apache.commons.math3.linear.CholeskyDecompositionTest();
-               object.testMatricesValues();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testDimensions() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.CholeskyDecompositionTest object = new org.apache.commons.math3.linear.CholeskyDecompositionTest();
-               object.testDimensions();
         }
     }
 

@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class SparseRealVectorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -834,14 +834,6 @@ public class SparseRealVectorTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testSerial() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
-               object.testSerial();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testGetEntry() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
@@ -854,6 +846,14 @@ public class SparseRealVectorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
                object.testIterator();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SparseRealVectorTest object = new org.apache.commons.math3.linear.SparseRealVectorTest();
+               object.testSerial();
         }
     }
 

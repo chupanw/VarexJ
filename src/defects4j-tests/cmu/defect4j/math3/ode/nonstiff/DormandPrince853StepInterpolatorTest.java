@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class DormandPrince853StepInterpolatorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void checklone() throws Exception {
+    public void serialization() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince853StepInterpolatorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853StepInterpolatorTest();
-               object.checklone();
+               object.serialization();
         }
     }
 
@@ -26,10 +26,10 @@ public class DormandPrince853StepInterpolatorTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void serialization() throws Exception {
+    public void checklone() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.DormandPrince853StepInterpolatorTest object = new org.apache.commons.math3.ode.nonstiff.DormandPrince853StepInterpolatorTest();
-               object.serialization();
+               object.checklone();
         }
     }
 

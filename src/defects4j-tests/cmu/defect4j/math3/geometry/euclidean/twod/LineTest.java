@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class LineTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -18,18 +18,10 @@ public class LineTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testContains() throws Exception {
+    public void testAbscissa() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.LineTest object = new org.apache.commons.math3.geometry.euclidean.twod.LineTest();
-               object.testContains();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testIntersection() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.twod.LineTest object = new org.apache.commons.math3.geometry.euclidean.twod.LineTest();
-               object.testIntersection();
+               object.testAbscissa();
         }
     }
 
@@ -38,14 +30,6 @@ public class LineTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.LineTest object = new org.apache.commons.math3.geometry.euclidean.twod.LineTest();
                object.testPointAt();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testAbscissa() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.geometry.euclidean.twod.LineTest object = new org.apache.commons.math3.geometry.euclidean.twod.LineTest();
-               object.testAbscissa();
         }
     }
 
@@ -70,6 +54,22 @@ public class LineTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.geometry.euclidean.twod.LineTest object = new org.apache.commons.math3.geometry.euclidean.twod.LineTest();
                object.testTransform();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testContains() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.twod.LineTest object = new org.apache.commons.math3.geometry.euclidean.twod.LineTest();
+               object.testContains();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testIntersection() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.geometry.euclidean.twod.LineTest object = new org.apache.commons.math3.geometry.euclidean.twod.LineTest();
+               object.testIntersection();
         }
     }
 

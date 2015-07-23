@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class BetaTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -14,14 +14,6 @@ public class BetaTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
                object.testLogBeta();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testLogBetaNanPositive() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
-               object.testLogBetaNanPositive();
         }
     }
 
@@ -106,6 +98,14 @@ public class BetaTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
+    public void testLogBetaNanPositive() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
+               object.testLogBetaNanPositive();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testLogBetaPositiveNan() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
@@ -118,62 +118,6 @@ public class BetaTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
                object.testLogBetaNegativePositive();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSumDeltaMinusDeltaSumPrecondition2() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
-               org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
-               object.testSumDeltaMinusDeltaSumPrecondition2();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testLogGammaSumPrecondition4() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
-               org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
-               object.testLogGammaSumPrecondition4();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testLogGammaMinusLogGammaSum() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
-               object.testLogGammaMinusLogGammaSum();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testLogGammaMinusLogGammaSumPrecondition1() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
-               org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
-               object.testLogGammaMinusLogGammaSumPrecondition1();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testLogGammaMinusLogGammaSumPrecondition2() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
-               org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
-               object.testLogGammaMinusLogGammaSumPrecondition2();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSumDeltaMinusDeltaSum() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
-               object.testSumDeltaMinusDeltaSum();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSumDeltaMinusDeltaSumPrecondition1() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
-               org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
-               object.testSumDeltaMinusDeltaSumPrecondition1();
         }
     }
 
@@ -238,6 +182,62 @@ public class BetaTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
                org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
                object.testLogGammaSumPrecondition3();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testLogGammaSumPrecondition4() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
+               org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
+               object.testLogGammaSumPrecondition4();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testLogGammaMinusLogGammaSum() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
+               object.testLogGammaMinusLogGammaSum();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testLogGammaMinusLogGammaSumPrecondition1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+               org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
+               object.testLogGammaMinusLogGammaSumPrecondition1();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testLogGammaMinusLogGammaSumPrecondition2() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+               org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
+               object.testLogGammaMinusLogGammaSumPrecondition2();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSumDeltaMinusDeltaSum() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
+               object.testSumDeltaMinusDeltaSum();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSumDeltaMinusDeltaSumPrecondition1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+               org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
+               object.testSumDeltaMinusDeltaSumPrecondition1();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSumDeltaMinusDeltaSumPrecondition2() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
+               org.apache.commons.math3.special.BetaTest object = new org.apache.commons.math3.special.BetaTest();
+               object.testSumDeltaMinusDeltaSumPrecondition2();
         }
     }
 

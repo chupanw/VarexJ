@@ -516,13 +516,13 @@
 				<fileset dir="build/defects4j-tests">
 					<include name="**/math3/**/*Test.class" />
 					<!--Exclude the following time-consuming test class in bug 7-->
-					<exclude name="**/cmu/defect4j/math3/dfp/BracketingNthOrderBrentSolverDFPTest.class"/>
-					<exclude name="**/cmu/defect4j/math3/dfp/DfpTest.class"/>
-					<exclude name="**/cmu/defect4j/math3/geometry/euclidean/threed/FieldRotationDfpTest.class"/>
-					<exclude name="**/cmu/defect4j/math3/optim/nonlinear/scalar/noderiv/BOBYQAOptimizerTest.class"/>
-					<exclude name="**/cmu/defect4j/math3/optim/nonlinear/scalar/noderiv/CMAESOptimizerTest.class"/>
-					<exclude name="**/cmu/defect4j/math3/optimization/direct/BOBYQAOptimizerTest.class"/>
-					<exclude name="**/cmu/defect4j/math3/optimization/direct/CMAESOptimizerTest.class"/>
+					<!--<exclude name="**/cmu/defect4j/math3/dfp/BracketingNthOrderBrentSolverDFPTest.class"/>-->
+					<!--<exclude name="**/cmu/defect4j/math3/dfp/DfpTest.class"/>-->
+					<!--<exclude name="**/cmu/defect4j/math3/geometry/euclidean/threed/FieldRotationDfpTest.class"/>-->
+					<!--<exclude name="**/cmu/defect4j/math3/optim/nonlinear/scalar/noderiv/BOBYQAOptimizerTest.class"/>-->
+					<!--<exclude name="**/cmu/defect4j/math3/optim/nonlinear/scalar/noderiv/CMAESOptimizerTest.class"/>-->
+					<!--<exclude name="**/cmu/defect4j/math3/optimization/direct/BOBYQAOptimizerTest.class"/>-->
+					<!--<exclude name="**/cmu/defect4j/math3/optimization/direct/CMAESOptimizerTest.class"/>-->
 
 				</fileset>
 			</batchtest>

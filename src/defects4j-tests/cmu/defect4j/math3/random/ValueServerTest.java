@@ -5,25 +5,25 @@ import org.junit.Test;
 
 public class ValueServerTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testFixedSeed() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.random.ValueServerTest object = new org.apache.commons.math3.random.ValueServerTest();
-               object.setUp();
-               object.testFixedSeed();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testNextDigest() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.ValueServerTest object = new org.apache.commons.math3.random.ValueServerTest();
                object.setUp();
                object.testNextDigest();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testFixedSeed() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.random.ValueServerTest object = new org.apache.commons.math3.random.ValueServerTest();
+               object.setUp();
+               object.testFixedSeed();
         }
     }
 

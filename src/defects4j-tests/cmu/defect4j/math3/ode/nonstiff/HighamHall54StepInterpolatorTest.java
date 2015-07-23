@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class HighamHall54StepInterpolatorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void derivativesConsistency() throws Exception {
+    public void checkClone() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.HighamHall54StepInterpolatorTest object = new org.apache.commons.math3.ode.nonstiff.HighamHall54StepInterpolatorTest();
-               object.derivativesConsistency();
+               object.checkClone();
         }
     }
 
@@ -26,10 +26,10 @@ public class HighamHall54StepInterpolatorTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void checkClone() throws Exception {
+    public void derivativesConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.HighamHall54StepInterpolatorTest object = new org.apache.commons.math3.ode.nonstiff.HighamHall54StepInterpolatorTest();
-               object.checkClone();
+               object.derivativesConsistency();
         }
     }
 

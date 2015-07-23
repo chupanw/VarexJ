@@ -5,23 +5,23 @@ import org.junit.Test;
 
 public class DescriptiveStatisticsTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testToString() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.stat.descriptive.DescriptiveStatisticsTest object = new org.apache.commons.math3.stat.descriptive.DescriptiveStatisticsTest();
-               object.testToString();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testCopy() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.stat.descriptive.DescriptiveStatisticsTest object = new org.apache.commons.math3.stat.descriptive.DescriptiveStatisticsTest();
                object.testCopy();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testToString() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.stat.descriptive.DescriptiveStatisticsTest object = new org.apache.commons.math3.stat.descriptive.DescriptiveStatisticsTest();
+               object.testToString();
         }
     }
 

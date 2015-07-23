@@ -5,26 +5,10 @@ import org.junit.Test;
 
 public class ElitisticListPopulationTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testNextGeneration() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.genetics.ElitisticListPopulationTest object = new org.apache.commons.math3.genetics.ElitisticListPopulationTest();
-               object.testNextGeneration();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSetElitismRate() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.genetics.ElitisticListPopulationTest object = new org.apache.commons.math3.genetics.ElitisticListPopulationTest();
-               object.testSetElitismRate();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testSetElitismRateTooLow() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
@@ -46,6 +30,22 @@ public class ElitisticListPopulationTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.OutOfRangeException", config)) {
                org.apache.commons.math3.genetics.ElitisticListPopulationTest object = new org.apache.commons.math3.genetics.ElitisticListPopulationTest();
                object.testConstructorTooLow();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testNextGeneration() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.genetics.ElitisticListPopulationTest object = new org.apache.commons.math3.genetics.ElitisticListPopulationTest();
+               object.testNextGeneration();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSetElitismRate() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.genetics.ElitisticListPopulationTest object = new org.apache.commons.math3.genetics.ElitisticListPopulationTest();
+               object.testSetElitismRate();
         }
     }
 

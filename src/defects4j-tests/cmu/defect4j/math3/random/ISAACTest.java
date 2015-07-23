@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class ISAACTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -136,15 +136,6 @@ public class ISAACTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testNextIntExtremeValues() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.random.ISAACTest object = new org.apache.commons.math3.random.ISAACTest();
-               object.setUp();
-               object.testNextIntExtremeValues();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testNextLongExtremeValues() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.ISAACTest object = new org.apache.commons.math3.random.ISAACTest();
@@ -168,6 +159,15 @@ public class ISAACTest extends TestJPF {
                org.apache.commons.math3.random.ISAACTest object = new org.apache.commons.math3.random.ISAACTest();
                object.setUp();
                object.testNextIntIAE();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testNextIntExtremeValues() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.random.ISAACTest object = new org.apache.commons.math3.random.ISAACTest();
+               object.setUp();
+               object.testNextIntExtremeValues();
         }
     }
 

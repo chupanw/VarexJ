@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class RandomDataGeneratorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -18,42 +18,10 @@ public class RandomDataGeneratorTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testNextSecureLongNegativeToPositiveRange() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.random.RandomDataGeneratorTest object = new org.apache.commons.math3.random.RandomDataGeneratorTest();
-               object.testNextSecureLongNegativeToPositiveRange();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testNextIntExtremeValues() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.random.RandomDataGeneratorTest object = new org.apache.commons.math3.random.RandomDataGeneratorTest();
-               object.testNextIntExtremeValues();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testNextSecureLongNegativeRange() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.RandomDataGeneratorTest object = new org.apache.commons.math3.random.RandomDataGeneratorTest();
                object.testNextSecureLongNegativeRange();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testNextSecureLongPositiveRange() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.random.RandomDataGeneratorTest object = new org.apache.commons.math3.random.RandomDataGeneratorTest();
-               object.testNextSecureLongPositiveRange();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testNextSecureIntIAE() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.random.RandomDataGeneratorTest object = new org.apache.commons.math3.random.RandomDataGeneratorTest();
-               object.testNextSecureIntIAE();
         }
     }
 
@@ -90,6 +58,30 @@ public class RandomDataGeneratorTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
+    public void testNextSecureLongNegativeToPositiveRange() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.random.RandomDataGeneratorTest object = new org.apache.commons.math3.random.RandomDataGeneratorTest();
+               object.testNextSecureLongNegativeToPositiveRange();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testNextSecureLongPositiveRange() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.random.RandomDataGeneratorTest object = new org.apache.commons.math3.random.RandomDataGeneratorTest();
+               object.testNextSecureLongPositiveRange();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testNextSecureIntIAE() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.random.RandomDataGeneratorTest object = new org.apache.commons.math3.random.RandomDataGeneratorTest();
+               object.testNextSecureIntIAE();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testNextLongExtremeValues() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.RandomDataGeneratorTest object = new org.apache.commons.math3.random.RandomDataGeneratorTest();
@@ -110,6 +102,14 @@ public class RandomDataGeneratorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.random.RandomDataGeneratorTest object = new org.apache.commons.math3.random.RandomDataGeneratorTest();
                object.testNextIntIAE();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testNextIntExtremeValues() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.random.RandomDataGeneratorTest object = new org.apache.commons.math3.random.RandomDataGeneratorTest();
+               object.testNextIntExtremeValues();
         }
     }
 

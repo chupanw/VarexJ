@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class PolynomialFunctionLagrangeFormTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -18,10 +18,10 @@ public class PolynomialFunctionLagrangeFormTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testLinearFunction() throws Exception {
+    public void testParameters() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialFunctionLagrangeFormTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionLagrangeFormTest();
-               object.testLinearFunction();
+               object.testParameters();
         }
     }
 
@@ -34,10 +34,10 @@ public class PolynomialFunctionLagrangeFormTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testParameters() throws Exception {
+    public void testLinearFunction() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.analysis.polynomials.PolynomialFunctionLagrangeFormTest object = new org.apache.commons.math3.analysis.polynomials.PolynomialFunctionLagrangeFormTest();
-               object.testParameters();
+               object.testLinearFunction();
         }
     }
 

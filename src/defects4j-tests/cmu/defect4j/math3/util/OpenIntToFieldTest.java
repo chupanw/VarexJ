@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class OpenIntToFieldTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
@@ -15,6 +15,24 @@ public class OpenIntToFieldTest extends TestJPF {
                org.apache.commons.math3.util.OpenIntToFieldTest object = new org.apache.commons.math3.util.OpenIntToFieldTest();
                object.setUp();
                object.testCopy();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testIterator() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.OpenIntToFieldTest object = new org.apache.commons.math3.util.OpenIntToFieldTest();
+               object.setUp();
+               object.testIterator();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testConcurrentModification() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.OpenIntToFieldTest object = new org.apache.commons.math3.util.OpenIntToFieldTest();
+               object.setUp();
+               object.testConcurrentModification();
         }
     }
 
@@ -141,24 +159,6 @@ public class OpenIntToFieldTest extends TestJPF {
                org.apache.commons.math3.util.OpenIntToFieldTest object = new org.apache.commons.math3.util.OpenIntToFieldTest();
                object.setUp();
                object.testPutKeysWithCollision2();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testIterator() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.OpenIntToFieldTest object = new org.apache.commons.math3.util.OpenIntToFieldTest();
-               object.setUp();
-               object.testIterator();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testConcurrentModification() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.OpenIntToFieldTest object = new org.apache.commons.math3.util.OpenIntToFieldTest();
-               object.setUp();
-               object.testConcurrentModification();
         }
     }
 

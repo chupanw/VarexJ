@@ -5,10 +5,26 @@ import org.junit.Test;
 
 public class RRQRSolverTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1800000)
+    public void testSolve() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.RRQRSolverTest object = new org.apache.commons.math3.linear.RRQRSolverTest();
+               object.testSolve();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSolveDimensionErrors() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.RRQRSolverTest object = new org.apache.commons.math3.linear.RRQRSolverTest();
+               object.testSolveDimensionErrors();
+        }
+    }
+
     @Test(timeout=1800000)
     public void testRank() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -38,22 +54,6 @@ public class RRQRSolverTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.RRQRSolverTest object = new org.apache.commons.math3.linear.RRQRSolverTest();
                object.testUnderdetermined();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSolve() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.RRQRSolverTest object = new org.apache.commons.math3.linear.RRQRSolverTest();
-               object.testSolve();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSolveDimensionErrors() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.RRQRSolverTest object = new org.apache.commons.math3.linear.RRQRSolverTest();
-               object.testSolveDimensionErrors();
         }
     }
 

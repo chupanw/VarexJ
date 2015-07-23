@@ -5,18 +5,10 @@ import org.junit.Test;
 
 public class HarmonicFitterTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testInitialGuess() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.fitting.HarmonicFitterTest object = new org.apache.commons.math3.optimization.fitting.HarmonicFitterTest();
-               object.testInitialGuess();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testNoError() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -62,6 +54,14 @@ public class HarmonicFitterTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
                org.apache.commons.math3.optimization.fitting.HarmonicFitterTest object = new org.apache.commons.math3.optimization.fitting.HarmonicFitterTest();
                object.testPreconditions1();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testInitialGuess() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.fitting.HarmonicFitterTest object = new org.apache.commons.math3.optimization.fitting.HarmonicFitterTest();
+               object.testInitialGuess();
         }
     }
 

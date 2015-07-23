@@ -5,19 +5,10 @@ import org.junit.Test;
 
 public class LevyDistributionTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testParameters() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.LevyDistributionTest object = new org.apache.commons.math3.distribution.LevyDistributionTest();
-               object.setUp();
-               object.testParameters();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testSupport() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -28,20 +19,29 @@ public class LevyDistributionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
+    public void testParameters() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.LevyDistributionTest object = new org.apache.commons.math3.distribution.LevyDistributionTest();
+               object.setUp();
+               object.testParameters();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testIllegalArguments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.LevyDistributionTest object = new org.apache.commons.math3.distribution.LevyDistributionTest();
+               object.setUp();
+               object.testIllegalArguments();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testDensities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.LevyDistributionTest object = new org.apache.commons.math3.distribution.LevyDistributionTest();
                object.setUp();
                object.testDensities();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSampling() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.LevyDistributionTest object = new org.apache.commons.math3.distribution.LevyDistributionTest();
-               object.setUp();
-               object.testSampling();
         }
     }
 
@@ -60,6 +60,15 @@ public class LevyDistributionTest extends TestJPF {
                org.apache.commons.math3.distribution.LevyDistributionTest object = new org.apache.commons.math3.distribution.LevyDistributionTest();
                object.setUp();
                object.testInverseCumulativeProbabilities();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSampling() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.LevyDistributionTest object = new org.apache.commons.math3.distribution.LevyDistributionTest();
+               object.setUp();
+               object.testSampling();
         }
     }
 
@@ -105,15 +114,6 @@ public class LevyDistributionTest extends TestJPF {
                org.apache.commons.math3.distribution.LevyDistributionTest object = new org.apache.commons.math3.distribution.LevyDistributionTest();
                object.setUp();
                object.testIsSupportUpperBoundInclusive();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testIllegalArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.LevyDistributionTest object = new org.apache.commons.math3.distribution.LevyDistributionTest();
-               object.setUp();
-               object.testIllegalArguments();
         }
     }
 

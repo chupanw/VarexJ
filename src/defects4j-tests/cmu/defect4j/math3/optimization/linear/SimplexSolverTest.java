@@ -5,42 +5,10 @@ import org.junit.Test;
 
 public class SimplexSolverTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testTrivialModel() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.linear.SimplexSolverTest object = new org.apache.commons.math3.optimization.linear.SimplexSolverTest();
-               object.testTrivialModel();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testRestrictVariablesToNonNegative() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.linear.SimplexSolverTest object = new org.apache.commons.math3.optimization.linear.SimplexSolverTest();
-               object.testRestrictVariablesToNonNegative();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testEpsilon() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.linear.SimplexSolverTest object = new org.apache.commons.math3.optimization.linear.SimplexSolverTest();
-               object.testEpsilon();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testLargeModel() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.linear.SimplexSolverTest object = new org.apache.commons.math3.optimization.linear.SimplexSolverTest();
-               object.testLargeModel();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testMath828() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -214,6 +182,38 @@ public class SimplexSolverTest extends TestJPF {
         if (verifyUnhandledException("org.apache.commons.math3.optimization.linear.UnboundedSolutionException", config)) {
                org.apache.commons.math3.optimization.linear.SimplexSolverTest object = new org.apache.commons.math3.optimization.linear.SimplexSolverTest();
                object.testUnboundedSolution();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testRestrictVariablesToNonNegative() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.linear.SimplexSolverTest object = new org.apache.commons.math3.optimization.linear.SimplexSolverTest();
+               object.testRestrictVariablesToNonNegative();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testEpsilon() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.linear.SimplexSolverTest object = new org.apache.commons.math3.optimization.linear.SimplexSolverTest();
+               object.testEpsilon();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testTrivialModel() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.linear.SimplexSolverTest object = new org.apache.commons.math3.optimization.linear.SimplexSolverTest();
+               object.testTrivialModel();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testLargeModel() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optimization.linear.SimplexSolverTest object = new org.apache.commons.math3.optimization.linear.SimplexSolverTest();
+               object.testLargeModel();
         }
     }
 

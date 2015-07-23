@@ -5,10 +5,18 @@ import org.junit.Test;
 
 public class AdamsBashforthIntegratorTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1800000)
+    public void dimensionCheck() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
+               org.apache.commons.math3.ode.nonstiff.AdamsBashforthIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.AdamsBashforthIntegratorTest();
+               object.dimensionCheck();
+        }
+    }
+
     @Test(timeout=1800000)
     public void testMinStep() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooSmallException", config)) {
@@ -46,14 +54,6 @@ public class AdamsBashforthIntegratorTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.ode.nonstiff.AdamsBashforthIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.AdamsBashforthIntegratorTest();
                object.polynomial();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void dimensionCheck() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.DimensionMismatchException", config)) {
-               org.apache.commons.math3.ode.nonstiff.AdamsBashforthIntegratorTest object = new org.apache.commons.math3.ode.nonstiff.AdamsBashforthIntegratorTest();
-               object.dimensionCheck();
         }
     }
 

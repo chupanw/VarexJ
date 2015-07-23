@@ -5,31 +5,15 @@ import org.junit.Test;
 
 public class SparseRealMatrixTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testNorm() throws Exception {
+    public void testEqualsAndHashCode() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseRealMatrixTest object = new org.apache.commons.math3.linear.SparseRealMatrixTest();
-               object.testNorm();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testToString() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SparseRealMatrixTest object = new org.apache.commons.math3.linear.SparseRealMatrixTest();
-               object.testToString();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSubMatrix() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SparseRealMatrixTest object = new org.apache.commons.math3.linear.SparseRealMatrixTest();
-               object.testSubMatrix();
+               object.testEqualsAndHashCode();
         }
     }
 
@@ -50,26 +34,18 @@ public class SparseRealMatrixTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testSerial() throws Exception {
+    public void testNorm() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseRealMatrixTest object = new org.apache.commons.math3.linear.SparseRealMatrixTest();
-               object.testSerial();
+               object.testNorm();
         }
     }
 
     @Test(timeout=1800000)
-    public void testScalarAdd() throws Exception {
+    public void testToString() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseRealMatrixTest object = new org.apache.commons.math3.linear.SparseRealMatrixTest();
-               object.testScalarAdd();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testEqualsAndHashCode() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.linear.SparseRealMatrixTest object = new org.apache.commons.math3.linear.SparseRealMatrixTest();
-               object.testEqualsAndHashCode();
+               object.testToString();
         }
     }
 
@@ -222,6 +198,30 @@ public class SparseRealMatrixTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.linear.SparseRealMatrixTest object = new org.apache.commons.math3.linear.SparseRealMatrixTest();
                object.testSetSubMatrix();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testScalarAdd() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SparseRealMatrixTest object = new org.apache.commons.math3.linear.SparseRealMatrixTest();
+               object.testScalarAdd();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSerial() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SparseRealMatrixTest object = new org.apache.commons.math3.linear.SparseRealMatrixTest();
+               object.testSerial();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSubMatrix() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.linear.SparseRealMatrixTest object = new org.apache.commons.math3.linear.SparseRealMatrixTest();
+               object.testSubMatrix();
         }
     }
 

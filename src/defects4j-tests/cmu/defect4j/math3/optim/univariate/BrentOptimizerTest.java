@@ -5,42 +5,10 @@ import org.junit.Test;
 
 public class BrentOptimizerTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
-    @Test(timeout=1800000)
-    public void testMath832() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
-               object.testMath832();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testBoundaries() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
-               object.testBoundaries();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testSinMinWithValueChecker() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
-               object.testSinMinWithValueChecker();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testQuinticMinStatistics() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
-               object.testQuinticMinStatistics();
-        }
-    }
-
     @Test(timeout=1800000)
     public void testQuinticMin() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -54,6 +22,22 @@ public class BrentOptimizerTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
                object.testSinMin();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testQuinticMinStatistics() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
+               object.testQuinticMinStatistics();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testSinMinWithValueChecker() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
+               object.testSinMinWithValueChecker();
         }
     }
 
@@ -86,6 +70,22 @@ public class BrentOptimizerTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
                object.testMath855();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testBoundaries() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
+               object.testBoundaries();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testMath832() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.optim.univariate.BrentOptimizerTest object = new org.apache.commons.math3.optim.univariate.BrentOptimizerTest();
+               object.testMath832();
         }
     }
 

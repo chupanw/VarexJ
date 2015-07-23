@@ -5,10 +5,37 @@ import org.junit.Test;
 
 public class ResizableDoubleArrayTest extends TestJPF {
 
-    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7.jar"};
+    private final String[] config = {"+interaction=interaction", "+search.class= .search.RandomSearch", "+nhandler.delegateUnhandledNative", "+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math7b.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
+    @Test(timeout=1800000)
+    public void testEqualsAndHashCode() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
+               object.setUp();
+               object.testEqualsAndHashCode();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testAdd1000() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
+               object.setUp();
+               object.testAdd1000();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testAddElementRolling() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
+               object.setUp();
+               object.testAddElementRolling();
+        }
+    }
+
     @Test(timeout=1800000)
     public void testSetElementArbitraryExpansion1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
@@ -109,38 +136,11 @@ public class ResizableDoubleArrayTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testEqualsAndHashCode() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
-               object.setUp();
-               object.testEqualsAndHashCode();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testConstructors() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
                object.setUp();
                object.testConstructors();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testAdd1000() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
-               object.setUp();
-               object.testAdd1000();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testAddElementRolling() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.util.ResizableDoubleArrayTest object = new org.apache.commons.math3.util.ResizableDoubleArrayTest();
-               object.setUp();
-               object.testAddElementRolling();
         }
     }
 
