@@ -78,3 +78,4 @@ coverage.xml
 Notify.sh
 PassingList.txt
 GlobalPassing.txt
+coverage/
