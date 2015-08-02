@@ -47,6 +47,8 @@ public class CoverageLogger {
 		file = file.substring(file.lastIndexOf('/') + 1);
 		JPF.COVERAGE.setLineCovered(file, frame.getPC().simplify(ctx).getValue().getLineNumber(), interaction,
 				content);
+		JPF.EXISTING_COVERAGE.setLineCovered(file, frame.getPC().simplify(ctx).getValue().getLineNumber(), interaction,
+				content);
 	}
 	
 }
