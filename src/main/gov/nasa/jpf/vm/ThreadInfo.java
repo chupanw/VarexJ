@@ -2227,13 +2227,16 @@ public Conditional<Instruction> executeInstruction () {
 				switch (JPF.SELECTED_COVERAGE_TYPE) {
 				case feature:
 					JPF.COVERAGE.setLineCovered(file, instruction.getLineNumber(), ctx.collectDistinctFeatures().size(), Conditional.getCTXString(ctx));
+                  JPF.EXISTING_COVERAGE.setLineCovered(file, instruction.getLineNumber(), ctx.collectDistinctFeatures().size(), Conditional.getCTXString(ctx));
 					break;
 				case stack:
 					JPF.COVERAGE.setLineCovered(file, instruction.getLineNumber(), top.stack.getStackWidth(), Conditional.getCTXString(ctx));
+                  JPF.EXISTING_COVERAGE.setLineCovered(file, instruction.getLineNumber(), top.stack.getStackWidth(), Conditional.getCTXString(ctx));
 					break;
 				case local:
 					// TODO LocalVariableInstruction.getLocalVariableName()
 					JPF.COVERAGE.setLineCovered(file, instruction.getLineNumber(), top.stack.getLocalWidth(), top.stack.getMaxLocal().toString());
+                  JPF.EXISTING_COVERAGE.setLineCovered(file, instruction.getLineNumber(), top.stack.getLocalWidth(), top.stack.getMaxLocal().toString());
 					break;
 				case interaction:	
 				case local2:
@@ -2284,6 +2287,7 @@ public Conditional<Instruction> executeInstruction () {
 					break;
 				case context:// same as for composedContext
 				case composedContext:
+                  // Fixme! Not working for EXISTING_COVERAGE
 					Interaction interaction = JPF.COVERAGE.getCoverage(file, instruction.getLineNumber());
 					if (interaction != null) {
 						@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -2329,6 +2333,7 @@ public Conditional<Instruction> executeInstruction () {
 					}
 					break;
 				case time:
+                  // Fixme Not working for EXISTING_COVERAGE
 					final int modifier = 1_000_000;
 					interaction = JPF.COVERAGE.getCoverage(file, instruction.getLineNumber());
 					if (interaction != null) {
@@ -2407,6 +2412,7 @@ public Conditional<Instruction> executeInstruction () {
 					break;
 				case field:
 					// handled at FieldInstruction
+                  // Fixme: not working for EXISTING_COVERAGE
 					break;
 				default:
 					throw new RuntimeException(JPF.SELECTED_COVERAGE_TYPE + " not implemented");

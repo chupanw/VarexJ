@@ -24,7 +24,7 @@ import gov.nasa.jpf.vm.RestorableVMState;
 import gov.nasa.jpf.vm.ThreadInfo;
 import gov.nasa.jpf.vm.VM;
 
-import java.io.File;
+import java.io.*;
 import java.util.HashMap;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -130,8 +130,15 @@ public class RandomSearch extends Search {
 				}
 				
 				JPF.COVERAGE.deleteMinInteraction();
-				
-				File file = new File("coverage.xml");
+
+				// This way of getting method name could be wrong sometimes
+				// because the index may change
+				StackTraceElement[] st = (new Throwable()).getStackTrace();
+				String name = st[5].getClassName() + "#" + st[5].getMethodName();
+				File file = new File("coverage/" + name + ".xml");
+				file.getParentFile().mkdirs();
+				if (!file.exists()) {
+				}
 				System.out.println("Create file: " + file.getAbsolutePath());
 				XMLWriter writer = new XMLWriter(gov.nasa.jpf.JPF.COVERAGE);
 				try {
@@ -143,6 +150,22 @@ public class RandomSearch extends Search {
 					}
 					e.printStackTrace();
 				}
+
+				// Serialize the existing coverage object
+				JPF.EXISTING_COVERAGE.deleteMinInteraction();
+
+				File fileOut = new File("coverage/aggregating.xml");
+				XMLWriter aggWriter = new XMLWriter(JPF.EXISTING_COVERAGE);
+				try {
+					aggWriter.writeToFile(fileOut);
+				} catch (ParserConfigurationException | TransformerException e) {
+					System.out.println(e.getMessage());
+					for (StackTraceElement element : e.getStackTrace()) {
+						System.out.println(element);
+					}
+					e.printStackTrace();
+				}
+
 			}
 			if (JPF.traceMethod != null) {
 				TraceComparator.compare();
