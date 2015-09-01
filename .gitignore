@@ -79,3 +79,6 @@ Notify.sh
 PassingList.txt
 GlobalPassing.txt
 coverage/
+measurement/
+jetty-resources/
+resources/
