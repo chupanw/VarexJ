@@ -37,7 +37,7 @@ public class MathTestGenerator extends TestGenerator {
     public void searchTest() {
         //cpwTODO: deal with @After
         FileDetector detector = new FileDetector("java");
-        File[] files = detector.detect("/Users/chupanw/Projects/Data/defects4j-checkout/math7b/src/test/java/");
+        File[] files = detector.detect("/Users/chupanw/Projects/Data/defects4j-checkout/math6b/src/test/java/");
 
         for (File file : files) {
             String filepath = file.getAbsolutePath();
