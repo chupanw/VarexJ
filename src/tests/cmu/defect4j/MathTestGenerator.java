@@ -4,12 +4,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runners.Parameterized;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
+import java.util.HashSet;
 import java.util.LinkedList;
 
 /**
@@ -17,14 +16,20 @@ import java.util.LinkedList;
  */
 public class MathTestGenerator extends TestGenerator {
 
+    int version = 6;
+
     private String config =
 //            "\"+interaction=interaction\"," +
             "\"+search.class= .search.RandomSearch\"," +
             "\"+nhandler.delegateUnhandledNative\"," +
-            "\"+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math6.jar\"";
+            "\"+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math" + version + ".jar\"";
+
+    private File effectiveTestListFile = new File("resources/EffectiveListBug" + version + ".txt");
+    private HashSet<String> effectSet;
 
     public static void main(String[] args) {
         MathTestGenerator generator = new MathTestGenerator();
+        generator.initEffectiveSet();
         generator.timeout =
                 1800000; // half an hour
 //                600000; // ten minutes
@@ -37,7 +42,7 @@ public class MathTestGenerator extends TestGenerator {
     public void searchTest() {
         //cpwTODO: deal with @After
         FileDetector detector = new FileDetector("java");
-        File[] files = detector.detect("/Users/chupanw/Projects/Data/defects4j-math-patched/Bug6/src/test/java/");
+        File[] files = detector.detect("/Users/chupanw/Projects/Data/defects4j-math-patched/Bug" + version + "/src/test/java/");
 
         for (File file : files) {
             String filepath = file.getAbsolutePath();
@@ -47,6 +52,14 @@ public class MathTestGenerator extends TestGenerator {
             String className = full_class_name.split("\\.")[full_class_name.split("\\.").length - 1];
             String pathSuffix = filepath.substring(filepath.indexOf("math3"));
             String packageNameSuffix = full_class_name.substring(full_class_name.indexOf("math3"), full_class_name.indexOf(className) - 1);
+
+            // Use effective list to filter out useless test cases
+            if (isEffective(full_class_name)) {
+                System.out.println("EFFECTIVE: " + full_class_name);
+            }
+            else {
+                continue;
+            }
 
             // Only generate files that have test cases
             boolean haveTest = false;
@@ -152,6 +165,27 @@ public class MathTestGenerator extends TestGenerator {
 
         }
         System.out.println("Finished");
+    }
+
+
+    public void initEffectiveSet() {
+        effectSet = new HashSet<>();
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(effectiveTestListFile));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                effectSet.add(line);
+            }
+            reader.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private boolean isEffective(String name) {
+        return effectSet.contains(name);
     }
 
     //Override because testMath899Sync throws Throwable instead of Exception
