@@ -16,7 +16,7 @@ import java.util.LinkedList;
  */
 public class MathTestGenerator extends TestGenerator {
 
-    int version = 6;
+    int version = 7;
 
     private String config =
 //            "\"+interaction=interaction\"," +
