@@ -525,7 +525,7 @@
 			<report todir="build/defects4j-tests/report" />
 		</junitreport>
 
-        <exec executable="./resources/Notify.sh"/>
+        <exec executable="./script/Notify.sh"/>
 
 
 	</target>
