@@ -16,13 +16,16 @@ import java.util.LinkedList;
  */
 public class MathTestGenerator extends TestGenerator {
 
-    int version = 7;
+    // cpwTODO: set this
+    int version = 6;
+    // cpwTODO: set this
+    String jarVersion = "6b";
 
     private String config =
 //            "\"+interaction=interaction\"," +
             "\"+search.class= .search.RandomSearch\"," +
             "\"+nhandler.delegateUnhandledNative\"," +
-            "\"+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math" + version + ".jar\"";
+            "\"+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math" + jarVersion + ".jar\"";
 
     private File effectiveTestListFile = new File("resources/EffectiveListBug" + version + ".txt");
     private HashSet<String> effectSet;
@@ -30,6 +33,7 @@ public class MathTestGenerator extends TestGenerator {
     public static void main(String[] args) {
         MathTestGenerator generator = new MathTestGenerator();
         generator.initEffectiveSet();
+        // cpwTODO: set this
         generator.timeout =
                 1800000; // half an hour
 //                600000; // ten minutes
@@ -40,7 +44,7 @@ public class MathTestGenerator extends TestGenerator {
 
     @Override
     public void searchTest() {
-        //cpwTODO: deal with @After
+        //TODO: deal with @After
         FileDetector detector = new FileDetector("java");
         File[] files = detector.detect("/Users/chupanw/Projects/Data/defects4j-math-patched/Bug" + version + "/src/test/java/");
 
