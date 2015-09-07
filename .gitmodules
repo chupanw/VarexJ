@@ -1,3 +1,0 @@
-[submodule "src/defects4j-tests/cmu/defect4j/math3"]
-	path = src/defects4j-tests/cmu/defect4j/math3
-	url = https://github.com/chupanw/VarexJ-math3.git
