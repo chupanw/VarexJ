@@ -34,6 +34,22 @@ public class CMAESOptimizerTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
+    public void testUnsupportedBoundaries1() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.MathUnsupportedOperationException", config)) {
+               org.apache.commons.math3.optimization.direct.CMAESOptimizerTest object = new org.apache.commons.math3.optimization.direct.CMAESOptimizerTest();
+               object.testUnsupportedBoundaries1();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testUnsupportedBoundaries2() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.MathUnsupportedOperationException", config)) {
+               org.apache.commons.math3.optimization.direct.CMAESOptimizerTest object = new org.apache.commons.math3.optimization.direct.CMAESOptimizerTest();
+               object.testUnsupportedBoundaries2();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testInputSigmaNegative() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NotPositiveException", config)) {
                org.apache.commons.math3.optimization.direct.CMAESOptimizerTest object = new org.apache.commons.math3.optimization.direct.CMAESOptimizerTest();
@@ -94,14 +110,6 @@ public class CMAESOptimizerTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.direct.CMAESOptimizerTest object = new org.apache.commons.math3.optimization.direct.CMAESOptimizerTest();
                object.testCigar();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testCigarWithBoundaries() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.optimization.direct.CMAESOptimizerTest object = new org.apache.commons.math3.optimization.direct.CMAESOptimizerTest();
-               object.testCigarWithBoundaries();
         }
     }
 
@@ -190,6 +198,14 @@ public class CMAESOptimizerTest extends TestJPF {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.optimization.direct.CMAESOptimizerTest object = new org.apache.commons.math3.optimization.direct.CMAESOptimizerTest();
                object.testMath864();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testBoundaryRangeTooLarge() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
+               org.apache.commons.math3.optimization.direct.CMAESOptimizerTest object = new org.apache.commons.math3.optimization.direct.CMAESOptimizerTest();
+               object.testBoundaryRangeTooLarge();
         }
     }
 
