@@ -35,7 +35,8 @@ public class MathTestGenerator extends TestGenerator {
         generator.initEffectiveSet();
         // cpwTODO: set this
         generator.timeout =
-                1800000; // half an hour
+                3600000;    // one hour
+//                1800000; // half an hour
 //                600000; // ten minutes
 //                60000; // one minute
 
