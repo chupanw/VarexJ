@@ -57,13 +57,6 @@ public class MathTestGenerator extends TestGenerator {
             String pathSuffix = filepath.substring(filepath.indexOf("math3"));
             String packageNameSuffix = full_class_name.substring(full_class_name.indexOf("math3"), full_class_name.indexOf(className) - 1);
 
-            // Use effective list to filter out useless test cases
-            if (isEffective(full_class_name)) {
-                System.out.println("EFFECTIVE: " + full_class_name);
-            }
-            else {
-                continue;
-            }
 
             // Only generate files that have test cases
             boolean haveTest = false;
@@ -92,7 +85,31 @@ public class MathTestGenerator extends TestGenerator {
             }
 
             if(Modifier.toString(c.getModifiers()).contains("abstract")){
-                System.out.println(full_class_name + " is abstract");
+//                System.out.println(full_class_name + " is abstract");
+                continue;
+            }
+
+            // Use effective list to filter out useless test cases
+            boolean effFlag = false;
+            if (isEffective(full_class_name)) {
+                System.out.println("EFFECTIVE: " + full_class_name);
+                effFlag = true;
+            }
+            else {
+                Class superClass = c.getSuperclass();
+                while (!superClass.equals(Object.class)) {
+                    if (isEffective(superClass.getCanonicalName()) && isAbstract(superClass)) {
+                        System.out.println("Subclass: " + full_class_name + " Effective: " + superClass.getCanonicalName());
+                        effFlag = true;
+                        break;
+                    }
+                    else {
+                        superClass = superClass.getSuperclass();
+                    }
+                }
+            }
+
+            if (!effFlag) {
                 continue;
             }
 
@@ -171,6 +188,12 @@ public class MathTestGenerator extends TestGenerator {
         System.out.println("Finished");
     }
 
+    public boolean isAbstract(Class c) {
+        if (Modifier.toString(c.getModifiers()).contains("abstract")) {
+            return true;
+        }
+        return false;
+    }
 
     public void initEffectiveSet() {
         effectSet = new HashSet<>();
