@@ -46,15 +46,6 @@ public class WeibullDistributionTest extends TestJPF {
     }
 
     @Test(timeout=1800000)
-    public void testIllegalArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.WeibullDistributionTest object = new org.apache.commons.math3.distribution.WeibullDistributionTest();
-               object.setUp();
-               object.testIllegalArguments();
-        }
-    }
-
-    @Test(timeout=1800000)
     public void testDensities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.WeibullDistributionTest object = new org.apache.commons.math3.distribution.WeibullDistributionTest();
@@ -123,6 +114,15 @@ public class WeibullDistributionTest extends TestJPF {
                org.apache.commons.math3.distribution.WeibullDistributionTest object = new org.apache.commons.math3.distribution.WeibullDistributionTest();
                object.setUp();
                object.testIsSupportUpperBoundInclusive();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testIllegalArguments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.WeibullDistributionTest object = new org.apache.commons.math3.distribution.WeibullDistributionTest();
+               object.setUp();
+               object.testIllegalArguments();
         }
     }
 

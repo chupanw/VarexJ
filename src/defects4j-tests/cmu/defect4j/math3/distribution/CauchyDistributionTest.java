@@ -10,18 +10,20 @@ public class CauchyDistributionTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
-    public void testMoments() throws Exception {
+    public void testPreconditions() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.CauchyDistributionTest object = new org.apache.commons.math3.distribution.CauchyDistributionTest();
-               object.testMoments();
+               object.setUp();
+               object.testPreconditions();
         }
     }
 
     @Test(timeout=1800000)
-    public void testScale() throws Exception {
+    public void testMoments() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.CauchyDistributionTest object = new org.apache.commons.math3.distribution.CauchyDistributionTest();
-               object.testScale();
+               object.setUp();
+               object.testMoments();
         }
     }
 
@@ -29,6 +31,7 @@ public class CauchyDistributionTest extends TestJPF {
     public void testInverseCumulativeProbabilityExtremes() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.CauchyDistributionTest object = new org.apache.commons.math3.distribution.CauchyDistributionTest();
+               object.setUp();
                object.testInverseCumulativeProbabilityExtremes();
         }
     }
@@ -37,23 +40,17 @@ public class CauchyDistributionTest extends TestJPF {
     public void testMedian() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.CauchyDistributionTest object = new org.apache.commons.math3.distribution.CauchyDistributionTest();
+               object.setUp();
                object.testMedian();
         }
     }
 
     @Test(timeout=1800000)
-    public void testPreconditions() throws Exception {
+    public void testScale() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.CauchyDistributionTest object = new org.apache.commons.math3.distribution.CauchyDistributionTest();
-               object.testPreconditions();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testIllegalArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.CauchyDistributionTest object = new org.apache.commons.math3.distribution.CauchyDistributionTest();
-               object.testIllegalArguments();
+               object.setUp();
+               object.testScale();
         }
     }
 
@@ -61,6 +58,7 @@ public class CauchyDistributionTest extends TestJPF {
     public void testDensities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.CauchyDistributionTest object = new org.apache.commons.math3.distribution.CauchyDistributionTest();
+               object.setUp();
                object.testDensities();
         }
     }
@@ -69,6 +67,7 @@ public class CauchyDistributionTest extends TestJPF {
     public void testCumulativeProbabilities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.CauchyDistributionTest object = new org.apache.commons.math3.distribution.CauchyDistributionTest();
+               object.setUp();
                object.testCumulativeProbabilities();
         }
     }
@@ -77,6 +76,7 @@ public class CauchyDistributionTest extends TestJPF {
     public void testInverseCumulativeProbabilities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.CauchyDistributionTest object = new org.apache.commons.math3.distribution.CauchyDistributionTest();
+               object.setUp();
                object.testInverseCumulativeProbabilities();
         }
     }
@@ -85,6 +85,7 @@ public class CauchyDistributionTest extends TestJPF {
     public void testSampling() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.CauchyDistributionTest object = new org.apache.commons.math3.distribution.CauchyDistributionTest();
+               object.setUp();
                object.testSampling();
         }
     }
@@ -93,6 +94,7 @@ public class CauchyDistributionTest extends TestJPF {
     public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.CauchyDistributionTest object = new org.apache.commons.math3.distribution.CauchyDistributionTest();
+               object.setUp();
                object.testConsistency();
         }
     }
@@ -101,6 +103,7 @@ public class CauchyDistributionTest extends TestJPF {
     public void testDensityIntegrals() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.CauchyDistributionTest object = new org.apache.commons.math3.distribution.CauchyDistributionTest();
+               object.setUp();
                object.testDensityIntegrals();
         }
     }
@@ -109,6 +112,7 @@ public class CauchyDistributionTest extends TestJPF {
     public void testIsSupportLowerBoundInclusive() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.CauchyDistributionTest object = new org.apache.commons.math3.distribution.CauchyDistributionTest();
+               object.setUp();
                object.testIsSupportLowerBoundInclusive();
         }
     }
@@ -117,7 +121,17 @@ public class CauchyDistributionTest extends TestJPF {
     public void testIsSupportUpperBoundInclusive() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.CauchyDistributionTest object = new org.apache.commons.math3.distribution.CauchyDistributionTest();
+               object.setUp();
                object.testIsSupportUpperBoundInclusive();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testIllegalArguments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.CauchyDistributionTest object = new org.apache.commons.math3.distribution.CauchyDistributionTest();
+               object.setUp();
+               object.testIllegalArguments();
         }
     }
 

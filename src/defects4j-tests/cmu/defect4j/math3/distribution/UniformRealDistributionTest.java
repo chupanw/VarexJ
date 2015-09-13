@@ -13,6 +13,7 @@ public class UniformRealDistributionTest extends TestJPF {
     public void testGetLowerBound() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.UniformRealDistributionTest object = new org.apache.commons.math3.distribution.UniformRealDistributionTest();
+               object.setUp();
                object.testGetLowerBound();
         }
     }
@@ -21,6 +22,7 @@ public class UniformRealDistributionTest extends TestJPF {
     public void testGetUpperBound() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.UniformRealDistributionTest object = new org.apache.commons.math3.distribution.UniformRealDistributionTest();
+               object.setUp();
                object.testGetUpperBound();
         }
     }
@@ -29,6 +31,7 @@ public class UniformRealDistributionTest extends TestJPF {
     public void testPreconditions1() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
                org.apache.commons.math3.distribution.UniformRealDistributionTest object = new org.apache.commons.math3.distribution.UniformRealDistributionTest();
+               object.setUp();
                object.testPreconditions1();
         }
     }
@@ -37,6 +40,7 @@ public class UniformRealDistributionTest extends TestJPF {
     public void testPreconditions2() throws Exception {
         if (verifyUnhandledException("org.apache.commons.math3.exception.NumberIsTooLargeException", config)) {
                org.apache.commons.math3.distribution.UniformRealDistributionTest object = new org.apache.commons.math3.distribution.UniformRealDistributionTest();
+               object.setUp();
                object.testPreconditions2();
         }
     }
@@ -45,15 +49,8 @@ public class UniformRealDistributionTest extends TestJPF {
     public void testMeanVariance() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.UniformRealDistributionTest object = new org.apache.commons.math3.distribution.UniformRealDistributionTest();
+               object.setUp();
                object.testMeanVariance();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testIllegalArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.UniformRealDistributionTest object = new org.apache.commons.math3.distribution.UniformRealDistributionTest();
-               object.testIllegalArguments();
         }
     }
 
@@ -61,6 +58,7 @@ public class UniformRealDistributionTest extends TestJPF {
     public void testDensities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.UniformRealDistributionTest object = new org.apache.commons.math3.distribution.UniformRealDistributionTest();
+               object.setUp();
                object.testDensities();
         }
     }
@@ -69,6 +67,7 @@ public class UniformRealDistributionTest extends TestJPF {
     public void testCumulativeProbabilities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.UniformRealDistributionTest object = new org.apache.commons.math3.distribution.UniformRealDistributionTest();
+               object.setUp();
                object.testCumulativeProbabilities();
         }
     }
@@ -77,6 +76,7 @@ public class UniformRealDistributionTest extends TestJPF {
     public void testInverseCumulativeProbabilities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.UniformRealDistributionTest object = new org.apache.commons.math3.distribution.UniformRealDistributionTest();
+               object.setUp();
                object.testInverseCumulativeProbabilities();
         }
     }
@@ -85,6 +85,7 @@ public class UniformRealDistributionTest extends TestJPF {
     public void testSampling() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.UniformRealDistributionTest object = new org.apache.commons.math3.distribution.UniformRealDistributionTest();
+               object.setUp();
                object.testSampling();
         }
     }
@@ -93,6 +94,7 @@ public class UniformRealDistributionTest extends TestJPF {
     public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.UniformRealDistributionTest object = new org.apache.commons.math3.distribution.UniformRealDistributionTest();
+               object.setUp();
                object.testConsistency();
         }
     }
@@ -101,6 +103,7 @@ public class UniformRealDistributionTest extends TestJPF {
     public void testDensityIntegrals() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.UniformRealDistributionTest object = new org.apache.commons.math3.distribution.UniformRealDistributionTest();
+               object.setUp();
                object.testDensityIntegrals();
         }
     }
@@ -109,6 +112,7 @@ public class UniformRealDistributionTest extends TestJPF {
     public void testIsSupportLowerBoundInclusive() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.UniformRealDistributionTest object = new org.apache.commons.math3.distribution.UniformRealDistributionTest();
+               object.setUp();
                object.testIsSupportLowerBoundInclusive();
         }
     }
@@ -117,7 +121,17 @@ public class UniformRealDistributionTest extends TestJPF {
     public void testIsSupportUpperBoundInclusive() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.UniformRealDistributionTest object = new org.apache.commons.math3.distribution.UniformRealDistributionTest();
+               object.setUp();
                object.testIsSupportUpperBoundInclusive();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testIllegalArguments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.UniformRealDistributionTest object = new org.apache.commons.math3.distribution.UniformRealDistributionTest();
+               object.setUp();
+               object.testIllegalArguments();
         }
     }
 

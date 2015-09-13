@@ -10,9 +10,19 @@ public class ExponentialDistributionTest extends TestJPF {
         runTestsOfThisClass(testMethods);
     }
     @Test(timeout=1800000)
+    public void testPreconditions() throws Exception {
+        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
+               org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
+               object.setUp();
+               object.testPreconditions();
+        }
+    }
+
+    @Test(timeout=1800000)
     public void testDensity() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
+               object.setUp();
                object.testDensity();
         }
     }
@@ -21,6 +31,7 @@ public class ExponentialDistributionTest extends TestJPF {
     public void testMoments() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
+               object.setUp();
                object.testMoments();
         }
     }
@@ -29,7 +40,17 @@ public class ExponentialDistributionTest extends TestJPF {
     public void testInverseCumulativeProbabilityExtremes() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
+               object.setUp();
                object.testInverseCumulativeProbabilityExtremes();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testMeanAccessors() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
+               object.setUp();
+               object.testMeanAccessors();
         }
     }
 
@@ -37,6 +58,7 @@ public class ExponentialDistributionTest extends TestJPF {
     public void testCumulativeProbabilityExtremes() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
+               object.setUp();
                object.testCumulativeProbabilityExtremes();
         }
     }
@@ -45,31 +67,8 @@ public class ExponentialDistributionTest extends TestJPF {
     public void testCumulativeProbability2() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
+               object.setUp();
                object.testCumulativeProbability2();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testMeanAccessors() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
-               object.testMeanAccessors();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testPreconditions() throws Exception {
-        if (verifyUnhandledException("org.apache.commons.math3.exception.NotStrictlyPositiveException", config)) {
-               org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
-               object.testPreconditions();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testIllegalArguments() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
-               object.testIllegalArguments();
         }
     }
 
@@ -77,6 +76,7 @@ public class ExponentialDistributionTest extends TestJPF {
     public void testDensities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
+               object.setUp();
                object.testDensities();
         }
     }
@@ -85,6 +85,7 @@ public class ExponentialDistributionTest extends TestJPF {
     public void testCumulativeProbabilities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
+               object.setUp();
                object.testCumulativeProbabilities();
         }
     }
@@ -93,6 +94,7 @@ public class ExponentialDistributionTest extends TestJPF {
     public void testInverseCumulativeProbabilities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
+               object.setUp();
                object.testInverseCumulativeProbabilities();
         }
     }
@@ -101,6 +103,7 @@ public class ExponentialDistributionTest extends TestJPF {
     public void testSampling() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
+               object.setUp();
                object.testSampling();
         }
     }
@@ -109,6 +112,7 @@ public class ExponentialDistributionTest extends TestJPF {
     public void testConsistency() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
+               object.setUp();
                object.testConsistency();
         }
     }
@@ -117,6 +121,7 @@ public class ExponentialDistributionTest extends TestJPF {
     public void testDensityIntegrals() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
+               object.setUp();
                object.testDensityIntegrals();
         }
     }
@@ -125,6 +130,7 @@ public class ExponentialDistributionTest extends TestJPF {
     public void testIsSupportLowerBoundInclusive() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
+               object.setUp();
                object.testIsSupportLowerBoundInclusive();
         }
     }
@@ -133,7 +139,17 @@ public class ExponentialDistributionTest extends TestJPF {
     public void testIsSupportUpperBoundInclusive() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
+               object.setUp();
                object.testIsSupportUpperBoundInclusive();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testIllegalArguments() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.ExponentialDistributionTest object = new org.apache.commons.math3.distribution.ExponentialDistributionTest();
+               object.setUp();
+               object.testIllegalArguments();
         }
     }
 
