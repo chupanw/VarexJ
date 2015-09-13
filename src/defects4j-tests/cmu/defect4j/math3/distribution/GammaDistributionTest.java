@@ -13,6 +13,7 @@ public class GammaDistributionTest extends TestJPF {
     public void testValues() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
                object.testValues();
         }
     }
@@ -21,6 +22,7 @@ public class GammaDistributionTest extends TestJPF {
     public void testDensity() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
                object.testDensity();
         }
     }
@@ -29,6 +31,7 @@ public class GammaDistributionTest extends TestJPF {
     public void testMoments() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
                object.testMoments();
         }
     }
@@ -37,15 +40,8 @@ public class GammaDistributionTest extends TestJPF {
     public void testInverseCumulativeProbabilityExtremes() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
                object.testInverseCumulativeProbabilityExtremes();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testProbabilities() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
-               object.testProbabilities();
         }
     }
 
@@ -53,7 +49,26 @@ public class GammaDistributionTest extends TestJPF {
     public void testParameterAccessors() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
                object.testParameterAccessors();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testPreconditions() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
+               object.testPreconditions();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testProbabilities() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
+               object.testProbabilities();
         }
     }
 
@@ -61,6 +76,7 @@ public class GammaDistributionTest extends TestJPF {
     public void testMath753Shape1() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
                object.testMath753Shape1();
         }
     }
@@ -69,6 +85,7 @@ public class GammaDistributionTest extends TestJPF {
     public void testMath753Shape8() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
                object.testMath753Shape8();
         }
     }
@@ -77,6 +94,7 @@ public class GammaDistributionTest extends TestJPF {
     public void testMath753Shape10() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
                object.testMath753Shape10();
         }
     }
@@ -85,6 +103,7 @@ public class GammaDistributionTest extends TestJPF {
     public void testMath753Shape100() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
                object.testMath753Shape100();
         }
     }
@@ -93,6 +112,7 @@ public class GammaDistributionTest extends TestJPF {
     public void testMath753Shape142() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
                object.testMath753Shape142();
         }
     }
@@ -101,47 +121,8 @@ public class GammaDistributionTest extends TestJPF {
     public void testMath753Shape1000() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
                object.testMath753Shape1000();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testPreconditions() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
-               object.testPreconditions();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testConsistency() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
-               object.testConsistency();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testDensityIntegrals() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
-               object.testDensityIntegrals();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testIsSupportLowerBoundInclusive() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
-               object.testIsSupportLowerBoundInclusive();
-        }
-    }
-
-    @Test(timeout=1800000)
-    public void testIsSupportUpperBoundInclusive() throws Exception {
-        if (verifyNoPropertyViolation(config)) {
-               org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
-               object.testIsSupportUpperBoundInclusive();
         }
     }
 
@@ -149,6 +130,7 @@ public class GammaDistributionTest extends TestJPF {
     public void testIllegalArguments() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
                object.testIllegalArguments();
         }
     }
@@ -157,6 +139,7 @@ public class GammaDistributionTest extends TestJPF {
     public void testDensities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
                object.testDensities();
         }
     }
@@ -165,6 +148,7 @@ public class GammaDistributionTest extends TestJPF {
     public void testCumulativeProbabilities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
                object.testCumulativeProbabilities();
         }
     }
@@ -173,6 +157,7 @@ public class GammaDistributionTest extends TestJPF {
     public void testInverseCumulativeProbabilities() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
                object.testInverseCumulativeProbabilities();
         }
     }
@@ -181,7 +166,44 @@ public class GammaDistributionTest extends TestJPF {
     public void testSampling() throws Exception {
         if (verifyNoPropertyViolation(config)) {
                org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
                object.testSampling();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testConsistency() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
+               object.testConsistency();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testDensityIntegrals() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
+               object.testDensityIntegrals();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testIsSupportLowerBoundInclusive() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
+               object.testIsSupportLowerBoundInclusive();
+        }
+    }
+
+    @Test(timeout=1800000)
+    public void testIsSupportUpperBoundInclusive() throws Exception {
+        if (verifyNoPropertyViolation(config)) {
+               org.apache.commons.math3.distribution.GammaDistributionTest object = new org.apache.commons.math3.distribution.GammaDistributionTest();
+               object.setUp();
+               object.testIsSupportUpperBoundInclusive();
         }
     }
 
