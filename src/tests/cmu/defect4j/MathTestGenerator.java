@@ -159,6 +159,10 @@ public class MathTestGenerator extends TestGenerator {
                             beforeMethodName = method.getName();
                         }
                     }
+                    if (isOverwriteBefore(c, method)) {
+                        assert beforeMethodName == null;
+                        beforeMethodName = method.getName();
+                    }
                 }
                 for (Method method : methods) {
                     String expectedName = null;
@@ -186,6 +190,27 @@ public class MathTestGenerator extends TestGenerator {
 
         }
         System.out.println("Finished");
+    }
+
+    private boolean isOverwriteBefore(Class c, Method m) {
+        Class superClass = c.getSuperclass();
+        boolean res = false;
+        while (!superClass.equals(Object.class)) {
+            try {
+                Method superMethod = superClass.getMethod(m.getName(), m.getParameterTypes());
+                Annotation[] annotations = superMethod.getAnnotations();
+                for (Annotation a : annotations) {
+                    if (a instanceof Before) {
+                        System.out.println("SUPER BEFORE: " + c.getCanonicalName());
+                        res = true;
+                    }
+                }
+                superClass = superClass.getSuperclass();
+            } catch (NoSuchMethodException e) {
+                break;
+            }
+        }
+        return res;
     }
 
     public boolean isAbstract(Class c) {
