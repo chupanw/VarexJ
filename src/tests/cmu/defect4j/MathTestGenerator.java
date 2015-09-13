@@ -17,9 +17,9 @@ import java.util.LinkedList;
 public class MathTestGenerator extends TestGenerator {
 
     // cpwTODO: set this
-    int version = 0;
+    int version = 22;
     // cpwTODO: set this
-    String jarVersion = "0";
+    String jarVersion = "22";
 
     private String config =
 //            "\"+interaction=interaction\"," +
@@ -85,7 +85,7 @@ public class MathTestGenerator extends TestGenerator {
             }
 
             if(Modifier.toString(c.getModifiers()).contains("abstract")){
-                System.out.println(full_class_name + " is abstract");
+//                System.out.println(full_class_name + " is abstract");
                 continue;
             }
 
