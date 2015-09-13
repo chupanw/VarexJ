@@ -19,7 +19,7 @@ public class MathTestGenerator extends TestGenerator {
     // cpwTODO: set this
     int version = 22;
     // cpwTODO: set this
-    String jarVersion = "22";
+    String jarVersion = "22b";
 
     private String config =
 //            "\"+interaction=interaction\"," +
