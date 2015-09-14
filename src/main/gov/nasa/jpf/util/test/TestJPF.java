@@ -33,7 +33,6 @@ import gov.nasa.jpf.util.JPFSiteUtils;
 import gov.nasa.jpf.util.Reflection;
 import gov.nasa.jpf.util.TypeRef;
 import gov.nasa.jpf.vm.*;
-import org.apache.commons.math3.analysis.integration.IterativeLegendreGaussIntegrator;
 
 import java.io.*;
 import java.lang.annotation.Annotation;
