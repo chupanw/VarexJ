@@ -17,9 +17,9 @@ import java.util.LinkedList;
 public class MathTestGenerator extends TestGenerator {
 
     // cpwTODO: set this
-    int version = 22;
+    int version = 23;
     // cpwTODO: set this
-    String jarVersion = "22";
+    String jarVersion = "23";
 
     private String config =
 //            "\"+interaction=interaction\"," +
