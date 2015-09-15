@@ -17,9 +17,9 @@ import java.util.LinkedList;
 public class MathTestGenerator extends TestGenerator {
 
     // cpwTODO: set this
-    int version = 22;
+    int version = 37;
     // cpwTODO: set this
-    String jarVersion = "22";
+    String jarVersion = "37";
 
     private String config =
 //            "\"+interaction=interaction\"," +
@@ -54,8 +54,8 @@ public class MathTestGenerator extends TestGenerator {
             String full_class_name = filepath.replace("/", ".");
 
             String className = full_class_name.split("\\.")[full_class_name.split("\\.").length - 1];
-            String pathSuffix = filepath.substring(filepath.indexOf("math3"));
-            String packageNameSuffix = full_class_name.substring(full_class_name.indexOf("math3"), full_class_name.indexOf(className) - 1);
+            String pathSuffix = filepath.substring(filepath.indexOf("math"));
+            String packageNameSuffix = full_class_name.substring(full_class_name.indexOf("math"), full_class_name.indexOf(className) - 1);
 
 
             // Only generate files that have test cases
