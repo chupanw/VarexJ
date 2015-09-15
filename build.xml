@@ -514,7 +514,7 @@
 			<formatter type="xml" />
 			<batchtest todir="build/defects4j-tests">
 				<fileset dir="build/defects4j-tests">
-					<include name="**/math3/**/*Test.class" />
+					<include name="**/math/**/*Test.class" />
 				</fileset>
 			</batchtest>
 
