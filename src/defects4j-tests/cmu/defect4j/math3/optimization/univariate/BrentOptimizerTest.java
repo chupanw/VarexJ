@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class BrentOptimizerTest extends TestJPF {
 
-    private final String[] config = {"+search.class= .search.RandomSearch","+nhandler.delegateUnhandledNative","+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math23.jar"};
+    private final String[] config = {"+interaction=interaction","+search.class= .search.RandomSearch","+nhandler.delegateUnhandledNative","+classpath+=${jpf-core}/lib/junit-4.11.jar,lib/math23.jar"};
     public static void main(String[] testMethods){
         runTestsOfThisClass(testMethods);
     }
